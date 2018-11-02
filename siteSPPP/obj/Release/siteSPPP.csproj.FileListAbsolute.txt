@@ -1,0 +1,172 @@
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\ApplicationInsights.config
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\x64\Oracle.ManagedDataAccessDTC.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\roslyn\csc.exe
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\roslyn\vbc.exe
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\roslyn\VBCSCompiler.exe
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\siteSPPP.dll.config
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\siteSPPP.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\siteSPPP.pdb
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Antlr3.Runtime.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\EntityFramework.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AI.Web.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Newtonsoft.Json.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Oracle.ManagedDataAccess.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Owin.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Data.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.Helpers.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.Mvc.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.Optimization.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.Razor.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.WebPages.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\WebGrease.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\EntityFramework.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AI.Web.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.Helpers.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.Mvc.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.Optimization.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.Razor.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.WebPages.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Antlr3.Runtime.pdb
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Newtonsoft.Json.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\obj\Release\siteSPPP.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\obj\Release\siteSPPP.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\siteSPPP\siteSPPP\obj\Release\siteSPPP.pdb
+\\ns1\siteSPPP\siteSPPP\bin\ApplicationInsights.config
+\\ns1\siteSPPP\siteSPPP\bin\x64\Oracle.ManagedDataAccessDTC.dll
+\\ns1\siteSPPP\siteSPPP\bin\roslyn\csc.exe
+\\ns1\siteSPPP\siteSPPP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\ns1\siteSPPP\siteSPPP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\ns1\siteSPPP\siteSPPP\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\ns1\siteSPPP\siteSPPP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\ns1\siteSPPP\siteSPPP\bin\roslyn\Microsoft.CSharp.Core.targets
+\\ns1\siteSPPP\siteSPPP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\ns1\siteSPPP\siteSPPP\bin\roslyn\System.Collections.Immutable.dll
+\\ns1\siteSPPP\siteSPPP\bin\roslyn\System.Reflection.Metadata.dll
+\\ns1\siteSPPP\siteSPPP\bin\roslyn\vbc.exe
+\\ns1\siteSPPP\siteSPPP\bin\roslyn\VBCSCompiler.exe
+\\ns1\siteSPPP\siteSPPP\bin\roslyn\VBCSCompiler.exe.config
+\\ns1\siteSPPP\siteSPPP\bin\siteSPPP.dll.config
+\\ns1\siteSPPP\siteSPPP\bin\siteSPPP.dll
+\\ns1\siteSPPP\siteSPPP\bin\siteSPPP.pdb
+\\ns1\siteSPPP\siteSPPP\bin\Antlr3.Runtime.dll
+\\ns1\siteSPPP\siteSPPP\bin\EntityFramework.dll
+\\ns1\siteSPPP\siteSPPP\bin\EntityFramework.SqlServer.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AI.Agent.Intercept.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AI.DependencyCollector.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AI.PerfCounterCollector.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AI.Web.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AI.WindowsServer.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.ApplicationInsights.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AspNet.Identity.Core.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AspNet.Identity.Owin.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Host.SystemWeb.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Cookies.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Facebook.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Google.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.OAuth.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Twitter.dll
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Web.Infrastructure.dll
+\\ns1\siteSPPP\siteSPPP\bin\Newtonsoft.Json.dll
+\\ns1\siteSPPP\siteSPPP\bin\Oracle.ManagedDataAccess.dll
+\\ns1\siteSPPP\siteSPPP\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+\\ns1\siteSPPP\siteSPPP\bin\Owin.dll
+\\ns1\siteSPPP\siteSPPP\bin\System.Data.dll
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.Helpers.dll
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.Mvc.dll
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.Optimization.dll
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.Razor.dll
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.WebPages.Deployment.dll
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.WebPages.dll
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.WebPages.Razor.dll
+\\ns1\siteSPPP\siteSPPP\bin\WebGrease.dll
+\\ns1\siteSPPP\siteSPPP\bin\EntityFramework.xml
+\\ns1\siteSPPP\siteSPPP\bin\EntityFramework.SqlServer.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AI.DependencyCollector.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AI.Web.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AI.WindowsServer.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.ApplicationInsights.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.Helpers.xml
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.Mvc.xml
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.Optimization.xml
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.Razor.xml
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.WebPages.xml
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.WebPages.Deployment.xml
+\\ns1\siteSPPP\siteSPPP\bin\System.Web.WebPages.Razor.xml
+\\ns1\siteSPPP\siteSPPP\bin\Antlr3.Runtime.pdb
+\\ns1\siteSPPP\siteSPPP\bin\Newtonsoft.Json.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AspNet.Identity.Core.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AspNet.Identity.Owin.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Host.SystemWeb.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Facebook.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Cookies.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.OAuth.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Google.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.Twitter.xml
+\\ns1\siteSPPP\siteSPPP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+\\ns1\siteSPPP\siteSPPP\obj\Release\siteSPPP.csprojResolveAssemblyReference.cache
+\\ns1\siteSPPP\siteSPPP\obj\Release\siteSPPP.dll
+\\ns1\siteSPPP\siteSPPP\obj\Release\siteSPPP.pdb

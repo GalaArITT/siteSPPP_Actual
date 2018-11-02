@@ -1,0 +1,1024 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{703D34EB-C3B6-4A33-B837-3F62C02EF91D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>siteSPPP</RootNamespace>
+    <AssemblyName>siteSPPP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.2.1100\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdministradorController.cs" />
+    <Compile Include="Controllers\CapturistaController.cs" />
+    <Compile Include="Controllers\ConocenosController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InicioTestController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\NoticiasController.cs" />
+    <Compile Include="Controllers\PlaneacionController.cs" />
+    <Compile Include="Controllers\TransparenciaController.cs" />
+    <Compile Include="Controllers\V_top_noticiasController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClasesParciales.cs" />
+    <Compile Include="Models\DEPARTAMENTOS.cs">
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INFORMACION.cs">
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Memoria_fotografica.cs" />
+    <Compile Include="Models\Metadatos.cs" />
+    <Compile Include="Models\ModeloNoticias.cs" />
+    <Compile Include="Models\Noticias.cs" />
+    <Compile Include="Models\NoticiasSQLServer.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NoticiasSQLServer.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NoticiasSQLServer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NoticiasSQLServer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NoticiasSQLServer.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NOTICIAS_SEPLAN.cs">
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SERVIDORESPUBLICOS.cs">
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USUARIO.cs">
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\V_top_noticias.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap3.min.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\flexslider.css" />
+    <Content Include="Content\css\Login.css" />
+    <Content Include="Content\css\normalize.css" />
+    <Content Include="Content\css\skeleton.css" />
+    <Content Include="Content\fonts\flexslider-icon.svg" />
+    <Content Include="Content\images\actas-2014.jpg" />
+    <Content Include="Content\images\actas-2015.jpg" />
+    <Content Include="Content\images\actas-2016.jpg" />
+    <Content Include="Content\images\actas-2017.jpg" />
+    <Content Include="Content\images\ArmCont_Contenido_contable.PNG" />
+    <Content Include="Content\images\ArmCont_Contenido_presup.png" />
+    <Content Include="Content\images\ArmCont_Contenido_program.png" />
+    <Content Include="Content\images\bannerHEAD_1200x280.jpg" />
+    <Content Include="Content\images\banner_PED-01.jpg" />
+    <Content Include="Content\images\banner_PED-01.png" />
+    <Content Include="Content\images\banner_PED-02.jpg" />
+    <Content Include="Content\images\banner_PED-02.png" />
+    <Content Include="Content\images\banner_PED_1200.jpg" />
+    <Content Include="Content\images\banner_PED_1200.png" />
+    <Content Include="Content\images\banner_PED_600.jpg" />
+    <Content Include="Content\images\banner_PED_600.png" />
+    <Content Include="Content\images\banner_principal_1200.jpg" />
+    <Content Include="Content\images\banner_principal_600.jpg" />
+    <Content Include="Content\images\boton_ATENCION CIUDADANA.png" />
+    <Content Include="Content\images\boton_FOROS REGIONALES.png" />
+    <Content Include="Content\images\boton_FOROS_TEMATICOS.png" />
+    <Content Include="Content\images\boton_ped_BASES---.png" />
+    <Content Include="Content\images\boton_ped_BASES.png" />
+    <Content Include="Content\images\boton_ped_BUZON.png" />
+    <Content Include="Content\images\boton_ped_CALENDARIO.png" />
+    <Content Include="Content\images\boton_ped_FANPAGE.png" />
+    <Content Include="Content\images\Directorio\Antonio Hernandez Sanchez.jpg" />
+    <Content Include="Content\images\Directorio\Arq. Angel Rodriguez.jpg" />
+    <Content Include="Content\images\Directorio\Arq. Julio Cesar Pineda.jpg" />
+    <Content Include="Content\images\Directorio\C. Clemente Ulloa Arteaga.jpg" />
+    <Content Include="Content\images\Directorio\C.P.A. Aida Lorena Monreal Rosales.jpg" />
+    <Content Include="Content\images\Directorio\C.P.A. Jose Gutierrez Quintero.jpg" />
+    <Content Include="Content\images\Directorio\C.P.A. Jose Gutierrez.jpg" />
+    <Content Include="Content\images\Directorio\Cesar Humberto Sandoval.jpg" />
+    <Content Include="Content\images\Directorio\Coordinador Cesar Rodriguez.jpg" />
+    <Content Include="Content\images\Directorio\Dr. Felipe Javier Ruiz Rivera.jpg" />
+    <Content Include="Content\images\Directorio\Dra. Reina Rosales Andrade_2.jpg" />
+    <Content Include="Content\images\Directorio\Dra. Reina Rosales.jpg" />
+    <Content Include="Content\images\Directorio\Efrain Contreras Constante.jpg" />
+    <Content Include="Content\images\Directorio\erik.jpg" />
+    <Content Include="Content\images\Directorio\Froilan Medina Garcia.jpg" />
+    <Content Include="Content\images\Directorio\genero.jpg" />
+    <Content Include="Content\images\Directorio\Gilberto Nicolas.jpg" />
+    <Content Include="Content\images\Directorio\Ing. Evencio Javier Burgara Vera.jpg" />
+    <Content Include="Content\images\Directorio\Ing. Gerardo Aguilar Flores.jpg" />
+    <Content Include="Content\images\Directorio\Ing. Hector Gomez.jpg" />
+    <Content Include="Content\images\Directorio\Ing. Jorge Arellano Lopez.jpg" />
+    <Content Include="Content\images\Directorio\Ing. Jorge Arellano.jpg" />
+    <Content Include="Content\images\Directorio\Ing. Oscar Ortiz.jpg" />
+    <Content Include="Content\images\Directorio\Ing. Victor Manuel  Cuervo Barrales.jpg" />
+    <Content Include="Content\images\Directorio\Javier Zaragoza.jpg" />
+    <Content Include="Content\images\Directorio\Juan Manuel Cuevas.jpg" />
+    <Content Include="Content\images\Directorio\L.C. Ana Alicia Enciso Duran.jpg" />
+    <Content Include="Content\images\Directorio\L.C. Ana Alicia Enciso Duran_2.jpg" />
+    <Content Include="Content\images\Directorio\Leopoldo Dominguez.jpg" />
+    <Content Include="Content\images\Directorio\Lic. A. Issai Jimenez Ante.jpg" />
+    <Content Include="Content\images\Directorio\Lic. Abraham Bastida Gutierrez.jpg" />
+    <Content Include="Content\images\Directorio\Lic. Armando Manuel Porras Fuentes_2.jpg" />
+    <Content Include="Content\images\Directorio\Lic. David Guerrero Castellon.jpg" />
+    <Content Include="Content\images\Directorio\Lic. Guillermo Mendez Salgado.jpg" />
+    <Content Include="Content\images\Directorio\Lic. Jesus Antonio Ruiz.jpg" />
+    <Content Include="Content\images\Directorio\Lic. Juan Pablo Lopez Diaz.jpg" />
+    <Content Include="Content\images\Directorio\Lic. Juan Pablo Lopez.jpg" />
+    <Content Include="Content\images\Directorio\Lic. Leonor Ortega Godinez.jpg" />
+    <Content Include="Content\images\Directorio\Lic. M. Dolores Lopez Carrillo.jpg" />
+    <Content Include="Content\images\Directorio\Lic. Mayra Janet Morales Rojo.jpg" />
+    <Content Include="Content\images\Directorio\Lic. Monica Fregoso Frias.jpg" />
+    <Content Include="Content\images\Directorio\Lic.David Guerrero.jpg" />
+    <Content Include="Content\images\Directorio\Mtra. Cristina de la Rosa Coronado.jpg" />
+    <Content Include="Content\images\Directorio\PARA CURRICULA.jpg" />
+    <Content Include="Content\images\Directorio\Vacante.jpg" />
+    <Content Include="Content\images\Directorio\Xitle Gonzalez.jpg" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\favicon.png" />
+    <Content Include="Content\images\FC_acrobat-02.png" />
+    <Content Include="Content\images\folder_16.png" />
+    <Content Include="Content\images\gnay1721_1600x500.png" />
+    <Content Include="Content\images\head-nay.png" />
+    <Content Include="Content\images\icono_pdf.png" />
+    <Content Include="Content\images\icono_ppt.png" />
+    <Content Include="Content\images\icono_web.png" />
+    <Content Include="Content\images\icono_word.png" />
+    <Content Include="Content\images\icono_xls.png" />
+    <Content Include="Content\images\icono_zip.png" />
+    <Content Include="Content\images\icon_down_colap.gif" />
+    <Content Include="Content\images\icon_down_colap.png" />
+    <Content Include="Content\images\img04.jpg" />
+    <Content Include="Content\images\ind_01.jpg" />
+    <Content Include="Content\images\ind_02.jpg" />
+    <Content Include="Content\images\ind_03.jpg" />
+    <Content Include="Content\images\ind_03A.jpg" />
+    <Content Include="Content\images\ind_04.jpg" />
+    <Content Include="Content\images\ind_05.jpg" />
+    <Content Include="Content\images\ind_abajo.gif" />
+    <Content Include="Content\images\ind_eva.jpg" />
+    <Content Include="Content\images\lavoz-.jpg" />
+    <Content Include="Content\images\limaraba.gif" />
+    <Content Include="Content\images\more-movilicon.png" />
+    <Content Include="Content\images\nayarit.png" />
+    <Content Include="Content\images\NAY_plan de desarrollo_20%25_1-Gobierno.jpg" />
+    <Content Include="Content\images\NAY_plan de desarrollo_BannersWEB-2.jpg" />
+    <Content Include="Content\images\NAY_plan-de-desarrollo_BannersWEB_468x60.jpg" />
+    <Content Include="Content\images\NAY_plan-de-desarrollo_BannersWEB_728x90.jpg" />
+    <Content Include="Content\images\NAY_plan-de-desarrollo_BannersWEB_970x90.jpg" />
+    <Content Include="Content\images\organigrama_25_Oct_18.jpg" />
+    <Content Include="Content\images\organigrama_5_Oct_18.jpg" />
+    <Content Include="Content\images\organigrama_8_Oct_18.jpg" />
+    <Content Include="Content\images\pdf_gray-02.png" />
+    <Content Include="Content\images\pdm_01.jpg" />
+    <Content Include="Content\images\pdm_02.jpg" />
+    <Content Include="Content\images\pdm_03.jpg" />
+    <Content Include="Content\images\pdm_04.jpg" />
+    <Content Include="Content\images\pdm_05.jpg" />
+    <Content Include="Content\images\pdm_06.jpg" />
+    <Content Include="Content\images\pdm_07.jpg" />
+    <Content Include="Content\images\pdm_08.jpg" />
+    <Content Include="Content\images\pdm_09.jpg" />
+    <Content Include="Content\images\pdm_10.jpg" />
+    <Content Include="Content\images\pdm_11.jpg" />
+    <Content Include="Content\images\pdm_12.jpg" />
+    <Content Include="Content\images\pdm_13.jpg" />
+    <Content Include="Content\images\pdm_14.jpg" />
+    <Content Include="Content\images\pdm_15.jpg" />
+    <Content Include="Content\images\pdm_16.jpg" />
+    <Content Include="Content\images\pdm_17.jpg" />
+    <Content Include="Content\images\pdm_18.jpg" />
+    <Content Include="Content\images\pdm_19.jpg" />
+    <Content Include="Content\images\pdm_20.jpg" />
+    <Content Include="Content\images\ped-movil600.jpg" />
+    <Content Include="Content\images\ped_descargaweb.jpg" />
+    <Content Include="Content\images\placeholder.png" />
+    <Content Include="Content\images\proy_inversion_2014-03.png" />
+    <Content Include="Content\images\proy_inversion_2015-03.png" />
+    <Content Include="Content\images\proy_inversion_2016-03.png" />
+    <Content Include="Content\images\proy_inversion_2017-03.png" />
+    <Content Include="Content\images\proy_inversion_2018-03.png" />
+    <Content Include="Content\images\secre1.jpg" />
+    <Content Include="Content\images\secretaria-1.jpg" />
+    <Content Include="Content\images\spacer.gif" />
+    <Content Include="Content\images\thumbnail_trazos.jpg" />
+    <Content Include="Content\images\values-bg.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\NoticiasSQLServer.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NoticiasSQLServer.edmx</DependentUpon>
+      <LastGenOutput>NoticiasSQLServer.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\NoticiasSQLServer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NoticiasSQLServer.edmx</DependentUpon>
+      <LastGenOutput>NoticiasSQLServer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap3.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ClassDiagram1.cd" />
+    <Content Include="Content\fonts\flexslider-icon.eot" />
+    <Content Include="Content\fonts\flexslider-icon.ttf" />
+    <Content Include="Content\fonts\flexslider-icon.woff" />
+    <Content Include="Content\files\PED_NAYARIT_2017-2021.pdf" />
+    <Content Include="Content\files\curriculum\ARMANDO_MANUEL_PORRAS_FUENTES_Unidad_Inversiones.pdf" />
+    <Content Include="Content\files\curriculum\FC_ABRAHAM BASTIDA.pdf" />
+    <Content Include="Content\files\curriculum\FC_AbrahamBastida.pdf" />
+    <Content Include="Content\files\curriculum\FC_AIDA MONREAL.pdf" />
+    <Content Include="Content\files\curriculum\FC_ANA ENCISO.pdf" />
+    <Content Include="Content\files\curriculum\FC_Antonio Hernandez.pdf" />
+    <Content Include="Content\files\curriculum\FC_ARMANDO PORRAS.pdf" />
+    <Content Include="Content\files\curriculum\FC_ARQ ADRIAN RODRIGUEZ.pdf" />
+    <Content Include="Content\files\curriculum\FC_C. JAVIER ZARAGOZA GOMEZ.pdf" />
+    <Content Include="Content\files\curriculum\FC_CLEMENTEULLOA.pdf" />
+    <Content Include="Content\files\curriculum\FC_CRISTINA DE LA ROSA.pdf" />
+    <Content Include="Content\files\curriculum\FC_DOLORES LOPEZ.pdf" />
+    <Content Include="Content\files\curriculum\FC_EfrainContreras.pdf" />
+    <Content Include="Content\files\curriculum\FC_EvencioBurgara.pdf" />
+    <Content Include="Content\files\curriculum\FC_FelipeRuiz.pdf" />
+    <Content Include="Content\files\curriculum\FC_FroilanMedina.pdf" />
+    <Content Include="Content\files\curriculum\FC_GERARDO AGUILAR.pdf" />
+    <Content Include="Content\files\curriculum\FC_ING.GUILLERMOMENDEZ.pdf" />
+    <Content Include="Content\files\curriculum\FC_ING.HECTORGOMEZ.pdf" />
+    <Content Include="Content\files\curriculum\FC_IssaiJimenez.pdf" />
+    <Content Include="Content\files\curriculum\FC_JORGE ARELLANO.pdf" />
+    <Content Include="Content\files\curriculum\FC_JoseGutierrez.pdf" />
+    <Content Include="Content\files\curriculum\FC_JUANPABLOLOPEZ.pdf" />
+    <Content Include="Content\files\curriculum\FC_JulioPineda.pdf" />
+    <Content Include="Content\files\curriculum\FC_Leonor Ortega.pdf" />
+    <Content Include="Content\files\curriculum\FC_LEOPOLDO DOMINGUEZ.pdf" />
+    <Content Include="Content\files\curriculum\FC_LIC. JESUS BALLESTEROS.pdf" />
+    <Content Include="Content\files\curriculum\FC_LIC.DAVIDGUERRERO.pdf" />
+    <Content Include="Content\files\curriculum\FC_MONICA FREGOSO.pdf" />
+    <Content Include="Content\files\curriculum\FC_VICTOR CUERVO.pdf" />
+    <Content Include="Content\files\curriculum\FC_XITLE GONZALEZ.pdf" />
+    <Content Include="Content\files\curriculum\FICHA_CURRICULAR_DAVID_GUERRERO_CASTELLoN_SPPP.pdf" />
+    <Content Include="Content\files\curriculum\FICHA_CURRICULAR_JOSE_GUTIeRREZ_SPPP.pdf" />
+    <Content Include="Content\files\curriculum\FICHA_CURRICULAR_JUAN_PABLO_LOPEZ_DIAZ.pdf" />
+    <Content Include="Content\files\curriculum\FICHA_CURRICULAR_LEOPOLDO_DOMINGUEZ_GUTIERREZ.pdf" />
+    <Content Include="Content\files\curriculum\FICHA_CURRICULAR_MENDEZ_fomento_inversion.pdf" />
+    <Content Include="Content\files\curriculum\FICHA_CURRICULAR_REINA_ROSALES_SPPP.pdf" />
+    <Content Include="Content\files\leyes\CONSTITUCION POLITICA DEL ESTADO LIBRE Y SOBERANO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\constitucion_politica_de_los_estados_unidos_mexicanos.pdf" />
+    <Content Include="Content\files\leyes\DECRETO QUE SECTORIZA A LOS ORGANISMOS PUBLICOS DESCENTRALIZADOS, FONDOS Y FIDEICOMISOS DE LA A.PDF" />
+    <Content Include="Content\files\leyes\LEY DE ADQUISICIONES, ARRENDAMIENTOS Y SERVICIOS DEL SECTOR PUBLICO.pdf" />
+    <Content Include="Content\files\leyes\LEY DE ADQUISICIONES, ARRENDAMIENTOS, SERVICIOS Y ALMACENES DELE STADO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\LEY DE ASOCIACIONES PUBLICO PRIVADAS DEL ESTADO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\LEY DE COORDINACION FISCAL Y DE GASTO PUBLICO DEL ESTADO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\LEY DE COORDINACION FISCAL.pdf" />
+    <Content Include="Content\files\leyes\LEY DE HACIENDA MUNICIPAL DEL ESTADO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\LEY DE INGRESOS PARA EL ESTADO DE NAYARIT 2011.pdf" />
+    <Content Include="Content\files\leyes\LEY DE INVERSION PUBLICA PARA EL ESTADO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\LEY DE OBRA PUBLICA DEL ESTADO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\LEY DE OBRAS PUBLICAS Y SERVICIOS RELACIONADOS CON LAS MISMAS.pdf" />
+    <Content Include="Content\files\leyes\LEY DE PLANEACION 09-04-12.pdf" />
+    <Content Include="Content\files\leyes\LEY DE PLANEACION DEL ESTADO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\LEY DE PLANEACION.pdf" />
+    <Content Include="Content\files\leyes\LEY DE PRESUPUESTACION, CONTABILIDAD Y GASTO PUBLICO.pdf" />
+    <Content Include="Content\files\leyes\LEY DE RESPONSABILIDAD DE SERVIDORES PUBLICOS DEL ESTADO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACION PUBLICA DEL ESTADO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\LEY DEL ORGANO DE FISCALIZACION SUPERIOR DEL ESTADO.pdf" />
+    <Content Include="Content\files\leyes\LEY GENERAL DE DESARROLLO SOCIAL.pdf" />
+    <Content Include="Content\files\leyes\LEY MUNICIPAL PARA EL ESTADO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\LEY ORGANICA DEL PODER EJECUTIVO DEL ESTADO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\LEY PARA LA COMPETITIVIDAD Y EL EMPLEO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\LEY QUE CREA EL COMITE DE PLANEACION PARA EL DESARROLLO DEL ESTADO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\LEY QUE REGULA LA ENTREGA RECEPCION DE LA ADMINISTRACION PUBLICA DEL ESTADO DE NAYARIT.pdf" />
+    <Content Include="Content\files\leyes\PRESUPUESTO DE EGRESOS DE LA FEDERACION PARA EL EJERCICIO FISCAL 2011.pdf" />
+    <Content Include="Content\files\leyes\PRESUPUESTO DE EGRESOS DEL ESTADO PARA EL 2011.pdf" />
+    <Content Include="Content\files\descargas\planeacion_mpal\cpam.pdf" />
+    <Content Include="Content\files\descargas\planeacion_mpal\frdfpm.pdf" />
+    <Content Include="Content\files\descargas\planeacion_mpal\fuirr33.pdf" />
+    <Content Include="Content\files\descargas\planeacion_mpal\gci.pdf" />
+    <Content Include="Content\files\descargas\planeacion_mpal\hcpmmm.pps" />
+    <Content Include="Content\files\descargas\planeacion_mpal\ieeu.pdf" />
+    <Content Include="Content\files\descargas\planeacion_mpal\ifm.pdf" />
+    <Content Include="Content\files\descargas\planeacion_mpal\ims.pdf" />
+    <Content Include="Content\files\descargas\planeacion_mpal\iseipc.xls" />
+    <Content Include="Content\files\descargas\planeacion_mpal\pfoc.pdf" />
+    <Content Include="Content\files\descargas\planeacion_mpal\10lppe.pdf" />
+    <Content Include="Content\files\descargas\planeacion_mpal\arm.pdf" />
+    <Content Include="Content\files\descargas\planeacion\2010_spef_comunicaciones.pdf" />
+    <Content Include="Content\files\descargas\planeacion\2010_spef_cultura.pdf" />
+    <Content Include="Content\files\descargas\planeacion\2010_spef_deporte.pdf" />
+    <Content Include="Content\files\descargas\planeacion\2010_spef_educacion.pdf" />
+    <Content Include="Content\files\descargas\planeacion\2010_spef_fondosespeciales.pdf" />
+    <Content Include="Content\files\descargas\planeacion\2010_spef_fondosinvesion.pdf" />
+    <Content Include="Content\files\descargas\planeacion\2010_spef_hidraulico.pdf" />
+    <Content Include="Content\files\descargas\planeacion\2010_spef_medioambiente.pdf" />
+    <Content Include="Content\files\descargas\planeacion\2010_spef_resumen.pdf" />
+    <Content Include="Content\files\descargas\planeacion\2010_spef_salud.pdf" />
+    <Content Include="Content\files\descargas\planeacion\2010_spef_seguridadpublica.pdf" />
+    <Content Include="Content\files\descargas\planeacion\2010_spef_turismo.pdf" />
+    <Content Include="Content\files\descargas\planeacion\correspondencia_cta_ped_2009.pdf" />
+    <Content Include="Content\files\descargas\planeacion\criterios_2010_shcp.pdf" />
+    <Content Include="Content\files\descargas\planeacion\evaluacion pobreza nayarit 2012.pdf" />
+    <Content Include="Content\files\descargas\planeacion\evaluacion_dic_09.pdf" />
+    <Content Include="Content\files\descargas\planeacion\pef 2012-2013.pdf" />
+    <Content Include="Content\files\descargas\planeacion\pib_2008_inegi.pdf" />
+    <Content Include="Content\files\descargas\planeacion\presupuesto_egresos_2010.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_aca.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_ahu.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_ama.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_bdb.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_com.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_hua.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_ixt.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_jal.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_lay.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_ros.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_rui.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_san.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_sap.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_si.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_smo.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_tec.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_tux.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_xal.pdf" />
+    <Content Include="Content\files\descargas\pdms\pdm_eln.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos\1. LINEAMIENTOS determinacion de req de inf de mecanismo de planeacion.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos\2. LINEAMIENTOS elaboracion de analisis costo-beneficio.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos\3. LINEAMIENTOS para registro en cartera de proyectos.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos\4. LINEAMIENTOS seguimiento de la rentabilidad de los programas.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos\5. LINEAMIENTOS dictamenes de programas y proyectos de inversion.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos\CERTIFICADO DE FACTIBILIDAD %28INFR. EN SALUD%29.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos\GLOSARIO DE TERMINOS.doc" />
+    <Content Include="Content\files\descargas\cartera_proyectos\MODELO DE FICHA TECNICA.xlsx" />
+    <Content Include="Content\files\descargas\cartera_proyectos\PEF 2012 %28VER ARTICULOS 15 Y 31%29.pdf" />
+    <Content Include="Content\files\descargas\indicadores\DOCUMENTO METODOLOGICO Sistema de Indicadores.docx" />
+    <Content Include="Content\files\descargas\indicadores\Formato Difusion Resultados Evaluaciones FAFEF 2011- 2012.pdf" />
+    <Content Include="Content\files\descargas\indicadores\Formato Difusion Resultados Evaluaciones FISE 2011-2012.pdf" />
+    <Content Include="Content\files\descargas\indicadores\Metodologia.pdf" />
+    <Content Include="Content\files\descargas\indicadores\Programa Anual de Evaluacion para el Ejercicio Fiscal 2015.pdf" />
+    <Content Include="Content\files\descargas\indicadores\Sistema Integral de Indicadores de Desempeno2.pdf" />
+    <Content Include="Content\files\descargas\transparencia\PROGRAMA ANUAL DE EVALUACION 2013.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\ANEXOS EVALUACION FAM INFRAESTRUCTURA EDUCATIVA.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\Avance Evaluacion FAEB 2014.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\Avance Evaluacion FAETA 2014.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\AVANCE EVALUACION FAFEF 2014.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\Avance Evaluacion FAM_Asist Soc_2014.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\Avance Evaluacion FASP 2014.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\Avance Evaluacion FASSA 2014.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\Avance General PAE 2015.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\Avances Evaluacion FAETA 2014.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\Avances Evaluacion FISE 2014.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\CONVENIO EVALUADOR EXTERNO-INDETEC.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\CONVENIO EVALUADOR EXTERNO-INDETEC_FAFEF.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\CONVENIO EVALUADOR EXTERNO-INDETEC_FISE.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\EVALUACION 2014 FAM INFRAESTRUCTURA EDUCATIVA %28Preliminar%29.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\EVALUACION EXTERNA FAFEF 2014 %28preliminar%29.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\evaluacionFAFEF_2014.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\FAM INFRAESTRUCTURA EDUCATIVA Nayarit.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\FISE Nayarit FINAL.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\FORMATOS DE DIFUSION FAM INFRAESTRUCTURA EDUCATIVA.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\FORMATOS SEGUIMIENTO ASM.xlsx" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\Mecanismo para el seguimiento a los aspectos susceptibles-1.docx" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\NOR_01_14_011.doc" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\Programa Anual de Evaluacion para el Ejercicio Fiscal 2014.docx" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\REPORTE SFU_RESUMEN DE EVALUACION FAFEF 2014_Avance 31julio2015.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\REPORTE SFU_RESUMEN DE EVALUACION FISE 2014_Avance 31julio2015.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\TDR evaluacionConsistencia.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\TDR evaluacionDesempeno_FAFEF.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\TDR evaluacionDesempeno_FISE.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2017\Programa Anual de Evaluacion para el Ejercicio Fiscal 2017.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2016\Programa Anual de Evaluacion para el Ejercicio Fiscal 2016.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2015\ASM\ASM FISE-FAFEF 2014.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2015\ASM\ASM FISE-FAFEF 2015.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2015\ASM\FORMATOS_SEGUIMIENTO_ASM.xlsx" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2015\ASM\Mecanismo para el seguimiento a los aspectos susceptibles.pdf" />
+    <Content Include="Content\files\descargas\PBR.zip" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\AVANCES 1ER TRIM 2017.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\Avances 1er Trimestre FISE  2018.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\Avances 1er Trimestre FISE 2018.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\AVANCES 2do TRIM FISE 2017.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\AVANCES 3er TRIM FISE 2017.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\AVANCES 4TO TRIM 2016.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\AVANCES 4TO TRIM FISE 2017.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\PROPUESTA FISE 2014.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\PROPUESTA FISE 2015.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\PROPUESTA FISE 2016.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\PROPUESTA FISE 2017.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\Propuesta Inicial FISE 2018.pdf" />
+    <Content Include="Content\files\descargas\informes_trimestrales\2017\fafef\3ER. TRIM_FONDO VIII.pdf" />
+    <Content Include="Content\files\descargas\informes_trimestrales\2017\fise\3ER. TRIM_FONDO III.pdf" />
+    <Content Include="Content\files\descargas\informes_trimestrales\2017\inversion_estatal\3ER. TRIM_REC ESTATAL.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\1 ACTA SO_SPPP ENERO 2014.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\10 ACTA SO_OCTUBRE 2014.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\11 ACTA SPPP NOVIEMBRE 2014.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\12 SEPLAN ACTA DICIEMBRE 2014.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\2 ACTA SO_SPPP FEBRERO 14 SPPP.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\3 ACTA SO_MARZO-14 SPPP.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\3.3 ACTA SESION EXTRAORDINARIA MARZO 2014.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\4 ACTA SO_SPPP ABRIL 2014 SPPP.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\5 SESION ORDINARIA MAYO 2014 SPPP.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\6 ACTA SO _SPPP JUNIO 2014.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\7 ACTA SPPP SESION DE JULIO 2014.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\8 ACTA SO_ SPPP AGOSTO 2014.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\9 ACTA SPPP_SEPTIEMBRE 2014.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2014\ACTAS SEPLA OCTUBRE 2014.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2015\01 ACTA SO_CI_SPPP ENERO 2015.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2015\02 ACTA SO_CI_SPPP FEBRERO 2015.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2015\03 ACTA SO_CI_SPPP MARZO 2015.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2015\04 ACTA SO_CI_SPPP ABRIL  2015.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2015\05 ACTA SO_CI_SPPP MAYO 2015.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2015\06 ACTA SO_CI_SPPP JUNIO 2015.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2015\07 ACTA SO_CI_SPPP JULIO 2015.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2015\08 ACTA SO_CI_SPPP AGOSTO 2015.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2015\09 ACTA SO_CI_SPPP SEPTIEMBRE 2015.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2015\ACTA_SO_CI_SPPP-DICIEMBRE-2015.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2015\ACTA_SO_CI_SPPP-NOVIEMBRE-2015.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2015\ACTA_SO_CI_SPPP-OCTUBRE-2015.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2016\2017-01-25 %281%29febrero.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2016\2017-01-26 %281%29marzo.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2016\2017-01-26 %2810%29octubre.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2016\2017-01-26 %2811%29noviembre.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2016\2017-01-26 %2812%29diciembre.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2016\2017-01-26 %283%29junio.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2016\2017-01-26 %284%29julio.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2016\2017-01-26 %285%29agosto.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2016\2017-01-26 %286%29septiembre.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2016\acta enero 2016 sppp.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2016\actaabrilsppp.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2016\EXTRA09SPPP.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2016\MAYO ACTA 05 SPPP 2016.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\ACTA CUARTA SESION EXTRAORDINARIA MES ABRIL 2017 SPPP.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\ACTA PRIMERA SESION EXTRAORDINARIA ENERO 2017 SPPP.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\ACTA PRIMERA SESION ORDINARIA ENERO 2017 SPPP.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\ACTA SEGUNDA SESION EXTRAORDINARIA FEBRERO 2017 SPPP.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\ACTA SEGUNDA SESION ORDINARIA FEBRERO 2017 SPPP.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\ACTA SESION EXTRAORDINARIA FEBRERO 2017 SPPP.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\ACTA TERCERA SESION EXTRAORDINARIA MARZO 2017 SPPP.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\ACTA TERCERA SESION ORDINARIA MARZO 2017 SPPP..pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\1 SO SPPP ENERO 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\10 SO OCT 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\11 SO NOV 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\12 SO DIC 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\2 SO SPPP FEBRERO 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\3 SO SPPP MARZO 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\4 SO SPPP ABRIL 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\5 SO SPPP MAYO 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\6 SO SPPP JUNIO 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\7 SO SPPP JULIO 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\8 SO SPPP AGOSTO 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\9 SO SPPP SEP 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\ACTA DE INSTALACION OCT 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\1 SE enero 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\10 SE agosto 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\11 SE agosto 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\12 SE agosto 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\13 SE agosto 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\14 SE septiembre 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\15 SE septiembre 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\16 SE septiembre 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\17 SE octubre 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\18 SE noviembre 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\19 SE noviembre  2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\2 SE febrero 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\20 SE noviembre 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\21 SE noviembre 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\22 SE noviembre 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\3 SE marzo 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\4 SE abril 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\5 SE mayo 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\6 SE mayo 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\7 SE mayo 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\8 SE julio 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\9 SE julio 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\SE febrero 2017.pdf" />
+    <Content Include="x64\Oracle.ManagedDataAccessDTC.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\files\transparencia\evaluaciones_2014\ANEXOS EVALUACION FAM INFRAESTRUCTURA EDUCATIVA.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\Avance Evaluacion FAEB 2014.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\Avance Evaluacion FAETA 2014.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\AVANCE EVALUACION FAFEF 2014.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\Avance Evaluacion FAM_Asist Soc_2014.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\Avance Evaluacion FASP 2014.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\Avance Evaluacion FASSA 2014.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\Avance General PAE 2015.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\Avances Evaluacion FAETA 2014.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\Avances Evaluacion FISE 2014.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\CONVENIO EVALUADOR EXTERNO-INDETEC.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\CONVENIO EVALUADOR EXTERNO-INDETEC_FAFEF.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\CONVENIO EVALUADOR EXTERNO-INDETEC_FISE.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\EVALUACION 2014 FAM INFRAESTRUCTURA EDUCATIVA %28Preliminar%29.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\EVALUACION EXTERNA FAFEF 2014 %28preliminar%29.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\evaluacionFAFEF_2014.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FAM INFRAESTRUCTURA EDUCATIVA Nayarit.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FISE Nayarit FINAL.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FORMATOS DE DIFUSION FAM INFRAESTRUCTURA EDUCATIVA.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FORMATOS SEGUIMIENTO ASM.xlsx" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\Mecanismo para el seguimiento a los aspectos susceptibles-1.docx" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\NOR_01_14_011.doc" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\Programa Anual de Evaluacion para el Ejercicio Fiscal 2014.docx" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\REPORTE SFU_RESUMEN DE EVALUACION FAFEF 2014_Avance 31julio2015.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\REPORTE SFU_RESUMEN DE EVALUACION FISE 2014_Avance 31julio2015.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\TDR evaluacionConsistencia.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\TDR evaluacionDesempeno_FAFEF.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\TDR evaluacionDesempeno_FISE.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FAETA EDUCACION ADULTOS Nayarit.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FAETA EDUCACION TECNOLOGICA Nayarit %281%29.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\ANEXO %28EVALUACION FAFEF%29.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\ANEXOS %28EVALUACION FISE%29.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\ANEXOS EVALUACION FAEB1.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\ANEXOS FAM ASISTENCIA SOCIAL.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\ANEXOS FASSA.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\EVALUACION FAETA ED TECNOLOGICA.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\EVALUACION FAETA Educacion para adultos.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\Evaluacion Preliminar del FISE Nayarit.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FORMATO DE DIFUSION FAEB.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FORMATO DE DIFUSION FAETA ED ADULTOS.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FORMATO DE DIFUSION FAETA ED TECNOLOGICA.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FORMATO DE DIFUSION FAFEF.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FORMATO DE DIFUSION FAM.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FORMATO DE DIFUSION FASP.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FORMATO DE DIFUSION FASSA.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\FORMATO DE DIFUSION FISE.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\RESUMEN DE LA EVALUACION FAFEF.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones_2014\RESUMEN DE LA EVALUACION FISE.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\Avance 2do Trimestre portal 2018.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2017\12 SESION ORDINARIA SPPP DIC 2017.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SO\1 SO ENERO.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SO\2 SO FEBRERO.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SO\3 SO MARZO.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SO\4 SO ABRIL.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SO\5 SO MAYO.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SO\6 SO JUNIO.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SO\7 SO JULIO.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\1 SE.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\10 SE.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\11 SE.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\12 SE.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\13 SE.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\14 SE.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\2 SE.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\3 SE.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\4 SE.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\5 SE.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\6 SE.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\7 SE.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\8 SE.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\9 SE.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\FORMATO DE DIFUSION FAETA ED TECNOLOGICA.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\FAETA EDUCACION TECNOLOGICA Nayarit %281%29.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\FORMATO DE DIFUSION FAETA ED ADULTOS.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\FAETA EDUCACION ADULTOS Nayarit.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\FORMATO DE DIFUSION FASP.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\FORMATO DE DIFUSION FAM.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\RESUMEN DE LA EVALUACION FAFEF.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\FORMATO DE DIFUSION FAFEF.pdf" />
+    <Content Include="Content\files\descargas\transparencia\Lineamientos de creacion_modificacion Pp.pdf" />
+    <Content Include="Content\files\descargas\transparencia\Lineamientos revisión_actualización-metas.pdf" />
+    <Content Include="Content\files\descargas\transparencia\Lineamientos Modificación MIR.pdf" />
+    <Content Include="Content\files\descargas\transparencia\PAE 2018.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2017\1.- POSICIONAMIENTO INSTITUCIONAL.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2017\2.-CLASIFICACION ASM.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2017\3.- DOCUMENTO DE TRABAJO.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2017\4.- AVANCES AL DOCUMENTO DE TRABAJO.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2017\5.- DOCUMENTO INSTITUCIONAL.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2017\6.- AVANCE DEL DOCUMENTO INSTITUCIONAL.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\FASSA\1.- POSICIONAMIENTO INSTITUCIONAL.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\FASSA\2.- CLASIFICACION ASM.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\FASSA\3.-DOCUMENTO DE TRABAJO.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\FASSA\4.- AVANCE DOCUMENTO DE TRABAJO.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\V FAM asist social\1.- POSICIONAMIENTO INSTITUCIONAL.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\V FAM infraestructura educativa\1.- POSICION INSTITUCIONAL.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\III FISE\1.- POSICIONAMIENTO INSTITUCIONAL.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\VIII FAFEF\1.- POSICIONAMIENTO INSTITUCIONAL.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\I FAEB\1.- POSICIONAMIENTO INSTITUCIONAL.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\I FAEB\2.- Clasificacion ASM.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\I FAEB\3.- DOCUMENTO DE TRABAJO.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\I FAEB\4.- AVANCES AL DOCUMENTO DE TRABAJO.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\I FAEB\5.- DOCUMENTO INSTITUCIONAL.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2016\I FAEB\6.- AVANCE DEL DOCUMENTO INSTITUCIONAL.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR Federal_SHCP.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\GUIA ELABORACION MIR.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\I. METODOLOGÍA MARCO LÓGICO MML\I. Introducción MML.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\II. ARBOL DEL PROBLEMA\II.1. Identificación del Problema.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\II. ARBOL DEL PROBLEMA\II.1.1 Identificacion Problema Modalidad inversa.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\II. ARBOL DEL PROBLEMA\II.2. Análisis del problema.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\III. ARBOL DE OBJETIVOS\III.1 Arbol Objetivos.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\III. ARBOL DE OBJETIVOS\III.2 Selección Alternativas.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\IV. MATRIZ DE INDICADORES DE RESULTADOS MIR\IV.1 Resumen Narrativo.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\IV. MATRIZ DE INDICADORES DE RESULTADOS MIR\IV.2 Supuestos.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\IV. MATRIZ DE INDICADORES DE RESULTADOS MIR\IV.3 Indicadores.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\IV. MATRIZ DE INDICADORES DE RESULTADOS MIR\IV.4 LB_Metas_ Medios Ver.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\V. ANEXOS\Aplicación Metodo Lluvia de ideas.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\V. ANEXOS\FORMATO MML - arbol obj.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\V. ANEXOS\FORMATO MML - arbol problema.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\V. ANEXOS\FORMATO MML - guia a-obj.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\V. ANEXOS\FORMATO MML - guia arbol.pdf" />
+    <Content Include="Content\files\descargas\transparencia\GUÍA MIR\Guia MIR\V. ANEXOS\FORMATO MML - MIR.pdf" />
+    <Content Include="Content\files\descargas\transparencia\Criterios Grales_EvaluacProgramasEstatales.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones 2013\DIGANOSTICO_DE_AVANCE_EN_MONITOREO_Y_EVALUACION_2013 coneval.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones 2013\EVALUACION DEL FAFEF 2013.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones 2013\EVALUACION DEL FISE 2013.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones 2013\PROGRAMA ANUAL DE EVALUACION 2013.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones 2012\EVALUACION PBR-SED_SUASOR SHCP 2012.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones 2012\Formato Difusion Resultados Evaluaciones FAFEF 2011- 2012.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones 2012\Formato Difusion Resultados Evaluaciones FISE 2011-2012.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones 2012\ANEXO-1_FAFEF.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones 2012\ANEXO-1_FISE.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones 2012\Diseno Indicadores programas financiados FAFEF.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones 2012\Diseno indicadores programas financiados FISE.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones 2012\Evaluacion FAFEF 2012 TECSO.pdf" />
+    <Content Include="Content\files\transparencia\evaluaciones 2012\Evaluacion FISE 2012 TECSO.pdf" />
+    <Content Include="Content\files\transparencia\pae_2015\CONVENIO EVALUADOR EXTERNO-INDETEC.pdf" />
+    <Content Include="Content\files\transparencia\pae_2015\TDR evaluacionConsistencia.pdf" />
+    <Content Include="Content\files\transparencia\pae_2015\TDR evaluacionDesempeno.pdf" />
+    <Content Include="Content\files\transparencia\pae_2016\ANEXO 4 NAYARIT EVALUACION FONDOS %28PRELIMINAR%29.pdf" />
+    <Content Include="Content\files\transparencia\pae_2016\SEGUIMIENTO PAE2016 dic2016.pdf" />
+    <Content Include="Content\files\transparencia\pae_2016\TdR Evaluacion ejercicio 2015.pdf" />
+    <Content Include="Content\files\descargas\transparencia\evaluaciones 2014\FORMATO DE DIFUSION FAEB.pdf" />
+    <Content Include="Content\files\curriculum\FICHA CURRICULAR CESAR HUMBERTO.pdf" />
+    <Content Include="Content\files\curriculum\1. FICHA CURRICULAR ING. OMAR RAMIREZ.pdf" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\CARTERA DE PROYECTOS TERCER TRIMETRE FISE 2018.pdf" />
+    <Content Include="Content\files\transparencia\ASM_2017\RESUMEN AVANCE ASM 2017.pdf" />
+    <Content Include="Content\files\curriculum\FICHA CURRICULAR Antonio Hernandez DIR PROGRAMAC.pdf" />
+    <Content Include="Content\files\curriculum\FICHA CURRICULAR ING ERICK DELGADO.pdf" />
+    <Content Include="Content\files\curriculum\FICHA CURRICULAR ING ORTIZ SUBSECRETARIO.pdf" />
+    <Content Include="Content\files\curriculum\FICHA CURRICULAR LIC CESAR RODRIGUEZ.pdf" />
+    <Content Include="Content\files\curriculum\FICHA CURRICULAR LIC GENARO ARCE.pdf" />
+    <Content Include="Content\files\curriculum\FICHA CURRICULAR MAYRA MORALES  SIESPLAN.pdf" />
+    <Content Include="Content\files\curriculum\FICHA CURRICULAR CUEVAS.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\SE 15.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\SE 16.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\SE 17.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SE\SE 18.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SO\10 SO.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SO\8 SO.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SO\9 SO.pdf" />
+    <EntityDeploy Include="Models\NoticiasSQLServer.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NoticiasSQLServer.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\NoticiasSQLServer.edmx.diagram">
+      <DependentUpon>NoticiasSQLServer.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\localftp.pubxml" />
+    <None Include="Properties\PublishProfiles\seplan_ftp.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\bootstrap.min.js" />
+    <Content Include="Scripts\js\core.js" />
+    <Content Include="Scripts\js\demo.js" />
+    <Content Include="Scripts\js\froogaloop.js" />
+    <Content Include="Scripts\js\jquery.easing.js" />
+    <Content Include="Scripts\js\jquery.fitvid.js" />
+    <Content Include="Scripts\js\jquery.flexslider.js" />
+    <Content Include="Scripts\js\jquery.js" />
+    <Content Include="Scripts\js\jquery.min.js" />
+    <Content Include="Scripts\js\jquery.mousewheel.js" />
+    <Content Include="Scripts\js\modernizr.js" />
+    <Content Include="Scripts\js\shBrushCss.js" />
+    <Content Include="Scripts\js\shBrushJScript.js" />
+    <Content Include="Scripts\js\shBrushXml.js" />
+    <Content Include="Scripts\js\shCore.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Conocenos\Antecedentes.cshtml" />
+    <Content Include="Views\Transparencia\InformesTrimestrales.cshtml" />
+    <Content Include="Views\Transparencia\ProyectosInversion.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Noticias\Create.cshtml" />
+    <Content Include="Views\Noticias\Delete.cshtml" />
+    <Content Include="Views\Noticias\Details.cshtml" />
+    <Content Include="Views\Noticias\Edit.cshtml" />
+    <Content Include="Views\Noticias\Index.cshtml" />
+    <Content Include="Views\V_top_noticias\Create.cshtml" />
+    <Content Include="Views\V_top_noticias\Delete.cshtml" />
+    <Content Include="Views\V_top_noticias\Details.cshtml" />
+    <Content Include="Views\V_top_noticias\Edit.cshtml" />
+    <Content Include="Views\V_top_noticias\Index.cshtml" />
+    <Content Include="Scripts\js\jquery.min.map" />
+    <Content Include="Views\Conocenos\MisionVision.cshtml" />
+    <Content Include="Views\Conocenos\Objetivos.cshtml" />
+    <Content Include="Views\Conocenos\Directorio.cshtml" />
+    <Content Include="Views\Conocenos\FuncionesPrincipales.cshtml" />
+    <Content Include="Views\Planeacion\pdm.cshtml" />
+    <Content Include="Views\Planeacion\SistemaDesempeño.cshtml" />
+    <Content Include="Views\Planeacion\CarteraProyectos.cshtml" />
+    <Content Include="Views\Planeacion\Index.cshtml" />
+    <Content Include="Views\Transparencia\ActasComite.cshtml" />
+    <Content Include="Views\Transparencia\AcuerdosNormatividad.cshtml" />
+    <Content Include="Views\Planeacion\Evaluación_2014.cshtml" />
+    <Content Include="Views\Transparencia\ArmonizacionContable.cshtml" />
+    <Content Include="Views\Planeacion\ASM_2017.cshtml" />
+    <Content Include="Views\Planeacion\ASM_2016.cshtml" />
+    <Content Include="Views\Planeacion\guia_MIR.cshtml" />
+    <Content Include="Views\Planeacion\Evaluación_2013.cshtml" />
+    <Content Include="Views\Planeacion\Evaluación_2012.cshtml" />
+    <Content Include="Views\Login\Iniciar.cshtml" />
+    <Content Include="Views\Shared\LayoutAuth.cshtml" />
+    <Content Include="Views\Login\VerDatos.cshtml" />
+    <Content Include="Views\Capturista\Bienvenido.cshtml" />
+    <Content Include="Views\Shared\LayoutCapturista.cshtml" />
+    <Content Include="Views\Administrador\Bienvenido.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\files\descargas\informes\recursos_financieros\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Content\images\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52329</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52329/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

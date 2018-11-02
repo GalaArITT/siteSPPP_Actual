@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--@Page.Title-->
+    <title>@Page.Title</title>
+    @RenderSection("head", required: false)
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109381096-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-109381096-1');
+    </script>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8" />
+    <title>Secretaría de Planeación Programación y Presupuesto</title>
+    <META NAME="title" CONTENT="Secretaría de Planeación Programación y Presupuesto" />
+    <META NAME="description" CONTENT="Ejercer la rectoría en materia de la planeación del desarrollo integral de la Entidad, así como la programación y presupuesto de la inversión, coordinando y estableciendo los lineamientos y criterios generales, para la formulación, instrumentación, control y evaluación de planes y programas que conlleven al bienestar social de la población, con base en el Plan Estatal de Desarrollo y el Sistema Estatal de Planeación." />
+    <META NAME="Author" CONTENT="Nayarit" />
+    <META name="robot" content="index,follow" />
+    <meta property="og:title" content="Secretaría de Planeación Programación y Presupuesto" />
+    <meta property="og:site_name" content="seplan" />
+    <meta property="og:url" content="http://www.seplan.gob.mx/" />
+    <meta property="og:description" content="Ejercer la rectoría en materia de la planeación del desarrollo integral de la Entidad, así como la programación y presupuesto de la inversión, coordinando y estableciendo los lineamientos y criterios generales, para la formulación, instrumentación, control y evaluación de planes y programas que conlleven al bienestar social de la población, con base en el Plan Estatal de Desarrollo y el Sistema Estatal de Planeación." />
+    <meta property="og:image" content="http://www.seplan.gob.mx/Content/images/sppp-logo.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="twitter:url" content="http://www.seplan.gob.mx/" />
+    <meta property="twitter:title" content="Secretaría de Planeación Programación y Presupuesto" />
+    <meta property="twitter:description" content="Ejercer la rectoría en materia de la planeación del desarrollo integral de la Entidad, así como la programación y presupuesto de la inversión, coordinando y estableciendo los lineamientos y criterios generales, para la formulación, instrumentación, control y evaluación de planes y programas que conlleven al bienestar social de la población, con base en el Plan Estatal de Desarrollo y el Sistema Estatal de Planeación." />
+    <meta name="twitter:image" content="http://www.seplan.gob.mx/Content/images/sppp-logo.jpg" />
+    <meta name="Keywords" content="nayarit, sppp, seplan, Planeación Programación y Presupuesto" />
+    <meta name="robots" content="index, follow" />
+    <meta name="generator" content="Nayarit" />
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'/>
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    @Styles.Render("~/Content/estiloSitio")
+
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="~/Scripts/js/jquery.min.js"></script>
+    <script src="~/Scripts/js/bootstrap.min.js"></script>
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="~/Content/images/favicon.ico" />
+
+</head>
+<body>
+
+    <!-- Primary Page Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Menu superior -->
+    <div class="section" id="superior" style="padding:0px;">
+        <img src="~/Content/images/boton_facebook.png" />
+
+    </div>
+    <!-- Encabezado -->
+    <div class="row">
+        <div class="container" id="div-img-container" style="margin-bottom:-50px;">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <img src="~/Content/images/bannerHEAD_1200x280.jpg" class="img-logo" style="width:100%" usemap="#Map" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Fin Encabezado -->
+
+    <div class="container">
+
+        <nav class="navbar navbar-light navbar-toggleable-md">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleCenteredNav" aria-expanded="false" aria-label="Toggle navigation" style="color:#fff">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExampleCenteredNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item2">
+                        <a class="nav-link nav-link2" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item nav-item2-separator"></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-link2 dropdown-toggle" href="/" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;&nbsp;Conócenos&nbsp;&nbsp;&nbsp;</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown03">
+                            <a class="dropdown-item" href="/Conocenos/Antecedentes">Antecedentes</a>
+                            <a class="dropdown-item" href="/Conocenos/MisionVision">Misión y Visión</a>
+                            <a class="dropdown-item" href="/Conocenos/Objetivos">Objetivo</a>
+                            <a class="dropdown-item" href="~/Content/images/organigrama_25_Oct_18.jpg" target="_blank">Organigrama</a>
+                            <a class="dropdown-item" href="/Conocenos/Directorio">Directorio</a>
+                            <a class="dropdown-item" href="/Conocenos/FuncionesPrincipales">Funciones Principales</a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-item2-separator"></li>
+                    @*<li class="nav-item2">
+                        <a class="nav-link nav-link2" href="/Noticias">Comunicación Social</a>
+                    </li>*@
+                    <li class="nav-item nav-item2-separator"></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-link2 dropdown-toggle" href="/" id="dropdown_pla" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;&nbsp;Planeación&nbsp;&nbsp;&nbsp;</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown_pla">
+                            <a class="dropdown-item" href="/Planeacion">Sistema Estatal de Planeación, Programación y Presupuesto</a>
+                            <a class="dropdown-item" href="http://pnd.gob.mx/" target="_blank">Plan Nacional de Desarrollo</a>
+                            <a class="dropdown-item" href="/Planeacion/pdm">Planes Municipales de Desarrollo</a>
+                            <a class="dropdown-item" href="/Planeacion/SistemaDesempeño">Sistema de Evaluación del Desempeño</a>
+                            <a class="dropdown-item" href="/Planeacion/CarteraProyectos">Registro en SHCP mes de la Cartera de Proyectos</a>
+                            <a class="dropdown-item" href="~/Content/files/descargas/PBR.zip">Reforma Gerencial de la Gestión Pública</a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-item2-separator"></li>
+                    <li class="nav-item2">
+                        <a class="nav-link nav-link2" href="~/Content/files/PED_NAYARIT_2017-2021.pdf" target="_blank">PED 2017-2021</a>
+                    </li>
+                    <li class="nav-item nav-item2-separator"></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-link2 dropdown-toggle" href="/" id="dropdowntrans" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;&nbsp;Transparencia&nbsp;&nbsp;&nbsp;</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdowntrans">
+                            @*<a class="dropdown-item" href="/Transparencia/pni">Plan Nacional de Insfraestructura</a>*@
+                            <a class="dropdown-item" href="http://nayarit.gob.mx/transparenciafiscal/" target="_blank">Transparencia  fiscal</a>
+                            <a class="dropdown-item" href="http://transparencia.nayarit.gob.mx/" target="_blank">Portal de Transparencia</a>
+                            @*<a class="dropdown-item" href="/Transparencia/ArmonizacionContable">Avances de la Armonización Contable</a>*@
+                            <a class="dropdown-item" href="/Transparencia/ProyectosInversion">Cartera Proyectos de Inversión</a>
+                            @*<a class="dropdown-item" href="/Transparencia/Macroindicadores">Macroindicadores</a>
+                            <a class="dropdown-item" href="http://www.centroccidente.org.mx" target="_blank">FIDERCO</a>*@
+                            <a class="dropdown-item" href="/Transparencia/InformesTrimestrales">Informes Trimestrales</a>
+                            @*<a class="dropdown-item" href="/Trasparencia/POA">Programas Operativos Anuales Proyectados</a>
+                                <a class="dropdown-item" href="/Transparencia/AcuerdosAnexosConvenios">Acuerdos, Anexos y Convenios</a>*@
+                            <a class="dropdown-item" href="/Transparencia/ActasComite">Actas del Comité de Información</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+    <div class="section" style="padding:0px;">
+        <div class="container formulario">
+            <div class="row">
+                <div class="nine columns">
+                    @RenderBody()
+                </div>
+                <div class="three columns">
+                    <div id="menulateral">
+                        <b>Transparencia</b>
+                        <label><a href="http://transparencia.nayarit.gob.mx/" target="_blank">Transparencia SPPP</a></label>
+                        <label><a href="">Informes de Gobierno</a></label>
+                        <label><a href="/Transparencia/InformesTrimestrales">Informes Trimestrales</a></label>
+                        @*<label><a href="">Información financiera</a></label>*@
+                        <b>Enlaces de Interés</b>
+                        <label><a href="http://www.nayarit.gob.mx" target="_blank">Gobierno del Estado de Nayarit </a></label>
+                        <b>Sistemas</b>
+                        <label><a href="http://svo-14-93.servidoresvirtuales.mx/apex/f?p=124" target="_blank">Simon</a></label>
+                        <label><a href="/Login/Iniciar" target="_blank">Seplan Noticias</a></label>
+                    </div><!-- termina menu -->
+                    <div class="redes">
+                        <div id="fb-root"></div>
+                        <script>
+(function (d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) return;
+                                js = d.createElement(s); js.id = id;
+                                js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11&appId=272289562863753';
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-page" data-href="https://www.facebook.com/spppnayarit/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/spppnayarit/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/spppnayarit/">Secretaría de Planeación, Programación y Presupuesto de Nayarit</a></blockquote></div>
+
+                    </div>
+
+                </div><!-- columns -->
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div id="intfoot"> &nbsp; </div>
+        <div class="container">
+            <div class="footal">
+                <b>SECRETARÍA DE PLANEACIÓN, PROGRAMACIÓN Y PRESUPUESTO (SPPP)</b><br />
+                AVENIDA DE LOS INSURGENTES ESQUINA REY NAYAR S/N COLONIA BURÓCRATAS FEDERAL C.P. 63156.  <br />TEPIC, NAYARIT.<br />
+            </div>
+
+            <div class="footnum">
+                TEL. (311) 211 9200. FAX (311) 213 5471
+            </div>
+
+
+            <div class="footder">
+                DERECHOS RESERVADOS
+            </div>
+
+        </div>
+    </div>
+
+    <!-- jQuery
+    <script src= http: //ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+    -->
+    <script>window.jQuery || document.write('<script src="~/Scripts/js/jquery.min.js">\x3C/script>')</script>
+
+    <!-- FlexSlider -->
+    <script defer src="~/Scripts/js/jquery.flexslider.js"></script>
+
+
+    <script type="text/javascript">
+                        $(function () {
+                            SyntaxHighlighter.all();
+                        });
+                        $(window).load(function () {
+                            $('.flexslider').flexslider({
+                                animation: "slide",
+                                start: function (slider) {
+                                    $('body').removeClass('loading');
+                                }
+                            });
+                        });
+
+                        $("#iconmov").click(function () {
+                            if ($("#menumov:first").is(":hidden")) {
+                                $("#menumov").slideDown("slow");
+                            } else {
+                                $("#menumov").hide(1000);
+                            }
+                        });
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121907661-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121907661-1');
+    </script>
+
+    <!-- Syntax Highlighter
+    <script type="text/javascript" src="funciones/woocommerce-FlexSlider-2.6.4-1-g0d95828/woocommerce-FlexSlider-0d95828/demo/js/shCore.js"></script>
+    <script type="text/javascript" src="funciones/woocommerce-FlexSlider-2.6.4-1-g0d95828/woocommerce-FlexSlider-0d95828/demo/js/shBrushXml.js"></script>
+    <script type="text/javascript" src="funciones/woocommerce-FlexSlider-2.6.4-1-g0d95828/woocommerce-FlexSlider-0d95828/demo/js/shBrushJScript.js"></script>
+
+    <!-- End Document
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+</body>
+</html>

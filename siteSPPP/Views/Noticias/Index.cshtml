@@ -1,0 +1,178 @@
+﻿@model IEnumerable<siteSPPP.Models.Noticias>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EVENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TITULO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENCABEZADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_PUBLICACION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RESPONSABLE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EVENTO2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BALAZO1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_FOTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VER_COPLADENAY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VER_SEPLAN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VER_COCYTEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VER_FOMIX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VER_INTRANET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BALAZO2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BALAZO3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LUGAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRIORIDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EVENTO3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SOLO_MEDIOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PARTICIPANTES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RESENIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VER_DIF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USUARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EVENTO4)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EVENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TITULO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENCABEZADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_PUBLICACION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RESPONSABLE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EVENTO2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BALAZO1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_FOTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VER_COPLADENAY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VER_SEPLAN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VER_COCYTEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VER_FOMIX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VER_INTRANET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BALAZO2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BALAZO3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LUGAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRIORIDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EVENTO3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SOLO_MEDIOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PARTICIPANTES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RESENIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VER_DIF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USUARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EVENTO4)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_NOTICIA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_NOTICIA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_NOTICIA })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sitio_seplaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DEPARTAMENTOS">
+    <Key>
+      <PropertyRef Name="IDDEPARTAMENTO" />
+    </Key>
+    <Property Name="IDDEPARTAMENTO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBREDEPTO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SERVIDORESPUBLICOS" Relationship="Self.FK_SERVIDORES_DEPTO" FromRole="DEPARTAMENTOS" ToRole="SERVIDORESPUBLICOS" />
+  </EntityType>
+  <EntityType Name="INFORMACION">
+    <Key>
+      <PropertyRef Name="IDINFORMACION" />
+    </Key>
+    <Property Name="IDINFORMACION" Type="Int32" Nullable="false" />
+    <Property Name="ANTECEDENTES" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="MISION" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="VISION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="OBJETIVO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NOTICIAS_SEPLAN">
+    <Key>
+      <PropertyRef Name="IDNOTICIA" />
+    </Key>
+    <Property Name="IDNOTICIA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUSUARIO" Type="Int32" />
+    <Property Name="TITULO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ENCABEZADO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FECHAPUBLIC" Type="DateTime" Precision="7" />
+    <Property Name="RESPONSABLE" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="BALAZO1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BALAZO2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BALAZO3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="VER_COPLADENAY" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VER_SEPLAN" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="VER_INTRANET" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="LUGAR" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="PRIORIDAD" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="SOLO_MEDIOS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="PARTICIPANTES" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="RESENIA" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="FOTO_PRINCIPAL" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PIE_FOTO_PRINCIPAL" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="FOTO_2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PIE_FOTO_2" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="FOTO_3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PIE_FOTO_3" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="FOTO_4" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PIE_FOTO_4" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="FOTO_5" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PIE_FOTO_5" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="FOTO_6" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.FK_NOTICIAS_REFERENCE_USUARIO" FromRole="NOTICIAS_SEPLAN" ToRole="USUARIO" />
+    <Property Name="PIE_FOTO_6" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SERVIDORESPUBLICOS">
+    <Key>
+      <PropertyRef Name="IDSERVPUB" />
+    </Key>
+    <Property Name="IDSERVPUB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDDEPARTAMENTO" Type="Int32" />
+    <Property Name="NOMBREPERSONAL" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="NOMBRAMIENTO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CONMUTADOR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EXT" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="FOTOPERSONAL" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CORREO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CURRICULUM" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ESTATUS" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="DEPARTAMENTOS" Relationship="Self.FK_SERVIDORES_DEPTO" FromRole="SERVIDORESPUBLICOS" ToRole="DEPARTAMENTOS" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="IDUSUARIO" />
+    </Key>
+    <Property Name="IDUSUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USUARIOINICIA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CONTRASENA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NOMBREUSUARIO" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="ROL" Type="Byte" />
+    <Property Name="ESTATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NOTICIAS_SEPLAN" Relationship="Self.FK_NOTICIAS_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="NOTICIAS_SEPLAN" />
+  </EntityType>
+  <Association Name="FK_SERVIDORES_DEPTO">
+    <End Role="DEPARTAMENTOS" Type="Self.DEPARTAMENTOS" Multiplicity="0..1" />
+    <End Role="SERVIDORESPUBLICOS" Type="Self.SERVIDORESPUBLICOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPARTAMENTOS">
+        <PropertyRef Name="IDDEPARTAMENTO" />
+      </Principal>
+      <Dependent Role="SERVIDORESPUBLICOS">
+        <PropertyRef Name="IDDEPARTAMENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NOTICIAS_REFERENCE_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="NOTICIAS_SEPLAN" Type="Self.NOTICIAS_SEPLAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="NOTICIAS_SEPLAN">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="sitio_seplaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DEPARTAMENTOS" EntityType="Self.DEPARTAMENTOS" />
+    <EntitySet Name="INFORMACION" EntityType="Self.INFORMACION" />
+    <EntitySet Name="NOTICIAS_SEPLAN" EntityType="Self.NOTICIAS_SEPLAN" />
+    <EntitySet Name="SERVIDORESPUBLICOS" EntityType="Self.SERVIDORESPUBLICOS" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+    <AssociationSet Name="FK_SERVIDORES_DEPTO" Association="Self.FK_SERVIDORES_DEPTO">
+      <End Role="DEPARTAMENTOS" EntitySet="DEPARTAMENTOS" />
+      <End Role="SERVIDORESPUBLICOS" EntitySet="SERVIDORESPUBLICOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NOTICIAS_REFERENCE_USUARIO" Association="Self.FK_NOTICIAS_REFERENCE_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="NOTICIAS_SEPLAN" EntitySet="NOTICIAS_SEPLAN" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
