@@ -11,5 +11,6 @@ namespace siteSPPP.Models
         //NOTICIAS_SEPLAN
         [MetadataType(typeof(NOTICIAS_SEPLAN_Metadatos))]
         public partial class NOTICIAS_SEPLAN { }
+
     }
 }

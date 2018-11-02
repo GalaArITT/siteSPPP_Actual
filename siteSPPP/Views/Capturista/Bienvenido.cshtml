@@ -1,9 +1,5 @@
 ﻿@{
     Layout = "~/Views/Shared/LayoutCapturista.cshtml";
-    if (Session["IDUSUARIO"]==null)
-    {
-        Response.Redirect("~/Login/Iniciar");
-    }
 }
 
 <h2>Bienvenido @Session["NOMBREUSUARIO"]</h2>

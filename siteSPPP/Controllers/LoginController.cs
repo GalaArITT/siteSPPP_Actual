@@ -31,38 +31,41 @@ namespace siteSPPP.Controllers
                 //validar que no se cierre la sesión con el usuario autenticado
                 //consultar el usuario capturista
                 var userDetails = db.USUARIO.Where(x => x.USUARIOINICIA == userModel.USUARIOINICIA && x.CONTRASENA == userModel.CONTRASENA)
-                    .Where(s=>s.ROL==1 && s.ESTATUS == "A")
+                    .Where(s => s.ROL == 1 && s.ESTATUS == "A")
                     .FirstOrDefault();
                 //consultar usuario administrador
                 var userDetailsAdmin = db.USUARIO.Where(x => x.USUARIOINICIA == userModel.USUARIOINICIA && x.CONTRASENA == userModel.CONTRASENA)
-                    .Where(s => s.ROL == 2 && s.ESTATUS=="A")
+                    .Where(s => s.ROL == 2 && s.ESTATUS == "A")
                     .FirstOrDefault();
 
-                if (userDetails == null && userDetailsAdmin==null)
+                if (userDetails == null && userDetailsAdmin == null)
                 {
                     ViewBag.Message = "Datos incorrectos, verifique su información";
                     return View("Iniciar", userModel);
                 }
 
                 //para usuario capturista
-                if (userDetails!=null)
+                if (userDetails != null)
                 {
                     //Datos del usuario
                     Session["IDUSUARIO"] = userDetails.IDUSUARIO;
                     Session["NOMBREUSUARIO"] = userDetails.NOMBREUSUARIO;
                     Session["ROL"] = userDetails.ROL;
+                    //short idUsuario = short.Parse("1");
                     int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
-                    ViewBag.rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                    FormsAuthentication.SetAuthCookie(idUsuario.ToString(), false);
+                    //ViewBag.rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
                     return RedirectToAction("Bienvenido", "Capturista");//("Vista","Controlador")
                 }
-                if (userDetailsAdmin!=null)
+                if (userDetailsAdmin != null)
                 {
                     //Datos del usuario
                     Session["IDUSUARIO"] = userDetailsAdmin.IDUSUARIO;
                     Session["NOMBREUSUARIO"] = userDetailsAdmin.NOMBREUSUARIO;
                     Session["ROL"] = userDetailsAdmin.ROL;
                     int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
-                    ViewBag.rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                    FormsAuthentication.SetAuthCookie(idUsuario.ToString(), false);
+                    //ViewBag.rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
                     return RedirectToAction("Bienvenido", "Administrador");//("Vista","Controlador")
                 }
                 return null;
@@ -70,13 +73,15 @@ namespace siteSPPP.Controllers
         }
         public ActionResult VerDatos()
         {
-            return View(db.USUARIO.ToList().Where(x=>x.ROL==1));
+            return View(db.USUARIO.ToList().Where(x => x.ROL == 1));
         }
         public ActionResult Logout()
         {
             Session.Abandon();
             return RedirectToAction("Iniciar", "Login");
+    
         }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
