@@ -12,28 +12,17 @@ namespace siteSPPP.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class USUARIO
+    public partial class TIPO_PLANTILLA
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public USUARIO()
+        public TIPO_PLANTILLA()
         {
-            this.INFORMES = new HashSet<INFORMES>();
-            this.NOTICIAS = new HashSet<NOTICIAS_SEPLAN>();
             this.PLANTILLA = new HashSet<PLANTILLA>();
         }
     
-        public int IDUSUARIO { get; set; }
-        public string USUARIOINICIA { get; set; }
-        public string CONTRASENA { get; set; }
-        public string NOMBREUSUARIO { get; set; }
-        public Nullable<byte> ROL { get; set; }
-        public string ESTATUS { get; set; }
-        public Nullable<System.DateTime> FECHAREGISTRO { get; set; }
+        public int IDTIPO { get; set; }
+        public string TIPOPLANTILLA { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<INFORMES> INFORMES { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NOTICIAS_SEPLAN> NOTICIAS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PLANTILLA> PLANTILLA { get; set; }
     }

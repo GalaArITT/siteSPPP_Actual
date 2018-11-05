@@ -1,11 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="sitio_seplaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BALAZO">
+    <Key>
+      <PropertyRef Name="IDBALAZO" />
+    </Key>
+    <Property Name="IDBALAZO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDNOTICIA" Type="int" />
+    <Property Name="DATOBALAZO" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
   <EntityType Name="DEPARTAMENTOS">
     <Key>
       <PropertyRef Name="IDDEPARTAMENTO" />
     </Key>
     <Property Name="IDDEPARTAMENTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NOMBREDEPTO" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="FOTOS">
+    <Key>
+      <PropertyRef Name="IDNOTICIA" />
+    </Key>
+    <Property Name="IDNOTICIA" Type="int" Nullable="false" />
+    <Property Name="IDFOTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FOTOGRAFIA" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="INFORMACION">
     <Key>
@@ -17,39 +33,42 @@
     <Property Name="VISION" Type="nvarchar" MaxLength="200" />
     <Property Name="OBJETIVO" Type="nvarchar" MaxLength="200" />
   </EntityType>
-  <EntityType Name="NOTICIAS_SEPLAN">
+  <EntityType Name="INFORMES">
+    <Key>
+      <PropertyRef Name="IDINFORME" />
+    </Key>
+    <Property Name="IDINFORME" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDTIPO" Type="int" />
+    <Property Name="IDUSUARIO" Type="int" />
+    <Property Name="NOMFREINFORME" Type="nvarchar" MaxLength="50" />
+    <Property Name="ARCHIVOINFORME" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="NOTICIAS">
     <Key>
       <PropertyRef Name="IDNOTICIA" />
     </Key>
     <Property Name="IDNOTICIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IDUSUARIO" Type="int" />
-    <Property Name="TITULO" Type="nvarchar(max)" />
-    <Property Name="ENCABEZADO" Type="nvarchar(max)" />
+    <Property Name="TITULO" Type="nvarchar" MaxLength="225" />
+    <Property Name="CONTENIDO" Type="nvarchar(max)" />
     <Property Name="FECHAPUBLIC" Type="datetime2" Precision="7" />
-    <Property Name="RESPONSABLE" Type="nvarchar" MaxLength="150" />
-    <Property Name="BALAZO1" Type="nvarchar" MaxLength="200" />
-    <Property Name="BALAZO2" Type="nvarchar" MaxLength="200" />
-    <Property Name="BALAZO3" Type="nvarchar" MaxLength="200" />
-    <Property Name="VER_COPLADENAY" Type="nvarchar" MaxLength="1" />
-    <Property Name="VER_SEPLAN" Type="nvarchar" MaxLength="1" />
-    <Property Name="VER_INTRANET" Type="nvarchar" MaxLength="1" />
     <Property Name="LUGAR" Type="nvarchar" MaxLength="150" />
-    <Property Name="PRIORIDAD" Type="numeric" Precision="2" Scale="0" />
-    <Property Name="SOLO_MEDIOS" Type="nvarchar" MaxLength="1" />
     <Property Name="PARTICIPANTES" Type="nvarchar" MaxLength="300" />
-    <Property Name="RESENIA" Type="nvarchar" MaxLength="400" />
-    <Property Name="FOTO_PRINCIPAL" Type="varbinary(max)" />
-    <Property Name="PIE_FOTO_PRINCIPAL" Type="nvarchar" MaxLength="300" />
-    <Property Name="FOTO_2" Type="varbinary(max)" />
-    <Property Name="PIE_FOTO_2" Type="nvarchar" MaxLength="300" />
-    <Property Name="FOTO_3" Type="varbinary(max)" />
-    <Property Name="PIE_FOTO_3" Type="nvarchar" MaxLength="300" />
-    <Property Name="FOTO_4" Type="varbinary(max)" />
-    <Property Name="PIE_FOTO_4" Type="nvarchar" MaxLength="300" />
-    <Property Name="FOTO_5" Type="varbinary(max)" />
-    <Property Name="PIE_FOTO_5" Type="nvarchar" MaxLength="300" />
-    <Property Name="FOTO_6" Type="varbinary(max)" />
-    <Property Name="PIE_FOTO_6" Type="nvarchar" MaxLength="300" />
+    <Property Name="VER_COPLADENAY" Type="bit" />
+    <Property Name="VER_SEPLAN" Type="bit" />
+    <Property Name="VER_INTRANET" Type="bit" />
+    <Property Name="SOLO_MEDIOS" Type="bit" />
+    <Property Name="PRIORIDAD" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="PLANTILLA">
+    <Key>
+      <PropertyRef Name="IDPLANTILLA" />
+    </Key>
+    <Property Name="IDPLANTILLA" Type="int" Nullable="false" />
+    <Property Name="IDUSUARIO" Type="int" />
+    <Property Name="IDTIPO" Type="int" />
+    <Property Name="TITULO" Type="nvarchar" MaxLength="100" />
+    <Property Name="CONTENIDO" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="SERVIDORESPUBLICOS">
     <Key>
@@ -60,11 +79,26 @@
     <Property Name="NOMBREPERSONAL" Type="nvarchar" MaxLength="300" />
     <Property Name="NOMBRAMIENTO" Type="nvarchar" MaxLength="100" />
     <Property Name="CONMUTADOR" Type="nvarchar" MaxLength="20" />
-    <Property Name="EXT" Type="nvarchar" MaxLength="3" />
+    <Property Name="EXTENSION" Type="nvarchar" MaxLength="3" />
     <Property Name="FOTOPERSONAL" Type="varbinary(max)" />
     <Property Name="CORREO" Type="nvarchar" MaxLength="50" />
     <Property Name="CURRICULUM" Type="varbinary(max)" />
     <Property Name="ESTATUS" Type="nchar" MaxLength="1" />
+    <Property Name="FECHAREGISTRO" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TIPO_INFORME">
+    <Key>
+      <PropertyRef Name="IDTIPO" />
+    </Key>
+    <Property Name="IDTIPO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TIPOINFORME" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TIPO_PLANTILLA">
+    <Key>
+      <PropertyRef Name="IDTIPO" />
+    </Key>
+    <Property Name="IDTIPO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TIPOPLANTILLA" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="USUARIO">
     <Key>
@@ -76,15 +110,88 @@
     <Property Name="NOMBREUSUARIO" Type="nvarchar" MaxLength="400" />
     <Property Name="ROL" Type="tinyint" />
     <Property Name="ESTATUS" Type="nvarchar" MaxLength="1" />
+    <Property Name="FECHAREGISTRO" Type="datetime2" Precision="7" />
   </EntityType>
-  <Association Name="FK_NOTICIAS_REFERENCE_USUARIO">
+  <Association Name="FK_BALAZO_REFERENCE_NOTICIAS">
+    <End Role="NOTICIAS" Type="Self.NOTICIAS" Multiplicity="0..1" />
+    <End Role="BALAZO" Type="Self.BALAZO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NOTICIAS">
+        <PropertyRef Name="IDNOTICIA" />
+      </Principal>
+      <Dependent Role="BALAZO">
+        <PropertyRef Name="IDNOTICIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FOTOS_REFERENCE_NOTICIAS">
+    <End Role="NOTICIAS" Type="Self.NOTICIAS" Multiplicity="1" />
+    <End Role="FOTOS" Type="Self.FOTOS" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="NOTICIAS">
+        <PropertyRef Name="IDNOTICIA" />
+      </Principal>
+      <Dependent Role="FOTOS">
+        <PropertyRef Name="IDNOTICIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INFORMES_REFERENCE_TIPO_INF">
+    <End Role="TIPO_INFORME" Type="Self.TIPO_INFORME" Multiplicity="0..1" />
+    <End Role="INFORMES" Type="Self.INFORMES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_INFORME">
+        <PropertyRef Name="IDTIPO" />
+      </Principal>
+      <Dependent Role="INFORMES">
+        <PropertyRef Name="IDTIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INFORMES_REFERENCE_USUARIO">
     <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
-    <End Role="NOTICIAS_SEPLAN" Type="Self.NOTICIAS_SEPLAN" Multiplicity="*" />
+    <End Role="INFORMES" Type="Self.INFORMES" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="USUARIO">
         <PropertyRef Name="IDUSUARIO" />
       </Principal>
-      <Dependent Role="NOTICIAS_SEPLAN">
+      <Dependent Role="INFORMES">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NOTICIAS_REFERENCE_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="NOTICIAS" Type="Self.NOTICIAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="NOTICIAS">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PLANTILL_REFERENCE_TIPO_PLA">
+    <End Role="TIPO_PLANTILLA" Type="Self.TIPO_PLANTILLA" Multiplicity="0..1" />
+    <End Role="PLANTILLA" Type="Self.PLANTILLA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_PLANTILLA">
+        <PropertyRef Name="IDTIPO" />
+      </Principal>
+      <Dependent Role="PLANTILLA">
+        <PropertyRef Name="IDTIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PLANTILL_REFERENCE_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="PLANTILLA" Type="Self.PLANTILLA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="PLANTILLA">
         <PropertyRef Name="IDUSUARIO" />
       </Dependent>
     </ReferentialConstraint>
@@ -102,14 +209,44 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="sitio_seplaModelStoreContainer">
+    <EntitySet Name="BALAZO" EntityType="Self.BALAZO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DEPARTAMENTOS" EntityType="Self.DEPARTAMENTOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FOTOS" EntityType="Self.FOTOS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="INFORMACION" EntityType="Self.INFORMACION" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="NOTICIAS_SEPLAN" EntityType="Self.NOTICIAS_SEPLAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INFORMES" EntityType="Self.INFORMES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NOTICIAS" EntityType="Self.NOTICIAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PLANTILLA" EntityType="Self.PLANTILLA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SERVIDORESPUBLICOS" EntityType="Self.SERVIDORESPUBLICOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_INFORME" EntityType="Self.TIPO_INFORME" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_PLANTILLA" EntityType="Self.TIPO_PLANTILLA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BALAZO_REFERENCE_NOTICIAS" Association="Self.FK_BALAZO_REFERENCE_NOTICIAS">
+      <End Role="NOTICIAS" EntitySet="NOTICIAS" />
+      <End Role="BALAZO" EntitySet="BALAZO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FOTOS_REFERENCE_NOTICIAS" Association="Self.FK_FOTOS_REFERENCE_NOTICIAS">
+      <End Role="NOTICIAS" EntitySet="NOTICIAS" />
+      <End Role="FOTOS" EntitySet="FOTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INFORMES_REFERENCE_TIPO_INF" Association="Self.FK_INFORMES_REFERENCE_TIPO_INF">
+      <End Role="TIPO_INFORME" EntitySet="TIPO_INFORME" />
+      <End Role="INFORMES" EntitySet="INFORMES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INFORMES_REFERENCE_USUARIO" Association="Self.FK_INFORMES_REFERENCE_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="INFORMES" EntitySet="INFORMES" />
+    </AssociationSet>
     <AssociationSet Name="FK_NOTICIAS_REFERENCE_USUARIO" Association="Self.FK_NOTICIAS_REFERENCE_USUARIO">
       <End Role="USUARIO" EntitySet="USUARIO" />
-      <End Role="NOTICIAS_SEPLAN" EntitySet="NOTICIAS_SEPLAN" />
+      <End Role="NOTICIAS" EntitySet="NOTICIAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PLANTILL_REFERENCE_TIPO_PLA" Association="Self.FK_PLANTILL_REFERENCE_TIPO_PLA">
+      <End Role="TIPO_PLANTILLA" EntitySet="TIPO_PLANTILLA" />
+      <End Role="PLANTILLA" EntitySet="PLANTILLA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PLANTILL_REFERENCE_USUARIO" Association="Self.FK_PLANTILL_REFERENCE_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="PLANTILLA" EntitySet="PLANTILLA" />
     </AssociationSet>
     <AssociationSet Name="FK_SERVIDORES_DEPTO" Association="Self.FK_SERVIDORES_DEPTO">
       <End Role="DEPARTAMENTOS" EntitySet="DEPARTAMENTOS" />

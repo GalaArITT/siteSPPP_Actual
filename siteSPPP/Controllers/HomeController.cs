@@ -6,8 +6,7 @@ namespace siteSPPP.Controllers
 {
     public class HomeController : Controller
     {
-        private ModeloNoticias db = new ModeloNoticias();
-
+        
         // GET: V_top_noticias
         public ActionResult Index()
         {

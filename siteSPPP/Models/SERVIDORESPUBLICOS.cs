@@ -19,11 +19,12 @@ namespace siteSPPP.Models
         public string NOMBREPERSONAL { get; set; }
         public string NOMBRAMIENTO { get; set; }
         public string CONMUTADOR { get; set; }
-        public string EXT { get; set; }
+        public string EXTENSION { get; set; }
         public byte[] FOTOPERSONAL { get; set; }
         public string CORREO { get; set; }
         public byte[] CURRICULUM { get; set; }
         public string ESTATUS { get; set; }
+        public Nullable<System.DateTime> FECHAREGISTRO { get; set; }
     
         public virtual DEPARTAMENTOS DEPARTAMENTOS { get; set; }
     }

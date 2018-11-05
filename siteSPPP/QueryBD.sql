@@ -1,5 +1,147 @@
 ﻿USE sitio_sepla
 GO
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('BALAZO') and o.name = 'FK_BALAZO_REFERENCE_NOTICIAS')
+alter table BALAZO
+   drop constraint FK_BALAZO_REFERENCE_NOTICIAS
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('FOTOS') and o.name = 'FK_FOTOS_REFERENCE_NOTICIAS')
+alter table FOTOS
+   drop constraint FK_FOTOS_REFERENCE_NOTICIAS
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('INFORMES') and o.name = 'FK_INFORMES_REFERENCE_TIPO_INF')
+alter table INFORMES
+   drop constraint FK_INFORMES_REFERENCE_TIPO_INF
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('INFORMES') and o.name = 'FK_INFORMES_REFERENCE_USUARIO')
+alter table INFORMES
+   drop constraint FK_INFORMES_REFERENCE_USUARIO
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('NOTICIAS') and o.name = 'FK_NOTICIAS_REFERENCE_USUARIO')
+alter table NOTICIAS
+   drop constraint FK_NOTICIAS_REFERENCE_USUARIO
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('PLANTILLA') and o.name = 'FK_PLANTILL_REFERENCE_USUARIO')
+alter table PLANTILLA
+   drop constraint FK_PLANTILL_REFERENCE_USUARIO
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('PLANTILLA') and o.name = 'FK_PLANTILL_REFERENCE_TIPO_PLA')
+alter table PLANTILLA
+   drop constraint FK_PLANTILL_REFERENCE_TIPO_PLA
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('SERVIDORESPUBLICOS') and o.name = 'FK_SERVIDORES_DEPTO')
+alter table SERVIDORESPUBLICOS
+   drop constraint FK_SERVIDORES_DEPTO
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('BALAZO')
+            and   type = 'U')
+   drop table BALAZO
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('DEPARTAMENTOS')
+            and   type = 'U')
+   drop table DEPARTAMENTOS
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('FOTOS')
+            and   type = 'U')
+   drop table FOTOS
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('INFORMACION')
+            and   type = 'U')
+   drop table INFORMACION
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('INFORMES')
+            and   type = 'U')
+   drop table INFORMES
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('NOTICIAS')
+            and   type = 'U')
+   drop table NOTICIAS
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('PLANTILLA')
+            and   type = 'U')
+   drop table PLANTILLA
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('SERVIDORESPUBLICOS')
+            and   type = 'U')
+   drop table SERVIDORESPUBLICOS
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('TIPO_INFORME')
+            and   type = 'U')
+   drop table TIPO_INFORME
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('TIPO_PLANTILLA')
+            and   type = 'U')
+   drop table TIPO_PLANTILLA
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('USUARIO')
+            and   type = 'U')
+   drop table USUARIO
+go
+
+/*==============================================================*/
+/* Table: BALAZO                                                */
+/*==============================================================*/
+create table BALAZO (
+   IDBALAZO             int                  identity,
+   IDNOTICIA            int                  null,
+   DATOBALAZO           nvarchar(200)        not null,
+   constraint PK_BALAZO primary key (IDBALAZO)
+)
 go
 
 /*==============================================================*/
@@ -9,6 +151,17 @@ create table DEPARTAMENTOS (
    IDDEPARTAMENTO       int                  identity,
    NOMBREDEPTO          nvarchar(100)        null,
    constraint PK_DEPARTAMENTOS primary key (IDDEPARTAMENTO)
+)
+go
+
+/*==============================================================*/
+/* Table: FOTOS                                                 */
+/*==============================================================*/
+create table FOTOS (
+   IDNOTICIA            int                  not null,
+   IDFOTO               int                  identity,
+   FOTOGRAFIA           varbinary(Max)       null,
+   constraint PK_FOTOS primary key (IDNOTICIA)
 )
 go
 
@@ -26,39 +179,48 @@ create table INFORMACION (
 go
 
 /*==============================================================*/
-/* Table: NOTICIAS_SEPLAN                                       */
+/* Table: INFORMES                                              */
 /*==============================================================*/
-create table NOTICIAS_SEPLAN (
+create table INFORMES (
+   IDINFORME            int                  identity,
+   IDTIPO               int                  null,
+   IDUSUARIO            int                  null,
+   NOMFREINFORME        nvarchar(50)         null,
+   ARCHIVOINFORME       varbinary(Max)       null,
+   constraint PK_INFORMES primary key (IDINFORME)
+)
+go
+
+/*==============================================================*/
+/* Table: NOTICIAS                                              */
+/*==============================================================*/
+create table NOTICIAS (
    IDNOTICIA            int                  identity,
    IDUSUARIO            int                  null,
-   TITULO               nvarchar(Max)        null,
-   ENCABEZADO           nvarchar(Max)        null,
+   TITULO               nvarchar(225)        null,
+   CONTENIDO            nvarchar(Max)        null,
    FECHAPUBLIC          datetime2            null,
-   RESPONSABLE          nvarchar(150)        null,
-   BALAZO1              nvarchar(200)        null,
-   BALAZO2              nvarchar(200)        null,
-   BALAZO3              nvarchar(200)        null,
-   VER_COPLADENAY       nvarchar(1)          null,
-   VER_SEPLAN           nvarchar(1)          null,
-   VER_INTRANET         nvarchar(1)          null,
    LUGAR                nvarchar(150)        null,
-   PRIORIDAD            numeric(2,0)         null,
-   SOLO_MEDIOS          nvarchar(1)          null,
    PARTICIPANTES        nvarchar(300)        null,
-   RESENIA              nvarchar(400)        null,
-   FOTO_PRINCIPAL       varbinary(max)       null,
-   PIE_FOTO_PRINCIPAL   nvarchar(300)        null,
-   FOTO_2               varbinary(max)       null,
-   PIE_FOTO_2           nvarchar(300)        null,
-   FOTO_3               varbinary(max)       null,
-   PIE_FOTO_3           nvarchar(300)        null,
-   FOTO_4               varbinary(max)       null,
-   PIE_FOTO_4           nvarchar(300)        null,
-   FOTO_5               varbinary(max)       null,
-   PIE_FOTO_5           nvarchar(300)        null,
-   FOTO_6               varbinary(max)       null,
-   PIE_FOTO_6           nvarchar(300)        null,
-   constraint PK_NOTICIAS_SEPLAN primary key (IDNOTICIA)
+   VER_COPLADENAY       bit                  null,
+   VER_SEPLAN           bit                  null,
+   VER_INTRANET         bit                  null,
+   SOLO_MEDIOS          bit                  null,
+   PRIORIDAD            tinyint              null,
+   constraint PK_NOTICIAS primary key (IDNOTICIA)
+)
+go
+
+/*==============================================================*/
+/* Table: PLANTILLA                                             */
+/*==============================================================*/
+create table PLANTILLA (
+   IDPLANTILLA          int                  not null,
+   IDUSUARIO            int                  null,
+   IDTIPO               int                  null,
+   TITULO               nvarchar(100)        null,
+   CONTENIDO            nvarchar(Max)        null,
+   constraint PK_PLANTILLA primary key (IDPLANTILLA)
 )
 go
 
@@ -71,12 +233,33 @@ create table SERVIDORESPUBLICOS (
    NOMBREPERSONAL       nvarchar(300)        null,
    NOMBRAMIENTO         nvarchar(100)        null,
    CONMUTADOR           nvarchar(20)         null,
-   EXT                  nvarchar(3)          null,
+   EXTENSION            nvarchar(3)          null,
    FOTOPERSONAL         varbinary(Max)       null,
    CORREO               nvarchar(50)         null,
    CURRICULUM           varbinary(Max)       null,
    ESTATUS              nchar(1)             null,
+   FECHAREGISTRO        Datetime             null,
    constraint PK_SERVIDORESPUBLICOS primary key (IDSERVPUB)
+)
+go
+
+/*==============================================================*/
+/* Table: TIPO_INFORME                                          */
+/*==============================================================*/
+create table TIPO_INFORME (
+   IDTIPO               int                  identity,
+   TIPOINFORME          nvarchar(50)         null,
+   constraint PK_TIPO_INFORME primary key (IDTIPO)
+)
+go
+
+/*==============================================================*/
+/* Table: TIPO_PLANTILLA                                        */
+/*==============================================================*/
+create table TIPO_PLANTILLA (
+   IDTIPO               int                  identity,
+   TIPOPLANTILLA        nvarchar(50)         null,
+   constraint PK_TIPO_PLANTILLA primary key (IDTIPO)
 )
 go
 
@@ -90,13 +273,44 @@ create table USUARIO (
    NOMBREUSUARIO        nvarchar(400)        null,
    ROL                  tinyint              null,
    ESTATUS              nvarchar(1)          null,
+   FECHAREGISTRO        datetime2            null,
    constraint PK_USUARIO primary key (IDUSUARIO)
 )
 go
 
-alter table NOTICIAS_SEPLAN
+alter table BALAZO
+   add constraint FK_BALAZO_REFERENCE_NOTICIAS foreign key (IDNOTICIA)
+      references NOTICIAS (IDNOTICIA)
+go
+
+alter table FOTOS
+   add constraint FK_FOTOS_REFERENCE_NOTICIAS foreign key (IDNOTICIA)
+      references NOTICIAS (IDNOTICIA)
+go
+
+alter table INFORMES
+   add constraint FK_INFORMES_REFERENCE_TIPO_INF foreign key (IDTIPO)
+      references TIPO_INFORME (IDTIPO)
+go
+
+alter table INFORMES
+   add constraint FK_INFORMES_REFERENCE_USUARIO foreign key (IDUSUARIO)
+      references USUARIO (IDUSUARIO)
+go
+
+alter table NOTICIAS
    add constraint FK_NOTICIAS_REFERENCE_USUARIO foreign key (IDUSUARIO)
       references USUARIO (IDUSUARIO)
+go
+
+alter table PLANTILLA
+   add constraint FK_PLANTILL_REFERENCE_USUARIO foreign key (IDUSUARIO)
+      references USUARIO (IDUSUARIO)
+go
+
+alter table PLANTILLA
+   add constraint FK_PLANTILL_REFERENCE_TIPO_PLA foreign key (IDTIPO)
+      references TIPO_PLANTILLA (IDTIPO)
 go
 
 alter table SERVIDORESPUBLICOS
@@ -104,19 +318,40 @@ alter table SERVIDORESPUBLICOS
       references DEPARTAMENTOS (IDDEPARTAMENTO)
 go
 
+
 select * from USUARIO
-/*
-	Tipos: 
+
+	/*Tipos: 
 	1 = Capturista
 	2 = Administrador
 
 	Estatus
 	A= Activo
 	I= Inactivo
-*/
+		conexion:
+	
+	conexion: sqs.nayarit.gob.mx
+usuario=usepladb 
+PASSWORD='57wrTlp'
+
+db name: sitio_sepla
+	*/
+
 INSERT INTO USUARIO
-VALUES ('123','123', 'USUARIO CAPTURISTA',2,'A')
+VALUES ('1234','1234', 'USUARIO CAPTURISTA',1,'A',GETDATE())
 
 update USUARIO
-set NOMBREUSUARIO = 'USUARIO CAPTURISTA'
-where IDUSUARIO=2
+set NOMBREUSUARIO = 'USUARIO ADMINISTRADOR'
+where IDUSUARIO=1
+
+
+drop table BALAZO
+drop table DEPARTAMENTOS
+drop table FOTOS
+drop table INFORMACION
+drop table INFORMES
+drop table NOTICIAS
+drop table PLANTILLA
+drop table SERVIDORESPUBLICOS
+drop table TIPO_INFORME
+drop table TIPO_PLANTILLA*/

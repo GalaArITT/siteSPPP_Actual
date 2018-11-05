@@ -218,24 +218,28 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InicioTestController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\NoticiasController.cs" />
     <Compile Include="Controllers\PlaneacionController.cs" />
     <Compile Include="Controllers\TransparenciaController.cs" />
-    <Compile Include="Controllers\V_top_noticiasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BALAZO.cs">
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ClasesParciales.cs" />
     <Compile Include="Models\DEPARTAMENTOS.cs">
       <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\FOTOS.cs">
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\INFORMACION.cs">
       <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Memoria_fotografica.cs" />
+    <Compile Include="Models\INFORMES.cs">
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Metadatos.cs" />
-    <Compile Include="Models\ModeloNoticias.cs" />
-    <Compile Include="Models\Noticias.cs" />
     <Compile Include="Models\NoticiasSQLServer.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -254,7 +258,16 @@
     <Compile Include="Models\NOTICIAS_SEPLAN.cs">
       <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PLANTILLA.cs">
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\SERVIDORESPUBLICOS.cs">
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPO_INFORME.cs">
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPO_PLANTILLA.cs">
       <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\USUARIO.cs">
@@ -1225,6 +1238,12 @@
     <Content Include="Views\Capturista\Bienvenido.cshtml" />
     <Content Include="Views\Shared\LayoutCapturista.cshtml" />
     <Content Include="Views\Administrador\Bienvenido.cshtml" />
+    <Content Include="Views\Administrador\ListaUsuarios.cshtml" />
+    <Content Include="Views\USUARIOs\Create.cshtml" />
+    <Content Include="Views\USUARIOs\Delete.cshtml" />
+    <Content Include="Views\USUARIOs\Details.cshtml" />
+    <Content Include="Views\USUARIOs\Edit.cshtml" />
+    <Content Include="Views\USUARIOs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -14,36 +14,28 @@ namespace siteSPPP.Models
     
     public partial class NOTICIAS_SEPLAN
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public NOTICIAS_SEPLAN()
+        {
+            this.BALAZO = new HashSet<BALAZO>();
+        }
+    
         public int IDNOTICIA { get; set; }
         public Nullable<int> IDUSUARIO { get; set; }
         public string TITULO { get; set; }
-        public string ENCABEZADO { get; set; }
+        public string CONTENIDO { get; set; }
         public Nullable<System.DateTime> FECHAPUBLIC { get; set; }
-        public string RESPONSABLE { get; set; }
-        public string BALAZO1 { get; set; }
-        public string BALAZO2 { get; set; }
-        public string BALAZO3 { get; set; }
-        public string VER_COPLADENAY { get; set; }
-        public string VER_SEPLAN { get; set; }
-        public string VER_INTRANET { get; set; }
         public string LUGAR { get; set; }
-        public Nullable<decimal> PRIORIDAD { get; set; }
-        public string SOLO_MEDIOS { get; set; }
         public string PARTICIPANTES { get; set; }
-        public string RESENIA { get; set; }
-        public byte[] FOTO_PRINCIPAL { get; set; }
-        public string PIE_FOTO_PRINCIPAL { get; set; }
-        public byte[] FOTO_2 { get; set; }
-        public string PIE_FOTO_2 { get; set; }
-        public byte[] FOTO_3 { get; set; }
-        public string PIE_FOTO_3 { get; set; }
-        public byte[] FOTO_4 { get; set; }
-        public string PIE_FOTO_4 { get; set; }
-        public byte[] FOTO_5 { get; set; }
-        public string PIE_FOTO_5 { get; set; }
-        public byte[] FOTO_6 { get; set; }
-        public string PIE_FOTO_6 { get; set; }
+        public Nullable<bool> VER_COPLADENAY { get; set; }
+        public Nullable<bool> VER_SEPLAN { get; set; }
+        public Nullable<bool> VER_INTRANET { get; set; }
+        public Nullable<bool> SOLO_MEDIOS { get; set; }
+        public Nullable<byte> PRIORIDAD { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BALAZO> BALAZO { get; set; }
+        public virtual FOTOS FOTOS { get; set; }
         public virtual USUARIO USUARIO { get; set; }
     }
 }

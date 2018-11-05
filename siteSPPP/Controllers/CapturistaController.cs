@@ -11,8 +11,8 @@ namespace siteSPPP.Controllers
     public class CapturistaController : Controller
     {
         private sitio_seplaEntities db = new sitio_seplaEntities();
-        //metodo para dar seguridad al usuario
-        public ActionResult Seguridad_Capturista()
+       
+        public ActionResult Bienvenido()
         {
             //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
             int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
@@ -37,10 +37,6 @@ namespace siteSPPP.Controllers
                 }
             }
             return null;
-        }
-        public ActionResult Bienvenido()
-        {
-            return Seguridad_Capturista();
         }
     }
 }
