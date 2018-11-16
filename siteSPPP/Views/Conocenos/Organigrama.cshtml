@@ -1,79 +1,76 @@
-﻿@model IEnumerable<siteSPPP.Models.SERVIDORESPUBLICOS>
+﻿ @model IEnumerable<siteSPPP.Models.SERVIDORESPUBLICOS> 
 
 @{
     ViewBag.Title = "Organigrama";
     Layout = null;
 }
-<link rel="stylesheet" href="~/Content/orgchart/demo.css" />
-<link rel="stylesheet" href="~/Content/orgchart/jquery.orgchart.css" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="~/Content/orgchart/jquery.orgchart.js"></script>
-<script>
-    $(function () {
-        $("#organisation").orgChart({ container: $("#main"), stack: true, depth: 4 });
-    });
-</script>
-<style>
-    div.orgChart div.node.level1 {
-        background-color: #fbcece;
-    }
-
-        div.orgChart div.node.level1.special {
-            background-color: white;
-        }
-
-    div.orgChart div.node.level2 {
-        background-color: #cefbce;
-    }
-
-    div.orgChart div.node.level3 {
-        background-color: #e0cefb;
-    }
-</style>
-
-<div id="content">
-
-    <h1>JQuery/CSS Organisation Chart</h1>
-
-    <div id="main">
+<h2 style="text-align: center;"> Google org chart - ASP.NET MVC 4 </h2>
+    <div id="chartOrg">
     </div>
 
-</div>
+    @section scripts
+    {
+        <!-- Scripts JS -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
-@foreach (var item in Model)
-{
-    <div id="left" hidden>
-    <ul id="organisation">
-        <li>
-            <em>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</em><br /><br />
-            <ul>
-                <li class="special">
-                    Cobb
-                    <ul>
-                        <li>Arthur</li>
-                        <li>Ariadne</li>
-                        <li>Eames</li>
-                        <li>Saito</li>
-                        <li>Yusuf</li>
-                    </ul>
-                </li>
-                <li>Mal</li>
-                <li>Miles</li>
-                <li>
-                    Robert Fischer
-                    <ul>
-                        <li>
-                            Maurice Fischer
-                            <ul>
-                                <li>Peter Browning</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
+        <script type="text/javascript">
 
-</div>
-}
+            google.load("visualization", "1", { packages: ["orgchart"] });
 
+            google.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+
+                $.ajax({
+
+                    type: "POST",
+                    url: "Home/GetEmployee",
+                    data: '{}',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (dt) {
+
+                        var dataArray = [];
+
+                        $.each(dt, function (i, item) {
+                            dataArray.push([item.IDSERVPUB, item.NOMBREPERSONAL, item.NOMBRAMIENTO, item.NIVEL]);
+                        });
+
+
+
+                        var data = new google.visualization.DataTable();
+
+                        data.addColumn('string', 'Entity');
+                        data.addColumn('string', 'ReportEntity');
+                        data.addColumn('string', 'ToolTip');
+
+
+                        for (var i = 0; i < dataArray.length; i++) {
+
+                            var Employee_ID = dataArray[i][0].toString();
+                            var Employee_Name = dataArray[i][1];
+                            var Title = dataArray[i][2];
+                            var ReportTo = dataArray[i][3] != null ? dataArray[i][3].toString() : '';
+
+                            data.addRows([[{
+                                v: Employee_ID,
+                                f: Employee_Name + '<br/><b>' + Title + '</b>'
+                            }, ReportTo, Title]]);
+                        }
+
+
+                        var chart = new google.visualization.OrgChart($("#chartOrg")[0]);
+                        chart.draw(data, { allowHtml: true });
+
+                    },
+                    failure: function (dt) {
+                        alert(dt);
+                    },
+                    error: function (dt) {
+                        alert(dt);
+                    }
+                });
+            }
+        </script>
+    }

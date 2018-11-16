@@ -1,4 +1,5 @@
 ﻿using Microsoft.Reporting.WebForms;
+using Newtonsoft.Json;
 using siteSPPP.DatosXSDS;
 using siteSPPP.Models;
 using System;
@@ -46,50 +47,15 @@ namespace siteSPPP.Controllers
             return View(pLANTILLA);
         }
 
-        public ActionResult Organigrama()
+        public JsonResult GetEmployee()
         {
-            return View(db.SERVIDORESPUBLICOS.Where(s=>s.ESTATUS.Equals("A")).ToList());
+            db.Configuration.ProxyCreationEnabled = false;
+            var sERVIDORESPUBLICOs = db.SERVIDORESPUBLICOS.Where(s => s.ESTATUS.Equals("A")).ToList();
+            var json = Json(sERVIDORESPUBLICOs, JsonRequestBehavior.AllowGet);
+            json.MaxJsonLength= 500000000;
+            return json;
         }
 
-        public ActionResult GenerarPdf()
-        {
-
-            SERVIDORESPUBLICOS salidaPersona = db.SERVIDORESPUBLICOS.FirstOrDefault();
-
-            ReportViewer rv = new ReportViewer();
-            rv.ProcessingMode = ProcessingMode.Local;
-            rv.LocalReport.ReportPath = Server.MapPath("~/Organigrama/Organigrama.rdlc");
-            rv.LocalReport.Refresh();
-
-            DatosOrganigrama xsd = new DatosOrganigrama();
-            DatosOrganigrama.OrganigramaRow fila = null;
-
-            fila = xsd.Organigrama.NewOrganigramaRow();
-
-            fila.Departamento = salidaPersona.DEPARTAMENTOS.NOMBREDEPTO;
-            try
-            {
-                fila.Nombre = salidaPersona.NOMBREPERSONAL;
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine("Error" + ex);
-            }
-            xsd.Organigrama.Rows.Add(fila);
-
-            rv.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", (DataTable)xsd.Organigrama));
-
-            byte[] streamBytes = null;
-            string mimeType = "";
-            string encoding = "";
-            string filenameExtension = "";
-            string[] streamids = null;
-            Warning[] warnings = null;
-            string deviceInfo = null;
-
-            streamBytes = rv.LocalReport.Render("PDF", deviceInfo, out mimeType, out encoding, out filenameExtension, out streamids, out warnings);
-            return File(streamBytes, mimeType);
-        }
         public ActionResult Directorio()
         {
             return View(db.SERVIDORESPUBLICOS.Where(s => s.ESTATUS.Equals("A")).ToList());

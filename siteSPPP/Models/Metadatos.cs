@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace siteSPPP.Models
 {
+    [DataContract(IsReference = true)]
     public class USUARIO_Metadatos
     {
         public int IDUSUARIO { get; set; }
@@ -68,7 +71,7 @@ namespace siteSPPP.Models
         [Display(Name = "Tipo de plantilla")]
         public string TIPOPLANTILLA { get; set; }
     }
-
+    [DataContract(IsReference = true)]
     public class SERVIDORESPUBLICOS_Metadatos
     {
         public int IDSERVPUB { get; set; }
@@ -96,6 +99,12 @@ namespace siteSPPP.Models
         public Nullable<System.DateTime> FECHAREGISTRO { get; set; }
         [Display(Name = "Nivel")]
         public byte NIVEL { get; set; }
+    }
+    [DataContract(IsReference = true)]
+    public class DEPARTAMENTOS_Metadatos
+    {
+        public int IDDEPARTAMENTO { get; set; }
+        public string NOMBREDEPTO { get; set; }
     }
 
 }
