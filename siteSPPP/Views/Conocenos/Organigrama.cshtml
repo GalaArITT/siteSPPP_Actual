@@ -1,19 +1,22 @@
-﻿@model IEnumerable<siteSPPP.Models.SERVIDORESPUBLICOS>
+﻿ @model IEnumerable<siteSPPP.Models.SERVIDORESPUBLICOS> 
 
 @{
     ViewBag.Title = "Organigrama";
     Layout = null;
 }
-<h2 style="text-align: center;"> Google org chart - ASP.NET MVC 4 </h2>
-<div id="chartOrg">
-</div>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<h2 style="text-align: center;"> Google org chart - ASP.NET MVC 5 </h2>
+    <div id="chartOrg">
+
+    </div>
 
     @section scripts
     {
         <!-- Scripts JS -->
-<script type="text/javascript">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+        <script type="text/javascript">
+
             google.load("visualization", "1", { packages: ["orgchart"] });
 
             google.setOnLoadCallback(drawChart);
@@ -23,7 +26,7 @@
                 $.ajax({
 
                     type: "POST",
-                    url: "Home/Organigrama",
+                    url: "Conocenos/Organigrama_Json",
                     data: '{}',
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
@@ -32,7 +35,7 @@
                         var dataArray = [];
 
                         $.each(dt, function (i, item) {
-                            dataArray.push([item.IDSERVPUB, item.NOMBREPERSONAL, item.NOMBRAMIENTO, item.NIVEL]);
+                            dataArray.push([item.IDSERVPUB, item.NOMBREPERSONAL, item.NOMBRAMIENTO, item.NIVEL,item.ESTATUS]);
                         });
 
 
@@ -70,5 +73,5 @@
                     }
                 });
             }
-</script>
+        </script>
     }

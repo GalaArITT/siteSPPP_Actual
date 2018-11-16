@@ -47,13 +47,29 @@ namespace siteSPPP.Controllers
             return View(pLANTILLA);
         }
 
-        public JsonResult Organigrama()
+        public JsonResult Organigrama_Json()
         {
+            //deshabilitar la creación del proxy
             //db.Configuration.ProxyCreationEnabled = false;
-            var sERVIDORESPUBLICOs = db.SERVIDORESPUBLICOS.ToList();
+            //IDSERVPUB, item.NOMBREPERSONAL, item.NOMBRAMIENTO, item.NIVEL
+            var sERVIDORESPUBLICOs = db.SERVIDORESPUBLICOS.Select(
+                p => new
+                {
+                    IDSERPUB = p.IDSERVPUB,
+                    NOMBREPERSONAL = p.NOMBREPERSONAL,
+                    NOMBRAMIENTO = p.NOMBRAMIENTO,
+                    NIVEL = p.NIVEL,
+                    ESTATUS = p.ESTATUS
+                }).Where(p => p.ESTATUS == "A").FirstOrDefault();
             var json = Json(sERVIDORESPUBLICOs, JsonRequestBehavior.AllowGet);
-            json.MaxJsonLength= 500000000;
+            //json.MaxJsonLength = 500000000;
             return json;
+        }
+
+
+        public ActionResult Organigrama()
+        {
+            return View();
         }
 
         public ActionResult Directorio()
@@ -64,7 +80,7 @@ namespace siteSPPP.Controllers
         public ActionResult FuncionesPrincipales()
         {
             //valor 5 significa FUNCIONES GENERALES DE LA SPPP en la tabla TIPO_PLANTILLA fdsfsfsds
-            var pLANTILLA = db.PLANTILLA.Where(s => s.IDTIPO == 5).ToList();
+            var pLANTILLA = db.PLANTILLA.Where(s => s.IDTIPO == 5).ToList(              );
             return View(pLANTILLA);
         }
 
