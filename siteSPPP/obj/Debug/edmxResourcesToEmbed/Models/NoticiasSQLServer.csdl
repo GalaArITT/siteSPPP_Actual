@@ -1,85 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="sitio_seplaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="sitio_seplaEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="BALAZO" EntityType="sitio_seplaModel.BALAZO" />
-    <EntitySet Name="DEPARTAMENTOS" EntityType="sitio_seplaModel.DEPARTAMENTOS" />
-    <EntitySet Name="FOTOS" EntityType="sitio_seplaModel.FOTOS" />
-    <EntitySet Name="INFORMACION" EntityType="sitio_seplaModel.INFORMACION" />
-    <EntitySet Name="INFORMES" EntityType="sitio_seplaModel.INFORMES" />
-    <EntitySet Name="NOTICIAS" EntityType="sitio_seplaModel.NOTICIAS_SEPLAN" />
-    <EntitySet Name="PLANTILLA" EntityType="sitio_seplaModel.PLANTILLA" />
-    <EntitySet Name="SERVIDORESPUBLICOS" EntityType="sitio_seplaModel.SERVIDORESPUBLICOS" />
-    <EntitySet Name="TIPO_INFORME" EntityType="sitio_seplaModel.TIPO_INFORME" />
-    <EntitySet Name="TIPO_PLANTILLA" EntityType="sitio_seplaModel.TIPO_PLANTILLA" />
-    <EntitySet Name="USUARIO" EntityType="sitio_seplaModel.USUARIO" />
-    <AssociationSet Name="FK_BALAZO_REFERENCE_NOTICIAS" Association="sitio_seplaModel.FK_BALAZO_REFERENCE_NOTICIAS">
-      <End Role="NOTICIAS" EntitySet="NOTICIAS" />
-      <End Role="BALAZO" EntitySet="BALAZO" />
-    </AssociationSet>
-    <AssociationSet Name="FK_SERVIDORES_DEPTO" Association="sitio_seplaModel.FK_SERVIDORES_DEPTO">
-      <End Role="DEPARTAMENTOS" EntitySet="DEPARTAMENTOS" />
-      <End Role="SERVIDORESPUBLICOS" EntitySet="SERVIDORESPUBLICOS" />
-    </AssociationSet>
-    <AssociationSet Name="FK_FOTOS_REFERENCE_NOTICIAS" Association="sitio_seplaModel.FK_FOTOS_REFERENCE_NOTICIAS">
-      <End Role="NOTICIAS" EntitySet="NOTICIAS" />
-      <End Role="FOTOS" EntitySet="FOTOS" />
-    </AssociationSet>
-    <AssociationSet Name="FK_INFORMES_REFERENCE_TIPO_INF" Association="sitio_seplaModel.FK_INFORMES_REFERENCE_TIPO_INF">
-      <End Role="TIPO_INFORME" EntitySet="TIPO_INFORME" />
-      <End Role="INFORMES" EntitySet="INFORMES" />
-    </AssociationSet>
-    <AssociationSet Name="FK_INFORMES_REFERENCE_USUARIO" Association="sitio_seplaModel.FK_INFORMES_REFERENCE_USUARIO">
-      <End Role="USUARIO" EntitySet="USUARIO" />
-      <End Role="INFORMES" EntitySet="INFORMES" />
-    </AssociationSet>
-    <AssociationSet Name="FK_NOTICIAS_REFERENCE_USUARIO" Association="sitio_seplaModel.FK_NOTICIAS_REFERENCE_USUARIO">
-      <End Role="USUARIO" EntitySet="USUARIO" />
-      <End Role="NOTICIAS" EntitySet="NOTICIAS" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PLANTILL_REFERENCE_TIPO_PLA" Association="sitio_seplaModel.FK_PLANTILL_REFERENCE_TIPO_PLA">
-      <End Role="TIPO_PLANTILLA" EntitySet="TIPO_PLANTILLA" />
-      <End Role="PLANTILLA" EntitySet="PLANTILLA" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PLANTILL_REFERENCE_USUARIO" Association="sitio_seplaModel.FK_PLANTILL_REFERENCE_USUARIO">
-      <End Role="USUARIO" EntitySet="USUARIO" />
-      <End Role="PLANTILLA" EntitySet="PLANTILLA" />
-    </AssociationSet>
-  </EntityContainer>
   <EntityType Name="BALAZO">
     <Key>
       <PropertyRef Name="IDBALAZO" />
     </Key>
     <Property Name="IDBALAZO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="IDNOTICIA" Type="Int32" />
-    <Property Name="DATOBALAZO" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="NOTICIAS" Relationship="sitio_seplaModel.FK_BALAZO_REFERENCE_NOTICIAS" FromRole="BALAZO" ToRole="NOTICIAS" />
+    <Property Name="IDNOTICIA" Type="Int32" Nullable="false" />
+    <Property Name="DATOBALAZO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NOTICIAS" Relationship="Self.FK_BALAZO_REFERENCE_NOTICIAS" FromRole="BALAZO" ToRole="NOTICIAS" />
   </EntityType>
   <EntityType Name="DEPARTAMENTOS">
     <Key>
       <PropertyRef Name="IDDEPARTAMENTO" />
     </Key>
     <Property Name="IDDEPARTAMENTO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="NOMBREDEPTO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="SERVIDORESPUBLICOS" Relationship="sitio_seplaModel.FK_SERVIDORES_DEPTO" FromRole="DEPARTAMENTOS" ToRole="SERVIDORESPUBLICOS" />
+    <Property Name="NOMBREDEPTO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="SERVIDORESPUBLICOS" Relationship="Self.FK_SERVIDORES_DEPTO" FromRole="DEPARTAMENTOS" ToRole="SERVIDORESPUBLICOS" />
   </EntityType>
   <EntityType Name="FOTOS">
     <Key>
-      <PropertyRef Name="IDNOTICIA" />
+      <PropertyRef Name="IDFOTO" />
     </Key>
     <Property Name="IDNOTICIA" Type="Int32" Nullable="false" />
     <Property Name="IDFOTO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="FOTOGRAFIA" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <NavigationProperty Name="NOTICIAS" Relationship="sitio_seplaModel.FK_FOTOS_REFERENCE_NOTICIAS" FromRole="FOTOS" ToRole="NOTICIAS" />
-  </EntityType>
-  <EntityType Name="INFORMACION">
-    <Key>
-      <PropertyRef Name="IDINFORMACION" />
-    </Key>
-    <Property Name="IDINFORMACION" Type="Int32" Nullable="false" />
-    <Property Name="ANTECEDENTES" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-    <Property Name="MISION" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-    <Property Name="VISION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="OBJETIVO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NOTICIAS" Relationship="Self.FK_FOTOS_REFERENCE_NOTICIAS" FromRole="FOTOS" ToRole="NOTICIAS" />
   </EntityType>
   <EntityType Name="INFORMES">
     <Key>
@@ -88,10 +33,10 @@
     <Property Name="IDINFORME" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IDTIPO" Type="Int32" />
     <Property Name="IDUSUARIO" Type="Int32" />
-    <Property Name="NOMFREINFORME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="ARCHIVOINFORME" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <NavigationProperty Name="TIPO_INFORME" Relationship="sitio_seplaModel.FK_INFORMES_REFERENCE_TIPO_INF" FromRole="INFORMES" ToRole="TIPO_INFORME" />
-    <NavigationProperty Name="USUARIO" Relationship="sitio_seplaModel.FK_INFORMES_REFERENCE_USUARIO" FromRole="INFORMES" ToRole="USUARIO" />
+    <Property Name="NOMFREINFORME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ARCHIVOINFORME" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="TIPO_INFORME" Relationship="Self.FK_INFORMES_REFERENCE_TIPO_INF" FromRole="INFORMES" ToRole="TIPO_INFORME" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.FK_INFORMES_REFERENCE_USUARIO" FromRole="INFORMES" ToRole="USUARIO" />
   </EntityType>
   <EntityType Name="NOTICIAS_SEPLAN">
     <Key>
@@ -99,19 +44,16 @@
     </Key>
     <Property Name="IDNOTICIA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IDUSUARIO" Type="Int32" />
-    <Property Name="TITULO" Type="String" MaxLength="225" FixedLength="false" Unicode="true" />
-    <Property Name="CONTENIDO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="FECHAPUBLIC" Type="DateTime" Precision="7" />
-    <Property Name="LUGAR" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-    <Property Name="PARTICIPANTES" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-    <Property Name="VER_COPLADENAY" Type="Boolean" />
-    <Property Name="VER_SEPLAN" Type="Boolean" />
-    <Property Name="VER_INTRANET" Type="Boolean" />
-    <Property Name="SOLO_MEDIOS" Type="Boolean" />
-    <Property Name="PRIORIDAD" Type="Byte" />
-    <NavigationProperty Name="BALAZO" Relationship="sitio_seplaModel.FK_BALAZO_REFERENCE_NOTICIAS" FromRole="NOTICIAS" ToRole="BALAZO" />
-    <NavigationProperty Name="FOTOS" Relationship="sitio_seplaModel.FK_FOTOS_REFERENCE_NOTICIAS" FromRole="NOTICIAS" ToRole="FOTOS" />
-    <NavigationProperty Name="USUARIO" Relationship="sitio_seplaModel.FK_NOTICIAS_REFERENCE_USUARIO" FromRole="NOTICIAS" ToRole="USUARIO" />
+    <Property Name="TITULO" Type="String" MaxLength="225" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CONTENIDO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FECHACAPTURA" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="FECHAPUBLIC" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LUGAR" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PRIORIDAD" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="BALAZO" Relationship="Self.FK_BALAZO_REFERENCE_NOTICIAS" FromRole="NOTICIAS" ToRole="BALAZO" />
+    <NavigationProperty Name="FOTOS" Relationship="Self.FK_FOTOS_REFERENCE_NOTICIAS" FromRole="NOTICIAS" ToRole="FOTOS" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.FK_NOTICIAS_REFERENCE_USUARIO" FromRole="NOTICIAS" ToRole="USUARIO" />
+    <Property Name="ESTATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="PLANTILLA">
     <Key>
@@ -120,10 +62,10 @@
     <Property Name="IDPLANTILLA" Type="Int32" Nullable="false" />
     <Property Name="IDUSUARIO" Type="Int32" />
     <Property Name="IDTIPO" Type="Int32" />
-    <Property Name="TITULO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="CONTENIDO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="TIPO_PLANTILLA" Relationship="sitio_seplaModel.FK_PLANTILL_REFERENCE_TIPO_PLA" FromRole="PLANTILLA" ToRole="TIPO_PLANTILLA" />
-    <NavigationProperty Name="USUARIO" Relationship="sitio_seplaModel.FK_PLANTILL_REFERENCE_USUARIO" FromRole="PLANTILLA" ToRole="USUARIO" />
+    <Property Name="TITULO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CONTENIDO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="TIPO_PLANTILLA" Relationship="Self.FK_PLANTILL_REFERENCE_TIPO_PLA" FromRole="PLANTILLA" ToRole="TIPO_PLANTILLA" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.FK_PLANTILL_REFERENCE_USUARIO" FromRole="PLANTILLA" ToRole="USUARIO" />
   </EntityType>
   <EntityType Name="SERVIDORESPUBLICOS">
     <Key>
@@ -131,24 +73,27 @@
     </Key>
     <Property Name="IDSERVPUB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IDDEPARTAMENTO" Type="Int32" />
+    <Property Name="IDUSUARIO" Type="Int32" />
     <Property Name="NOMBREPERSONAL" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-    <Property Name="NOMBRAMIENTO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NOMBRAMIENTO" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="CONMUTADOR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="EXTENSION" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="EXTENSION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="FOTOPERSONAL" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="CORREO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="CURRICULUM" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <Property Name="ESTATUS" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="ESTATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
     <Property Name="FECHAREGISTRO" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="DEPARTAMENTOS" Relationship="sitio_seplaModel.FK_SERVIDORES_DEPTO" FromRole="SERVIDORESPUBLICOS" ToRole="DEPARTAMENTOS" />
+    <NavigationProperty Name="DEPARTAMENTOS" Relationship="Self.FK_SERVIDORES_DEPTO" FromRole="SERVIDORESPUBLICOS" ToRole="DEPARTAMENTOS" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.FK_SERVIDOR_REFERENCE_USUARIO" FromRole="SERVIDORESPUBLICOS" ToRole="USUARIO" />
+    <Property Name="NIVEL" Type="Byte" Nullable="false" />
   </EntityType>
   <EntityType Name="TIPO_INFORME">
     <Key>
       <PropertyRef Name="IDTIPO" />
     </Key>
     <Property Name="IDTIPO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TIPOINFORME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="INFORMES" Relationship="sitio_seplaModel.FK_INFORMES_REFERENCE_TIPO_INF" FromRole="TIPO_INFORME" ToRole="INFORMES" />
+    <Property Name="TIPOINFORME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="INFORMES" Relationship="Self.FK_INFORMES_REFERENCE_TIPO_INF" FromRole="TIPO_INFORME" ToRole="INFORMES" />
   </EntityType>
   <EntityType Name="TIPO_PLANTILLA">
     <Key>
@@ -156,26 +101,28 @@
     </Key>
     <Property Name="IDTIPO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TIPOPLANTILLA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="PLANTILLA" Relationship="sitio_seplaModel.FK_PLANTILL_REFERENCE_TIPO_PLA" FromRole="TIPO_PLANTILLA" ToRole="PLANTILLA" />
+    <NavigationProperty Name="PLANTILLA" Relationship="Self.FK_PLANTILL_REFERENCE_TIPO_PLA" FromRole="TIPO_PLANTILLA" ToRole="PLANTILLA" />
   </EntityType>
   <EntityType Name="USUARIO">
     <Key>
       <PropertyRef Name="IDUSUARIO" />
     </Key>
     <Property Name="IDUSUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="USUARIOINICIA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CONTRASENA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="NOMBREUSUARIO" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
-    <Property Name="ROL" Type="Byte" />
+    <Property Name="USUARIOINICIA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CONTRASENA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NOMBREUSUARIO" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ROL" Type="Byte" Nullable="false" />
     <Property Name="ESTATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
-    <Property Name="FECHAREGISTRO" Type="DateTime" Precision="7" />
-    <NavigationProperty Name="INFORMES" Relationship="sitio_seplaModel.FK_INFORMES_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="INFORMES" />
-    <NavigationProperty Name="NOTICIAS" Relationship="sitio_seplaModel.FK_NOTICIAS_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="NOTICIAS" />
-    <NavigationProperty Name="PLANTILLA" Relationship="sitio_seplaModel.FK_PLANTILL_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="PLANTILLA" />
+    <Property Name="FECHAREGISTRO" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CORREO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="INFORMES" Relationship="Self.FK_INFORMES_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="INFORMES" />
+    <NavigationProperty Name="NOTICIAS" Relationship="Self.FK_NOTICIAS_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="NOTICIAS" />
+    <NavigationProperty Name="PLANTILLA" Relationship="Self.FK_PLANTILL_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="PLANTILLA" />
+    <NavigationProperty Name="SERVIDORESPUBLICOS" Relationship="Self.FK_SERVIDOR_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="SERVIDORESPUBLICOS" />
   </EntityType>
   <Association Name="FK_BALAZO_REFERENCE_NOTICIAS">
-    <End Type="sitio_seplaModel.NOTICIAS_SEPLAN" Role="NOTICIAS" Multiplicity="0..1" />
-    <End Type="sitio_seplaModel.BALAZO" Role="BALAZO" Multiplicity="*" />
+    <End Role="NOTICIAS" Type="sitio_seplaModel.NOTICIAS_SEPLAN" Multiplicity="1" />
+    <End Role="BALAZO" Type="Self.BALAZO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NOTICIAS">
         <PropertyRef Name="IDNOTICIA" />
@@ -186,8 +133,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_SERVIDORES_DEPTO">
-    <End Type="sitio_seplaModel.DEPARTAMENTOS" Role="DEPARTAMENTOS" Multiplicity="0..1" />
-    <End Type="sitio_seplaModel.SERVIDORESPUBLICOS" Role="SERVIDORESPUBLICOS" Multiplicity="*" />
+    <End Role="DEPARTAMENTOS" Type="Self.DEPARTAMENTOS" Multiplicity="0..1" />
+    <End Role="SERVIDORESPUBLICOS" Type="Self.SERVIDORESPUBLICOS" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DEPARTAMENTOS">
         <PropertyRef Name="IDDEPARTAMENTO" />
@@ -198,8 +145,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_FOTOS_REFERENCE_NOTICIAS">
-    <End Type="sitio_seplaModel.NOTICIAS_SEPLAN" Role="NOTICIAS" Multiplicity="1" />
-    <End Type="sitio_seplaModel.FOTOS" Role="FOTOS" Multiplicity="0..1" />
+    <End Role="NOTICIAS" Type="sitio_seplaModel.NOTICIAS_SEPLAN" Multiplicity="1" />
+    <End Role="FOTOS" Type="Self.FOTOS" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NOTICIAS">
         <PropertyRef Name="IDNOTICIA" />
@@ -210,8 +157,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_INFORMES_REFERENCE_TIPO_INF">
-    <End Type="sitio_seplaModel.TIPO_INFORME" Role="TIPO_INFORME" Multiplicity="0..1" />
-    <End Type="sitio_seplaModel.INFORMES" Role="INFORMES" Multiplicity="*" />
+    <End Role="TIPO_INFORME" Type="Self.TIPO_INFORME" Multiplicity="0..1" />
+    <End Role="INFORMES" Type="Self.INFORMES" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TIPO_INFORME">
         <PropertyRef Name="IDTIPO" />
@@ -222,8 +169,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_INFORMES_REFERENCE_USUARIO">
-    <End Type="sitio_seplaModel.USUARIO" Role="USUARIO" Multiplicity="0..1" />
-    <End Type="sitio_seplaModel.INFORMES" Role="INFORMES" Multiplicity="*" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="INFORMES" Type="Self.INFORMES" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="USUARIO">
         <PropertyRef Name="IDUSUARIO" />
@@ -234,8 +181,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_NOTICIAS_REFERENCE_USUARIO">
-    <End Type="sitio_seplaModel.USUARIO" Role="USUARIO" Multiplicity="0..1" />
-    <End Type="sitio_seplaModel.NOTICIAS_SEPLAN" Role="NOTICIAS" Multiplicity="*" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="NOTICIAS" Type="sitio_seplaModel.NOTICIAS_SEPLAN" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="USUARIO">
         <PropertyRef Name="IDUSUARIO" />
@@ -246,8 +193,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_PLANTILL_REFERENCE_TIPO_PLA">
-    <End Type="sitio_seplaModel.TIPO_PLANTILLA" Role="TIPO_PLANTILLA" Multiplicity="0..1" />
-    <End Type="sitio_seplaModel.PLANTILLA" Role="PLANTILLA" Multiplicity="*" />
+    <End Role="TIPO_PLANTILLA" Type="Self.TIPO_PLANTILLA" Multiplicity="0..1" />
+    <End Role="PLANTILLA" Type="Self.PLANTILLA" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TIPO_PLANTILLA">
         <PropertyRef Name="IDTIPO" />
@@ -258,8 +205,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_PLANTILL_REFERENCE_USUARIO">
-    <End Type="sitio_seplaModel.USUARIO" Role="USUARIO" Multiplicity="0..1" />
-    <End Type="sitio_seplaModel.PLANTILLA" Role="PLANTILLA" Multiplicity="*" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="PLANTILLA" Type="Self.PLANTILLA" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="USUARIO">
         <PropertyRef Name="IDUSUARIO" />
@@ -269,4 +216,64 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_SERVIDOR_REFERENCE_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="SERVIDORESPUBLICOS" Type="Self.SERVIDORESPUBLICOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="SERVIDORESPUBLICOS">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="sitio_seplaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BALAZO" EntityType="Self.BALAZO" />
+    <EntitySet Name="DEPARTAMENTOS" EntityType="Self.DEPARTAMENTOS" />
+    <EntitySet Name="FOTOS" EntityType="Self.FOTOS" />
+    <EntitySet Name="INFORMES" EntityType="Self.INFORMES" />
+    <EntitySet Name="NOTICIAS" EntityType="sitio_seplaModel.NOTICIAS_SEPLAN" />
+    <EntitySet Name="PLANTILLA" EntityType="Self.PLANTILLA" />
+    <EntitySet Name="SERVIDORESPUBLICOS" EntityType="Self.SERVIDORESPUBLICOS" />
+    <EntitySet Name="TIPO_INFORME" EntityType="Self.TIPO_INFORME" />
+    <EntitySet Name="TIPO_PLANTILLA" EntityType="Self.TIPO_PLANTILLA" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+    <AssociationSet Name="FK_BALAZO_REFERENCE_NOTICIAS" Association="Self.FK_BALAZO_REFERENCE_NOTICIAS">
+      <End Role="NOTICIAS" EntitySet="NOTICIAS" />
+      <End Role="BALAZO" EntitySet="BALAZO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SERVIDORES_DEPTO" Association="Self.FK_SERVIDORES_DEPTO">
+      <End Role="DEPARTAMENTOS" EntitySet="DEPARTAMENTOS" />
+      <End Role="SERVIDORESPUBLICOS" EntitySet="SERVIDORESPUBLICOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FOTOS_REFERENCE_NOTICIAS" Association="Self.FK_FOTOS_REFERENCE_NOTICIAS">
+      <End Role="NOTICIAS" EntitySet="NOTICIAS" />
+      <End Role="FOTOS" EntitySet="FOTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INFORMES_REFERENCE_TIPO_INF" Association="Self.FK_INFORMES_REFERENCE_TIPO_INF">
+      <End Role="TIPO_INFORME" EntitySet="TIPO_INFORME" />
+      <End Role="INFORMES" EntitySet="INFORMES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INFORMES_REFERENCE_USUARIO" Association="Self.FK_INFORMES_REFERENCE_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="INFORMES" EntitySet="INFORMES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NOTICIAS_REFERENCE_USUARIO" Association="Self.FK_NOTICIAS_REFERENCE_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="NOTICIAS" EntitySet="NOTICIAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PLANTILL_REFERENCE_TIPO_PLA" Association="Self.FK_PLANTILL_REFERENCE_TIPO_PLA">
+      <End Role="TIPO_PLANTILLA" EntitySet="TIPO_PLANTILLA" />
+      <End Role="PLANTILLA" EntitySet="PLANTILLA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PLANTILL_REFERENCE_USUARIO" Association="Self.FK_PLANTILL_REFERENCE_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="PLANTILLA" EntitySet="PLANTILLA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SERVIDOR_REFERENCE_USUARIO" Association="Self.FK_SERVIDOR_REFERENCE_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="SERVIDORESPUBLICOS" EntitySet="SERVIDORESPUBLICOS" />
+    </AssociationSet>
+  </EntityContainer>
 </Schema>

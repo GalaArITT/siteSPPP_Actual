@@ -16,6 +16,7 @@ namespace siteSPPP.Models
     {
         public int IDSERVPUB { get; set; }
         public Nullable<int> IDDEPARTAMENTO { get; set; }
+        public Nullable<int> IDUSUARIO { get; set; }
         public string NOMBREPERSONAL { get; set; }
         public string NOMBRAMIENTO { get; set; }
         public string CONMUTADOR { get; set; }
@@ -25,7 +26,9 @@ namespace siteSPPP.Models
         public byte[] CURRICULUM { get; set; }
         public string ESTATUS { get; set; }
         public Nullable<System.DateTime> FECHAREGISTRO { get; set; }
+        public byte NIVEL { get; set; }
     
         public virtual DEPARTAMENTOS DEPARTAMENTOS { get; set; }
+        public virtual USUARIO USUARIO { get; set; }
     }
 }

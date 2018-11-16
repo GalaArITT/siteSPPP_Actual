@@ -1,0 +1,48 @@
+﻿@model siteSPPP.Models.PLANTILLA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/LayoutCapturista.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PLANTILLA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TITULO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TITULO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONTENIDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONTENIDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_PLANTILLA.TIPOPLANTILLA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_PLANTILLA.TIPOPLANTILLA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USUARIO.USUARIOINICIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USUARIO.USUARIOINICIA)
+        </dd>
+
+    </dl>
+</div>
+

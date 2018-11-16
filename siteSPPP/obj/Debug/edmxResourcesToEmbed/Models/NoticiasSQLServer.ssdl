@@ -5,33 +5,23 @@
       <PropertyRef Name="IDBALAZO" />
     </Key>
     <Property Name="IDBALAZO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IDNOTICIA" Type="int" />
-    <Property Name="DATOBALAZO" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="IDNOTICIA" Type="int" Nullable="false" />
+    <Property Name="DATOBALAZO" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="DEPARTAMENTOS">
     <Key>
       <PropertyRef Name="IDDEPARTAMENTO" />
     </Key>
     <Property Name="IDDEPARTAMENTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="NOMBREDEPTO" Type="nvarchar" MaxLength="100" />
+    <Property Name="NOMBREDEPTO" Type="nvarchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityType Name="FOTOS">
     <Key>
-      <PropertyRef Name="IDNOTICIA" />
+      <PropertyRef Name="IDFOTO" />
     </Key>
     <Property Name="IDNOTICIA" Type="int" Nullable="false" />
     <Property Name="IDFOTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FOTOGRAFIA" Type="varbinary(max)" />
-  </EntityType>
-  <EntityType Name="INFORMACION">
-    <Key>
-      <PropertyRef Name="IDINFORMACION" />
-    </Key>
-    <Property Name="IDINFORMACION" Type="int" Nullable="false" />
-    <Property Name="ANTECEDENTES" Type="nvarchar" MaxLength="300" />
-    <Property Name="MISION" Type="nvarchar" MaxLength="300" />
-    <Property Name="VISION" Type="nvarchar" MaxLength="200" />
-    <Property Name="OBJETIVO" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="INFORMES">
     <Key>
@@ -40,8 +30,8 @@
     <Property Name="IDINFORME" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IDTIPO" Type="int" />
     <Property Name="IDUSUARIO" Type="int" />
-    <Property Name="NOMFREINFORME" Type="nvarchar" MaxLength="50" />
-    <Property Name="ARCHIVOINFORME" Type="varbinary(max)" />
+    <Property Name="NOMFREINFORME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ARCHIVOINFORME" Type="varbinary(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="NOTICIAS">
     <Key>
@@ -49,26 +39,23 @@
     </Key>
     <Property Name="IDNOTICIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IDUSUARIO" Type="int" />
-    <Property Name="TITULO" Type="nvarchar" MaxLength="225" />
-    <Property Name="CONTENIDO" Type="nvarchar(max)" />
-    <Property Name="FECHAPUBLIC" Type="datetime2" Precision="7" />
-    <Property Name="LUGAR" Type="nvarchar" MaxLength="150" />
-    <Property Name="PARTICIPANTES" Type="nvarchar" MaxLength="300" />
-    <Property Name="VER_COPLADENAY" Type="bit" />
-    <Property Name="VER_SEPLAN" Type="bit" />
-    <Property Name="VER_INTRANET" Type="bit" />
-    <Property Name="SOLO_MEDIOS" Type="bit" />
-    <Property Name="PRIORIDAD" Type="tinyint" />
+    <Property Name="TITULO" Type="nvarchar" MaxLength="225" Nullable="false" />
+    <Property Name="CONTENIDO" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FECHACAPTURA" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="FECHAPUBLIC" Type="date" Nullable="false" />
+    <Property Name="LUGAR" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="PRIORIDAD" Type="tinyint" Nullable="false" />
+    <Property Name="ESTATUS" Type="nvarchar" MaxLength="1" />
   </EntityType>
   <EntityType Name="PLANTILLA">
     <Key>
       <PropertyRef Name="IDPLANTILLA" />
     </Key>
-    <Property Name="IDPLANTILLA" Type="int" Nullable="false" />
+    <Property Name="IDPLANTILLA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IDUSUARIO" Type="int" />
     <Property Name="IDTIPO" Type="int" />
-    <Property Name="TITULO" Type="nvarchar" MaxLength="100" />
-    <Property Name="CONTENIDO" Type="nvarchar(max)" />
+    <Property Name="TITULO" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CONTENIDO" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="SERVIDORESPUBLICOS">
     <Key>
@@ -76,22 +63,24 @@
     </Key>
     <Property Name="IDSERVPUB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IDDEPARTAMENTO" Type="int" />
+    <Property Name="IDUSUARIO" Type="int" />
     <Property Name="NOMBREPERSONAL" Type="nvarchar" MaxLength="300" />
-    <Property Name="NOMBRAMIENTO" Type="nvarchar" MaxLength="100" />
+    <Property Name="NOMBRAMIENTO" Type="nvarchar" MaxLength="300" Nullable="false" />
     <Property Name="CONMUTADOR" Type="nvarchar" MaxLength="20" />
-    <Property Name="EXTENSION" Type="nvarchar" MaxLength="3" />
+    <Property Name="EXTENSION" Type="nvarchar" MaxLength="10" />
     <Property Name="FOTOPERSONAL" Type="varbinary(max)" />
     <Property Name="CORREO" Type="nvarchar" MaxLength="50" />
     <Property Name="CURRICULUM" Type="varbinary(max)" />
-    <Property Name="ESTATUS" Type="nchar" MaxLength="1" />
+    <Property Name="ESTATUS" Type="nvarchar" MaxLength="1" />
     <Property Name="FECHAREGISTRO" Type="datetime" />
+    <Property Name="NIVEL" Type="tinyint" Nullable="false" />
   </EntityType>
   <EntityType Name="TIPO_INFORME">
     <Key>
       <PropertyRef Name="IDTIPO" />
     </Key>
     <Property Name="IDTIPO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TIPOINFORME" Type="nvarchar" MaxLength="50" />
+    <Property Name="TIPOINFORME" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="TIPO_PLANTILLA">
     <Key>
@@ -105,15 +94,16 @@
       <PropertyRef Name="IDUSUARIO" />
     </Key>
     <Property Name="IDUSUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="USUARIOINICIA" Type="nvarchar" MaxLength="50" />
-    <Property Name="CONTRASENA" Type="nvarchar" MaxLength="50" />
-    <Property Name="NOMBREUSUARIO" Type="nvarchar" MaxLength="400" />
-    <Property Name="ROL" Type="tinyint" />
+    <Property Name="USUARIOINICIA" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CONTRASENA" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NOMBREUSUARIO" Type="nvarchar" MaxLength="400" Nullable="false" />
+    <Property Name="ROL" Type="tinyint" Nullable="false" />
     <Property Name="ESTATUS" Type="nvarchar" MaxLength="1" />
-    <Property Name="FECHAREGISTRO" Type="datetime2" Precision="7" />
+    <Property Name="FECHAREGISTRO" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="CORREO" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_BALAZO_REFERENCE_NOTICIAS">
-    <End Role="NOTICIAS" Type="Self.NOTICIAS" Multiplicity="0..1" />
+    <End Role="NOTICIAS" Type="Self.NOTICIAS" Multiplicity="1" />
     <End Role="BALAZO" Type="Self.BALAZO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NOTICIAS">
@@ -126,7 +116,7 @@
   </Association>
   <Association Name="FK_FOTOS_REFERENCE_NOTICIAS">
     <End Role="NOTICIAS" Type="Self.NOTICIAS" Multiplicity="1" />
-    <End Role="FOTOS" Type="Self.FOTOS" Multiplicity="0..1" />
+    <End Role="FOTOS" Type="Self.FOTOS" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NOTICIAS">
         <PropertyRef Name="IDNOTICIA" />
@@ -172,26 +162,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PLANTILL_REFERENCE_TIPO_PLA">
-    <End Role="TIPO_PLANTILLA" Type="Self.TIPO_PLANTILLA" Multiplicity="0..1" />
-    <End Role="PLANTILLA" Type="Self.PLANTILLA" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TIPO_PLANTILLA">
-        <PropertyRef Name="IDTIPO" />
-      </Principal>
-      <Dependent Role="PLANTILLA">
-        <PropertyRef Name="IDTIPO" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_PLANTILL_REFERENCE_USUARIO">
+  <Association Name="FK_SERVIDOR_REFERENCE_USUARIO">
     <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
-    <End Role="PLANTILLA" Type="Self.PLANTILLA" Multiplicity="*" />
+    <End Role="SERVIDORESPUBLICOS" Type="Self.SERVIDORESPUBLICOS" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="USUARIO">
         <PropertyRef Name="IDUSUARIO" />
       </Principal>
-      <Dependent Role="PLANTILLA">
+      <Dependent Role="SERVIDORESPUBLICOS">
         <PropertyRef Name="IDUSUARIO" />
       </Dependent>
     </ReferentialConstraint>
@@ -212,7 +190,6 @@
     <EntitySet Name="BALAZO" EntityType="Self.BALAZO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DEPARTAMENTOS" EntityType="Self.DEPARTAMENTOS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FOTOS" EntityType="Self.FOTOS" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="INFORMACION" EntityType="Self.INFORMACION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="INFORMES" EntityType="Self.INFORMES" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NOTICIAS" EntityType="Self.NOTICIAS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PLANTILLA" EntityType="Self.PLANTILLA" Schema="dbo" store:Type="Tables" />
@@ -240,13 +217,9 @@
       <End Role="USUARIO" EntitySet="USUARIO" />
       <End Role="NOTICIAS" EntitySet="NOTICIAS" />
     </AssociationSet>
-    <AssociationSet Name="FK_PLANTILL_REFERENCE_TIPO_PLA" Association="Self.FK_PLANTILL_REFERENCE_TIPO_PLA">
-      <End Role="TIPO_PLANTILLA" EntitySet="TIPO_PLANTILLA" />
-      <End Role="PLANTILLA" EntitySet="PLANTILLA" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PLANTILL_REFERENCE_USUARIO" Association="Self.FK_PLANTILL_REFERENCE_USUARIO">
+    <AssociationSet Name="FK_SERVIDOR_REFERENCE_USUARIO" Association="Self.FK_SERVIDOR_REFERENCE_USUARIO">
       <End Role="USUARIO" EntitySet="USUARIO" />
-      <End Role="PLANTILLA" EntitySet="PLANTILLA" />
+      <End Role="SERVIDORESPUBLICOS" EntitySet="SERVIDORESPUBLICOS" />
     </AssociationSet>
     <AssociationSet Name="FK_SERVIDORES_DEPTO" Association="Self.FK_SERVIDORES_DEPTO">
       <End Role="DEPARTAMENTOS" EntitySet="DEPARTAMENTOS" />

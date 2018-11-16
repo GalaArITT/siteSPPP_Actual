@@ -20,15 +20,17 @@ namespace siteSPPP.Models
             this.INFORMES = new HashSet<INFORMES>();
             this.NOTICIAS = new HashSet<NOTICIAS_SEPLAN>();
             this.PLANTILLA = new HashSet<PLANTILLA>();
+            this.SERVIDORESPUBLICOS = new HashSet<SERVIDORESPUBLICOS>();
         }
     
         public int IDUSUARIO { get; set; }
         public string USUARIOINICIA { get; set; }
         public string CONTRASENA { get; set; }
         public string NOMBREUSUARIO { get; set; }
-        public Nullable<byte> ROL { get; set; }
+        public byte ROL { get; set; }
         public string ESTATUS { get; set; }
-        public Nullable<System.DateTime> FECHAREGISTRO { get; set; }
+        public System.DateTime FECHAREGISTRO { get; set; }
+        public string CORREO { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<INFORMES> INFORMES { get; set; }
@@ -36,5 +38,7 @@ namespace siteSPPP.Models
         public virtual ICollection<NOTICIAS_SEPLAN> NOTICIAS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PLANTILLA> PLANTILLA { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SERVIDORESPUBLICOS> SERVIDORESPUBLICOS { get; set; }
     }
 }

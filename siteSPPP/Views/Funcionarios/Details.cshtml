@@ -1,0 +1,107 @@
+﻿@model siteSPPP.Models.SERVIDORESPUBLICOS
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/LayoutAuth.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SERVIDORESPUBLICOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBREPERSONAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBREPERSONAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRAMIENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRAMIENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONMUTADOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONMUTADOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EXTENSION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EXTENSION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FOTOPERSONAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FOTOPERSONAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CORREO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CORREO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CURRICULUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CURRICULUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHAREGISTRO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHAREGISTRO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEPARTAMENTOS.NOMBREDEPTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEPARTAMENTOS.NOMBREDEPTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USUARIO.USUARIOINICIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USUARIO.USUARIOINICIA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDSERVPUB }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

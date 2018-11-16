@@ -28,7 +28,6 @@ namespace siteSPPP.Models
         public virtual DbSet<BALAZO> BALAZO { get; set; }
         public virtual DbSet<DEPARTAMENTOS> DEPARTAMENTOS { get; set; }
         public virtual DbSet<FOTOS> FOTOS { get; set; }
-        public virtual DbSet<INFORMACION> INFORMACION { get; set; }
         public virtual DbSet<INFORMES> INFORMES { get; set; }
         public virtual DbSet<NOTICIAS_SEPLAN> NOTICIAS { get; set; }
         public virtual DbSet<PLANTILLA> PLANTILLA { get; set; }

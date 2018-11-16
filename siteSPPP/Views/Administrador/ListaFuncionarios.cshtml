@@ -1,0 +1,73 @@
+﻿@model IEnumerable<siteSPPP.Models.SERVIDORESPUBLICOS>
+
+<p>
+    @Html.ActionLink("Create New", "AgregarFuncionario")
+</p>
+<table class="table-responsive">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBREPERSONAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRAMIENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONMUTADOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXTENSION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FOTOPERSONAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CURRICULUM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CORREO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDDEPARTAMENTO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBREPERSONAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRAMIENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONMUTADOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXTENSION)
+        </td>
+        <td>
+            <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" alt="" width="80" height="110" />
+            @Html.ActionLink("Cambiar Imagen", "CambiarFotoFuncionario", new { id = item.IDSERVPUB })
+        </td>
+        <td>
+            <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
+                <img src="~/Content/images/FC_acrobat-02.png" alt="" width="70" height="70">
+            </a>
+            @Html.ActionLink("Cambiar Curriculum", "CambiarCurriculumFuncionario", new { id = item.IDSERVPUB })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CORREO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEPARTAMENTOS.NOMBREDEPTO)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "EditarFuncionario", new { id = item.IDSERVPUB }) 
+            @Html.ActionLink("Detalle", "DetalleFuncionario", new { id = item.IDSERVPUB }) 
+
+        </td>
+    </tr>
+}
+
+</table>

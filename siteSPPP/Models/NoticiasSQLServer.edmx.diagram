@@ -4,26 +4,26 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0ac3a09e08214ac0b564cb8513577f3d" Name="Diagram1" ZoomLevel="99">
-        <EntityTypeShape EntityType="sitio_seplaModel.BALAZO" Width="1.5" PointX="7.75" PointY="2.875" />
-        <EntityTypeShape EntityType="sitio_seplaModel.DEPARTAMENTOS" Width="1.5" PointX="6.125" PointY="2.375" />
-        <EntityTypeShape EntityType="sitio_seplaModel.FOTOS" Width="1.5" PointX="9.625" PointY="4.875" />
-        <EntityTypeShape EntityType="sitio_seplaModel.INFORMACION" Width="1.5" PointX="7.875" PointY="0.5" />
-        <EntityTypeShape EntityType="sitio_seplaModel.INFORMES" Width="1.5" PointX="2.5" PointY="0.5" />
-        <EntityTypeShape EntityType="sitio_seplaModel.NOTICIAS_SEPLAN" Width="1.5" PointX="3.5" PointY="3" />
-        <EntityTypeShape EntityType="sitio_seplaModel.PLANTILLA" Width="1.5" PointX="4.5" PointY="0.5" />
-        <EntityTypeShape EntityType="sitio_seplaModel.SERVIDORESPUBLICOS" Width="1.5" PointX="9.75" PointY="0.5" />
-        <EntityTypeShape EntityType="sitio_seplaModel.TIPO_INFORME" Width="1.5" PointX="6.25" PointY="0.5" />
-        <EntityTypeShape EntityType="sitio_seplaModel.TIPO_PLANTILLA" Width="1.5" PointX="0.5" PointY="0.5" />
-        <EntityTypeShape EntityType="sitio_seplaModel.USUARIO" Width="1.5" PointX="0.5" PointY="2.375" />
-        <AssociationConnector Association="sitio_seplaModel.FK_BALAZO_REFERENCE_NOTICIAS" />
-        <AssociationConnector Association="sitio_seplaModel.FK_SERVIDORES_DEPTO" />
-        <AssociationConnector Association="sitio_seplaModel.FK_FOTOS_REFERENCE_NOTICIAS" />
-        <AssociationConnector Association="sitio_seplaModel.FK_INFORMES_REFERENCE_TIPO_INF" />
-        <AssociationConnector Association="sitio_seplaModel.FK_INFORMES_REFERENCE_USUARIO" />
-        <AssociationConnector Association="sitio_seplaModel.FK_NOTICIAS_REFERENCE_USUARIO" />
-        <AssociationConnector Association="sitio_seplaModel.FK_PLANTILL_REFERENCE_TIPO_PLA" />
-        <AssociationConnector Association="sitio_seplaModel.FK_PLANTILL_REFERENCE_USUARIO" />
+      <Diagram DiagramId="0eb5fd5a0ae44d24ab74711d02d500fa" Name="Diagram1">
+        <EntityTypeShape EntityType="sitio_seplaModel.BALAZO" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.DEPARTAMENTOS" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.FOTOS" Width="1.5" PointX="5.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.INFORMES" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.NOTICIAS_SEPLAN" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.PLANTILLA" Width="1.5" PointX="6" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.SERVIDORESPUBLICOS" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.TIPO_INFORME" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.TIPO_PLANTILLA" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.USUARIO" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="sitio_seplaModel.FK_BALAZO_REFERENCE_NOTICIAS" ManuallyRouted="false" />
+        <AssociationConnector Association="sitio_seplaModel.FK_SERVIDORES_DEPTO" ManuallyRouted="false" />
+        <AssociationConnector Association="sitio_seplaModel.FK_FOTOS_REFERENCE_NOTICIAS" ManuallyRouted="false" />
+        <AssociationConnector Association="sitio_seplaModel.FK_INFORMES_REFERENCE_TIPO_INF" ManuallyRouted="false" />
+        <AssociationConnector Association="sitio_seplaModel.FK_INFORMES_REFERENCE_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="sitio_seplaModel.FK_NOTICIAS_REFERENCE_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="sitio_seplaModel.FK_PLANTILL_REFERENCE_TIPO_PLA" ManuallyRouted="false" />
+        <AssociationConnector Association="sitio_seplaModel.FK_PLANTILL_REFERENCE_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="sitio_seplaModel.FK_SERVIDOR_REFERENCE_USUARIO" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

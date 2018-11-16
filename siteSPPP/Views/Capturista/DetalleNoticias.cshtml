@@ -1,0 +1,79 @@
+﻿@model siteSPPP.Models.NOTICIAS_SEPLAN
+
+@{
+    ViewBag.Title = "Detalle de noticia";
+    Layout = "~/Views/Shared/LayoutCapturista.cshtml";
+}
+
+<h2>Datos de la Noticia</h2>
+
+<div class="text-left JustifyCenter" >
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            <img src="@Url.Action("MostrarFoto", "Capturista", new { id = Model.FOTOS.FirstOrDefault().IDFOTO })" alt="" height=500 width=500 />
+        </dd>
+        <dd>
+            <h1>
+                @Html.DisplayFor(model=>model.TITULO)
+            </h1>
+        </dd>
+
+        <dd>
+            @Html.Raw(Model.CONTENIDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHACAPTURA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHACAPTURA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHAPUBLIC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHAPUBLIC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LUGAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LUGAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRIORIDAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRIORIDAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USUARIO.NOMBREUSUARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USUARIO.NOMBREUSUARIO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "ListaNoticias")
+</p>

@@ -18,7 +18,6 @@ namespace siteSPPP.Controllers
         // GET: Login
         public ActionResult Iniciar(siteSPPP.Models.USUARIO userModel)
         {
-
             return View();
         }
         [HttpPost]

@@ -4,123 +4,112 @@
     <EntitySetMapping Name="BALAZO">
       <EntityTypeMapping TypeName="sitio_seplaModel.BALAZO">
         <MappingFragment StoreEntitySet="BALAZO">
-          <ScalarProperty Name="DATOBALAZO" ColumnName="DATOBALAZO" />
-          <ScalarProperty Name="IDNOTICIA" ColumnName="IDNOTICIA" />
           <ScalarProperty Name="IDBALAZO" ColumnName="IDBALAZO" />
+          <ScalarProperty Name="IDNOTICIA" ColumnName="IDNOTICIA" />
+          <ScalarProperty Name="DATOBALAZO" ColumnName="DATOBALAZO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DEPARTAMENTOS">
       <EntityTypeMapping TypeName="sitio_seplaModel.DEPARTAMENTOS">
         <MappingFragment StoreEntitySet="DEPARTAMENTOS">
-          <ScalarProperty Name="NOMBREDEPTO" ColumnName="NOMBREDEPTO" />
           <ScalarProperty Name="IDDEPARTAMENTO" ColumnName="IDDEPARTAMENTO" />
+          <ScalarProperty Name="NOMBREDEPTO" ColumnName="NOMBREDEPTO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FOTOS">
       <EntityTypeMapping TypeName="sitio_seplaModel.FOTOS">
         <MappingFragment StoreEntitySet="FOTOS">
-          <ScalarProperty Name="FOTOGRAFIA" ColumnName="FOTOGRAFIA" />
-          <ScalarProperty Name="IDFOTO" ColumnName="IDFOTO" />
           <ScalarProperty Name="IDNOTICIA" ColumnName="IDNOTICIA" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="INFORMACION">
-      <EntityTypeMapping TypeName="sitio_seplaModel.INFORMACION">
-        <MappingFragment StoreEntitySet="INFORMACION">
-          <ScalarProperty Name="OBJETIVO" ColumnName="OBJETIVO" />
-          <ScalarProperty Name="VISION" ColumnName="VISION" />
-          <ScalarProperty Name="MISION" ColumnName="MISION" />
-          <ScalarProperty Name="ANTECEDENTES" ColumnName="ANTECEDENTES" />
-          <ScalarProperty Name="IDINFORMACION" ColumnName="IDINFORMACION" />
+          <ScalarProperty Name="IDFOTO" ColumnName="IDFOTO" />
+          <ScalarProperty Name="FOTOGRAFIA" ColumnName="FOTOGRAFIA" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="INFORMES">
       <EntityTypeMapping TypeName="sitio_seplaModel.INFORMES">
         <MappingFragment StoreEntitySet="INFORMES">
-          <ScalarProperty Name="ARCHIVOINFORME" ColumnName="ARCHIVOINFORME" />
-          <ScalarProperty Name="NOMFREINFORME" ColumnName="NOMFREINFORME" />
-          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
-          <ScalarProperty Name="IDTIPO" ColumnName="IDTIPO" />
           <ScalarProperty Name="IDINFORME" ColumnName="IDINFORME" />
+          <ScalarProperty Name="IDTIPO" ColumnName="IDTIPO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="NOMFREINFORME" ColumnName="NOMFREINFORME" />
+          <ScalarProperty Name="ARCHIVOINFORME" ColumnName="ARCHIVOINFORME" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NOTICIAS">
       <EntityTypeMapping TypeName="sitio_seplaModel.NOTICIAS_SEPLAN">
         <MappingFragment StoreEntitySet="NOTICIAS">
-          <ScalarProperty Name="PRIORIDAD" ColumnName="PRIORIDAD" />
-          <ScalarProperty Name="SOLO_MEDIOS" ColumnName="SOLO_MEDIOS" />
-          <ScalarProperty Name="VER_INTRANET" ColumnName="VER_INTRANET" />
-          <ScalarProperty Name="VER_SEPLAN" ColumnName="VER_SEPLAN" />
-          <ScalarProperty Name="VER_COPLADENAY" ColumnName="VER_COPLADENAY" />
-          <ScalarProperty Name="PARTICIPANTES" ColumnName="PARTICIPANTES" />
-          <ScalarProperty Name="LUGAR" ColumnName="LUGAR" />
-          <ScalarProperty Name="FECHAPUBLIC" ColumnName="FECHAPUBLIC" />
-          <ScalarProperty Name="CONTENIDO" ColumnName="CONTENIDO" />
-          <ScalarProperty Name="TITULO" ColumnName="TITULO" />
-          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
           <ScalarProperty Name="IDNOTICIA" ColumnName="IDNOTICIA" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+          <ScalarProperty Name="CONTENIDO" ColumnName="CONTENIDO" />
+          <ScalarProperty Name="FECHACAPTURA" ColumnName="FECHACAPTURA" />
+          <ScalarProperty Name="FECHAPUBLIC" ColumnName="FECHAPUBLIC" />
+          <ScalarProperty Name="LUGAR" ColumnName="LUGAR" />
+          <ScalarProperty Name="PRIORIDAD" ColumnName="PRIORIDAD" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PLANTILLA">
       <EntityTypeMapping TypeName="sitio_seplaModel.PLANTILLA">
         <MappingFragment StoreEntitySet="PLANTILLA">
-          <ScalarProperty Name="CONTENIDO" ColumnName="CONTENIDO" />
-          <ScalarProperty Name="TITULO" ColumnName="TITULO" />
-          <ScalarProperty Name="IDTIPO" ColumnName="IDTIPO" />
-          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
           <ScalarProperty Name="IDPLANTILLA" ColumnName="IDPLANTILLA" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="IDTIPO" ColumnName="IDTIPO" />
+          <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+          <ScalarProperty Name="CONTENIDO" ColumnName="CONTENIDO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SERVIDORESPUBLICOS">
       <EntityTypeMapping TypeName="sitio_seplaModel.SERVIDORESPUBLICOS">
         <MappingFragment StoreEntitySet="SERVIDORESPUBLICOS">
-          <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
-          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
-          <ScalarProperty Name="CURRICULUM" ColumnName="CURRICULUM" />
-          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
-          <ScalarProperty Name="FOTOPERSONAL" ColumnName="FOTOPERSONAL" />
-          <ScalarProperty Name="EXTENSION" ColumnName="EXTENSION" />
-          <ScalarProperty Name="CONMUTADOR" ColumnName="CONMUTADOR" />
-          <ScalarProperty Name="NOMBRAMIENTO" ColumnName="NOMBRAMIENTO" />
-          <ScalarProperty Name="NOMBREPERSONAL" ColumnName="NOMBREPERSONAL" />
-          <ScalarProperty Name="IDDEPARTAMENTO" ColumnName="IDDEPARTAMENTO" />
+          <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
           <ScalarProperty Name="IDSERVPUB" ColumnName="IDSERVPUB" />
+          <ScalarProperty Name="IDDEPARTAMENTO" ColumnName="IDDEPARTAMENTO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="NOMBREPERSONAL" ColumnName="NOMBREPERSONAL" />
+          <ScalarProperty Name="NOMBRAMIENTO" ColumnName="NOMBRAMIENTO" />
+          <ScalarProperty Name="CONMUTADOR" ColumnName="CONMUTADOR" />
+          <ScalarProperty Name="EXTENSION" ColumnName="EXTENSION" />
+          <ScalarProperty Name="FOTOPERSONAL" ColumnName="FOTOPERSONAL" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="CURRICULUM" ColumnName="CURRICULUM" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TIPO_INFORME">
       <EntityTypeMapping TypeName="sitio_seplaModel.TIPO_INFORME">
         <MappingFragment StoreEntitySet="TIPO_INFORME">
-          <ScalarProperty Name="TIPOINFORME" ColumnName="TIPOINFORME" />
           <ScalarProperty Name="IDTIPO" ColumnName="IDTIPO" />
+          <ScalarProperty Name="TIPOINFORME" ColumnName="TIPOINFORME" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TIPO_PLANTILLA">
       <EntityTypeMapping TypeName="sitio_seplaModel.TIPO_PLANTILLA">
         <MappingFragment StoreEntitySet="TIPO_PLANTILLA">
-          <ScalarProperty Name="TIPOPLANTILLA" ColumnName="TIPOPLANTILLA" />
           <ScalarProperty Name="IDTIPO" ColumnName="IDTIPO" />
+          <ScalarProperty Name="TIPOPLANTILLA" ColumnName="TIPOPLANTILLA" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="USUARIO">
       <EntityTypeMapping TypeName="sitio_seplaModel.USUARIO">
         <MappingFragment StoreEntitySet="USUARIO">
-          <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
-          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
-          <ScalarProperty Name="ROL" ColumnName="ROL" />
-          <ScalarProperty Name="NOMBREUSUARIO" ColumnName="NOMBREUSUARIO" />
-          <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
-          <ScalarProperty Name="USUARIOINICIA" ColumnName="USUARIOINICIA" />
           <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+          <ScalarProperty Name="USUARIOINICIA" ColumnName="USUARIOINICIA" />
+          <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
+          <ScalarProperty Name="NOMBREUSUARIO" ColumnName="NOMBREUSUARIO" />
+          <ScalarProperty Name="ROL" ColumnName="ROL" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -1,0 +1,79 @@
+﻿@model IEnumerable<siteSPPP.Models.SERVIDORESPUBLICOS>
+
+@{
+    ViewBag.Title = "Organigrama";
+    Layout = null;
+}
+<link rel="stylesheet" href="~/Content/orgchart/demo.css" />
+<link rel="stylesheet" href="~/Content/orgchart/jquery.orgchart.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="~/Content/orgchart/jquery.orgchart.js"></script>
+<script>
+    $(function () {
+        $("#organisation").orgChart({ container: $("#main"), stack: true, depth: 4 });
+    });
+</script>
+<style>
+    div.orgChart div.node.level1 {
+        background-color: #fbcece;
+    }
+
+        div.orgChart div.node.level1.special {
+            background-color: white;
+        }
+
+    div.orgChart div.node.level2 {
+        background-color: #cefbce;
+    }
+
+    div.orgChart div.node.level3 {
+        background-color: #e0cefb;
+    }
+</style>
+
+<div id="content">
+
+    <h1>JQuery/CSS Organisation Chart</h1>
+
+    <div id="main">
+    </div>
+
+</div>
+
+@foreach (var item in Model)
+{
+    <div id="left" hidden>
+    <ul id="organisation">
+        <li>
+            <em>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</em><br /><br />
+            <ul>
+                <li class="special">
+                    Cobb
+                    <ul>
+                        <li>Arthur</li>
+                        <li>Ariadne</li>
+                        <li>Eames</li>
+                        <li>Saito</li>
+                        <li>Yusuf</li>
+                    </ul>
+                </li>
+                <li>Mal</li>
+                <li>Miles</li>
+                <li>
+                    Robert Fischer
+                    <ul>
+                        <li>
+                            Maurice Fischer
+                            <ul>
+                                <li>Peter Browning</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+}
+

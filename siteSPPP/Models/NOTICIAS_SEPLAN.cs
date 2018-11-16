@@ -18,24 +18,23 @@ namespace siteSPPP.Models
         public NOTICIAS_SEPLAN()
         {
             this.BALAZO = new HashSet<BALAZO>();
+            this.FOTOS = new HashSet<FOTOS>();
         }
     
         public int IDNOTICIA { get; set; }
         public Nullable<int> IDUSUARIO { get; set; }
         public string TITULO { get; set; }
         public string CONTENIDO { get; set; }
-        public Nullable<System.DateTime> FECHAPUBLIC { get; set; }
+        public System.DateTime FECHACAPTURA { get; set; }
+        public System.DateTime FECHAPUBLIC { get; set; }
         public string LUGAR { get; set; }
-        public string PARTICIPANTES { get; set; }
-        public Nullable<bool> VER_COPLADENAY { get; set; }
-        public Nullable<bool> VER_SEPLAN { get; set; }
-        public Nullable<bool> VER_INTRANET { get; set; }
-        public Nullable<bool> SOLO_MEDIOS { get; set; }
-        public Nullable<byte> PRIORIDAD { get; set; }
+        public byte PRIORIDAD { get; set; }
+        public string ESTATUS { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BALAZO> BALAZO { get; set; }
-        public virtual FOTOS FOTOS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FOTOS> FOTOS { get; set; }
         public virtual USUARIO USUARIO { get; set; }
     }
 }

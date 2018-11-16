@@ -1,0 +1,64 @@
+﻿@model IEnumerable<siteSPPP.Models.NOTICIAS_SEPLAN>
+
+@{
+    ViewBag.Title = "ListaNoticias";
+    Layout = "~/Views/Shared/LayoutCapturista.cshtml";
+}
+
+<h2>Listado de noticias</h2>
+
+<p>
+    @Html.ActionLink("Crear nueva noticia", "CrearNoticias")
+</p>
+<table class="table-responsive">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TITULO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHAPUBLIC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LUGAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRIORIDAD)
+        </th>
+        <th>
+            Agregar portada
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USUARIO.NOMBREUSUARIO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TITULO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHAPUBLIC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LUGAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRIORIDAD)
+        </td>
+        <td>
+            @Html.ActionLink("Agregar Fotos", "ListaFotos", "Capturista", new { idNoticia = item.IDNOTICIA }, new { @class = "btn btn-outline-primary", role = "button" })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USUARIO.NOMBREUSUARIO)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "EditarNoticias", new { id=item.IDNOTICIA }) 
+            @Html.ActionLink("Detalle", "DetalleNoticias", new { id=item.IDNOTICIA }) 
+            @Html.ActionLink("Eliminar", "EliminarNoticias", new { id=item.IDNOTICIA })
+        </td>
+    </tr>
+}
+
+</table>

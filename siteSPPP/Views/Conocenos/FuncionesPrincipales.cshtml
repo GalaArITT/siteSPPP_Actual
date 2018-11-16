@@ -1,36 +1,27 @@
-﻿
+﻿@model IEnumerable<siteSPPP.Models.PLANTILLA>
 @{
-    ViewBag.Title = "Objetivos";
+    ViewBag.Title = "Funciones Principales de la SPPP";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@foreach (var item in Model)
+{
+    <dl class="dl-horizontal">
 
-    <span style="font-size:1.5em;text-align:left">
-        <strong>Funciones Generales de la SPPP</strong>
-    </span>
-    <hr />
-    <p align="justify">Se establece en la Ley Orgánica del Poder Ejecutivo del Estado de Nayarit, Título Segundo de la Administración Pública Centralizada, Capitulo II de la Competencia de las Dependencias de la Administración Pública Centralizada: </p>
-    <p align="justify"><strong>Artículo 34.</strong> A la Secretaría de Planeación, Programación y Presupuesto corresponden las siguientes atribuciones:</p>
-    <p align="justify">I. Ejercer la rectoría del Estado en materia de planeación del desarrollo integral de la entidad, de conformidad con las leyes aplicables;</p>
-    <p align="justify">II. Elaborar y proponer al Gobernador, los programas que requiera la entidad, con apego a las disposiciones legales aplicables;</p>
-    <p align="justify">III. Conducir la instrumentación del Sistema Estatal de Planeación Democrática; IV. Proponer las normas y lineamientos metodológicos del Sistema Estatal de Planeación, Programación y Presupuestación, así como los mecanismos para su seguimiento y evaluación;</p>
-    <p align="justify">V. Formular, coordinar y supervisar el Plan Estatal de Desarrollo, los programas sectoriales y regionales, así como los especiales que determine el Gobernador del Estado;</p>
-    <p align="justify">VI. Concertar en el seno del Comité de Planeación para el Desarrollo del Estado de Nayarit, la participación de los sectores público, privado y social en la planeación del desarrollo integral de la entidad;</p>
-                
-    <p align="justify">VII. Coordinar los programas de desarrollo del Gobierno del Estado con los de la Administración Pública Federal y la de los Ayuntamientos de la entidad;</p>
-    <p align="justify">VIII. Participar con las dependencias correspondientes, en la formulación de los planes y programas de desarrollo urbano y rural, y de protección ambiental;</p>
-    <p align="justify">IX. Establecer, operar y vigilar el Sistema Estatal de Estadística e Información Geográfica y Cartográfica;</p>
-    <p align="justify">X. Diseñar las bases metodológicas y los mecanismos de participación de las dependencias y organismos para elaborar, ejecutar y evaluar el Plan Estatal de Desarrollo;</p>
-    <p align="justify">XI. Registrar el avance en la ejecución de los programas y el ejercicio del presupuesto de conformidad con la normatividad establecida y, en su caso, proponer las medidas necesarias para mantener la congruencia con los programas de desarrollo del Estado;</p>
-    <p align="justify">XII. Aplicar procedimientos para fortalecer la capacidad de los Ayuntamientos en la ejecución de obras y servicios, y la transferencia de recursos federales a los mismos;</p>
-    <p align="justify">XIII. Integrar los documentos e información para la planeación del desarrollo del Estado y promover o elaborar los estudios para definir y apoyar los criterios, métodos, técnicas y las bases de la planeación estatal; </p>
-    <p align="justify">XIV. Elaborar y someter a la aprobación del Gobernador del Estado los programas y presupuestos de inversión pública federal, estatal y municipal que se concerten; </p>
-    <p align="justify">XV. Participar en coordinación con la Secretaría de Administración en la integración del anteproyecto general de criterios de política económica del Gobierno del Estado;</p>
-    <p align="justify">XVI. Evaluar el avance, así como el comportamiento global y sectorial del ejercicio del presupuesto, en congruencia con los programas de desarrollo;</p>
-    <p align="justify">XVII. Dar seguimiento y analizar los programas anuales de inversión y gasto público de las dependencias y organismos de la Administración Pública Estatal;</p>
-    <p align="justify">XVIII. Orientar a las dependencias y entidades de la Administración Pública Estatal para que sus programas y acciones concurran al cumplimiento de los objetivos y metas contenidos en el Plan Estatal de Desarrollo;</p>
-    <p align="justify">XIX. Asesorar y apoyar técnicamente a los Ayuntamientos en la elaboración de sus planes y programas de desarrollo, así como en la aplicación, ejecución y evaluación de obras, servicios y recursos federales;</p>
-    <p align="justify">XX. Participar en coordinación con la Secretaría de Administración en la elaboración y actualización de los programas estatales de gasto e inversión pública;</p>
-    <p align="justify">XXI. Instrumentar y ejecutar programas de capacitación para los servidores públicos del Estado y municipios en lo relativo a la planeación, programación y presupuestación, y</p>
-    <p align="justify">XXII. Las demás que le atribuyan las leyes, reglamentos y convenios, y las que le confiera el Gobernador del Estado.</p>
+        <dd>
+            <span style="font-size:1.5em;text-align:left">
+                <strong>
+                    @Html.DisplayFor(model => item.TITULO)
+                </strong>
+            </span>
+        </dd>
+        <hr />
 
- 
+        <dd class="text-left">
+            @Html.Raw(item.CONTENIDO)
+        </dd>
+
+    </dl>
+
+}
+
+

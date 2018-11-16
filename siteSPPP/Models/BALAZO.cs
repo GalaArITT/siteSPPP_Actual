@@ -15,7 +15,7 @@ namespace siteSPPP.Models
     public partial class BALAZO
     {
         public int IDBALAZO { get; set; }
-        public Nullable<int> IDNOTICIA { get; set; }
+        public int IDNOTICIA { get; set; }
         public string DATOBALAZO { get; set; }
     
         public virtual NOTICIAS_SEPLAN NOTICIAS { get; set; }
