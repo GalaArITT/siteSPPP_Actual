@@ -5,16 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="0eb5fd5a0ae44d24ab74711d02d500fa" Name="Diagram1">
-        <EntityTypeShape EntityType="sitio_seplaModel.BALAZO" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.DEPARTAMENTOS" Width="1.875" PointX="0.5" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.FOTOS" Width="1.5" PointX="5.25" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.INFORMES" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.NOTICIAS_SEPLAN" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.PLANTILLA" Width="1.5" PointX="6" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.SERVIDORESPUBLICOS" Width="3.125" PointX="3" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.TIPO_INFORME" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.TIPO_PLANTILLA" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.USUARIO" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.BALAZO" Width="1.5" PointX="4.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.DEPARTAMENTOS" Width="1.875" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.FOTOS" Width="1.5" PointX="2.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.INFORMES" Width="1.5" PointX="8.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.NOTICIAS_SEPLAN" Width="1.5" PointX="2.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.PLANTILLA" Width="1.5" PointX="9.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.SERVIDORESPUBLICOS" Width="3.125" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.TIPO_INFORME" Width="1.5" PointX="11.625" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.TIPO_PLANTILLA" Width="1.5" PointX="11.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.USUARIO" Width="1.5" PointX="0.5" PointY="2.375" IsExpanded="true" />
         <AssociationConnector Association="sitio_seplaModel.FK_BALAZO_REFERENCE_NOTICIAS" ManuallyRouted="false" />
         <AssociationConnector Association="sitio_seplaModel.FK_SERVIDORES_DEPTO" ManuallyRouted="false" />
         <AssociationConnector Association="sitio_seplaModel.FK_FOTOS_REFERENCE_NOTICIAS" ManuallyRouted="false" />

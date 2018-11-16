@@ -47,10 +47,10 @@ namespace siteSPPP.Controllers
             return View(pLANTILLA);
         }
 
-        public JsonResult GetEmployee()
+        public JsonResult Organigrama()
         {
-            db.Configuration.ProxyCreationEnabled = false;
-            var sERVIDORESPUBLICOs = db.SERVIDORESPUBLICOS.Where(s => s.ESTATUS.Equals("A")).ToList();
+            //db.Configuration.ProxyCreationEnabled = false;
+            var sERVIDORESPUBLICOs = db.SERVIDORESPUBLICOS.ToList();
             var json = Json(sERVIDORESPUBLICOs, JsonRequestBehavior.AllowGet);
             json.MaxJsonLength= 500000000;
             return json;
@@ -63,7 +63,7 @@ namespace siteSPPP.Controllers
 
         public ActionResult FuncionesPrincipales()
         {
-            //valor 5 significa FUNCIONES GENERALES DE LA SPPP en la tabla TIPO_PLANTILLA
+            //valor 5 significa FUNCIONES GENERALES DE LA SPPP en la tabla TIPO_PLANTILLA fdsfsfsds
             var pLANTILLA = db.PLANTILLA.Where(s => s.IDTIPO == 5).ToList();
             return View(pLANTILLA);
         }
