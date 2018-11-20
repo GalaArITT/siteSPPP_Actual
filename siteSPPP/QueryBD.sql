@@ -389,5 +389,5 @@ set NOMBREDEPTO = 'Secretaría de Planeación, Programación y Presupuesto'
 where IDDEPARTAMENTO=1
 
 update SERVIDORESPUBLICOS
-set NIVEL = 0
+set NIVEL = NULL
 where IDSERVPUB = 7 

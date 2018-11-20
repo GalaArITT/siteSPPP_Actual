@@ -45,7 +45,7 @@
                     var Employee_ID = dataArray[i][0].toString();
                     var Employee_Name = dataArray[i][1];
                     var Title = dataArray[i][2];
-                    var ReportTo = dataArray[i][12] != 1 ? dataArray[i][12].toString() : '';
+                    var ReportTo = dataArray[i][12] != null ? dataArray[i][12].toString() : '';
 
                     //si el valor el null que no lo muestre en el diagrama
                     if (Employee_Name == null) {
