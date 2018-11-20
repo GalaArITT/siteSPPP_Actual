@@ -1,77 +1,73 @@
-﻿ @model IEnumerable<siteSPPP.Models.SERVIDORESPUBLICOS> 
+﻿@model siteSPPP.Models.SERVIDORESPUBLICOS
 
 @{
-    ViewBag.Title = "Organigrama";
+    ViewBag.Title = "Google Org Chart";
     Layout = null;
 }
-<h2 style="text-align: center;"> Google org chart - ASP.NET MVC 5 </h2>
-    <div id="chartOrg">
 
-    </div>
+<h2 style="text-align: center;"> Google org chart - ASP.NET MVC 4 </h2>
+<div id="chartOrg">
+</div>
 
-    @section scripts
-    {
-        <!-- Scripts JS -->
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<!-- Scripts JS -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
-        <script type="text/javascript">
+<script type="text/javascript">
+    google.load("visualization", "1", { packages: ["orgchart"] });
+    google.setOnLoadCallback(drawChart);
 
-            google.load("visualization", "1", { packages: ["orgchart"] });
+    function drawChart() {
+        $.ajax({
 
-            google.setOnLoadCallback(drawChart);
+            type: "POST",
+            url: "/Conocenos/Organigrama_Json",
+            data: '{}',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (dt) {
 
-            function drawChart() {
+                var dataArray = [];
 
-                $.ajax({
-
-                    type: "POST",
-                    url: "Conocenos/Organigrama_Json",
-                    data: '{}',
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    success: function (dt) {
-
-                        var dataArray = [];
-
-                        $.each(dt, function (i, item) {
-                            dataArray.push([item.IDSERVPUB, item.NOMBREPERSONAL, item.NOMBRAMIENTO, item.NIVEL,item.ESTATUS]);
-                        });
-
-
-
-                        var data = new google.visualization.DataTable();
-
-                        data.addColumn('string', 'Entity');
-                        data.addColumn('string', 'ReportEntity');
-                        data.addColumn('string', 'ToolTip');
-
-
-                        for (var i = 0; i < dataArray.length; i++) {
-
-                            var Employee_ID = dataArray[i][0].toString();
-                            var Employee_Name = dataArray[i][1];
-                            var Title = dataArray[i][2];
-                            var ReportTo = dataArray[i][3] != null ? dataArray[i][3].toString() : '';
-
-                            data.addRows([[{
-                                v: Employee_ID,
-                                f: Employee_Name + '<br/><b>' + Title + '</b>'
-                            }, ReportTo, Title]]);
-                        }
-
-
-                        var chart = new google.visualization.OrgChart($("#chartOrg")[0]);
-                        chart.draw(data, { allowHtml: true });
-
-                    },
-                    failure: function (dt) {
-                        alert(dt);
-                    },
-                    error: function (dt) {
-                        alert(dt);
-                    }
+                $.each(dt, function (i, item) {
+                    dataArray.push([item.IDSERVPUB, item.NOMBREPERSONAL, item.NOMBRAMIENTO, item.NIVEL]);
                 });
+
+                var data = new google.visualization.DataTable();
+
+                data.addColumn('string', 'Entity');
+                data.addColumn('string', 'ReportEntity');
+                data.addColumn('string', 'ToolTip');
+
+
+                for (var i = 0; i < dataArray.length; i++) {
+                    //no cambiar nombre de variables
+                    var Employee_ID = dataArray[i][0].toString();
+                    var Employee_Name = dataArray[i][1];
+                    var Title = dataArray[i][2];
+                    var ReportTo = dataArray[i][12] != 1 ? dataArray[i][12].toString() : '';
+
+                    //si el valor el null que no lo muestre en el diagrama
+                    if (Employee_Name == null) {
+                        Employee_Name = "";
+                    }
+                    data.addRows([[{
+                        v: Employee_ID,
+                        f: Employee_Name  + '<br/><b>' + Title + '</b>'
+                    }, ReportTo, Title]]);
+                }
+
+
+                var chart = new google.visualization.OrgChart($("#chartOrg")[0]);
+                chart.draw(data, { allowHtml: true });
+
+            },
+            failure: function (dt) {
+                alert(dt);
+            },
+            error: function (dt) {
+                alert(dt);
             }
-        </script>
+        });
     }
+</script>

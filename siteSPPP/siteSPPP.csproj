@@ -1379,11 +1379,11 @@
     <Content Include="Views\Funcionarios\Details.cshtml" />
     <Content Include="Views\Funcionarios\Edit.cshtml" />
     <Content Include="Views\Funcionarios\Index.cshtml" />
-    <Content Include="Views\Conocenos\Organigrama.cshtml" />
     <Content Include="Views\Administrador\CambiarFotoFuncionario.cshtml" />
     <Content Include="Views\Administrador\CambiarCurriculumFuncionario.cshtml" />
     <Content Include="Views\Administrador\EditarUsuario.cshtml" />
     <Content Include="Views\Administrador\EliminarUsuario.cshtml" />
+    <Content Include="Views\Conocenos\Organigrama.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

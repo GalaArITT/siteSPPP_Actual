@@ -98,7 +98,7 @@ namespace siteSPPP.Models
         [Display(Name = "Fecha registro")]
         public Nullable<System.DateTime> FECHAREGISTRO { get; set; }
         [Display(Name = "Nivel")]
-        public byte NIVEL { get; set; }
+        public Nullable<int> NIVEL { get; set; }
     }
     [DataContract(IsReference = true)]
     public class DEPARTAMENTOS_Metadatos

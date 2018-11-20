@@ -26,7 +26,7 @@ namespace siteSPPP.Models
         public byte[] CURRICULUM { get; set; }
         public string ESTATUS { get; set; }
         public Nullable<System.DateTime> FECHAREGISTRO { get; set; }
-        public byte NIVEL { get; set; }
+        public Nullable<byte> NIVEL { get; set; }
     
         public virtual DEPARTAMENTOS DEPARTAMENTOS { get; set; }
         public virtual USUARIO USUARIO { get; set; }

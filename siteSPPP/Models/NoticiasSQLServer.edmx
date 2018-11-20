@@ -78,7 +78,7 @@
           <Property Name="CURRICULUM" Type="varbinary(max)" />
           <Property Name="ESTATUS" Type="nvarchar" MaxLength="1" />
           <Property Name="FECHAREGISTRO" Type="datetime" />
-          <Property Name="NIVEL" Type="tinyint" Nullable="false" />
+          <Property Name="NIVEL" Type="int" />
         </EntityType>
         <EntityType Name="TIPO_INFORME">
           <Key>
@@ -320,7 +320,7 @@
           <Property Name="FECHAREGISTRO" Type="DateTime" Precision="3" />
           <NavigationProperty Name="DEPARTAMENTOS" Relationship="Self.FK_SERVIDORES_DEPTO" FromRole="SERVIDORESPUBLICOS" ToRole="DEPARTAMENTOS" />
           <NavigationProperty Name="USUARIO" Relationship="Self.FK_SERVIDOR_REFERENCE_USUARIO" FromRole="SERVIDORESPUBLICOS" ToRole="USUARIO" />
-          <Property Name="NIVEL" Type="Byte" Nullable="false" />
+          <Property Name="NIVEL" Type="Byte" />
         </EntityType>
         <EntityType Name="TIPO_INFORME">
           <Key>

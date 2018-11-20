@@ -50,9 +50,9 @@ namespace siteSPPP.Controllers
         public JsonResult Organigrama_Json()
         {
             //deshabilitar la creación del proxy
-            //db.Configuration.ProxyCreationEnabled = false;
+            db.Configuration.ProxyCreationEnabled = false;
             //IDSERVPUB, item.NOMBREPERSONAL, item.NOMBRAMIENTO, item.NIVEL
-            var sERVIDORESPUBLICOs = db.SERVIDORESPUBLICOS.Select(
+            /*var sERVIDORESPUBLICOs = db.SERVIDORESPUBLICOS.Select(
                 p => new
                 {
                     IDSERPUB = p.IDSERVPUB,
@@ -60,9 +60,10 @@ namespace siteSPPP.Controllers
                     NOMBRAMIENTO = p.NOMBRAMIENTO,
                     NIVEL = p.NIVEL,
                     ESTATUS = p.ESTATUS
-                }).Where(p => p.ESTATUS == "A").FirstOrDefault();
+                }).Where(p => p.ESTATUS == "A").ToList();*/
+            var sERVIDORESPUBLICOs = db.SERVIDORESPUBLICOS.ToList();
             var json = Json(sERVIDORESPUBLICOs, JsonRequestBehavior.AllowGet);
-            //json.MaxJsonLength = 500000000;
+            json.MaxJsonLength = 500000000;
             return json;
         }
 

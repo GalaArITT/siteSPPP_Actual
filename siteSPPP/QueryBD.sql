@@ -333,6 +333,9 @@ PASSWORD='57wrTlp'
 
 db name: sitio_sepla
 	*/
+	update SERVIDORESPUBLICOS
+set NIVEL = NULL
+where IDSERVPUB = 7 
 SELECT * FROM SERVIDORESPUBLICOS
 INSERT INTO USUARIO
 VALUES ('1234','1234', 'USUARIO CAPTURISTA',1,'A',GETDATE(),'oliver.jga@gmail.com')
@@ -377,7 +380,7 @@ select * from TIPO_PLANTILLA
 select * from SERVIDORESPUBLICOS
 
 ALTER TABLE SERVIDORESPUBLICOS
-ALTER COLUMN EXTENSION nvarchar(10) null
+ALTER COLUMN NIVEL int null
 
 
 select * from DEPARTAMENTOS
@@ -386,5 +389,5 @@ set NOMBREDEPTO = 'Secretaría de Planeación, Programación y Presupuesto'
 where IDDEPARTAMENTO=1
 
 update SERVIDORESPUBLICOS
-set FECHAREGISTRO = GETDATE()
+set NIVEL = 0
 where IDSERVPUB = 7 

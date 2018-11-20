@@ -73,7 +73,7 @@
     <Property Name="CURRICULUM" Type="varbinary(max)" />
     <Property Name="ESTATUS" Type="nvarchar" MaxLength="1" />
     <Property Name="FECHAREGISTRO" Type="datetime" />
-    <Property Name="NIVEL" Type="tinyint" Nullable="false" />
+    <Property Name="NIVEL" Type="int" />
   </EntityType>
   <EntityType Name="TIPO_INFORME">
     <Key>
