@@ -1,11 +1,13 @@
-﻿@model siteSPPP.Models.SERVIDORESPUBLICOS
+﻿@model IEnumerable<siteSPPP.Models.SERVIDORESPUBLICOS>
 
 @{
     ViewBag.Title = "Google Org Chart";
     Layout = null;
+    //'<img src="/Content/images/Directorio/Dr. Felipe Javier Ruiz Rivera.jpg"/>'
+
 }
 
-<h2 style="text-align: center;"> Google org chart - ASP.NET MVC 4 </h2>
+<h2 style="text-align: center;"> Organigrama de la SPPP </h2>
 <div id="chartOrg">
 </div>
 
@@ -45,7 +47,7 @@
                     var Employee_ID = dataArray[i][0].toString();
                     var Employee_Name = dataArray[i][1];
                     var Title = dataArray[i][2];
-                    var ReportTo = dataArray[i][12] != null ? dataArray[i][12].toString() : '';
+                    var ReportTo = dataArray[i][3] != null ? dataArray[i][3].toString() : '';
 
                     //si el valor el null que no lo muestre en el diagrama
                     if (Employee_Name == null) {
@@ -53,7 +55,8 @@
                     }
                     data.addRows([[{
                         v: Employee_ID,
-                        f: Employee_Name  + '<br/><b>' + Title + '</b>'
+                        f: Employee_Name + '<br/><b>' + Title + '</b>' + '<br/><b>' +
+                            '<img src="/Content/images/Directorio/Dr. Felipe Javier Ruiz Rivera.jpg"/>' 
                     }, ReportTo, Title]]);
                 }
 
