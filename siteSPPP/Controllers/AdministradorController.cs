@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 
 namespace siteSPPP.Controllers
 {
@@ -188,9 +189,40 @@ namespace siteSPPP.Controllers
         }
 
         //Modulo de Funcionarios Públicos
-        public ActionResult ListaFuncionarios()
+        public ActionResult ListaFuncionarios(string filtrado, string currentFilter, string busqueda, int? page)
         {
-            return View(db.SERVIDORESPUBLICOS.ToList());
+            var servidores = from s in db.SERVIDORESPUBLICOS
+                             select s;
+
+            if (busqueda!= null)
+            {
+                page = 1;
+            }
+            else
+            {
+                busqueda = currentFilter;
+            }
+            //buscar por nombre de servidor 
+           // busqueda = busqueda.ToString();
+            if (!String.IsNullOrEmpty(busqueda))
+            {
+                servidores = servidores.Where(s=>s.NOMBREPERSONAL.Contains(busqueda) || s.NOMBRAMIENTO.Contains(busqueda));
+                ViewBag.Currentfilter = busqueda;
+            }
+            //filtrar por estatus
+
+            //condicional para dropdownlist de filtro
+            if (!string.IsNullOrEmpty(filtrado))
+            {
+                filtrado = filtrado.ToString();
+                servidores = servidores.Where(s => s.ESTATUS.ToString().Contains(filtrado));
+                ViewBag.filtrado = filtrado;
+            }
+
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+
+            return View(servidores.OrderBy(x=>x.FECHAREGISTRO).Where(s=>s.ESTATUS=="A").ToPagedList(pageNumber,pageSize));
         }
 
         // GET: Funcionarios/Create

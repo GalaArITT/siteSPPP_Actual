@@ -680,3 +680,7 @@ C:\Users\Oliver\source\repos\PruebaGit\siteSPPP\obj\Debug\siteSPPP.csproj.CoreCo
 C:\Users\Oliver\source\repos\PruebaGit\siteSPPP\obj\Debug\siteSPPP.csproj.CopyComplete
 C:\Users\Oliver\source\repos\PruebaGit\siteSPPP\obj\Debug\siteSPPP.dll
 C:\Users\Oliver\source\repos\PruebaGit\siteSPPP\obj\Debug\siteSPPP.pdb
+C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\PagedList.dll
+C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\PagedList.Mvc.dll
+C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\PagedList.xml
+C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\PagedList.Mvc.xml
