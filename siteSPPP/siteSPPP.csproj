@@ -1381,11 +1381,6 @@
     <Content Include="Views\Administrador\AgregarFuncionario.cshtml" />
     <Content Include="Views\Administrador\EditarFuncionario.cshtml" />
     <Content Include="Views\Administrador\DetalleFuncionario.cshtml" />
-    <Content Include="Views\Funcionarios\Create.cshtml" />
-    <Content Include="Views\Funcionarios\Delete.cshtml" />
-    <Content Include="Views\Funcionarios\Details.cshtml" />
-    <Content Include="Views\Funcionarios\Edit.cshtml" />
-    <Content Include="Views\Funcionarios\Index.cshtml" />
     <Content Include="Views\Administrador\CambiarFotoFuncionario.cshtml" />
     <Content Include="Views\Administrador\CambiarCurriculumFuncionario.cshtml" />
     <Content Include="Views\Administrador\EditarUsuario.cshtml" />
