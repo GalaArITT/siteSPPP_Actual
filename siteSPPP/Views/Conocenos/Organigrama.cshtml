@@ -32,7 +32,7 @@
                 var dataArray = [];
 
                 $.each(dt, function (i, item) {
-                    dataArray.push([item.IDSERVPUB, item.NOMBREPERSONAL, item.NOMBRAMIENTO, item.NIVEL]);
+                    dataArray.push([item.IDSERVPUB, item.NOMBREPERSONAL, item.NOMBRAMIENTO, item.NIVEL, item.FOTOPERSONAL]);
                 });
 
                 var data = new google.visualization.DataTable();
@@ -48,15 +48,28 @@
                     var Employee_Name = dataArray[i][1];
                     var Title = dataArray[i][2];
                     var ReportTo = dataArray[i][3] != null ? dataArray[i][3].toString() : '';
+                    //necesito convertir este arreglo de bytes en una imagen
+                    var Imagen = dataArray[i][4];
+
+                    function bin2string(array) {
+                        var result = "";
+                        for (var i = 0; i < array.length; ++i) {
+                            result += (String.fromCharCode(array[i]));
+                        }
+                        return result;
+                    }
+                    var Imagen_Bin_String = bin2string(Imagen);
+                    var Imagen_Base64 = btoa(Imagen_Bin_String);
 
                     //si el valor el null que no lo muestre en el diagrama
                     if (Employee_Name == null) {
                         Employee_Name = "";
                     }
+                    console.log(Imagen);
                     data.addRows([[{
                         v: Employee_ID,
                         f: Employee_Name + '<br/><b>' + Title + '</b>' + '<br/><b>' +
-                            '<img src="/Content/images/Directorio/Dr. Felipe Javier Ruiz Rivera.jpg"/>' 
+                            '<img src="data:image/jpg;base64,' + Imagen_Base64 + '">'
                     }, ReportTo, Title]]);
                 }
 
