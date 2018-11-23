@@ -45,10 +45,12 @@ namespace siteSPPP.Controllers
             return null;
         }
         //Modulo de usuarios
-        public ActionResult ListaUsuarios()
+        public ActionResult ListaUsuarios(string filtrado, string currentFilter, string busqueda, int? page)
         {
             //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
             int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            var usuarios = from s in db.USUARIO
+                             select s;
             byte? rol = null;
             //linea para validar que no entre a los controladores hasta que detecte una autenticación
             if (idUsuario == 0)
@@ -66,8 +68,35 @@ namespace siteSPPP.Controllers
                 }
                 else
                 {
+                    if (busqueda != null)
+                    {
+                        page = 1;
+                    }
+                    else
+                    {
+                        busqueda = currentFilter;
+                    }
+                    //buscar por nombre de servidor 
+                    // busqueda = busqueda.ToString();
+                    if (!String.IsNullOrEmpty(busqueda))
+                    {
+                        usuarios = usuarios.Where(s => s.NOMBREUSUARIO.Contains(busqueda) || s.USUARIOINICIA.Contains(busqueda));
+                        ViewBag.Currentfilter = busqueda;
+                    }
+                    //filtrar por estatus
+
+                    //condicional para dropdownlist de filtro
+                    if (!string.IsNullOrEmpty(filtrado))
+                    {
+                        filtrado = filtrado.ToString();
+                        usuarios = usuarios.Where(s => s.ESTATUS.ToString().Contains(filtrado));
+                        ViewBag.filtrado = filtrado;
+                    }
+
+                    int pageSize = 5;
+                    int pageNumber = (page ?? 1);
                     //codigo de lista de usuarios
-                    return View(db.USUARIO.ToList());
+                    return View(usuarios.OrderBy(x => x.FECHAREGISTRO).ToPagedList(pageNumber, pageSize));
                 }
             }
             return null;

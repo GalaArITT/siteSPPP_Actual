@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 
 namespace siteSPPP.Controllers
 {
@@ -44,10 +45,12 @@ namespace siteSPPP.Controllers
 
         //MODULO DE NOTICIAS//
 
-        public ActionResult ListaNoticias()
+        public ActionResult ListaNoticias(string filtrarfech, string filtrado, string currentFilter, string busqueda, int? page)
         {
             //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
             int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            var noticias = from s in db.NOTICIAS
+                             select s;
             byte? rol = null;
             //linea para validar que no entre a los controladores hasta que detecte una autenticación
             if (idUsuario == 0)
@@ -65,9 +68,40 @@ namespace siteSPPP.Controllers
                 }
                 else
                 {
+                    if (busqueda != null)
+                    {
+                        page = 1;
+                    }
+                    else
+                    {
+                        busqueda = currentFilter;
+                    }
+                    //buscar por nombre de servidor 
+                    // busqueda = busqueda.ToString();
+                    if (!String.IsNullOrEmpty(busqueda))
+                    {
+                        noticias = noticias.Where(s => s.TITULO.Contains(busqueda) || s.CONTENIDO.Contains(busqueda));
+                        ViewBag.Currentfilter = busqueda;
+                    }
+                    //Filtrar por estatus
+                    if (!string.IsNullOrEmpty(filtrado))
+                    {
+                        filtrado = filtrado.ToString();
+                        noticias = noticias.Where(s => s.ESTATUS.ToString().Contains(filtrado));
+                        ViewBag.filtrado = filtrado;
+                    }
+                    //Filtrar por fechas
+                    if (!string.IsNullOrEmpty(filtrarfech))
+                    {
+                        DateTime filtrarfech1 = Convert.ToDateTime(filtrarfech).Date;
+                        noticias = noticias.Where(s => s.FECHAPUBLIC == filtrarfech1);
+                        ViewBag.filtrarfech = filtrarfech;
+                    }
                     //Mostrar una lista de noticias desde la tabla objeto NOTICIAS que hace referencia a NOTICIAS_SEPLA
-                    var nOTICIAS = db.NOTICIAS.ToList();
-                    return View(nOTICIAS);
+                    int pageSize = 5;
+                    int pageNumber = (page ?? 1);
+
+                    return View(noticias.OrderBy(x => x.FECHAPUBLIC).ToPagedList(pageNumber, pageSize));
                 }
             }
             return null;
@@ -124,31 +158,76 @@ namespace siteSPPP.Controllers
         // GET: NoticiasTesting/Details/5
         public ActionResult DetalleNoticias(int? id)
         {
-            if (id == null)
+
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
             }
-            NOTICIAS_SEPLAN nOTICIAS_SEPLAN = db.NOTICIAS.Find(id);
-            if (nOTICIAS_SEPLAN == null)
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
             {
-                return HttpNotFound();
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 1) // 1 = Capturista
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    NOTICIAS_SEPLAN nOTICIAS_SEPLAN = db.NOTICIAS.Find(id);
+                    if (nOTICIAS_SEPLAN == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    return View(nOTICIAS_SEPLAN);
+                }
             }
-            return View(nOTICIAS_SEPLAN);
+            return null;
         }
         // GET: NoticiasTesting/Edit/5
         public ActionResult EditarNoticias(int? id)
         {
-            if (id == null)
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
             }
-            NOTICIAS_SEPLAN nOTICIAS_SEPLAN = db.NOTICIAS.Find(id);
-            if (nOTICIAS_SEPLAN == null)
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
             {
-                return HttpNotFound();
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 1) // 1 = Capturista
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    NOTICIAS_SEPLAN nOTICIAS_SEPLAN = db.NOTICIAS.Find(id);
+                    if (nOTICIAS_SEPLAN == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    ViewBag.IDNOTICIA = new SelectList(db.FOTOS, "IDNOTICIA", "IDNOTICIA", nOTICIAS_SEPLAN.IDNOTICIA);
+                    return View(nOTICIAS_SEPLAN);
+                }
             }
-            ViewBag.IDNOTICIA = new SelectList(db.FOTOS, "IDNOTICIA", "IDNOTICIA", nOTICIAS_SEPLAN.IDNOTICIA);
-            return View(nOTICIAS_SEPLAN);
+            return null;
         }
 
         // POST: Editar Noticas
@@ -171,16 +250,38 @@ namespace siteSPPP.Controllers
         // GET: EliminarNoticias
         public ActionResult EliminarNoticias(int? id)
         {
-            if (id == null)
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
             }
-            NOTICIAS_SEPLAN nOTICIAS_SEPLAN = db.NOTICIAS.Find(id);
-            if (nOTICIAS_SEPLAN == null)
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
             {
-                return HttpNotFound();
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 1) // 1 = Capturista
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    NOTICIAS_SEPLAN nOTICIAS_SEPLAN = db.NOTICIAS.Find(id);
+                    if (nOTICIAS_SEPLAN == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    return View(nOTICIAS_SEPLAN);
+                }
             }
-            return View(nOTICIAS_SEPLAN);
+            return null;
         }
 
         // POST: SalidaPersonas/Delete/5
@@ -204,14 +305,36 @@ namespace siteSPPP.Controllers
         //Seccion de fotos
         public ActionResult ListaFotos(int? idNoticia)
         {
-            //encontrar por id 
-            if (idNoticia == null)
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
             }
-            //mostrar lista referente a idnoticias
-            ViewBag.idNoticia = idNoticia;
-            return View(db.FOTOS.Where(p => p.IDNOTICIA == idNoticia.Value).ToList());
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
+            {
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 1) // 1 = Capturista
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    //encontrar por id 
+                    if (idNoticia == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    //mostrar lista referente a idnoticias
+                    ViewBag.idNoticia = idNoticia;
+                    return View(db.FOTOS.Where(p => p.IDNOTICIA == idNoticia.Value).ToList());
+                }
+            }
+            return null;
         }
 
         public ActionResult MostrarFoto(int id)
@@ -235,18 +358,40 @@ namespace siteSPPP.Controllers
         // GET: FotosTesting/Create
         public ActionResult AgregarFoto(int? idNoticia)
         {
-            if (idNoticia == null)
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
             }
-            NOTICIAS_SEPLAN Noticias = db.NOTICIAS.Find(idNoticia);
-            if (idNoticia == null)
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
             {
-                return HttpNotFound();
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 1) // 1 = Capturista
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    if (idNoticia == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    NOTICIAS_SEPLAN Noticias = db.NOTICIAS.Find(idNoticia);
+                    if (idNoticia == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    FOTOS fotos = new FOTOS();
+                    fotos.IDNOTICIA = idNoticia.Value; // asignar valor de id
+                    return View(fotos);
+                }
             }
-            FOTOS fotos = new FOTOS();
-            fotos.IDNOTICIA = idNoticia.Value; // asignar valor de id
-            return View(fotos);
+            return null;
         }
         // POST: FotosTesting/Create
         [HttpPost]
@@ -272,17 +417,39 @@ namespace siteSPPP.Controllers
         // GET: FotosTesting/Edit/5
         public ActionResult EditarFoto(int? id)
         {
-            if (id == null)
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
             }
-            FOTOS fOTOS = db.FOTOS.Find(id);
-            if (fOTOS == null)
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
             {
-                return HttpNotFound();
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 1) // 1 = Capturista
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    FOTOS fOTOS = db.FOTOS.Find(id);
+                    if (fOTOS == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    ViewBag.IDNOTICIA = new SelectList(db.NOTICIAS, "IDNOTICIA", "TITULO", fOTOS.IDNOTICIA);
+                    return View(fOTOS);
+                }
             }
-            ViewBag.IDNOTICIA = new SelectList(db.NOTICIAS, "IDNOTICIA", "TITULO", fOTOS.IDNOTICIA);
-            return View(fOTOS);
+            return null;
         }
 
         // POST: FotosTesting/Edit/5

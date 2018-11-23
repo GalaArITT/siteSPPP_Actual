@@ -1,63 +1,94 @@
-﻿@model IEnumerable<siteSPPP.Models.USUARIO>
-
+﻿@model PagedList.IPagedList<siteSPPP.Models.USUARIO>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 @{
     ViewBag.Title = "ListaUsuarios";
     Layout = "~/Views/Shared/LayoutAuth.cshtml";
 }
 
 <h2>Lista de usuarios</h2>
-
-<p>
+<div class="text-center">
     @Html.ActionLink("Crear un nuevo usuario", "CrearUsuario")
-</p>
+</div>
+<hr />
+<div class="float-lg-left">
+    @using (Html.BeginForm("ListaUsuarios", "Administrador", FormMethod.Get, new { @class = "input-group" }))
+    {
+        @Html.TextBox("busqueda", ViewBag.CurrentFilter as string, new { @class = "form-control m-1", autofocus = "autofocus" })
+        <span class="input-group-btn">
+            <input type="submit" value="Buscar" class="btn btn-group btn-primary m-1" />
+        </span>
+    }
+    @using (Html.BeginForm("ListaUsuarios", "Administrador", FormMethod.Get, new { @class = "input-group" }))
+    {
+        @Html.DropDownList("filtrado", new SelectList(new[]{
+
+                   new SelectListItem { Value = "", Text ="SELECCIONE UNA OPCION"},
+                   new SelectListItem { Value = "A", Text ="ACTIVO"},
+                   new SelectListItem { Value = "I", Text = "INACTIVO"},
+               }, "Value"
+               , "Text"), htmlAttributes: new { @class = "form-control m-1", @id = "filtro", onchange = "this.form.submit();" })
+    }
+</div>
 <table class="table-responsive">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.USUARIOINICIA)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().USUARIOINICIA)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CONTRASENA)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().CONTRASENA)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NOMBREUSUARIO)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().NOMBREUSUARIO)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ROL)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().ROL)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ESTATUS)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().ESTATUS)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FECHAREGISTRO)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().FECHAREGISTRO)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.USUARIOINICIA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CONTRASENA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NOMBREUSUARIO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ROL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ESTATUS)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FECHAREGISTRO)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "EditarUsuario", new { id=item.IDUSUARIO }) |
-            @Html.ActionLink("Eliminar", "EliminarUsuario", new { id=item.IDUSUARIO })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.USUARIOINICIA)
+            </td>
+            <td>
+                @Html.Raw("\u2022\u2022\u2022\u2022\u2022")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOMBREUSUARIO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ROL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ESTATUS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FECHAREGISTRO)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "EditarUsuario", new { id = item.IDUSUARIO }) |
+                @Html.ActionLink("Eliminar", "EliminarUsuario", new { id = item.IDUSUARIO })
+            </td>
+        </tr>
+    }
 
 </table>
+<div class="text-right">
+    Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount
+</div>
+<div class="text-center">
+    @Html.PagedListPager(Model, page => Url.Action("ListaUsuarios", new { page,
+    currentFilter = ViewBag.currentFilter,
+    filtrado = ViewBag.filtrado
+}))
+</div>
+

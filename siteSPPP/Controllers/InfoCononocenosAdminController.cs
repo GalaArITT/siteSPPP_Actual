@@ -10,7 +10,7 @@ using siteSPPP.Models;
 
 namespace siteSPPP.Controllers
 {
-    public class InformacionConocenosController : Controller
+    public class InfoCononocenosAdminController : Controller
     {
         private sitio_seplaEntities db = new sitio_seplaEntities();
 
@@ -30,7 +30,7 @@ namespace siteSPPP.Controllers
             else
             {
                 rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
-                if (rol != 1) // 1 = Capturista
+                if (rol != 2) // 2 = Administrador
                 {
                     return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
                 }
@@ -59,7 +59,7 @@ namespace siteSPPP.Controllers
             else
             {
                 rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
-                if (rol != 1) // 1 = Capturista
+                if (rol != 2) // 2 = Administrador
                 {
                     return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
                 }
@@ -96,7 +96,7 @@ namespace siteSPPP.Controllers
             else
             {
                 rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
-                if (rol != 1) // 1 = Capturista
+                if (rol != 2) // 2 = Administrador
                 {
                     return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
                 }
@@ -145,7 +145,7 @@ namespace siteSPPP.Controllers
             else
             {
                 rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
-                if (rol != 1) // 1 = Capturista
+                if (rol != 2) // 2 = Administrador
                 {
                     return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
                 }
@@ -183,7 +183,6 @@ namespace siteSPPP.Controllers
             ViewBag.IDUSUARIO = new SelectList(db.USUARIO, "IDUSUARIO", "USUARIOINICIA", pLANTILLA.IDUSUARIO);
             return View(pLANTILLA);
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)

@@ -18,6 +18,7 @@ namespace siteSPPP.Models
         public string USUARIOINICIA { get; set; }
         [Required]
         [Display(Name = "Contraseña")]
+        [DataType(DataType.Password)]
         public string CONTRASENA { get; set; }
         [Display(Name = "Nombre completo")]
         public string NOMBREUSUARIO { get; set; }
@@ -25,7 +26,9 @@ namespace siteSPPP.Models
         public Nullable<byte> ROL { get; set; }
         [Display(Name = "Estatus")]
         public string ESTATUS { get; set; }
+        [DataType(DataType.Date)]
         [Display(Name = "Fecha de registro")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> FECHAREGISTRO { get; set; }
     }
 

@@ -316,7 +316,7 @@ go
 
 
 
-select * from USUARIO
+select * from NOTICIAS
 
 	/*Tipos: 
 	1 = Capturista
