@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/LayoutAuth.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Información del apartado de Conocenos</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*Html.ActionLink("Crear nuevo elemento", "Create")*@
 </p>
 <table class="table">
     <tr>
@@ -27,7 +27,7 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+    @foreach (var item in Model) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.TITULO)
@@ -42,11 +42,10 @@
             @Html.DisplayFor(modelItem => item.USUARIO.USUARIOINICIA)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IDPLANTILLA }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IDPLANTILLA }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IDPLANTILLA })
+            @Html.ActionLink("Editar", "Edit", new { id=item.IDPLANTILLA }) 
+            @Html.ActionLink("Detalle", "Details", new { id=item.IDPLANTILLA }) 
         </td>
     </tr>
-}
+    }
 
 </table>

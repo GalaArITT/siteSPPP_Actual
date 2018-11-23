@@ -4,13 +4,10 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/LayoutAuth.cshtml";
 }
-
-<h2>Details</h2>
-
 <div>
-    <h4>PLANTILLA</h4>
+    <h4>Información Previa</h4>
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="text-left">
         <dt>
             @Html.DisplayNameFor(model => model.TITULO)
         </dt>
@@ -24,15 +21,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CONTENIDO)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TIPO_PLANTILLA.TIPOPLANTILLA)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TIPO_PLANTILLA.TIPOPLANTILLA)
+            @Html.Raw(Model.CONTENIDO)
         </dd>
 
         <dt>
@@ -45,7 +34,7 @@
 
     </dl>
 </div>
+
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IDPLANTILLA }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Volver a la Lista", "Index")
 </p>
