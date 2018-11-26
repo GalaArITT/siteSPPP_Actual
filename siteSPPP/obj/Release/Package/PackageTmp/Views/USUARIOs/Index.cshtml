@@ -1,0 +1,64 @@
+﻿@model IEnumerable<siteSPPP.Models.USUARIO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutAuth.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.USUARIOINICIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONTRASENA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBREUSUARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ROL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTATUS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHAREGISTRO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.USUARIOINICIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONTRASENA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBREUSUARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ROL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTATUS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHAREGISTRO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDUSUARIO }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDUSUARIO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDUSUARIO })
+        </td>
+    </tr>
+}
+
+</table>

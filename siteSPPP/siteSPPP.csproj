@@ -247,7 +247,7 @@
     <Compile Include="Controllers\ConocenosController.cs" />
     <Compile Include="Controllers\FuncionariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\InfoCononocenosAdminController.cs" />
+    <Compile Include="Controllers\InfoConocenosAdminController.cs" />
     <Compile Include="Controllers\InformacionConocenosController.cs" />
     <Compile Include="Controllers\InicioTestController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -1384,15 +1384,18 @@
     <Content Include="Views\Administrador\CambiarFotoFuncionario.cshtml" />
     <Content Include="Views\Administrador\CambiarCurriculumFuncionario.cshtml" />
     <Content Include="Views\Administrador\EditarUsuario.cshtml" />
-    <Content Include="Views\Administrador\EliminarUsuario.cshtml" />
     <Content Include="Views\Conocenos\Organigrama.cshtml" />
     <Content Include="Views\Administrador\CrearUsuario.cshtml" />
     <Content Include="Views\Capturista\MostrarMisDatos.cshtml" />
     <Content Include="Views\Capturista\EditarMisDatos.cshtml" />
-    <Content Include="Views\InfoCononocenosAdmin\Create.cshtml" />
-    <Content Include="Views\InfoCononocenosAdmin\Details.cshtml" />
-    <Content Include="Views\InfoCononocenosAdmin\Edit.cshtml" />
-    <Content Include="Views\InfoCononocenosAdmin\Index.cshtml" />
+    <Content Include="Views\InfoConocenosAdmin\Create.cshtml" />
+    <Content Include="Views\InfoConocenosAdmin\Details.cshtml" />
+    <Content Include="Views\InfoConocenosAdmin\Edit.cshtml" />
+    <Content Include="Views\InfoConocenosAdmin\Index.cshtml" />
+    <Content Include="Views\Administrador\ListaNoticiasAdmin.cshtml" />
+    <Content Include="Views\Administrador\EliminarNoticiasAdmin.cshtml" />
+    <Content Include="Views\Administrador\EditarNoticiasAdmin.cshtml" />
+    <Content Include="Views\Administrador\EditarFotoAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

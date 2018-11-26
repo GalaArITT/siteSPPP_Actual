@@ -1,0 +1,67 @@
+﻿@model siteSPPP.Models.USUARIO
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/LayoutAuth.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>USUARIO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.USUARIOINICIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USUARIOINICIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONTRASENA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONTRASENA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBREUSUARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBREUSUARIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ROL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ROL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHAREGISTRO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHAREGISTRO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDUSUARIO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
