@@ -7,6 +7,8 @@
 }
 
 <h2>Listado de noticias</h2>
+@Html.ActionLink("Crear nueva noticia", "CrearNoticias", new { @class = "btn btn-outline-primary", role = "button" })
+<br />
 <div class="float-lg-left">
     <div>
         @using (Html.BeginForm("ListaNoticias", "Capturista", FormMethod.Get, new { @class = "input-group" }))
@@ -38,7 +40,6 @@
                    , "Text"), htmlAttributes: new { @class = "", @id = "filtro", onchange = "this.form.submit();" })
         }
     </div>
-    @Html.ActionLink("Crear nueva noticia", "CrearNoticias", new { @class = "btn btn-outline-primary", role = "button" })
 </div>
 
 <table class="table-responsive">

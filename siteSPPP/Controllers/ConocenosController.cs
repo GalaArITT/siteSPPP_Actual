@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 
 namespace siteSPPP.Controllers
 {
@@ -64,9 +65,19 @@ namespace siteSPPP.Controllers
             return View(db.SERVIDORESPUBLICOS.ToList());
         }
 
-        public ActionResult Directorio()
+        public ActionResult Directorio(string busqueda)
         {
-            return View(db.SERVIDORESPUBLICOS.Where(s => s.ESTATUS.Equals("A")).ToList());
+            var servidores = from s in db.SERVIDORESPUBLICOS
+                             select s;
+
+            //buscar por nombre de servidor 
+            // busqueda = busqueda.ToString();
+            if (!String.IsNullOrEmpty(busqueda))
+            {
+                servidores = servidores.Where(s => s.NOMBREPERSONAL.Contains(busqueda) || s.NOMBRAMIENTO.Contains(busqueda));
+                ViewBag.Currentfilter = busqueda;
+            }
+            return View(servidores.Where(s => s.ESTATUS.Equals("A")).OrderBy(x => x.IDDEPARTAMENTO).ToList());
         }
 
         public ActionResult FuncionesPrincipales()
@@ -74,6 +85,29 @@ namespace siteSPPP.Controllers
             //valor 5 significa FUNCIONES GENERALES DE LA SPPP en la tabla TIPO_PLANTILLA fdsfsfsds
             var pLANTILLA = db.PLANTILLA.Where(s => s.IDTIPO == 5).ToList();
             return View(pLANTILLA);
+        }
+        public ActionResult VerNoticias(string currentFilter, string busqueda, int? page)
+        {
+            var noticias = from s in db.NOTICIAS
+                           select s;
+            if (busqueda != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                busqueda = currentFilter;
+            }
+            //buscar por titulo
+            // busqueda = busqueda.ToString();
+            if (!String.IsNullOrEmpty(busqueda))
+            {
+                noticias = noticias.Where(s => s.TITULO.Contains(busqueda));
+                ViewBag.Currentfilter = busqueda;
+            }
+            int pageSize = 8;
+            int pageNumber = (page ?? 1);
+            return View(noticias.Where(s => s.ESTATUS.Equals("A")).OrderBy(x => x.FECHAPUBLIC).ToPagedList(pageNumber,pageSize));
         }
 
         protected override void Dispose(bool disposing)

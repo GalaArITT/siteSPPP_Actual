@@ -385,6 +385,7 @@ namespace siteSPPP.Controllers
             if (ModelState.IsValid)
             {
                 uSUARIO.FECHAREGISTRO = DateTime.Now; //capturar la fecha actual
+                uSUARIO.ESTATUS = "A";
                 db.USUARIO.Add(uSUARIO);
                 db.SaveChanges();//guardar cambios
                 return RedirectToAction("ListaUsuarios");
@@ -449,11 +450,10 @@ namespace siteSPPP.Controllers
         // POST: USUARIOs/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditarUsuario([Bind(Include = "IDUSUARIO,USUARIOINICIA,CONTRASENA,NOMBREUSUARIO,ROL,ESTATUS,FECHAREGISTRO")] USUARIO uSUARIO)
+        public ActionResult EditarUsuario([Bind(Include = "IDUSUARIO,USUARIOINICIA,CONTRASENA,NOMBREUSUARIO,ROL,ESTATUS,CORREO")] USUARIO uSUARIO)
         {
             if (ModelState.IsValid)
             {
-                uSUARIO.FECHAREGISTRO = DateTime.Now;
                 db.Entry(uSUARIO).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("ListaUsuarios");
@@ -494,7 +494,7 @@ namespace siteSPPP.Controllers
             int pageSize = 5;
             int pageNumber = (page ?? 1);
 
-            return View(servidores.OrderBy(x=>x.FECHAREGISTRO).Where(s=>s.ESTATUS=="A").ToPagedList(pageNumber,pageSize));
+            return View(servidores.OrderBy(x=>x.IDDEPARTAMENTO).ToPagedList(pageNumber,pageSize));
         }
 
         // GET: Funcionarios/Create
@@ -530,7 +530,7 @@ namespace siteSPPP.Controllers
             {
                 sERVIDORESPUBLICOS.FECHAREGISTRO = DateTime.Now;
                 sERVIDORESPUBLICOS.ESTATUS = "A";
-                sERVIDORESPUBLICOS.IDUSUARIO = 1; //idUsuario; 
+                sERVIDORESPUBLICOS.IDUSUARIO = idUsuario; //idUsuario; 
 
                 db.SERVIDORESPUBLICOS.Add(sERVIDORESPUBLICOS);
                 db.SaveChanges();
@@ -563,7 +563,7 @@ namespace siteSPPP.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult EditarFuncionario([Bind(Include = "IDSERVPUB,IDDEPARTAMENTO,IDUSUARIO,NOMBREPERSONAL,NOMBRAMIENTO,CONMUTADOR," +
-            "EXTENSION,FOTOPERSONAL,CORREO,CURRICULUM,ESTATUS,FECHAREGISTRO,NIVEL")] SERVIDORESPUBLICOS sERVIDORESPUBLICOS)
+            "EXTENSION,FOTOPERSONAL,CORREO,CURRICULUM,ESTATUS,FECHAREGISTRO,NIVEL,ESTATUS")] SERVIDORESPUBLICOS sERVIDORESPUBLICOS)
         {
             if (ModelState.IsValid)
             {

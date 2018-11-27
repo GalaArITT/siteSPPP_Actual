@@ -5,36 +5,38 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     //me la peló el slide de las fotos
 }
-<section class="slider">
-    <div class="flexslider">
-        <ul class="slides">
-            @foreach (var item in ViewBag.fotos)
-            {
-                <li>
-                    @*Cuando se itera un Viewbag se obtiene con la nomenclatura item.ELEMENTO 
-                        NOTA: el visual studio no muestra el elemento en el autocomplete. 
-                        *@
-                    <img src="/Home/MostrarFoto/@item.IDFOTO" alt="" height=500 width=500 />
-                </li>
-            }
-        </ul>
-
-    </div>
-</section>
-<div class="text-left">
-    <dl class="dl-horizontal">
+<div class="text-center">
+    <dl>
+        <dd>
+            <h1>
+                @Html.DisplayFor(model => model.TITULO)
+            </h1>
+        </dd>
         <dd class="text-right">
             @Html.DisplayFor(model => model.FECHAPUBLIC)
         </dd>
         <dd class="text-right">
             @Html.DisplayFor(model => model.LUGAR)
         </dd>
-        <dd>
-            <h1>
-                @Html.DisplayFor(model => model.TITULO)
-            </h1>
-        </dd>
-
+    </dl>
+</div>
+<section class="slider">
+    <div class="flexslider">
+        <ul class="slides">
+            @foreach (var item in ViewBag.fotos)
+            {
+                <li>
+                    @*Cuando se itera un Viewbag se obtiene con la nomenclatura item.ELEMENTO
+                        NOTA: el visual studio no muestra el elemento en el autocomplete.
+                    *@
+                    <img src="/Home/MostrarFoto/@item.IDFOTO" alt="" height=500 width=500 />
+                </li>
+            }
+        </ul>
+    </div>
+</section>
+<div class="text-left">
+    <dl class="dl-horizontal">
         <dd>
             @Html.Raw(Model.CONTENIDO)
         </dd>

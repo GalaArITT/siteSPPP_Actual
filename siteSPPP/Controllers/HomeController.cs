@@ -12,7 +12,7 @@ namespace siteSPPP.Controllers
         // GET: V_top_noticias
         public ActionResult Index()
         {
-            return View(db.NOTICIAS.OrderBy(s=>s.PRIORIDAD).OrderBy(s=>s.FECHAPUBLIC).Take(5).Where(s=>s.ESTATUS=="A").ToList());
+            return View(db.NOTICIAS.OrderByDescending(s=>s.FECHAPUBLIC).Take(5).Where(s=>s.ESTATUS=="A").OrderBy(s=>s.PRIORIDAD).ToList());
         }
 
         public ActionResult MostrarFoto(int id)

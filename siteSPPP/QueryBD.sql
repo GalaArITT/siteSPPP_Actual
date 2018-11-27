@@ -316,7 +316,10 @@ go
 
 
 
-select * from NOTICIAS
+select * from USUARIO
+update usuario
+set rol =1 
+where IDUSUARIO =2
 
 	/*Tipos: 
 	1 = Capturista
@@ -391,3 +394,4 @@ where IDDEPARTAMENTO=1
 update SERVIDORESPUBLICOS
 set NIVEL = 38
 where IDSERVPUB = 39
+
