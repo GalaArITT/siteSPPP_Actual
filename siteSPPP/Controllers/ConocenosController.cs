@@ -107,7 +107,7 @@ namespace siteSPPP.Controllers
             }
             int pageSize = 8;
             int pageNumber = (page ?? 1);
-            return View(noticias.Where(s => s.ESTATUS.Equals("A")).OrderBy(x => x.FECHAPUBLIC).ToPagedList(pageNumber,pageSize));
+            return View(noticias.Where(s => s.ESTATUS.Equals("A")).OrderByDescending(x => x.FECHAPUBLIC).ToPagedList(pageNumber,pageSize));
         }
 
         protected override void Dispose(bool disposing)
