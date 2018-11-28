@@ -1,0 +1,27 @@
+﻿@model siteSPPP.Models.FOTOS
+
+@{
+    ViewBag.Title = "EliminarFoto";
+    Layout = "~/Views/Shared/LayoutCapturista.cshtml";
+}
+<h3>¿Estás seguro de eliminar esta foto?</h3>
+<div>
+    <hr />
+    <div class="form-group">
+        @Html.Label("Imagen Actual", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <img src="@Url.Action("MostrarFoto", "Capturista", new { id = Model.IDFOTO })" alt="" height=100 width=200 />
+            @Html.ValidationMessageFor(model => model.FOTOGRAFIA, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Volver a la lista de fotos", "ListaFotos")
+            <input type="submit" value="Eliminar Fotografia" class="btn btn-default" />
+        </div>
+    }
+</div>
