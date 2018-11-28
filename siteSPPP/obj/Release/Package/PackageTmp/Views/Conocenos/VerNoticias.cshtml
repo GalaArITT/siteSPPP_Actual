@@ -21,22 +21,32 @@
 @foreach (var item in Model)
 {
     <article>
-        <div class="text-left">
-            <img src="/Home/MostrarFoto/@Html.DisplayFor(modelItem => item.FOTOS.FirstOrDefault().IDFOTO)" alt="" height=200 width=170 class="left" />
-            <h3>@Html.DisplayFor(model => item.FECHAPUBLIC)</h3>
-            <h3>@Html.DisplayFor(model => item.LUGAR)</h3>
-            <h3>
+        <div class="left">
+            <div class="">
                 @{
-                    string strURL = "<a href='/Home/NoticiaCompleta/" + Html.DisplayFor(modelItem => item.IDNOTICIA).ToString() + "'>";
-                    string strTitulo = Html.DisplayFor(modelItem => item.TITULO).ToString();
-                    strTitulo = MvcHtmlString.Create(strTitulo).ToString() + "</a>";
-                    @Html.Raw(strURL);
-                    @Html.Raw(strTitulo);
+                    <div style="float:left">
+                        <a href="/Home/NoticiaCompleta/@Html.DisplayFor(modelItem => item.IDNOTICIA)">
+                            <img src="/Home/MostrarFoto/@Html.DisplayFor(modelItem => item.FOTOS.FirstOrDefault().IDFOTO)" alt="" height=200 width=170 />
+                        </a>
+                    </div>
+                    <div class="text-left" style="margin-left: 200px;">
+                        <h3>@Html.DisplayFor(model => item.FECHAPUBLIC)</h3>
+                        <h3>@Html.DisplayFor(model => item.LUGAR)</h3>
+                        <h3 style="font-size: 1.3em">
+                            @{
+                                string strURL = "<a href='/Home/NoticiaCompleta/" + Html.DisplayFor(modelItem => item.IDNOTICIA).ToString() + "'>";
+                                string strTitulo = Html.DisplayFor(modelItem => item.TITULO).ToString();
+                                strTitulo = MvcHtmlString.Create(strTitulo).ToString() + "</a>";
+                                @Html.Raw(strURL);
+                                @Html.Raw(strTitulo);
+                            }
+                        </h3>
+                    </div>
                 }
-            </h3>
+            </div>
         </div>
     </article>
-    <hr />
+    <hr style="clear:both" />
 
 }
 

@@ -679,6 +679,7 @@ C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\pt\Microsoft.ReportViewer.W
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Debug\siteSPPP.csprojAssemblyReference.cache
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Debug\siteSPPP.csproj.CoreCompileInputs.cache
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Debug\siteSPPP.csproj.CopyComplete
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Debug\siteSPPP.dll

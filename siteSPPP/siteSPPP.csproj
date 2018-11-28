@@ -1368,7 +1368,6 @@
     <Content Include="Views\Capturista\AgregarFoto.cshtml" />
     <Content Include="Views\Capturista\EditarFoto.cshtml" />
     <Content Include="Views\Home\NoticiaCompleta.cshtml" />
-    <Content Include="Views\Capturista\EditNotTesting.cshtml" />
     <Content Include="Views\Capturista\EliminarNoticias.cshtml" />
     <Content Include="Views\InformacionConocenos\Create.cshtml" />
     <Content Include="Views\InformacionConocenos\Details.cshtml" />
@@ -1395,6 +1394,7 @@
     <Content Include="Views\Administrador\EditarNoticiasAdmin.cshtml" />
     <Content Include="Views\Administrador\EditarFotoAdmin.cshtml" />
     <Content Include="Views\Conocenos\VerNoticias.cshtml" />
+    <Content Include="Views\Capturista\EliminarFoto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
