@@ -11,7 +11,7 @@
 <div class="right">
     @using (Html.BeginForm("VerNoticias", "Conocenos", FormMethod.Get, new { @class = "input-group" }))
     {
-        @Html.TextBox("busqueda", ViewBag.CurrentFilter as string, new { @class = "form-control m-1", autofocus = "" })
+        @Html.TextBox("busqueda", ViewBag.CurrentFilter as string, new { @class = "form-control m-1", autofocus = "", Style="font-size:1em;" })
         <span class="input-group-btn">
             <input type="submit" value="Buscar" class="btn btn-group btn-primary m-1" />
         </span>
@@ -24,12 +24,12 @@
         <div class="left">
             <div class="">
                 @{
-                    <div style="float:left">
+                    <div style="float:left; width:20%;" >
                         <a href="/Home/NoticiaCompleta/@Html.DisplayFor(modelItem => item.IDNOTICIA)">
-                            <img src="/Home/MostrarFoto/@Html.DisplayFor(modelItem => item.FOTOS.FirstOrDefault().IDFOTO)" alt="" height=200 width=170 />
+                            <img src="/Home/MostrarFoto/@Html.DisplayFor(modelItem => item.FOTOS.FirstOrDefault().IDFOTO)" alt="" style="float:left; width:100%" />
                         </a>
                     </div>
-                    <div class="text-left" style="margin-left: 200px;">
+                    <div class="text-left" style="margin-left: 22%; width:75%;">
                         <h3>@Html.DisplayFor(model => item.FECHAPUBLIC)</h3>
                         <h3>@Html.DisplayFor(model => item.LUGAR)</h3>
                         <h3 style="font-size: 1.3em">

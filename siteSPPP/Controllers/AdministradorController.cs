@@ -450,7 +450,7 @@ namespace siteSPPP.Controllers
         // POST: USUARIOs/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditarUsuario([Bind(Include = "IDUSUARIO,USUARIOINICIA,CONTRASENA,NOMBREUSUARIO,ROL,ESTATUS,CORREO")] USUARIO uSUARIO)
+        public ActionResult EditarUsuario([Bind(Include = "IDUSUARIO,USUARIOINICIA,CONTRASENA,NOMBREUSUARIO,ROL,ESTATUS,FECHAREGISTRO,CORREO")] USUARIO uSUARIO)
         {
             if (ModelState.IsValid)
             {
@@ -465,36 +465,57 @@ namespace siteSPPP.Controllers
         {
             var servidores = from s in db.SERVIDORESPUBLICOS
                              select s;
-
-            if (busqueda!= null)
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
             {
-                page = 1;
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
             }
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
             else
             {
-                busqueda = currentFilter;
-            }
-            //buscar por nombre de servidor 
-           // busqueda = busqueda.ToString();
-            if (!String.IsNullOrEmpty(busqueda))
-            {
-                servidores = servidores.Where(s=>s.NOMBREPERSONAL.Contains(busqueda) || s.NOMBRAMIENTO.Contains(busqueda));
-                ViewBag.Currentfilter = busqueda;
-            }
-            //filtrar por estatus
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 2) // 2 = Administrador
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    if (busqueda != null)
+                    {
+                        page = 1;
+                    }
+                    else
+                    {
+                        busqueda = currentFilter;
+                    }
+                    //buscar por nombre de servidor 
+                    // busqueda = busqueda.ToString();
+                    if (!String.IsNullOrEmpty(busqueda))
+                    {
+                        servidores = servidores.Where(s => s.NOMBREPERSONAL.Contains(busqueda) || s.NOMBRAMIENTO.Contains(busqueda));
+                        ViewBag.Currentfilter = busqueda;
+                    }
+                    //filtrar por estatus
 
-            //condicional para dropdownlist de filtro
-            if (!string.IsNullOrEmpty(filtrado))
-            {
-                filtrado = filtrado.ToString();
-                servidores = servidores.Where(s => s.ESTATUS.ToString().Contains(filtrado));
-                ViewBag.filtrado = filtrado;
+                    //condicional para dropdownlist de filtro
+                    if (!string.IsNullOrEmpty(filtrado))
+                    {
+                        filtrado = filtrado.ToString();
+                        servidores = servidores.Where(s => s.ESTATUS.ToString().Contains(filtrado));
+                        ViewBag.filtrado = filtrado;
+                    }
+
+                    int pageSize = 5;
+                    int pageNumber = (page ?? 1);
+
+                    return View(servidores.OrderBy(x => x.IDDEPARTAMENTO).ToPagedList(pageNumber, pageSize));
+                }
             }
-
-            int pageSize = 5;
-            int pageNumber = (page ?? 1);
-
-            return View(servidores.OrderBy(x=>x.IDDEPARTAMENTO).ToPagedList(pageNumber,pageSize));
+            return null;
         }
 
         // GET: Funcionarios/Create

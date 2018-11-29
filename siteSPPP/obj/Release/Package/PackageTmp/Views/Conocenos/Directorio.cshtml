@@ -4,59 +4,407 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <span style="font-size:1.5em;text-align:left">
-        <strong>Directorio de Servidores Públicos</strong>
-    </span>
+<span style="font-size:1.5em;text-align:left">
+    <strong>Directorio de Servidores Públicos</strong>
+</span>
 
-    <div class="right">
-        @using (Html.BeginForm("Directorio", "Conocenos", FormMethod.Get, new { @class = "input-group" }))
-        {
-            @Html.TextBox("busqueda", ViewBag.CurrentFilter as string, new { @class = "form-control m-1", autofocus = "" })
-            <span class="input-group-btn">
-                <input type="submit" value="Buscar" class="btn btn-group btn-primary m-1" />
-            </span>
-        }
-    </div>
+<div class="right">
+    @using (Html.BeginForm("Directorio", "Conocenos", FormMethod.Get, new { @class = "input-group" }))
+    {
+        @Html.TextBox("busqueda", ViewBag.CurrentFilter as string, new { @class = "form-control m-1", autofocus = "",
+       @placeholder = "Escribe el Funcionario, para limpiar vacía el campo y pulsa en Buscar o Enter",Style="font-size:1em;" })
+        <span class="input-group-btn">
+            <input type="submit" value="Buscar" class="btn btn-group btn-primary m-1" />
+        </span>
+    }
 
-@foreach (var item in Model)
-{
-    <table width="703" border="0">
-        <tbody>
-            <tr>
-                <td colspan="5" bgcolor="#a5a7a9"><h2><strong class="a"><span class="blanco">@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</span></strong></h2></td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="text-center">
-                        <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" width="80" height="110" />
+    <h2 style="background-color:darkgray">Secretaría de Planeación, Programación y Presupuesto</h2>
+    @foreach (var item in Model)
+    {
+        <div>
+            @if (item.IDDEPARTAMENTO == 1 || item.IDDEPARTAMENTO == 3)
+            {
+                <div>
+                    <h3>@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</h3>
+                </div>
+                <div class="left">
+                    <div class="">
+                        @{
+                            <div style="float:left">
+                                <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" width="80" height="110" />
+                            </div>
+                            <div class="text-left" style="margin-left: 200px;">
+                                <h3>@Html.DisplayFor(model => item.NOMBREPERSONAL)</h3>
+                                <h3>@Html.DisplayFor(model => item.NOMBRAMIENTO)</h3>
+                                <p class="f12" align="center">
+                                    <span class="f14">Conmutador @Html.DisplayFor(s => item.CONMUTADOR) Ext @Html.DisplayFor(s => item.EXTENSION) </span>
+                                    <br>
+                                    <span class="f14">@Html.DisplayFor(s => item.CORREO)</span>
+                                </p>
+                                <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
+                                    <img src="~/Content/images/FC_acrobat-02.png" alt="" width="70" height="70">
+                                </a>
+                            </div>
+                        }
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h2 align="center">
-                        @Html.DisplayFor(s => item.NOMBREPERSONAL)
-                        <br>
-                        <span class="f14">@Html.DisplayFor(s => item.NOMBRAMIENTO)<span>
-                    </h2>
-                    <p class="f12" align="center">
-                        <span class="f14">Conmutador @Html.DisplayFor(s => item.CONMUTADOR) Ext @Html.DisplayFor(s => item.EXTENSION) </span>
-                        <br>
-                        <span class="f14">@Html.DisplayFor(s => item.CORREO)</span>
-                    </p>
-                </td>
-                <td width="85">
-                    <div align="center">
-                        <p>
-                            <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
-                                <img src="~/Content/images/FC_acrobat-02.png" alt="" width="70" height="70">
-                            </a>
-                        </p>
+                </div>
+                <hr style="clear:both" />
+            }
+        </div>
+    }
+
+    <h2 style="background-color:darkgray">SubSecretaría de Planeación, Programación y Presupuesto</h2>
+    @foreach (var item in Model)
+    {
+        <div>
+            @if (item.IDDEPARTAMENTO == 2)
+            {
+                <div>
+                    <h3>@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</h3>
+                </div>
+                <div class="left">
+                    <div class="">
+                        @{
+                            <div style="float:left">
+                                <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" width="80" height="110" />
+                            </div>
+                            <div class="text-left" style="margin-left: 200px;">
+                                <h3>@Html.DisplayFor(model => item.NOMBREPERSONAL)</h3>
+                                <h3>@Html.DisplayFor(model => item.NOMBRAMIENTO)</h3>
+                                <p class="f12" align="center">
+                                    <span class="f14">Conmutador @Html.DisplayFor(s => item.CONMUTADOR) Ext @Html.DisplayFor(s => item.EXTENSION) </span>
+                                    <br>
+                                    <span class="f14">@Html.DisplayFor(s => item.CORREO)</span>
+                                </p>
+                                <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
+                                    <img src="~/Content/images/FC_acrobat-02.png" alt="" width="70" height="70">
+                                </a>
+                            </div>
+                        }
                     </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-}
+                </div>
+                <hr style="clear:both" />
+            }
+        </div>
+    }
+
+    <h2 style="background-color:darkgray">Dirección General de la Unidad de Inversiones</h2>
+    @foreach (var item in Model)
+    {
+        <div>
+            @if (item.IDDEPARTAMENTO == 20)
+            {
+                <div>
+                    <h3>@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</h3>
+                </div>
+                <div class="left">
+                    <div class="">
+                        @{
+                            <div style="float:left">
+                                <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" width="80" height="110" />
+                            </div>
+                            <div class="text-left" style="margin-left: 200px;">
+                                <h3>@Html.DisplayFor(model => item.NOMBREPERSONAL)</h3>
+                                <h3>@Html.DisplayFor(model => item.NOMBRAMIENTO)</h3>
+                                <p class="f12" align="center">
+                                    <span class="f14">Conmutador @Html.DisplayFor(s => item.CONMUTADOR) Ext @Html.DisplayFor(s => item.EXTENSION) </span>
+                                    <br>
+                                    <span class="f14">@Html.DisplayFor(s => item.CORREO)</span>
+                                </p>
+                                <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
+                                    <img src="~/Content/images/FC_acrobat-02.png" alt="" width="70" height="70">
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <hr style="clear:both" />
+            }
+        </div>
+    }
+
+    <h2 style="background-color:darkgray">Dirección de Fomento a la Inversión</h2>
+    @foreach (var item in Model)
+    {
+        <div>
+            @if (item.IDDEPARTAMENTO == 21)
+            {
+                <div>
+                    <h3>@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</h3>
+                </div>
+                <div class="left">
+                    <div class="">
+                        @{
+                            <div style="float:left">
+                                <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" width="80" height="110" />
+                            </div>
+                            <div class="text-left" style="margin-left: 200px;">
+                                <h3>@Html.DisplayFor(model => item.NOMBREPERSONAL)</h3>
+                                <h3>@Html.DisplayFor(model => item.NOMBRAMIENTO)</h3>
+                                <p class="f12" align="center">
+                                    <span class="f14">Conmutador @Html.DisplayFor(s => item.CONMUTADOR) Ext @Html.DisplayFor(s => item.EXTENSION) </span>
+                                    <br>
+                                    <span class="f14">@Html.DisplayFor(s => item.CORREO)</span>
+                                </p>
+                                <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
+                                    <img src="~/Content/images/FC_acrobat-02.png" alt="" width="70" height="70">
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <hr style="clear:both" />
+            }
+        </div>
+    }
+
+    <h2 style="background-color:darkgray">Dirección de Proyectos Estratégicos</h2>
+    @foreach (var item in Model)
+    {
+        <div>
+            @if (item.IDDEPARTAMENTO == 22 || item.IDDEPARTAMENTO == 23)
+            {
+                <div>
+                    <h3>@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</h3>
+                </div>
+                <div class="left">
+                    <div class="">
+                        @{
+                            <div style="float:left">
+                                <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" width="80" height="110" />
+                            </div>
+                            <div class="text-left" style="margin-left: 200px;">
+                                <h3>@Html.DisplayFor(model => item.NOMBREPERSONAL)</h3>
+                                <h3>@Html.DisplayFor(model => item.NOMBRAMIENTO)</h3>
+                                <p class="f12" align="center">
+                                    <span class="f14">Conmutador @Html.DisplayFor(s => item.CONMUTADOR) Ext @Html.DisplayFor(s => item.EXTENSION) </span>
+                                    <br>
+                                    <span class="f14">@Html.DisplayFor(s => item.CORREO)</span>
+                                </p>
+                                <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
+                                    <img src="~/Content/images/FC_acrobat-02.png" alt="" width="70" height="70">
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <hr style="clear:both" />
+            }
+        </div>
+    }
+
+
+    <h2 style="background-color:darkgray">Dirección de Planeación y Evaluación</h2>
+    @foreach (var item in Model)
+    {
+        <div>
+            @if (item.IDDEPARTAMENTO >= 4 && item.IDDEPARTAMENTO <= 8)
+            {
+                <div>
+                    <h3>@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</h3>
+                </div>
+                <div class="left">
+                    <div class="">
+                        @{
+                            <div style="float:left">
+                                <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" width="80" height="110" />
+                            </div>
+                            <div class="text-left" style="margin-left: 200px;">
+                                <h3>@Html.DisplayFor(model => item.NOMBREPERSONAL)</h3>
+                                <h3>@Html.DisplayFor(model => item.NOMBRAMIENTO)</h3>
+                                <p class="f12" align="center">
+                                    <span class="f14">Conmutador @Html.DisplayFor(s => item.CONMUTADOR) Ext @Html.DisplayFor(s => item.EXTENSION) </span>
+                                    <br>
+                                    <span class="f14">@Html.DisplayFor(s => item.CORREO)</span>
+                                </p>
+                                <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
+                                    <img src="~/Content/images/FC_acrobat-02.png" alt="" width="70" height="70">
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <hr style="clear:both" />
+            }
+        </div>
+    }
+
+    <h2 style="background-color:darkgray">Dirección General de Programación y Presupuesto de la Inversión</h2>
+    @foreach (var item in Model)
+    {
+        <div>
+            @if (item.IDDEPARTAMENTO >= 9 && item.IDDEPARTAMENTO <= 13)
+            {
+                <div>
+                    <h3>@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</h3>
+                </div>
+                <div class="left">
+                    <div class="">
+                        @{
+                            <div style="float:left">
+                                <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" width="80" height="110" />
+                            </div>
+                            <div class="text-left" style="margin-left: 200px;">
+                                <h3>@Html.DisplayFor(model => item.NOMBREPERSONAL)</h3>
+                                <h3>@Html.DisplayFor(model => item.NOMBRAMIENTO)</h3>
+                                <p class="f12" align="center">
+                                    <span class="f14">Conmutador @Html.DisplayFor(s => item.CONMUTADOR) Ext @Html.DisplayFor(s => item.EXTENSION) </span>
+                                    <br>
+                                    <span class="f14">@Html.DisplayFor(s => item.CORREO)</span>
+                                </p>
+                                <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
+                                    <img src="~/Content/images/FC_acrobat-02.png" alt="" width="70" height="70">
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <hr style="clear:both" />
+            }
+        </div>
+    }
+
+    <h2 style="background-color:darkgray">Dirección General de Programas Operativos</h2>
+    @foreach (var item in Model)
+    {
+        <div>
+            @if (item.IDDEPARTAMENTO >= 14 && item.IDDEPARTAMENTO <= 19 || item.IDDEPARTAMENTO == 34)
+            {
+                <div>
+                    <h3>@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</h3>
+                </div>
+                <div class="left">
+                    <div class="">
+                        @{
+                            <div style="float:left">
+                                <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" width="80" height="110" />
+                            </div>
+                            <div class="text-left" style="margin-left: 200px;">
+                                <h3>@Html.DisplayFor(model => item.NOMBREPERSONAL)</h3>
+                                <h3>@Html.DisplayFor(model => item.NOMBRAMIENTO)</h3>
+                                <p class="f12" align="center">
+                                    <span class="f14">Conmutador @Html.DisplayFor(s => item.CONMUTADOR) Ext @Html.DisplayFor(s => item.EXTENSION) </span>
+                                    <br>
+                                    <span class="f14">@Html.DisplayFor(s => item.CORREO)</span>
+                                </p>
+                                <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
+                                    <img src="~/Content/images/FC_acrobat-02.png" alt="" width="70" height="70">
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <hr style="clear:both" />
+            }
+        </div>
+    }
+
+    <h2 style="background-color:darkgray">Coordinación Administrativa</h2>
+    @foreach (var item in Model)
+    {
+        <div>
+            @if (item.IDDEPARTAMENTO >= 24 && item.IDDEPARTAMENTO <= 28)
+            {
+                <div>
+                    <h3>@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</h3>
+                </div>
+                <div class="left">
+                    <div class="">
+                        @{
+                            <div style="float:left">
+                                <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" width="80" height="110" />
+                            </div>
+                            <div class="text-left" style="margin-left: 200px;">
+                                <h3>@Html.DisplayFor(model => item.NOMBREPERSONAL)</h3>
+                                <h3>@Html.DisplayFor(model => item.NOMBRAMIENTO)</h3>
+                                <p class="f12" align="center">
+                                    <span class="f14">Conmutador @Html.DisplayFor(s => item.CONMUTADOR) Ext @Html.DisplayFor(s => item.EXTENSION) </span>
+                                    <br>
+                                    <span class="f14">@Html.DisplayFor(s => item.CORREO)</span>
+                                </p>
+                                <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
+                                    <img src="~/Content/images/FC_acrobat-02.png" alt="" width="70" height="70">
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <hr style="clear:both" />
+            }
+        </div>
+    }
+
+    <h2 style="background-color:darkgray">Dirección Jurídica</h2>
+    @foreach (var item in Model)
+    {
+        <div>
+            @if (item.IDDEPARTAMENTO >= 29 && item.IDDEPARTAMENTO <= 30)
+            {
+                <div>
+                    <h3>@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</h3>
+                </div>
+                <div class="left">
+                    <div class="">
+                        @{
+                            <div style="float:left">
+                                <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" width="80" height="110" />
+                            </div>
+                            <div class="text-left" style="margin-left: 200px;">
+                                <h3>@Html.DisplayFor(model => item.NOMBREPERSONAL)</h3>
+                                <h3>@Html.DisplayFor(model => item.NOMBRAMIENTO)</h3>
+                                <p class="f12" align="center">
+                                    <span class="f14">Conmutador @Html.DisplayFor(s => item.CONMUTADOR) Ext @Html.DisplayFor(s => item.EXTENSION) </span>
+                                    <br>
+                                    <span class="f14">@Html.DisplayFor(s => item.CORREO)</span>
+                                </p>
+                                <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
+                                    <img src="~/Content/images/FC_acrobat-02.png" alt="" width="70" height="70">
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <hr style="clear:both" />
+            }
+        </div>
+    }
+
+    <h2 style="background-color:darkgray">Coordinación de Concertación y Vinculación Social</h2>
+    @foreach (var item in Model)
+    {
+        <div>
+            @if (item.IDDEPARTAMENTO >= 31 && item.IDDEPARTAMENTO <= 33)
+            {
+                <div>
+                    <h3>@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</h3>
+                </div>
+                <div class="left">
+                    <div class="">
+                        @{
+                            <div style="float:left">
+                                <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" width="80" height="110" />
+                            </div>
+                            <div class="text-left" style="margin-left: 200px;">
+                                <h3>@Html.DisplayFor(model => item.NOMBREPERSONAL)</h3>
+                                <h3>@Html.DisplayFor(model => item.NOMBRAMIENTO)</h3>
+                                <p class="f12" align="center">
+                                    <span class="f14">Conmutador @Html.DisplayFor(s => item.CONMUTADOR) Ext @Html.DisplayFor(s => item.EXTENSION) </span>
+                                    <br>
+                                    <span class="f14">@Html.DisplayFor(s => item.CORREO)</span>
+                                </p>
+                                <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
+                                    <img src="~/Content/images/FC_acrobat-02.png" alt="" width="70" height="70">
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <hr style="clear:both" />
+            }
+        </div>
+    }
+
+
+</div>
 
 

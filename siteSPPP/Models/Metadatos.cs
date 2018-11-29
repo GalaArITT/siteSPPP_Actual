@@ -28,7 +28,7 @@ namespace siteSPPP.Models
         public string ESTATUS { get; set; }
         [DataType(DataType.Date)]
         [Display(Name = "Fecha de registro")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> FECHAREGISTRO { get; set; }
     }
 
@@ -41,12 +41,12 @@ namespace siteSPPP.Models
 
         [DataType(DataType.Date)]
         [Display(Name = "Fecha de captura en sistema")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public System.DateTime FECHACAPTURA { get; set; }
 
         [DataType(DataType.Date)]
         [Display(Name = "Fecha de publicación")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public System.DateTime FECHAPUBLIC { get; set; }
         public string LUGAR { get; set; }
         [Display(Name = "Prioridad de la nota")]
@@ -99,6 +99,7 @@ namespace siteSPPP.Models
         [Display(Name = "Estatus")]
         public string ESTATUS { get; set; }
         [Display(Name = "Fecha registro")]
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> FECHAREGISTRO { get; set; }
         [Display(Name = "Nivel")]
         public Nullable<int> NIVEL { get; set; }
