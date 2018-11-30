@@ -10,6 +10,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
+using System.Text;
+using System.Globalization;
 
 namespace siteSPPP.Controllers
 {
@@ -69,13 +71,18 @@ namespace siteSPPP.Controllers
         {
             var servidores = from s in db.SERVIDORESPUBLICOS
                              select s;
-
+            
             //buscar por nombre de servidor 
             // busqueda = busqueda.ToString();
             if (!String.IsNullOrEmpty(busqueda))
             {
-                servidores = servidores.Where(s => s.NOMBREPERSONAL.Contains(busqueda) || s.NOMBRAMIENTO.Contains(busqueda));
+                servidores = servidores.Where(s => s.NOMBREPERSONAL.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
+                || s.NOMBRAMIENTO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")));
                 ViewBag.Currentfilter = busqueda;
+            }
+            else
+            {
+                ViewBag.Error = "No se encontraron resultados";
             }
             return View(servidores.Where(s => s.ESTATUS.Equals("A")).OrderBy(x => x.IDDEPARTAMENTO).ToList());
         }
@@ -102,7 +109,7 @@ namespace siteSPPP.Controllers
             // busqueda = busqueda.ToString();
             if (!String.IsNullOrEmpty(busqueda))
             {
-                noticias = noticias.Where(s => s.TITULO.Contains(busqueda));
+                noticias = noticias.Where(s => s.TITULO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")));
                 ViewBag.Currentfilter = busqueda;
             }
             int pageSize = 8;

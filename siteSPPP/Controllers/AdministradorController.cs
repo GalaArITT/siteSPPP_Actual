@@ -82,7 +82,8 @@ namespace siteSPPP.Controllers
                     // busqueda = busqueda.ToString();
                     if (!String.IsNullOrEmpty(busqueda))
                     {
-                        noticias = noticias.Where(s => s.TITULO.Contains(busqueda) || s.CONTENIDO.Contains(busqueda));
+                        noticias = noticias.Where(s => s.TITULO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
+                        || s.CONTENIDO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")));
                         ViewBag.Currentfilter = busqueda;
                     }
                     //Filtrar por estatus
@@ -350,7 +351,8 @@ namespace siteSPPP.Controllers
                     // busqueda = busqueda.ToString();
                     if (!String.IsNullOrEmpty(busqueda))
                     {
-                        usuarios = usuarios.Where(s => s.NOMBREUSUARIO.Contains(busqueda) || s.USUARIOINICIA.Contains(busqueda));
+                        usuarios = usuarios.Where(s => s.NOMBREUSUARIO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
+                        || s.USUARIOINICIA.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")));
                         ViewBag.Currentfilter = busqueda;
                     }
                     //filtrar por estatus
@@ -496,7 +498,8 @@ namespace siteSPPP.Controllers
                     // busqueda = busqueda.ToString();
                     if (!String.IsNullOrEmpty(busqueda))
                     {
-                        servidores = servidores.Where(s => s.NOMBREPERSONAL.Contains(busqueda) || s.NOMBRAMIENTO.Contains(busqueda));
+                        servidores = servidores.Where(s => s.NOMBREPERSONAL.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
+                        || s.NOMBRAMIENTO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")));
                         ViewBag.Currentfilter = busqueda;
                     }
                     //filtrar por estatus
@@ -523,6 +526,9 @@ namespace siteSPPP.Controllers
         {
             ViewBag.IDDEPARTAMENTO = new SelectList(db.DEPARTAMENTOS, "IDDEPARTAMENTO", "NOMBREDEPTO");
             ViewBag.IDUSUARIO = new SelectList(db.USUARIO, "IDUSUARIO", "USUARIOINICIA");
+            //crear una lista de fotos con IList de la tabla de fotos donde el id de noticia sea igual al id de noticias de la tabla de fotos
+            //Dicha lista agregarla a un objeto Viewbag para poder iterar desde la vista con un foreach
+            ViewBag.servidores = new SelectList(db.SERVIDORESPUBLICOS.Where(s => s.ESTATUS == "A").ToList(), "IDSERVPUB", "NOMBRAMIENTO");
             return View();
         }
 
@@ -560,6 +566,7 @@ namespace siteSPPP.Controllers
 
             ViewBag.IDDEPARTAMENTO = new SelectList(db.DEPARTAMENTOS, "IDDEPARTAMENTO", "NOMBREDEPTO", sERVIDORESPUBLICOS.IDDEPARTAMENTO);
             ViewBag.IDUSUARIO = new SelectList(db.USUARIO, "IDUSUARIO", "USUARIOINICIA", sERVIDORESPUBLICOS.IDUSUARIO);
+            ViewBag.servidores = new SelectList(db.SERVIDORESPUBLICOS.Where(s => s.ESTATUS == "A").ToList(), "IDSERVPUB", "NOMBRAMIENTO", sERVIDORESPUBLICOS.IDSERVPUB);
             return View(sERVIDORESPUBLICOS);
         }
 
@@ -577,6 +584,8 @@ namespace siteSPPP.Controllers
             }
             ViewBag.IDDEPARTAMENTO = new SelectList(db.DEPARTAMENTOS, "IDDEPARTAMENTO", "NOMBREDEPTO", sERVIDORESPUBLICOS.IDDEPARTAMENTO);
             ViewBag.IDUSUARIO = new SelectList(db.USUARIO, "IDUSUARIO", "USUARIOINICIA", sERVIDORESPUBLICOS.IDUSUARIO);
+            //Lista de funcionarios 
+            ViewBag.servidores = new SelectList(db.SERVIDORESPUBLICOS.Where(s => s.ESTATUS == "A").ToList(),"IDSERVPUB", "NOMBRAMIENTO",sERVIDORESPUBLICOS.IDSERVPUB);
             return View(sERVIDORESPUBLICOS);
         }
 
@@ -594,6 +603,7 @@ namespace siteSPPP.Controllers
             }
             ViewBag.IDDEPARTAMENTO = new SelectList(db.DEPARTAMENTOS, "IDDEPARTAMENTO", "NOMBREDEPTO", sERVIDORESPUBLICOS.IDDEPARTAMENTO);
             ViewBag.IDUSUARIO = new SelectList(db.USUARIO, "IDUSUARIO", "USUARIOINICIA", sERVIDORESPUBLICOS.IDUSUARIO);
+            ViewBag.servidores = new SelectList(db.SERVIDORESPUBLICOS.Where(s => s.ESTATUS == "A").ToList(), "IDSERVPUB", "NOMBRAMIENTO", sERVIDORESPUBLICOS.IDSERVPUB);
             return View(sERVIDORESPUBLICOS);
         }
         // GET: Funcionarios/Edit/5

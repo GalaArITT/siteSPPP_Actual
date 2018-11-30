@@ -80,7 +80,8 @@ namespace siteSPPP.Controllers
                     // busqueda = busqueda.ToString();
                     if (!String.IsNullOrEmpty(busqueda))
                     {
-                        noticias = noticias.Where(s => s.TITULO.Contains(busqueda) || s.CONTENIDO.Contains(busqueda));
+                        noticias = noticias.Where(s => s.TITULO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
+                        || s.CONTENIDO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")));
                         ViewBag.Currentfilter = busqueda;
                     }
                     //Filtrar por estatus
