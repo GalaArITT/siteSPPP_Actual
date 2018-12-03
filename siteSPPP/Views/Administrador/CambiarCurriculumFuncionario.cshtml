@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/LayoutAuth.cshtml";
 }
 
-<h2>CambiarCurriculumFuncionario</h2>
+<h2>Cambiar Curriculum de Funcionario</h2>
 
 @using (Html.BeginForm(Html.BeginForm("CambiarCurriculumFuncionario", "Administrador", FormMethod.Post, new { enctype = "multipart/form-data" })))
 {
@@ -23,7 +23,6 @@
         @Html.HiddenFor(model => model.FECHAREGISTRO)
         @Html.HiddenFor(model => model.NIVEL)    
     <div class="form-horizontal">
-        <h4>SERVIDORESPUBLICOS</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -37,12 +36,10 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                @Html.ActionLink("Volver a la Lista", "ListaFuncionarios")
+                <input type="submit" value="Guardar Cambios" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "ListaFuncionarios")
-</div>

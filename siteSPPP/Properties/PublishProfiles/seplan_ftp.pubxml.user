@@ -335,10 +335,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/17/2018 17:37:48</publishTime>
     </File>
     <File Include="bin/siteSPPP.dll">
-      <publishTime>11/30/2018 13:59:38</publishTime>
+      <publishTime>12/03/2018 12:50:10</publishTime>
     </File>
     <File Include="bin/siteSPPP.pdb">
-      <publishTime>11/30/2018 13:59:38</publishTime>
+      <publishTime>12/03/2018 12:50:10</publishTime>
     </File>
     <File Include="bin/SqlServerTypes/x64/msvcr120.dll">
       <publishTime>11/15/2018 09:42:10</publishTime>
@@ -1840,6 +1840,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/images/Directorio/Arq. Julio Cesar Pineda.jpg">
       <publishTime>02/07/2018 12:10:44</publishTime>
     </File>
+    <File Include="Content/images/Directorio/ArqJulioCesarPineda.jpg">
+      <publishTime>03/12/2018 09:29:38</publishTime>
+    </File>
     <File Include="Content/images/Directorio/C. Clemente Ulloa Arteaga.jpg">
       <publishTime>02/07/2018 12:10:44</publishTime>
     </File>
@@ -1875,6 +1878,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/images/Directorio/Froilan Medina Garcia.jpg">
       <publishTime>02/07/2018 12:10:44</publishTime>
+    </File>
+    <File Include="Content/images/Directorio/FroilanMedinaGarcia.jpg">
+      <publishTime>03/12/2018 09:30:56</publishTime>
     </File>
     <File Include="Content/images/Directorio/genero.jpg">
       <publishTime>05/10/2018 15:25:14</publishTime>
@@ -1983,6 +1989,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/images/gnay1721_1600x500.png">
       <publishTime>02/03/2018 10:31:58</publishTime>
+    </File>
+    <File Include="Content/images/GobEstadoNayarit.PNG">
+      <publishTime>03/12/2018 11:04:04</publishTime>
     </File>
     <File Include="Content/images/head-nay.png">
       <publishTime>02/03/2018 10:31:58</publishTime>
@@ -2196,6 +2205,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/images/spacer.gif">
       <publishTime>03/07/2018 12:20:06</publishTime>
+    </File>
+    <File Include="Content/images/sppp_logo.jpg">
+      <publishTime>03/12/2018 11:04:27</publishTime>
     </File>
     <File Include="Content/images/thumbnail_trazos.jpg">
       <publishTime>02/03/2018 10:31:58</publishTime>
@@ -3413,10 +3425,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2018 12:50:42</publishTime>
     </File>
     <File Include="Views/Administrador/CambiarCurriculumFuncionario.cshtml">
-      <publishTime>11/13/2018 13:32:48</publishTime>
+      <publishTime>03/12/2018 11:25:56</publishTime>
     </File>
     <File Include="Views/Administrador/CambiarFotoFuncionario.cshtml">
-      <publishTime>11/30/2018 13:47:24</publishTime>
+      <publishTime>03/12/2018 11:26:01</publishTime>
     </File>
     <File Include="Views/Administrador/CrearUsuario.cshtml">
       <publishTime>11/27/2018 10:01:15</publishTime>
@@ -3506,7 +3518,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/11/2018 14:18:18</publishTime>
     </File>
     <File Include="Views/Conocenos/Organigrama.cshtml">
-      <publishTime>11/22/2018 12:42:53</publishTime>
+      <publishTime>12/03/2018 12:49:20</publishTime>
     </File>
     <File Include="Views/Conocenos/VerNoticias.cshtml">
       <publishTime>11/30/2018 11:05:31</publishTime>

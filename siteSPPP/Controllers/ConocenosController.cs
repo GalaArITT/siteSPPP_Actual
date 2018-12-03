@@ -12,6 +12,7 @@ using System.Web.Mvc;
 using PagedList;
 using System.Text;
 using System.Globalization;
+using Rotativa;
 
 namespace siteSPPP.Controllers
 {
@@ -64,9 +65,14 @@ namespace siteSPPP.Controllers
 
         public ActionResult Organigrama()
         {
-            return View(db.SERVIDORESPUBLICOS.ToList());
+            return View(db.SERVIDORESPUBLICOS.Where(s=>s.ESTATUS=="A").ToList());
         }
 
+        public ActionResult Diagrama_PDF()
+        {
+            var report = new ActionAsPdf("Organigrama");
+            return report;
+        }
         public ActionResult Directorio(string busqueda)
         {
             var servidores = from s in db.SERVIDORESPUBLICOS

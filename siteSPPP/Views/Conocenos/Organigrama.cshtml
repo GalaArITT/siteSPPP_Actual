@@ -6,14 +6,29 @@
     //'<img src="/Content/images/Directorio/Dr. Felipe Javier Ruiz Rivera.jpg"/>'
 
 }
-
-<h2 style="text-align: center;"> Organigrama de la SPPP </h2>
-<div id="chartOrg">
+<link href="~/Content/orgchart/orgchartDesign.css" rel="stylesheet" type="text/css" />
+<div>
+    <div>
+        <img src="~/Content/images/GobEstadoNayarit.PNG" style="width:15%; float:left">
+        <img src="~/Content/images/sppp_logo.jpg" style="width:15%; float:right" />
+    </div>
+    <p>
+        @Html.ActionLink("Descargar", "Diagrama_PDF")
+    </p>
+    <div id="chart_div" style="text-align:center">
+        <div class="loader">
+            <p>Cargando...</p>
+            <div class="loader-inner"></div>
+            <div class="loader-inner"></div>
+            <div class="loader-inner"></div>
+        </div>
+    </div>
 </div>
 
 <!-- Scripts JS -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
 
 <script type="text/javascript">
     google.load("visualization", "1", { packages: ["orgchart"] });
@@ -65,24 +80,23 @@
                     if (Employee_Name == null) {
                         Employee_Name = "";
                     }
-                    console.log(Imagen);
                     data.addRows([[{
                         v: Employee_ID,
-                        f: Employee_Name + '<br/><b>' + Title + '</b>' + '<br/><b>' +
+                        f: '<b>' + Title + '</b></br>' + Employee_Name + '<br/><b>' +
                             '<img src="data:image/jpg;base64,' + Imagen_Base64 + '">'
                     }, ReportTo, Title]]);
                 }
 
 
-                var chart = new google.visualization.OrgChart($("#chartOrg")[0]);
+                var chart = new google.visualization.OrgChart($("#chart_div")[0]);
                 chart.draw(data, { allowHtml: true });
 
             },
             failure: function (dt) {
-                alert(dt);
+                console.log(dt);
             },
             error: function (dt) {
-                alert(dt);
+                console.log(dt);
             }
         });
     }

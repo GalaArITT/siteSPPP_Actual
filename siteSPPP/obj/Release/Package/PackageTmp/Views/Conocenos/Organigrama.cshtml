@@ -7,13 +7,46 @@
 
 }
 
-<h2 style="text-align: center;"> Organigrama de la SPPP </h2>
-<div id="chartOrg">
+<style>
+    #chart_div .google-visualization-orgchart-node {
+        background: darkgrey;
+        font-family: 'Times New Roman';
+        border: 1px solid gray;
+    }
+
+    #chart_div .google-visualization-orgchart-linebottom {
+        border-bottom: 4px solid darkgrey;
+    }
+
+    #chart_div .google-visualization-orgchart-lineleft {
+        border-left: 4px solid darkgrey;
+    }
+
+    #chart_div .google-visualization-orgchart-lineright {
+        border-right: 4px solid darkgrey;
+    }
+
+    #chart_div .google-visualization-orgchart-linetop {
+        border-top: 4px solid darkgrey;
+    }
+</style>
+
+<div>
+    <div>
+        <img src="~/Content/images/GobEstadoNayarit.PNG" style="width:15%; float:left">
+        <img src="~/Content/images/sppp_logo.jpg" style="width:15%; float:right" />
+    </div>
+    <div id="chart_div" style="text-align:center">
+        <div class="text-center">
+            <h1>CARGANDO...</h1>
+        </div>
+    </div>
 </div>
 
 <!-- Scripts JS -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
 
 <script type="text/javascript">
     google.load("visualization", "1", { packages: ["orgchart"] });
@@ -65,24 +98,23 @@
                     if (Employee_Name == null) {
                         Employee_Name = "";
                     }
-                    console.log(Imagen);
                     data.addRows([[{
                         v: Employee_ID,
-                        f: Employee_Name + '<br/><b>' + Title + '</b>' + '<br/><b>' +
+                        f: '<b>' + Title + '</b></br>' + Employee_Name + '<br/><b>' +
                             '<img src="data:image/jpg;base64,' + Imagen_Base64 + '">'
                     }, ReportTo, Title]]);
                 }
 
 
-                var chart = new google.visualization.OrgChart($("#chartOrg")[0]);
+                var chart = new google.visualization.OrgChart($("#chart_div")[0]);
                 chart.draw(data, { allowHtml: true });
 
             },
             failure: function (dt) {
-                alert(dt);
+                console.log(dt);
             },
             error: function (dt) {
-                alert(dt);
+                console.log(dt);
             }
         });
     }

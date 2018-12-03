@@ -128,6 +128,9 @@
     <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rotativa.1.7.3\lib\net461\Rotativa.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data">
       <Private>True</Private>
@@ -350,6 +353,7 @@
     <Content Include="Content\images\Directorio\Antonio Hernandez Sanchez.jpg" />
     <Content Include="Content\images\Directorio\Arq. Angel Rodriguez.jpg" />
     <Content Include="Content\images\Directorio\Arq. Julio Cesar Pineda.jpg" />
+    <Content Include="Content\images\Directorio\ArqJulioCesarPineda.jpg" />
     <Content Include="Content\images\Directorio\C. Clemente Ulloa Arteaga.jpg" />
     <Content Include="Content\images\Directorio\C.P.A. Aida Lorena Monreal Rosales.jpg" />
     <Content Include="Content\images\Directorio\C.P.A. Jose Gutierrez Quintero.jpg" />
@@ -362,6 +366,7 @@
     <Content Include="Content\images\Directorio\Efrain Contreras Constante.jpg" />
     <Content Include="Content\images\Directorio\erik.jpg" />
     <Content Include="Content\images\Directorio\Froilan Medina Garcia.jpg" />
+    <Content Include="Content\images\Directorio\FroilanMedinaGarcia.jpg" />
     <Content Include="Content\images\Directorio\genero.jpg" />
     <Content Include="Content\images\Directorio\Gilberto Nicolas.jpg" />
     <Content Include="Content\images\Directorio\Ing. Evencio Javier Burgara Vera.jpg" />
@@ -398,6 +403,7 @@
     <Content Include="Content\images\FC_acrobat-02.png" />
     <Content Include="Content\images\folder_16.png" />
     <Content Include="Content\images\gnay1721_1600x500.png" />
+    <Content Include="Content\images\GobEstadoNayarit.PNG" />
     <Content Include="Content\images\head-nay.png" />
     <Content Include="Content\images\icono_pdf.png" />
     <Content Include="Content\images\icono_ppt.png" />
@@ -460,12 +466,14 @@
     <Content Include="Content\images\secre1.jpg" />
     <Content Include="Content\images\secretaria-1.jpg" />
     <Content Include="Content\images\spacer.gif" />
+    <Content Include="Content\images\sppp_logo.jpg" />
     <Content Include="Content\images\thumbnail_trazos.jpg" />
     <Content Include="Content\images\values-bg.jpg" />
     <Content Include="Content\orgchart\demo.css" />
     <Content Include="Content\orgchart\jquery.orgchart.css" />
     <Content Include="Content\orgchart\jquery.orgchart.js" />
     <Content Include="Content\orgchart\jquery.orgchart.min.js" />
+    <Content Include="Content\orgchart\orgchartDesign.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -481,6 +489,10 @@
       <DependentUpon>NoticiasSQLServer.edmx</DependentUpon>
       <LastGenOutput>NoticiasSQLServer.cs</LastGenOutput>
     </Content>
+    <Content Include="Rotativa\help-wkhtmltoimage.txt" />
+    <Content Include="Rotativa\help-wkhtmltopdf.txt" />
+    <Content Include="Rotativa\wkhtmltoimage.exe" />
+    <Content Include="Rotativa\wkhtmltopdf.exe" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -1257,6 +1269,7 @@
     <Content Include="DatosXSDS\DatosOrganigrama.xsc">
       <DependentUpon>DatosOrganigrama.xsd</DependentUpon>
     </Content>
+    <Content Include="App_Browsers\qt.browser" />
     <None Include="DatosXSDS\DatosOrganigrama.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
