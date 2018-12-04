@@ -13,7 +13,9 @@
         <img src="~/Content/images/sppp_logo.jpg" style="width:15%; float:right" />
     </div>
     <p>
-        @Html.ActionLink("Descargar", "Diagrama_PDF")
+        <input type="button" id="btnSave" value="Save PNG" />
+
+        <div id="img-out"></div>
     </p>
     <div id="chart_div" style="text-align:center">
         <div class="loader">
@@ -28,7 +30,8 @@
 <!-- Scripts JS -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
+<script type="text/javascript" src="http://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+<script type="text/javascript" src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
 <script type="text/javascript">
     google.load("visualization", "1", { packages: ["orgchart"] });
@@ -87,7 +90,6 @@
                     }, ReportTo, Title]]);
                 }
 
-
                 var chart = new google.visualization.OrgChart($("#chart_div")[0]);
                 chart.draw(data, { allowHtml: true });
 
@@ -98,6 +100,26 @@
             error: function (dt) {
                 console.log(dt);
             }
+
         });
+
     }
+
+    html2canvas(document.querySelector("#capture")).then(canvas => {
+
+        $("#btnSave").click(function () {
+            html2canvas($("#widget"), {
+                onrendered: function (canvas) {
+                    theCanvas = canvas;
+                    document.body.appendChild(canvas);
+
+                    // Convert and download as image 
+                    Canvas2Image.saveAsPNG(canvas);
+                    $("#img-out").append(canvas);
+                    // Clean up 
+                    //document.body.removeChild(canvas);
+                }
+            });
+        });
+    });
 </script>
