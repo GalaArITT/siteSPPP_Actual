@@ -105,8 +105,7 @@
 
     }
 
-    html2canvas(document.querySelector("#capture")).then(canvas => {
-
+    html2canvas(document.body).then(function (canvas) {
         $("#btnSave").click(function () {
             html2canvas($("#widget"), {
                 onrendered: function (canvas) {
@@ -122,4 +121,5 @@
             });
         });
     });
+
 </script>
