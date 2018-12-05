@@ -433,7 +433,25 @@ namespace siteSPPP.Controllers
             byte[] cover = sERVIDORESPUBLICOS.CURRICULUM;
             return cover;
         }
-        
+        //MOSTRAR FOTOS ORGANIGRAMAS
+        public ActionResult MostrarFotoOrg(int id)
+        {
+            byte[] cover = TraerFotoOrg(id);
+            if (cover != null)
+            {
+                return File(cover, "image/jpg");
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public byte[] TraerFotoOrg(int id)
+        {
+            ORGANIGRAMA oRGANIGRAMA = db.ORGANIGRAMA.Find(id);
+            byte[] cover = oRGANIGRAMA.IMAGEN;
+            return cover;
+        }
         // GET: USUARIOs/Edit/5
         public ActionResult EditarUsuario(int? id)
         {
@@ -690,6 +708,90 @@ namespace siteSPPP.Controllers
                 return HttpNotFound();
             }
             return View(sERVIDORESPUBLICOS);
+        }
+
+        //CONTROL DE ORGANIGRAMAS
+
+        public ActionResult ListaOrganigramas()
+        {
+            return View(db.ORGANIGRAMA.OrderByDescending(s=>s.FECHACREACION).ToList());
+        }
+
+        //GET 
+        public ActionResult AgregarOrganigrama()
+        {
+            return View();
+        }
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AgregarOrganigrama([Bind(Include ="IDORGANIGRAMA,IDUSUARIO,FECHACREACION,ESTATUS")] ORGANIGRAMA oRGANIGRAMA, HttpPostedFileBase IMAGEN)
+        {
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            //
+            if (IMAGEN != null)
+            {
+                oRGANIGRAMA.IMAGEN = new byte[IMAGEN.ContentLength];
+                IMAGEN.InputStream.Read(oRGANIGRAMA.IMAGEN, 0, IMAGEN.ContentLength);
+            }
+            //
+            if (ModelState.IsValid)
+            {
+                oRGANIGRAMA.FECHACREACION = DateTime.Now;
+                oRGANIGRAMA.ESTATUS = "A";
+                oRGANIGRAMA.IDUSUARIO = 1; //idUsuario; 
+
+                db.ORGANIGRAMA.Add(oRGANIGRAMA);
+                db.SaveChanges();
+                return RedirectToAction("ListaOrganigramas");
+            }
+            return View(oRGANIGRAMA);
+        }
+        //GET
+        public ActionResult EditarOrganigrama(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ORGANIGRAMA oRGANIGRAMA = db.ORGANIGRAMA.Find(id);
+            if (oRGANIGRAMA == null)
+            {
+                return HttpNotFound();
+            }
+            return View(oRGANIGRAMA);
+        }
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditarOrganigrama([Bind(Include = "IDORGANIGRAMA,IDUSUARIO,FECHACREACION,ESTATUS")] ORGANIGRAMA oRGANIGRAMA, HttpPostedFileBase IMAGEN)
+        {
+            if (IMAGEN != null)
+            {
+                oRGANIGRAMA.IMAGEN = new byte[IMAGEN.ContentLength];
+                IMAGEN.InputStream.Read(oRGANIGRAMA.IMAGEN, 0, IMAGEN.ContentLength);
+            }
+            if (ModelState.IsValid)
+            {
+                db.Entry(oRGANIGRAMA).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("ListaOrganigramas");
+            }
+
+            return View(oRGANIGRAMA);
+        }
+        public ActionResult VerOrganigrama(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ORGANIGRAMA oRGANIGRAMA = db.ORGANIGRAMA.Find(id);
+            if (oRGANIGRAMA == null)
+            {
+                return HttpNotFound();
+            }
+            return View(oRGANIGRAMA);
         }
 
 

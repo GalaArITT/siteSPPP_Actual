@@ -52,6 +52,16 @@
           <Property Name="PRIORIDAD" Type="tinyint" Nullable="false" />
           <Property Name="ESTATUS" Type="nvarchar" MaxLength="1" />
         </EntityType>
+        <EntityType Name="ORGANIGRAMA">
+          <Key>
+            <PropertyRef Name="IDORGANIGRAMA" />
+          </Key>
+          <Property Name="IDORGANIGRAMA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDUSUARIO" Type="int" />
+          <Property Name="IMAGEN" Type="varbinary(max)" />
+          <Property Name="FECHACREACION" Type="datetime2" Precision="7" />
+          <Property Name="ESTATUS" Type="nvarchar" MaxLength="1" />
+        </EntityType>
         <EntityType Name="PLANTILLA">
           <Key>
             <PropertyRef Name="IDPLANTILLA" />
@@ -167,6 +177,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ORGANIGR_REFERENCE_USUARIO">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+          <End Role="ORGANIGRAMA" Type="Self.ORGANIGRAMA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="IDUSUARIO" />
+            </Principal>
+            <Dependent Role="ORGANIGRAMA">
+              <PropertyRef Name="IDUSUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_SERVIDOR_REFERENCE_USUARIO">
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
           <End Role="SERVIDORESPUBLICOS" Type="Self.SERVIDORESPUBLICOS" Multiplicity="*" />
@@ -197,6 +219,7 @@
           <EntitySet Name="FOTOS" EntityType="Self.FOTOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="INFORMES" EntityType="Self.INFORMES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NOTICIAS" EntityType="Self.NOTICIAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ORGANIGRAMA" EntityType="Self.ORGANIGRAMA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PLANTILLA" EntityType="Self.PLANTILLA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SERVIDORESPUBLICOS" EntityType="Self.SERVIDORESPUBLICOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TIPO_INFORME" EntityType="Self.TIPO_INFORME" Schema="dbo" store:Type="Tables" />
@@ -221,6 +244,10 @@
           <AssociationSet Name="FK_NOTICIAS_REFERENCE_USUARIO" Association="Self.FK_NOTICIAS_REFERENCE_USUARIO">
             <End Role="USUARIO" EntitySet="USUARIO" />
             <End Role="NOTICIAS" EntitySet="NOTICIAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ORGANIGR_REFERENCE_USUARIO" Association="Self.FK_ORGANIGR_REFERENCE_USUARIO">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="ORGANIGRAMA" EntitySet="ORGANIGRAMA" />
           </AssociationSet>
           <AssociationSet Name="FK_SERVIDOR_REFERENCE_USUARIO" Association="Self.FK_SERVIDOR_REFERENCE_USUARIO">
             <End Role="USUARIO" EntitySet="USUARIO" />
@@ -354,6 +381,7 @@
           <NavigationProperty Name="NOTICIAS" Relationship="Self.FK_NOTICIAS_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="NOTICIAS" />
           <NavigationProperty Name="PLANTILLA" Relationship="Self.FK_PLANTILL_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="PLANTILLA" />
           <NavigationProperty Name="SERVIDORESPUBLICOS" Relationship="Self.FK_SERVIDOR_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="SERVIDORESPUBLICOS" />
+          <NavigationProperty Name="ORGANIGRAMA" Relationship="sitio_seplaModel.FK_ORGANIGR_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="ORGANIGRAMA" />
         </EntityType>
         <Association Name="FK_BALAZO_REFERENCE_NOTICIAS">
           <End Role="NOTICIAS" Type="sitio_seplaModel.NOTICIAS_SEPLAN" Multiplicity="1" />
@@ -510,7 +538,35 @@
             <End Role="USUARIO" EntitySet="USUARIO" />
             <End Role="SERVIDORESPUBLICOS" EntitySet="SERVIDORESPUBLICOS" />
           </AssociationSet>
+          <EntitySet Name="ORGANIGRAMA" EntityType="sitio_seplaModel.ORGANIGRAMA" />
+          <AssociationSet Name="FK_ORGANIGR_REFERENCE_USUARIO" Association="sitio_seplaModel.FK_ORGANIGR_REFERENCE_USUARIO">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="ORGANIGRAMA" EntitySet="ORGANIGRAMA" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="ORGANIGRAMA">
+          <Key>
+            <PropertyRef Name="IDORGANIGRAMA" />
+          </Key>
+          <Property Name="IDORGANIGRAMA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDUSUARIO" Type="Int32" />
+          <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="FECHACREACION" Type="DateTime" Precision="7" />
+          <Property Name="ESTATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="USUARIO" Relationship="sitio_seplaModel.FK_ORGANIGR_REFERENCE_USUARIO" FromRole="ORGANIGRAMA" ToRole="USUARIO" />
+        </EntityType>
+        <Association Name="FK_ORGANIGR_REFERENCE_USUARIO">
+          <End Type="sitio_seplaModel.USUARIO" Role="USUARIO" Multiplicity="0..1" />
+          <End Type="sitio_seplaModel.ORGANIGRAMA" Role="ORGANIGRAMA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="IDUSUARIO" />
+            </Principal>
+            <Dependent Role="ORGANIGRAMA">
+              <PropertyRef Name="IDUSUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -626,6 +682,17 @@
                 <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
                 <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
                 <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ORGANIGRAMA">
+            <EntityTypeMapping TypeName="sitio_seplaModel.ORGANIGRAMA">
+              <MappingFragment StoreEntitySet="ORGANIGRAMA">
+                <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+                <ScalarProperty Name="FECHACREACION" ColumnName="FECHACREACION" />
+                <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+                <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+                <ScalarProperty Name="IDORGANIGRAMA" ColumnName="IDORGANIGRAMA" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -342,3 +342,4 @@ C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Release\siteSPPP.csproj.Cor
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Release\siteSPPP.csproj.CopyComplete
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Release\siteSPPP.dll
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Release\siteSPPP.pdb
+C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\Rotativa.dll

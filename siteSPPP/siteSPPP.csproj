@@ -294,6 +294,9 @@
     <Compile Include="Models\NOTICIAS_SEPLAN.cs">
       <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ORGANIGRAMA.cs">
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\PLANTILLA.cs">
       <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
@@ -1411,6 +1414,10 @@
     <Content Include="Views\Administrador\EditarFotoAdmin.cshtml" />
     <Content Include="Views\Conocenos\VerNoticias.cshtml" />
     <Content Include="Views\Capturista\EliminarFoto.cshtml" />
+    <Content Include="Views\Administrador\AgregarOrganigrama.cshtml" />
+    <Content Include="Views\Administrador\EditarOrganigrama.cshtml" />
+    <Content Include="Views\Administrador\VerOrganigrama.cshtml" />
+    <Content Include="Views\Administrador\ListaOrganigramas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -199,7 +199,18 @@ create table NOTICIAS (
    constraint PK_NOTICIAS primary key (IDNOTICIA)
 )
 go
-
+/*==============================================================*/
+/* Table: ORGANIGRAMA                                           */
+/*==============================================================*/
+create table ORGANIGRAMA (
+   IDORGANIGRAMA        int                  identity,
+   IDUSUARIO            int                  null,
+   IMAGEN               varbinary(Max)       null,
+   FECHACREACION        datetime2            null,
+   ESTATUS              nvarchar(1)          null,
+   constraint PK_ORGANIGRAMA primary key (IDORGANIGRAMA)
+)
+go
 /*==============================================================*/
 /* Table: PLANTILLA                                             */
 /*==============================================================*/
@@ -313,6 +324,9 @@ alter table SERVIDORESPUBLICOS
    add constraint FK_SERVIDORES_DEPTO foreign key (IDDEPARTAMENTO)
       references DEPARTAMENTOS (IDDEPARTAMENTO)
 go
+alter table ORGANIGRAMA
+   add constraint FK_ORGANIGR_REFERENCE_USUARIO foreign key (IDUSUARIO)
+      references USUARIO (IDUSUARIO)
 
 
 

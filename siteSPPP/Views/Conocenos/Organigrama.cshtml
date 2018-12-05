@@ -8,14 +8,12 @@
 }
 <link href="~/Content/orgchart/orgchartDesign.css" rel="stylesheet" type="text/css" />
 <div>
-    <div>
-        <img src="~/Content/images/GobEstadoNayarit.PNG" style="width:15%; float:left">
-        <img src="~/Content/images/sppp_logo.jpg" style="width:15%; float:right" />
-    </div>
     <p>
         <input type="button" id="btnSave" value="Guardar Imagen" />
     </p>
     <div id="chart_div" style="text-align:center">
+        <img src="~/Content/images/GobEstadoNayarit.PNG" style="width:15%; float:left" id="imgGob">
+        <img src="~/Content/images/sppp_logo.jpg" style="width:15%; float:right" id="spppLogo" />
         <div class="loader">
             <p>Cargando...</p>
             <div class="loader-inner"></div>
@@ -33,6 +31,8 @@
 
 <script type="text/javascript">
     $('#btnSave').attr('hidden', 'hidden'); //ocultar boton
+    $('#imgGob').attr('hidden', 'hidden'); //ocultar imagenGob
+    $('#spppLogo').attr('hidden', 'hidden'); //ocultar spppLogo
     google.load("visualization", "1", { packages: ["orgchart"] });
     google.setOnLoadCallback(drawChart);
     function drawChart() {
@@ -86,6 +86,8 @@
                 var chart = new google.visualization.OrgChart($("#chart_div")[0]);
                 chart.draw(data, { allowHtml: true });
                 $('#btnSave').removeAttr('hidden'); //mostrar boton
+                $('#imgGob').removeAttr('hidden'); //mostrar imagenGob
+                $('#spppLogo').removeAttr('hidden'); //mostrar spppLogo
             },
             failure: function (dt) {
                 console.log(dt);

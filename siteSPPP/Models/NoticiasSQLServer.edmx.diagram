@@ -10,8 +10,8 @@
         <EntityTypeShape EntityType="sitio_seplaModel.FOTOS" Width="1.5" PointX="2.75" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="sitio_seplaModel.INFORMES" Width="1.5" PointX="8.875" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="sitio_seplaModel.NOTICIAS_SEPLAN" Width="1.5" PointX="2.75" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.PLANTILLA" Width="1.5" PointX="9.25" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.SERVIDORESPUBLICOS" Width="3.125" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.PLANTILLA" Width="1.5" PointX="9" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.SERVIDORESPUBLICOS" Width="3.125" PointX="5" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="sitio_seplaModel.TIPO_INFORME" Width="1.5" PointX="11.625" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="sitio_seplaModel.TIPO_PLANTILLA" Width="1.5" PointX="11.75" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="sitio_seplaModel.USUARIO" Width="1.5" PointX="0.5" PointY="2.375" IsExpanded="true" />
@@ -24,6 +24,8 @@
         <AssociationConnector Association="sitio_seplaModel.FK_PLANTILL_REFERENCE_TIPO_PLA" ManuallyRouted="false" />
         <AssociationConnector Association="sitio_seplaModel.FK_PLANTILL_REFERENCE_USUARIO" ManuallyRouted="false" />
         <AssociationConnector Association="sitio_seplaModel.FK_SERVIDOR_REFERENCE_USUARIO" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="sitio_seplaModel.ORGANIGRAMA" Width="1.5" PointX="6.625" PointY="0.5" />
+        <AssociationConnector Association="sitio_seplaModel.FK_ORGANIGR_REFERENCE_USUARIO" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
