@@ -13,9 +13,7 @@
         <img src="~/Content/images/sppp_logo.jpg" style="width:15%; float:right" />
     </div>
     <p>
-        <input type="button" id="btnSave" value="Save PNG" />
-
-        <div id="img-out"></div>
+        <input type="button" id="btnSave" value="Guardar Imagen" />
     </p>
     <div id="chart_div" style="text-align:center">
         <div class="loader">
@@ -28,27 +26,24 @@
 </div>
 
 <!-- Scripts JS -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="~/Content/orgchart/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="http://html2canvas.hertzen.com/dist/html2canvas.js"></script>
-<script type="text/javascript" src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script type="text/javascript" src="~/Content/orgchart/canvas2image.js"></script>
+<script type="text/javascript" src="~/Content/orgchart/html2canvas.min.js"></script>
 
 <script type="text/javascript">
+    $('#btnSave').attr('hidden', 'hidden'); //ocultar boton
     google.load("visualization", "1", { packages: ["orgchart"] });
     google.setOnLoadCallback(drawChart);
-
     function drawChart() {
         $.ajax({
-
             type: "POST",
             url: "/Conocenos/Organigrama_Json",
             data: '{}',
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (dt) {
-
                 var dataArray = [];
-
                 $.each(dt, function (i, item) {
                     dataArray.push([item.IDSERVPUB, item.NOMBREPERSONAL, item.NOMBRAMIENTO, item.NIVEL, item.FOTOPERSONAL]);
                 });
@@ -58,7 +53,6 @@
                 data.addColumn('string', 'Entity');
                 data.addColumn('string', 'ReportEntity');
                 data.addColumn('string', 'ToolTip');
-
 
                 for (var i = 0; i < dataArray.length; i++) {
                     //no cambiar nombre de variables
@@ -89,10 +83,9 @@
                             '<img src="data:image/jpg;base64,' + Imagen_Base64 + '">'
                     }, ReportTo, Title]]);
                 }
-
                 var chart = new google.visualization.OrgChart($("#chart_div")[0]);
                 chart.draw(data, { allowHtml: true });
-
+                $('#btnSave').removeAttr('hidden'); //mostrar boton
             },
             failure: function (dt) {
                 console.log(dt);
@@ -100,26 +93,22 @@
             error: function (dt) {
                 console.log(dt);
             }
-
         });
-
     }
-
-    html2canvas(document.body).then(function (canvas) {
-        $("#btnSave").click(function () {
-            html2canvas($("#widget"), {
-                onrendered: function (canvas) {
-                    theCanvas = canvas;
-                    document.body.appendChild(canvas);
-
-                    // Convert and download as image 
-                    Canvas2Image.saveAsPNG(canvas);
-                    $("#img-out").append(canvas);
-                    // Clean up 
-                    //document.body.removeChild(canvas);
-                }
-            });
-        });
-    });
+    
+    $('#btnSave').click(function () {
+        var elm = $('#chart_div').get(0);
+        var lebar = "1904";
+        var tinggi = "1824";
+        var type = "png";
+        var filename = "Organigrama";
+        html2canvas(elm).then(function (canvas) {
+            var canWidth = canvas.width;
+            var canHeight = canvas.height;
+            var img = Canvas2Image.convertToImage(canvas, canWidth, canHeight);
+            //$('#img-out').after(img);
+            Canvas2Image.saveAsImage(canvas, lebar, tinggi, type, filename);
+        })
+    })
 
 </script>

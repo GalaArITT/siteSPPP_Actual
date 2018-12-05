@@ -469,7 +469,10 @@
     <Content Include="Content\images\sppp_logo.jpg" />
     <Content Include="Content\images\thumbnail_trazos.jpg" />
     <Content Include="Content\images\values-bg.jpg" />
+    <Content Include="Content\orgchart\canvas2image.js" />
     <Content Include="Content\orgchart\demo.css" />
+    <Content Include="Content\orgchart\html2canvas.min.js" />
+    <Content Include="Content\orgchart\jquery-3.3.1.js" />
     <Content Include="Content\orgchart\jquery.orgchart.css" />
     <Content Include="Content\orgchart\jquery.orgchart.js" />
     <Content Include="Content\orgchart\jquery.orgchart.min.js" />
