@@ -341,10 +341,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="bin/siteSPPP.dll">
-      <publishTime>12/05/2018 11:39:44</publishTime>
+      <publishTime>12/06/2018 13:10:36</publishTime>
     </File>
     <File Include="bin/siteSPPP.pdb">
-      <publishTime>12/05/2018 11:39:44</publishTime>
+      <publishTime>12/06/2018 13:10:36</publishTime>
     </File>
     <File Include="bin/SqlServerTypes/x64/msvcr120.dll">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -1837,6 +1837,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/images/boton_ped_FANPAGE.png">
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
+    <File Include="Content/images/Captura.PNG">
+      <publishTime>06/12/2018 11:34:56</publishTime>
+    </File>
     <File Include="Content/images/Directorio/Antonio Hernandez Sanchez.jpg">
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
@@ -2243,7 +2246,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/orgchart/orgchartDesign.css">
-      <publishTime>12/04/2018 14:17:07</publishTime>
+      <publishTime>06/12/2018 11:57:33</publishTime>
     </File>
     <File Include="Content/PagedList.css">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -2300,7 +2303,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Models/NoticiasSQLServer.edmx.diagram">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>05/12/2018 12:25:03</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>12/04/2018 14:17:08</publishTime>
@@ -3451,6 +3454,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Administrador/AgregarFuncionario.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
+    <File Include="Views/Administrador/AgregarOrganigrama.cshtml">
+      <publishTime>05/12/2018 13:09:40</publishTime>
+    </File>
     <File Include="Views/Administrador/Bienvenido.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
@@ -3458,7 +3464,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/04/2018 14:17:08</publishTime>
     </File>
     <File Include="Views/Administrador/CambiarFotoFuncionario.cshtml">
-      <publishTime>12/04/2018 14:17:08</publishTime>
+      <publishTime>05/12/2018 13:29:45</publishTime>
     </File>
     <File Include="Views/Administrador/CrearUsuario.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -3475,6 +3481,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Administrador/EditarNoticiasAdmin.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
+    <File Include="Views/Administrador/EditarOrganigrama.cshtml">
+      <publishTime>05/12/2018 13:45:33</publishTime>
+    </File>
     <File Include="Views/Administrador/EditarUsuario.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
@@ -3487,8 +3496,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Administrador/ListaNoticiasAdmin.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
+    <File Include="Views/Administrador/ListaOrganigramas.cshtml">
+      <publishTime>05/12/2018 13:17:41</publishTime>
+    </File>
     <File Include="Views/Administrador/ListaUsuarios.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
+    </File>
+    <File Include="Views/Administrador/VerOrganigrama.cshtml">
+      <publishTime>06/12/2018 12:38:46</publishTime>
     </File>
     <File Include="Views/Capturista/AgregarFoto.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -3548,10 +3563,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/Conocenos/Organigrama.cshtml">
-      <publishTime>12/05/2018 11:36:26</publishTime>
+      <publishTime>06/12/2018 11:40:31</publishTime>
     </File>
     <File Include="Views/Conocenos/VerNoticias.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
+    </File>
+    <File Include="Views/Conocenos/verOrganigrama.cshtml">
+      <publishTime>06/12/2018 12:45:30</publishTime>
     </File>
     <File Include="Views/Conocenos/Vision.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -3563,7 +3581,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>06/12/2018 11:59:50</publishTime>
     </File>
     <File Include="Views/Home/NoticiaCompleta.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -3665,7 +3683,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/Shared/LayoutAuth.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>12/06/2018 13:09:31</publishTime>
     </File>
     <File Include="Views/Shared/LayoutCapturista.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -3674,7 +3692,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>06/12/2018 12:36:00</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>

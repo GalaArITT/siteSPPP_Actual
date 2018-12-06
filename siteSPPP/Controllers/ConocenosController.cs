@@ -68,11 +68,30 @@ namespace siteSPPP.Controllers
             return View(db.SERVIDORESPUBLICOS.Where(s=>s.ESTATUS=="A").ToList());
         }
 
-        public ActionResult Diagrama_PDF()
+        public ActionResult verOrganigrama()
         {
-            var report = new ActionAsPdf("Organigrama");
-            return report;
+            return View(db.ORGANIGRAMA.Where(s=>s.ESTATUS=="A").OrderByDescending(s=>s.IDORGANIGRAMA).Take(1));
         }
+        //MOSTRAR FOTOS ORGANIGRAMAS
+        public ActionResult MostrarFotoOrg(int id)
+        {
+            byte[] cover = TraerFotoOrg(id);
+            if (cover != null)
+            {
+                return File(cover, "image/jpg");
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public byte[] TraerFotoOrg(int id)
+        {
+            ORGANIGRAMA oRGANIGRAMA = db.ORGANIGRAMA.Find(id);
+            byte[] cover = oRGANIGRAMA.IMAGEN;
+            return cover;
+        }
+
         public ActionResult Directorio(string busqueda)
         {
             var servidores = from s in db.SERVIDORESPUBLICOS

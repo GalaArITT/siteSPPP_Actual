@@ -1,0 +1,51 @@
+﻿@model IEnumerable<siteSPPP.Models.ORGANIGRAMA>
+
+@{
+    ViewBag.Title = "ListaOrganigramas";
+    Layout = "~/Views/Shared/LayoutAuth.cshtml";
+}
+
+<h2>Todos los organigramas de la Institución</h2>
+
+<p>
+    @Html.ActionLink("Agregar un nuevo Organigrama", "AgregarOrganigrama")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IMAGEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHACREACION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTATUS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USUARIO.USUARIOINICIA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="@Url.Action("MostrarFotoOrg", "Administrador", new { id = item.IDORGANIGRAMA })" alt="" width="80" height="110" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHACREACION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTATUS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USUARIO.USUARIOINICIA)
+        </td>
+        <td>
+            @Html.ActionLink("Cambiar de Fotografia", "EditarOrganigrama", new { id = item.IDORGANIGRAMA }) |
+            @Html.ActionLink("Ver Organigrama", "VerOrganigrama", new { id = item.IDORGANIGRAMA }) |
+        </td>
+    </tr>
+}
+
+</table>

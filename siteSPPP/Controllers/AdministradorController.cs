@@ -714,13 +714,57 @@ namespace siteSPPP.Controllers
 
         public ActionResult ListaOrganigramas()
         {
-            return View(db.ORGANIGRAMA.OrderByDescending(s=>s.FECHACREACION).ToList());
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
+            {
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
+            }
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
+            {
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 2) // 2 = Administrador
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    return View(db.ORGANIGRAMA.OrderByDescending(s => s.FECHACREACION).ToList());
+                }
+            }
+            return null;
         }
 
         //GET 
         public ActionResult AgregarOrganigrama()
         {
-            return View();
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
+            {
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
+            }
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
+            {
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 2) // 2 = Administrador
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    return View();
+                }
+            }
+            return null;
         }
         //POST
         [HttpPost]
@@ -750,16 +794,38 @@ namespace siteSPPP.Controllers
         //GET
         public ActionResult EditarOrganigrama(int? id)
         {
-            if (id == null)
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
             }
-            ORGANIGRAMA oRGANIGRAMA = db.ORGANIGRAMA.Find(id);
-            if (oRGANIGRAMA == null)
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
             {
-                return HttpNotFound();
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 2) // 2 = Administrador
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    ORGANIGRAMA oRGANIGRAMA = db.ORGANIGRAMA.Find(id);
+                    if (oRGANIGRAMA == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    return View(oRGANIGRAMA);
+                }
             }
-            return View(oRGANIGRAMA);
+            return null;
         }
         //POST
         [HttpPost]
@@ -782,18 +848,38 @@ namespace siteSPPP.Controllers
         }
         public ActionResult VerOrganigrama(int? id)
         {
-            if (id == null)
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
             }
-            ORGANIGRAMA oRGANIGRAMA = db.ORGANIGRAMA.Find(id);
-            if (oRGANIGRAMA == null)
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
             {
-                return HttpNotFound();
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 2) // 2 = Administrador
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    ORGANIGRAMA oRGANIGRAMA = db.ORGANIGRAMA.Find(id);
+                    if (oRGANIGRAMA == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    return View(oRGANIGRAMA);
+                }
             }
-            return View(oRGANIGRAMA);
+            return null;
         }
-
-
     }
 }

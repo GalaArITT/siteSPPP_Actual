@@ -119,6 +119,7 @@
     <NavigationProperty Name="NOTICIAS" Relationship="Self.FK_NOTICIAS_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="NOTICIAS" />
     <NavigationProperty Name="PLANTILLA" Relationship="Self.FK_PLANTILL_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="PLANTILLA" />
     <NavigationProperty Name="SERVIDORESPUBLICOS" Relationship="Self.FK_SERVIDOR_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="SERVIDORESPUBLICOS" />
+    <NavigationProperty Name="ORGANIGRAMA" Relationship="sitio_seplaModel.FK_ORGANIGR_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="ORGANIGRAMA" />
   </EntityType>
   <Association Name="FK_BALAZO_REFERENCE_NOTICIAS">
     <End Role="NOTICIAS" Type="sitio_seplaModel.NOTICIAS_SEPLAN" Multiplicity="1" />
@@ -275,5 +276,33 @@
       <End Role="USUARIO" EntitySet="USUARIO" />
       <End Role="SERVIDORESPUBLICOS" EntitySet="SERVIDORESPUBLICOS" />
     </AssociationSet>
+    <EntitySet Name="ORGANIGRAMA" EntityType="sitio_seplaModel.ORGANIGRAMA" />
+    <AssociationSet Name="FK_ORGANIGR_REFERENCE_USUARIO" Association="sitio_seplaModel.FK_ORGANIGR_REFERENCE_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="ORGANIGRAMA" EntitySet="ORGANIGRAMA" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="ORGANIGRAMA">
+    <Key>
+      <PropertyRef Name="IDORGANIGRAMA" />
+    </Key>
+    <Property Name="IDORGANIGRAMA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUSUARIO" Type="Int32" />
+    <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="FECHACREACION" Type="DateTime" Precision="7" />
+    <Property Name="ESTATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="USUARIO" Relationship="sitio_seplaModel.FK_ORGANIGR_REFERENCE_USUARIO" FromRole="ORGANIGRAMA" ToRole="USUARIO" />
+  </EntityType>
+  <Association Name="FK_ORGANIGR_REFERENCE_USUARIO">
+    <End Type="sitio_seplaModel.USUARIO" Role="USUARIO" Multiplicity="0..1" />
+    <End Type="sitio_seplaModel.ORGANIGRAMA" Role="ORGANIGRAMA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="ORGANIGRAMA">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -4,18 +4,20 @@
     ViewBag.Title = "Google Org Chart";
     Layout = null;
     //'<img src="/Content/images/Directorio/Dr. Felipe Javier Ruiz Rivera.jpg"/>'
+    //~/Content/images/GobEstadoNayarit.PNG
+    //~/Content/images/sppp_logo.jpg
 
 }
 <link href="~/Content/orgchart/orgchartDesign.css" rel="stylesheet" type="text/css" />
-<div>
-    <div>
-        <img src="~/Content/images/GobEstadoNayarit.PNG" style="width:15%; float:left">
-        <img src="~/Content/images/sppp_logo.jpg" style="width:15%; float:right" />
-    </div>
-    <p>
-        <input type="button" id="btnSave" value="Guardar Imagen" />
-    </p>
-    <div id="chart_div" style="text-align:center">
+<p>
+    <input type="button" id="btnSave" value="Guardar Imagen" />
+</p>
+<div id="Principal">
+    <div id="chart_div" style="text-align:center; float:unset">
+        <img src="~/Content/images/Captura.PNG" style="width:15%; float:left" id="imgGob">
+        <img src="/Content/images/GobEstadoNayarit.PNG" style="width:15%; float:left" id="imgGob2">
+        <img src="~/Content/images/Captura.PNG" style="width:15%; float:right" ; id="spppLogo" />
+        <img src="/Content/images/sppp_logo.jpg" style="width:15%; float:right" ; id="spppLogo2" />
         <div class="loader">
             <p>Cargando...</p>
             <div class="loader-inner"></div>
@@ -33,6 +35,8 @@
 
 <script type="text/javascript">
     $('#btnSave').attr('hidden', 'hidden'); //ocultar boton
+    //$('#imgGob').attr('hidden', 'hidden'); //ocultar boton
+    //$('#spppLogo').attr('hidden', 'hidden'); //ocultar boton
     google.load("visualization", "1", { packages: ["orgchart"] });
     google.setOnLoadCallback(drawChart);
     function drawChart() {
@@ -47,13 +51,10 @@
                 $.each(dt, function (i, item) {
                     dataArray.push([item.IDSERVPUB, item.NOMBREPERSONAL, item.NOMBRAMIENTO, item.NIVEL, item.FOTOPERSONAL]);
                 });
-
                 var data = new google.visualization.DataTable();
-
                 data.addColumn('string', 'Entity');
                 data.addColumn('string', 'ReportEntity');
                 data.addColumn('string', 'ToolTip');
-
                 for (var i = 0; i < dataArray.length; i++) {
                     //no cambiar nombre de variables
                     var Employee_ID = dataArray[i][0].toString();
@@ -62,7 +63,6 @@
                     var ReportTo = dataArray[i][3] != null ? dataArray[i][3].toString() : '';
                     //necesito convertir este arreglo de bytes en una imagen
                     var Imagen = dataArray[i][4];
-
                     function bin2string(array) {
                         var result = "";
                         for (var i = 0; i < array.length; ++i) {
@@ -72,7 +72,6 @@
                     }
                     var Imagen_Bin_String = bin2string(Imagen);
                     var Imagen_Base64 = btoa(Imagen_Bin_String);
-
                     //si el valor el null que no lo muestre en el diagrama
                     if (Employee_Name == null) {
                         Employee_Name = "";
@@ -86,6 +85,10 @@
                 var chart = new google.visualization.OrgChart($("#chart_div")[0]);
                 chart.draw(data, { allowHtml: true });
                 $('#btnSave').removeAttr('hidden'); //mostrar boton
+                $('#chart_div').prepend('<img src="/Content/images/GobEstadoNayarit.PNG" style="width:15%; float:left" id="imgGob">'); //mostrar 
+                $('#chart_div').prepend('<img src="/Content/images/Captura.PNG" style="width:15%; float:left" id="imgGob">')
+                $('#chart_div').prepend('<img src="/Content/images/sppp_logo.jpg" style="width:15%; float:right"; id="spppLogo" />'); //mostrar 
+                $('#chart_div').prepend('<img src="/Content/images/Captura.PNG" style="width:15%; float:right" ; id="spppLogo" />'); //mostrar 
             },
             failure: function (dt) {
                 console.log(dt);
@@ -95,7 +98,7 @@
             }
         });
     }
-    
+
     $('#btnSave').click(function () {
         var elm = $('#chart_div').get(0);
         var lebar = "1904";
@@ -110,5 +113,4 @@
             Canvas2Image.saveAsImage(canvas, lebar, tinggi, type, filename);
         })
     })
-
 </script>

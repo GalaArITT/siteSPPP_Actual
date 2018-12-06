@@ -353,6 +353,7 @@
     <Content Include="Content\images\boton_ped_BUZON.png" />
     <Content Include="Content\images\boton_ped_CALENDARIO.png" />
     <Content Include="Content\images\boton_ped_FANPAGE.png" />
+    <Content Include="Content\images\Captura.PNG" />
     <Content Include="Content\images\Directorio\Antonio Hernandez Sanchez.jpg" />
     <Content Include="Content\images\Directorio\Arq. Angel Rodriguez.jpg" />
     <Content Include="Content\images\Directorio\Arq. Julio Cesar Pineda.jpg" />
@@ -1418,6 +1419,7 @@
     <Content Include="Views\Administrador\EditarOrganigrama.cshtml" />
     <Content Include="Views\Administrador\VerOrganigrama.cshtml" />
     <Content Include="Views\Administrador\ListaOrganigramas.cshtml" />
+    <Content Include="Views\Conocenos\verOrganigrama.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
