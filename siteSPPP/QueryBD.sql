@@ -330,8 +330,9 @@ alter table ORGANIGRAMA
 
 
 
-select * from USUARIO
-update usuario
+select * from TIPO_PLANTILLA
+INSERT INTO TIPO_PLANTILLA
+VALUES ('SISTEMA DESEMPEÑO')
 set rol =1 
 where IDUSUARIO =2
 

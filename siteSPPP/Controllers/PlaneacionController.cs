@@ -1,4 +1,5 @@
-﻿using System;
+﻿using siteSPPP.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,8 @@ namespace siteSPPP.Controllers
 {
     public class PlaneacionController : Controller
     {
+        private sitio_seplaEntities db = new sitio_seplaEntities();
+
         // GET: Planeacion
         public ActionResult Index()
         {
@@ -20,7 +23,7 @@ namespace siteSPPP.Controllers
 
         public ActionResult SistemaDesempeño()
         {
-            return View();
+            return View(db.PLANTILLA.Where(s=>s.IDPLANTILLA==6).ToList());
         }
 
         public ActionResult Evaluación_2012()
