@@ -140,6 +140,19 @@ if exists (select 1
 go
 
 /*==============================================================*/
+/* Table: ARCHIVOS                                              */
+/*==============================================================*/
+create table ARCHIVOS (
+   IDARCHIVO            int                  identity,
+   IDTIPO               int                  not null,
+   NOMBREARCHIVO        nvarchar(300)        not null,
+   ARCHIVO              varbinary(Max)       null,
+   IMAGENARCHIVO        varbinary(Max)       null,
+   constraint PK_ARCHIVOS primary key (IDARCHIVO)
+)
+go
+
+/*==============================================================*/
 /* Table: BALAZO                                                */
 /*==============================================================*/
 create table BALAZO (
@@ -149,6 +162,7 @@ create table BALAZO (
    constraint PK_BALAZO primary key (IDBALAZO)
 )
 go
+
 
 /*==============================================================*/
 /* Table: DEPARTAMENTOS                                         */
@@ -279,7 +293,10 @@ create table USUARIO (
    constraint PK_USUARIO primary key (IDUSUARIO)
 )
 go
-
+alter table ARCHIVOS
+   add constraint FK_ARCHIVOS_REFERENCE_TIPO_PLA foreign key (IDTIPO)
+      references TIPO_PLANTILLA (IDTIPO)
+go
 alter table BALAZO
    add constraint FK_BALAZO_REFERENCE_NOTICIAS foreign key (IDNOTICIA)
       references NOTICIAS (IDNOTICIA)
@@ -384,8 +401,8 @@ drop table USUARIO
 
 SELECT * FROM USUARIO
 --ESTATUS              nvarchar(1)          null
-ALTER TABLE NOTICIAS
-ADD ESTATUS nvarchar(1) null; 
+ALTER TABLE ARCHIVOS
+ADD ESTATUS nvarchar(1) not null; 
 
 Select * from PLANTILLA
 

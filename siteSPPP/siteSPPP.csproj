@@ -246,6 +246,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdministradorController.cs" />
+    <Compile Include="Controllers\ArchivosController.cs" />
     <Compile Include="Controllers\CapturistaController.cs" />
     <Compile Include="Controllers\ConocenosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -262,6 +263,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ARCHIVOS.cs">
+      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\BALAZO.cs">
       <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
@@ -270,9 +274,6 @@
       <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\FOTOS.cs">
-      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\INFORMES.cs">
       <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Metadatos.cs" />
@@ -301,9 +302,6 @@
       <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SERVIDORESPUBLICOS.cs">
-      <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TIPO_INFORME.cs">
       <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TIPO_PLANTILLA.cs">
@@ -1420,6 +1418,9 @@
     <Content Include="Views\Administrador\VerOrganigrama.cshtml" />
     <Content Include="Views\Administrador\ListaOrganigramas.cshtml" />
     <Content Include="Views\Conocenos\verOrganigrama.cshtml" />
+    <Content Include="Views\Archivos\Create.cshtml" />
+    <Content Include="Views\Archivos\Edit.cshtml" />
+    <Content Include="Views\Archivos\ControlArchivos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

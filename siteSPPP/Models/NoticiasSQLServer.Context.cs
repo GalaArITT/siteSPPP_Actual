@@ -38,21 +38,19 @@ public partial class sitio_seplaEntities : DbContext
 
     public virtual DbSet<FOTOS> FOTOS { get; set; }
 
-    public virtual DbSet<INFORMES> INFORMES { get; set; }
-
     public virtual DbSet<NOTICIAS_SEPLAN> NOTICIAS { get; set; }
 
     public virtual DbSet<PLANTILLA> PLANTILLA { get; set; }
 
     public virtual DbSet<SERVIDORESPUBLICOS> SERVIDORESPUBLICOS { get; set; }
 
-    public virtual DbSet<TIPO_INFORME> TIPO_INFORME { get; set; }
-
     public virtual DbSet<TIPO_PLANTILLA> TIPO_PLANTILLA { get; set; }
 
     public virtual DbSet<USUARIO> USUARIO { get; set; }
 
     public virtual DbSet<ORGANIGRAMA> ORGANIGRAMA { get; set; }
+
+    public virtual DbSet<ARCHIVOS> ARCHIVOS { get; set; }
 
 }
 

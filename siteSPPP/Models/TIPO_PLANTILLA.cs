@@ -24,6 +24,8 @@ public partial class TIPO_PLANTILLA
 
         this.PLANTILLA = new HashSet<PLANTILLA>();
 
+        this.ARCHIVOS = new HashSet<ARCHIVOS>();
+
     }
 
 
@@ -36,6 +38,10 @@ public partial class TIPO_PLANTILLA
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
     public virtual ICollection<PLANTILLA> PLANTILLA { get; set; }
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
+    public virtual ICollection<ARCHIVOS> ARCHIVOS { get; set; }
 
 }
 

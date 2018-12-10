@@ -15,27 +15,26 @@ namespace siteSPPP.Models
 using System;
     using System.Collections.Generic;
     
-public partial class TIPO_INFORME
+public partial class ARCHIVOS
 {
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-    public TIPO_INFORME()
-    {
-
-        this.INFORMES = new HashSet<INFORMES>();
-
-    }
-
+    public int IDARCHIVO { get; set; }
 
     public int IDTIPO { get; set; }
 
-    public string TIPOINFORME { get; set; }
+    public string NOMBREARCHIVO { get; set; }
+
+    public byte[] ARCHIVO { get; set; }
+
+    public byte[] IMAGENARCHIVO { get; set; }
+
+    public System.DateTime FECHA { get; set; }
+
+    public string ESTATUS { get; set; }
 
 
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-    public virtual ICollection<INFORMES> INFORMES { get; set; }
+    public virtual TIPO_PLANTILLA TIPO_PLANTILLA { get; set; }
 
 }
 

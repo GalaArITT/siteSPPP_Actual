@@ -111,4 +111,22 @@ namespace siteSPPP.Models
         public string NOMBREDEPTO { get; set; }
     }
 
+    public class ARCHIVOS_Metadatos
+    {
+        public int IDARCHIVO { get; set; }
+        [Display(Name = "Plantilla asociada")]
+        public int IDTIPO { get; set; }
+        [Display(Name = "Nombre del archivo")]
+        public string NOMBREARCHIVO { get; set; }
+        [Display(Name = "Archivo")]
+        public byte[] ARCHIVO { get; set; }
+        [Display(Name = "Imagen alusiva")]
+        public byte[] IMAGENARCHIVO { get; set; }
+        [Display(Name = "Fecha creación")]
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
+        public System.DateTime FECHA { get; set; }
+        [Display(Name = "Estatus")]
+        public string ESTATUS { get; set; }
+    }
+
 }

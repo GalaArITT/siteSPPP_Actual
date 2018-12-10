@@ -1,0 +1,63 @@
+﻿@model PagedList.IPagedList<siteSPPP.Models.ARCHIVOS>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutAuth.cshtml";
+}
+
+<h2>Listado de todos los archivos</h2>
+
+<p>
+    @Html.ActionLink("Subir nuevo archivo", "Create")
+</p>
+<table class="table-responsive">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().NOMBREARCHIVO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().ARCHIVO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().IMAGENARCHIVO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().TIPO_PLANTILLA.TIPOPLANTILLA)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOMBREARCHIVO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ARCHIVO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IMAGENARCHIVO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TIPO_PLANTILLA.TIPOPLANTILLA)
+            </td>
+            <td>
+                @Html.ActionLink("Modificar", "Edit", new { id = item.IDARCHIVO }) 
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div class="text-right">
+    Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount
+</div>
+<div class="text-center">
+    @Html.PagedListPager(Model, page => Url.Action("ListaNoticiasAdmin", new { page,
+    currentFilter = ViewBag.currentFilter,
+    filtrarfech = ViewBag.filtrarfech,
+    filtrado = ViewBag.filtrado
+}))
+</div>

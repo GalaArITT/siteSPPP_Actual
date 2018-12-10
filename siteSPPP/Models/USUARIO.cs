@@ -22,8 +22,6 @@ public partial class USUARIO
     public USUARIO()
     {
 
-        this.INFORMES = new HashSet<INFORMES>();
-
         this.NOTICIAS = new HashSet<NOTICIAS_SEPLAN>();
 
         this.PLANTILLA = new HashSet<PLANTILLA>();
@@ -52,10 +50,6 @@ public partial class USUARIO
     public string CORREO { get; set; }
 
 
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-    public virtual ICollection<INFORMES> INFORMES { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 

@@ -24,4 +24,7 @@ namespace siteSPPP.Models
 
     [MetadataType(typeof(DEPARTAMENTOS_Metadatos))]
     public partial class DEPARTAMENTOS { }
+
+    [MetadataType(typeof(ARCHIVOS_Metadatos))]
+    public partial class ARCHIVOS { }
 }

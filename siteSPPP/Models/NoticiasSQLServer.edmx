@@ -5,6 +5,18 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="sitio_seplaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ARCHIVOS">
+          <Key>
+            <PropertyRef Name="IDARCHIVO" />
+          </Key>
+          <Property Name="IDARCHIVO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDTIPO" Type="int" Nullable="false" />
+          <Property Name="NOMBREARCHIVO" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="ARCHIVO" Type="varbinary(max)" />
+          <Property Name="IMAGENARCHIVO" Type="varbinary(max)" />
+          <Property Name="FECHA" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="ESTATUS" Type="nvarchar" MaxLength="1" Nullable="false" />
+        </EntityType>
         <EntityType Name="BALAZO">
           <Key>
             <PropertyRef Name="IDBALAZO" />
@@ -27,16 +39,6 @@
           <Property Name="IDNOTICIA" Type="int" Nullable="false" />
           <Property Name="IDFOTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FOTOGRAFIA" Type="varbinary(max)" />
-        </EntityType>
-        <EntityType Name="INFORMES">
-          <Key>
-            <PropertyRef Name="IDINFORME" />
-          </Key>
-          <Property Name="IDINFORME" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IDTIPO" Type="int" />
-          <Property Name="IDUSUARIO" Type="int" />
-          <Property Name="NOMFREINFORME" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="ARCHIVOINFORME" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="NOTICIAS">
           <Key>
@@ -90,13 +92,6 @@
           <Property Name="FECHAREGISTRO" Type="datetime" />
           <Property Name="NIVEL" Type="int" />
         </EntityType>
-        <EntityType Name="TIPO_INFORME">
-          <Key>
-            <PropertyRef Name="IDTIPO" />
-          </Key>
-          <Property Name="IDTIPO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TIPOINFORME" Type="nvarchar" MaxLength="50" Nullable="false" />
-        </EntityType>
         <EntityType Name="TIPO_PLANTILLA">
           <Key>
             <PropertyRef Name="IDTIPO" />
@@ -117,15 +112,15 @@
           <Property Name="FECHAREGISTRO" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="CORREO" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <Association Name="FK_BALAZO_REFERENCE_NOTICIAS">
-          <End Role="NOTICIAS" Type="Self.NOTICIAS" Multiplicity="1" />
-          <End Role="BALAZO" Type="Self.BALAZO" Multiplicity="*" />
+        <Association Name="FK_ARCHIVOS_REFERENCE_TIPO_PLA">
+          <End Role="TIPO_PLANTILLA" Type="Self.TIPO_PLANTILLA" Multiplicity="1" />
+          <End Role="ARCHIVOS" Type="Self.ARCHIVOS" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="NOTICIAS">
-              <PropertyRef Name="IDNOTICIA" />
+            <Principal Role="TIPO_PLANTILLA">
+              <PropertyRef Name="IDTIPO" />
             </Principal>
-            <Dependent Role="BALAZO">
-              <PropertyRef Name="IDNOTICIA" />
+            <Dependent Role="ARCHIVOS">
+              <PropertyRef Name="IDTIPO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -138,30 +133,6 @@
             </Principal>
             <Dependent Role="FOTOS">
               <PropertyRef Name="IDNOTICIA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_INFORMES_REFERENCE_TIPO_INF">
-          <End Role="TIPO_INFORME" Type="Self.TIPO_INFORME" Multiplicity="0..1" />
-          <End Role="INFORMES" Type="Self.INFORMES" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TIPO_INFORME">
-              <PropertyRef Name="IDTIPO" />
-            </Principal>
-            <Dependent Role="INFORMES">
-              <PropertyRef Name="IDTIPO" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_INFORMES_REFERENCE_USUARIO">
-          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
-          <End Role="INFORMES" Type="Self.INFORMES" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="USUARIO">
-              <PropertyRef Name="IDUSUARIO" />
-            </Principal>
-            <Dependent Role="INFORMES">
-              <PropertyRef Name="IDUSUARIO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -214,32 +185,23 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="sitio_seplaModelStoreContainer">
+          <EntitySet Name="ARCHIVOS" EntityType="Self.ARCHIVOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BALAZO" EntityType="Self.BALAZO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DEPARTAMENTOS" EntityType="Self.DEPARTAMENTOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FOTOS" EntityType="Self.FOTOS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="INFORMES" EntityType="Self.INFORMES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NOTICIAS" EntityType="Self.NOTICIAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ORGANIGRAMA" EntityType="Self.ORGANIGRAMA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PLANTILLA" EntityType="Self.PLANTILLA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SERVIDORESPUBLICOS" EntityType="Self.SERVIDORESPUBLICOS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TIPO_INFORME" EntityType="Self.TIPO_INFORME" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TIPO_PLANTILLA" EntityType="Self.TIPO_PLANTILLA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_BALAZO_REFERENCE_NOTICIAS" Association="Self.FK_BALAZO_REFERENCE_NOTICIAS">
-            <End Role="NOTICIAS" EntitySet="NOTICIAS" />
-            <End Role="BALAZO" EntitySet="BALAZO" />
+          <AssociationSet Name="FK_ARCHIVOS_REFERENCE_TIPO_PLA" Association="Self.FK_ARCHIVOS_REFERENCE_TIPO_PLA">
+            <End Role="TIPO_PLANTILLA" EntitySet="TIPO_PLANTILLA" />
+            <End Role="ARCHIVOS" EntitySet="ARCHIVOS" />
           </AssociationSet>
           <AssociationSet Name="FK_FOTOS_REFERENCE_NOTICIAS" Association="Self.FK_FOTOS_REFERENCE_NOTICIAS">
             <End Role="NOTICIAS" EntitySet="NOTICIAS" />
             <End Role="FOTOS" EntitySet="FOTOS" />
-          </AssociationSet>
-          <AssociationSet Name="FK_INFORMES_REFERENCE_TIPO_INF" Association="Self.FK_INFORMES_REFERENCE_TIPO_INF">
-            <End Role="TIPO_INFORME" EntitySet="TIPO_INFORME" />
-            <End Role="INFORMES" EntitySet="INFORMES" />
-          </AssociationSet>
-          <AssociationSet Name="FK_INFORMES_REFERENCE_USUARIO" Association="Self.FK_INFORMES_REFERENCE_USUARIO">
-            <End Role="USUARIO" EntitySet="USUARIO" />
-            <End Role="INFORMES" EntitySet="INFORMES" />
           </AssociationSet>
           <AssociationSet Name="FK_NOTICIAS_REFERENCE_USUARIO" Association="Self.FK_NOTICIAS_REFERENCE_USUARIO">
             <End Role="USUARIO" EntitySet="USUARIO" />
@@ -287,18 +249,6 @@
           <Property Name="IDFOTO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FOTOGRAFIA" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="NOTICIAS" Relationship="Self.FK_FOTOS_REFERENCE_NOTICIAS" FromRole="FOTOS" ToRole="NOTICIAS" />
-        </EntityType>
-        <EntityType Name="INFORMES">
-          <Key>
-            <PropertyRef Name="IDINFORME" />
-          </Key>
-          <Property Name="IDINFORME" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IDTIPO" Type="Int32" />
-          <Property Name="IDUSUARIO" Type="Int32" />
-          <Property Name="NOMFREINFORME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ARCHIVOINFORME" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
-          <NavigationProperty Name="TIPO_INFORME" Relationship="Self.FK_INFORMES_REFERENCE_TIPO_INF" FromRole="INFORMES" ToRole="TIPO_INFORME" />
-          <NavigationProperty Name="USUARIO" Relationship="Self.FK_INFORMES_REFERENCE_USUARIO" FromRole="INFORMES" ToRole="USUARIO" />
         </EntityType>
         <EntityType Name="NOTICIAS_SEPLAN">
           <Key>
@@ -349,14 +299,6 @@
           <NavigationProperty Name="USUARIO" Relationship="Self.FK_SERVIDOR_REFERENCE_USUARIO" FromRole="SERVIDORESPUBLICOS" ToRole="USUARIO" />
           <Property Name="NIVEL" Type="Byte" />
         </EntityType>
-        <EntityType Name="TIPO_INFORME">
-          <Key>
-            <PropertyRef Name="IDTIPO" />
-          </Key>
-          <Property Name="IDTIPO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TIPOINFORME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="INFORMES" Relationship="Self.FK_INFORMES_REFERENCE_TIPO_INF" FromRole="TIPO_INFORME" ToRole="INFORMES" />
-        </EntityType>
         <EntityType Name="TIPO_PLANTILLA">
           <Key>
             <PropertyRef Name="IDTIPO" />
@@ -364,6 +306,7 @@
           <Property Name="IDTIPO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TIPOPLANTILLA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PLANTILLA" Relationship="Self.FK_PLANTILL_REFERENCE_TIPO_PLA" FromRole="TIPO_PLANTILLA" ToRole="PLANTILLA" />
+          <NavigationProperty Name="ARCHIVOS" Relationship="sitio_seplaModel.FK_ARCHIVOS_REFERENCE_TIPO_PLA" FromRole="TIPO_PLANTILLA" ToRole="ARCHIVOS" />
         </EntityType>
         <EntityType Name="USUARIO">
           <Key>
@@ -377,7 +320,6 @@
           <Property Name="ESTATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
           <Property Name="FECHAREGISTRO" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="CORREO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="INFORMES" Relationship="Self.FK_INFORMES_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="INFORMES" />
           <NavigationProperty Name="NOTICIAS" Relationship="Self.FK_NOTICIAS_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="NOTICIAS" />
           <NavigationProperty Name="PLANTILLA" Relationship="Self.FK_PLANTILL_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="PLANTILLA" />
           <NavigationProperty Name="SERVIDORESPUBLICOS" Relationship="Self.FK_SERVIDOR_REFERENCE_USUARIO" FromRole="USUARIO" ToRole="SERVIDORESPUBLICOS" />
@@ -416,30 +358,6 @@
             </Principal>
             <Dependent Role="FOTOS">
               <PropertyRef Name="IDNOTICIA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_INFORMES_REFERENCE_TIPO_INF">
-          <End Role="TIPO_INFORME" Type="Self.TIPO_INFORME" Multiplicity="0..1" />
-          <End Role="INFORMES" Type="Self.INFORMES" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TIPO_INFORME">
-              <PropertyRef Name="IDTIPO" />
-            </Principal>
-            <Dependent Role="INFORMES">
-              <PropertyRef Name="IDTIPO" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_INFORMES_REFERENCE_USUARIO">
-          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
-          <End Role="INFORMES" Type="Self.INFORMES" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="USUARIO">
-              <PropertyRef Name="IDUSUARIO" />
-            </Principal>
-            <Dependent Role="INFORMES">
-              <PropertyRef Name="IDUSUARIO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -495,11 +413,9 @@
           <EntitySet Name="BALAZO" EntityType="Self.BALAZO" />
           <EntitySet Name="DEPARTAMENTOS" EntityType="Self.DEPARTAMENTOS" />
           <EntitySet Name="FOTOS" EntityType="Self.FOTOS" />
-          <EntitySet Name="INFORMES" EntityType="Self.INFORMES" />
           <EntitySet Name="NOTICIAS" EntityType="sitio_seplaModel.NOTICIAS_SEPLAN" />
           <EntitySet Name="PLANTILLA" EntityType="Self.PLANTILLA" />
           <EntitySet Name="SERVIDORESPUBLICOS" EntityType="Self.SERVIDORESPUBLICOS" />
-          <EntitySet Name="TIPO_INFORME" EntityType="Self.TIPO_INFORME" />
           <EntitySet Name="TIPO_PLANTILLA" EntityType="Self.TIPO_PLANTILLA" />
           <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
           <AssociationSet Name="FK_BALAZO_REFERENCE_NOTICIAS" Association="Self.FK_BALAZO_REFERENCE_NOTICIAS">
@@ -513,14 +429,6 @@
           <AssociationSet Name="FK_FOTOS_REFERENCE_NOTICIAS" Association="Self.FK_FOTOS_REFERENCE_NOTICIAS">
             <End Role="NOTICIAS" EntitySet="NOTICIAS" />
             <End Role="FOTOS" EntitySet="FOTOS" />
-          </AssociationSet>
-          <AssociationSet Name="FK_INFORMES_REFERENCE_TIPO_INF" Association="Self.FK_INFORMES_REFERENCE_TIPO_INF">
-            <End Role="TIPO_INFORME" EntitySet="TIPO_INFORME" />
-            <End Role="INFORMES" EntitySet="INFORMES" />
-          </AssociationSet>
-          <AssociationSet Name="FK_INFORMES_REFERENCE_USUARIO" Association="Self.FK_INFORMES_REFERENCE_USUARIO">
-            <End Role="USUARIO" EntitySet="USUARIO" />
-            <End Role="INFORMES" EntitySet="INFORMES" />
           </AssociationSet>
           <AssociationSet Name="FK_NOTICIAS_REFERENCE_USUARIO" Association="Self.FK_NOTICIAS_REFERENCE_USUARIO">
             <End Role="USUARIO" EntitySet="USUARIO" />
@@ -543,6 +451,11 @@
             <End Role="USUARIO" EntitySet="USUARIO" />
             <End Role="ORGANIGRAMA" EntitySet="ORGANIGRAMA" />
           </AssociationSet>
+          <EntitySet Name="ARCHIVOS" EntityType="sitio_seplaModel.ARCHIVOS" />
+          <AssociationSet Name="FK_ARCHIVOS_REFERENCE_TIPO_PLA" Association="sitio_seplaModel.FK_ARCHIVOS_REFERENCE_TIPO_PLA">
+            <End Role="TIPO_PLANTILLA" EntitySet="TIPO_PLANTILLA" />
+            <End Role="ARCHIVOS" EntitySet="ARCHIVOS" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="ORGANIGRAMA">
           <Key>
@@ -564,6 +477,31 @@
             </Principal>
             <Dependent Role="ORGANIGRAMA">
               <PropertyRef Name="IDUSUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ARCHIVOS">
+          <Key>
+            <PropertyRef Name="IDARCHIVO" />
+          </Key>
+          <Property Name="IDARCHIVO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDTIPO" Type="Int32" Nullable="false" />
+          <Property Name="NOMBREARCHIVO" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="ARCHIVO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="IMAGENARCHIVO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="TIPO_PLANTILLA" Relationship="sitio_seplaModel.FK_ARCHIVOS_REFERENCE_TIPO_PLA" FromRole="ARCHIVOS" ToRole="TIPO_PLANTILLA" />
+          <Property Name="FECHA" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="ESTATUS" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_ARCHIVOS_REFERENCE_TIPO_PLA">
+          <End Type="sitio_seplaModel.TIPO_PLANTILLA" Role="TIPO_PLANTILLA" Multiplicity="1" />
+          <End Type="sitio_seplaModel.ARCHIVOS" Role="ARCHIVOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_PLANTILLA">
+              <PropertyRef Name="IDTIPO" />
+            </Principal>
+            <Dependent Role="ARCHIVOS">
+              <PropertyRef Name="IDTIPO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -596,17 +534,6 @@
                 <ScalarProperty Name="IDNOTICIA" ColumnName="IDNOTICIA" />
                 <ScalarProperty Name="IDFOTO" ColumnName="IDFOTO" />
                 <ScalarProperty Name="FOTOGRAFIA" ColumnName="FOTOGRAFIA" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="INFORMES">
-            <EntityTypeMapping TypeName="sitio_seplaModel.INFORMES">
-              <MappingFragment StoreEntitySet="INFORMES">
-                <ScalarProperty Name="IDINFORME" ColumnName="IDINFORME" />
-                <ScalarProperty Name="IDTIPO" ColumnName="IDTIPO" />
-                <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
-                <ScalarProperty Name="NOMFREINFORME" ColumnName="NOMFREINFORME" />
-                <ScalarProperty Name="ARCHIVOINFORME" ColumnName="ARCHIVOINFORME" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -655,14 +582,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TIPO_INFORME">
-            <EntityTypeMapping TypeName="sitio_seplaModel.TIPO_INFORME">
-              <MappingFragment StoreEntitySet="TIPO_INFORME">
-                <ScalarProperty Name="IDTIPO" ColumnName="IDTIPO" />
-                <ScalarProperty Name="TIPOINFORME" ColumnName="TIPOINFORME" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TIPO_PLANTILLA">
             <EntityTypeMapping TypeName="sitio_seplaModel.TIPO_PLANTILLA">
               <MappingFragment StoreEntitySet="TIPO_PLANTILLA">
@@ -693,6 +612,19 @@
                 <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
                 <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
                 <ScalarProperty Name="IDORGANIGRAMA" ColumnName="IDORGANIGRAMA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ARCHIVOS">
+            <EntityTypeMapping TypeName="sitio_seplaModel.ARCHIVOS">
+              <MappingFragment StoreEntitySet="ARCHIVOS">
+                <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="IMAGENARCHIVO" ColumnName="IMAGENARCHIVO" />
+                <ScalarProperty Name="ARCHIVO" ColumnName="ARCHIVO" />
+                <ScalarProperty Name="NOMBREARCHIVO" ColumnName="NOMBREARCHIVO" />
+                <ScalarProperty Name="IDTIPO" ColumnName="IDTIPO" />
+                <ScalarProperty Name="IDARCHIVO" ColumnName="IDARCHIVO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

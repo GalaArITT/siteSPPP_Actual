@@ -8,24 +8,22 @@
         <EntityTypeShape EntityType="sitio_seplaModel.BALAZO" Width="1.5" PointX="4.5" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="sitio_seplaModel.DEPARTAMENTOS" Width="1.875" PointX="0.5" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="sitio_seplaModel.FOTOS" Width="1.5" PointX="2.75" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.INFORMES" Width="1.5" PointX="8.875" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="sitio_seplaModel.NOTICIAS_SEPLAN" Width="1.5" PointX="2.75" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.PLANTILLA" Width="1.5" PointX="9" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.PLANTILLA" Width="1.5" PointX="8.375" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="sitio_seplaModel.SERVIDORESPUBLICOS" Width="3.125" PointX="5" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.TIPO_INFORME" Width="1.5" PointX="11.625" PointY="0.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.TIPO_PLANTILLA" Width="1.5" PointX="11.75" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="sitio_seplaModel.USUARIO" Width="1.5" PointX="0.5" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.TIPO_PLANTILLA" Width="1.5" PointX="10.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sitio_seplaModel.USUARIO" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
         <AssociationConnector Association="sitio_seplaModel.FK_BALAZO_REFERENCE_NOTICIAS" ManuallyRouted="false" />
         <AssociationConnector Association="sitio_seplaModel.FK_SERVIDORES_DEPTO" ManuallyRouted="false" />
         <AssociationConnector Association="sitio_seplaModel.FK_FOTOS_REFERENCE_NOTICIAS" ManuallyRouted="false" />
-        <AssociationConnector Association="sitio_seplaModel.FK_INFORMES_REFERENCE_TIPO_INF" ManuallyRouted="false" />
-        <AssociationConnector Association="sitio_seplaModel.FK_INFORMES_REFERENCE_USUARIO" ManuallyRouted="false" />
         <AssociationConnector Association="sitio_seplaModel.FK_NOTICIAS_REFERENCE_USUARIO" ManuallyRouted="false" />
         <AssociationConnector Association="sitio_seplaModel.FK_PLANTILL_REFERENCE_TIPO_PLA" ManuallyRouted="false" />
         <AssociationConnector Association="sitio_seplaModel.FK_PLANTILL_REFERENCE_USUARIO" ManuallyRouted="false" />
         <AssociationConnector Association="sitio_seplaModel.FK_SERVIDOR_REFERENCE_USUARIO" ManuallyRouted="false" />
         <EntityTypeShape EntityType="sitio_seplaModel.ORGANIGRAMA" Width="1.5" PointX="6.625" PointY="0.5" />
         <AssociationConnector Association="sitio_seplaModel.FK_ORGANIGR_REFERENCE_USUARIO" />
+        <EntityTypeShape EntityType="sitio_seplaModel.ARCHIVOS" Width="1.5" PointX="8.5" PointY="0.5" />
+        <AssociationConnector Association="sitio_seplaModel.FK_ARCHIVOS_REFERENCE_TIPO_PLA" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
