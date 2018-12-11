@@ -255,11 +255,6 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PlaneacionController.cs" />
     <Compile Include="Controllers\TransparenciaController.cs" />
-    <Compile Include="DatosXSDS\DatosOrganigrama.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatosOrganigrama.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1271,18 +1266,7 @@
     <Content Include="Models\NoticiasSQLServer.edmx.diagram">
       <DependentUpon>NoticiasSQLServer.edmx</DependentUpon>
     </Content>
-    <Content Include="DatosXSDS\DatosOrganigrama.xsc">
-      <DependentUpon>DatosOrganigrama.xsd</DependentUpon>
-    </Content>
     <Content Include="App_Browsers\qt.browser" />
-    <None Include="DatosXSDS\DatosOrganigrama.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatosOrganigrama.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="DatosXSDS\DatosOrganigrama.xss">
-      <DependentUpon>DatosOrganigrama.xsd</DependentUpon>
-    </Content>
     <None Include="Properties\PublishProfiles\localftp.pubxml" />
     <None Include="Properties\PublishProfiles\seplan_ftp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -1421,6 +1405,8 @@
     <Content Include="Views\Archivos\Create.cshtml" />
     <Content Include="Views\Archivos\Edit.cshtml" />
     <Content Include="Views\Archivos\ControlArchivos.cshtml" />
+    <Content Include="Views\Archivos\CambiarImagen.cshtml" />
+    <Content Include="Views\Archivos\CambiarArchivo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

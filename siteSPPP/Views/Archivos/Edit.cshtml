@@ -8,10 +8,14 @@
 <h2>Modificar Archivos</h2>
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "Archivos", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+    @Html.HiddenFor(s => s.IDARCHIVO)
+    @Html.HiddenFor(s => s.FECHA)
+    @Html.HiddenFor(s => s.IMAGENARCHIVO)
+    @Html.HiddenFor(s => s.ARCHIVO)
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -33,25 +37,21 @@
             </div>
         </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.ARCHIVO, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
+        <div class="form-group">
+            @Html.LabelFor(model => model.ESTATUS, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <input type="file" id="ARCHIVO" name="ARCHIVO" />
+                <div class="checkbox">
+                    @Html.DropDownListFor(m => m.ESTATUS,new SelectList(new[]
+                       {
+                           new SelectListItem { Value = "", Text ="SELECCIONE UNA OPCION"},
+                           new SelectListItem { Value = "A", Text = "ACTIVO"},
+                           new SelectListItem { Value = "I", Text = "INACTIVO"},
+                       },"Value"
+                       ,"Text"), new { @id = "listRegresa", @class = "" })
+                    @Html.ValidationMessageFor(model => model.ESTATUS, "", new { @class = "text-danger" })
+                </div>
             </div>
-            @Html.ValidationMessageFor(model => model.ARCHIVO, "", new { @class = "text-danger" })
         </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.IMAGENARCHIVO, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            <div class="col-md-10">
-                <input type="file" id="IMAGENARCHIVO" name="IMAGENARCHIVO" />
-            </div>
-            @Html.ValidationMessageFor(model => model.IMAGENARCHIVO, "", new { @class = "text-danger" })
-        </div>
-    </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

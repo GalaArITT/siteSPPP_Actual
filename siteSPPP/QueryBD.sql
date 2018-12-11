@@ -350,8 +350,10 @@ alter table ORGANIGRAMA
 select * from TIPO_PLANTILLA
 INSERT INTO TIPO_PLANTILLA
 VALUES ('SISTEMA DESEMPEÑO')
-set rol =1 
-where IDUSUARIO =2
+
+UPDATE TIPO_PLANTILLA
+set TIPOPLANTILLA = 'SISTEMA ESTATAL DE PPP'
+WHERE IDTIPO = 6
 
 	/*Tipos: 
 	1 = Capturista
@@ -398,7 +400,6 @@ drop table SERVIDORESPUBLICOS
 drop table TIPO_INFORME
 drop table TIPO_PLANTILLA
 drop table USUARIO
-
 SELECT * FROM USUARIO
 --ESTATUS              nvarchar(1)          null
 ALTER TABLE ARCHIVOS
@@ -411,8 +412,7 @@ VALUES ('OBJETIVO')
 
 delete from PLANTILLA 
 
-
-
+select * from archivos
 select * from TIPO_PLANTILLA
 select * from SERVIDORESPUBLICOS
 

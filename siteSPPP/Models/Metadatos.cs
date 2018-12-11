@@ -101,7 +101,7 @@ namespace siteSPPP.Models
         [Display(Name = "Fecha registro")]
         [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> FECHAREGISTRO { get; set; }
-        [Display(Name = "Nivel")]
+        [Display(Name = "Nivel superior dependiente")]
         public Nullable<int> NIVEL { get; set; }
     }
     [DataContract(IsReference = true)]

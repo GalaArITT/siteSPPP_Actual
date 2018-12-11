@@ -8,7 +8,7 @@
 <h2>Carga de archivos</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Create", "Archivos", FormMethod.Post, new { enctype = "multipart/form-data" })) 
 {
     @Html.AntiForgeryToken()
     
