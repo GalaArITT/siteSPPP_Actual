@@ -1,319 +1,34 @@
-﻿
+﻿@model IEnumerable<siteSPPP.Models.ARCHIVOS>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<table width="710" border="0" align="center">
-    <tbody>
-        <tr>
-            <td>
-                <table width="610" border="0" align="center">
-                    <tbody>
-                        <tr>
-                            <td height="23">
-                                <table width="637" border="0">
-                                    <tbody>
-                                        <tr>
-                                            <td width="35">&nbsp;</td>
-                                            <td width="592">
-                                                <h1>Sistema Estatal de Planeación, Programación y Presupuesto</h1>
-                                                <p>&nbsp;</p>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table width="634" border="0" align="center">
-                                    <tbody>
-                                        <tr>
-                                            <td width="40" nowrap="nowrap" bgcolor="#FFFFFF">&nbsp;</td>
-                                            <td width="658"><strong>Marco Regulatorio</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="40"><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td class="transparencia"><a href="~/Content/files/leyes/LEY DE PLANEACION 09-04-12.pdf" target="_blank">Ley de Planeación</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="40"><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="~/Content/files/leyes/LEY DE PLANEACION DEL ESTADO DE NAYARIT.pdf" target="_blank" class="transparencia">Ley  de Planeación del Estado de Nayarit </a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="40"><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="~/Content/files/leyes/REGLAMENTO INTERIOR DE LA SECRETARIA DE PLANEACION PROGRAMACION Y PRESUPUESTO 27-03-2010.pdf" target="_blank">Reglamento Interior de la Secretaría de Planeación, Programación y Presupuesto</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="40"><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="~/Content/files/leyes/LEY QUE CREA EL COMITE DE PLANEACION PARA EL DESARROLLO DEL ESTADO DE NAYARIT.pdf" target="_blank">Ley que crea el Comité de Planeación para el Desarrollo del Estado de Nayarit (COPLADENAY) </a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="40"><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="~/Content/files/leyes/REGLAMENTO INTERIOR DEL COPLADENAY  19-11-2003.pdf" target="_blank">Reglamento Interior del COPLADENAY </a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="40"><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="~/Content/files/leyes/LEY DE ASOCIACIONES PUBLICO PRIVADAS DEL ESTADO DE NAYARIT.pdf" target="_blank">Ley de Asociaciones Público Privadas</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td nowrap="nowrap" bgcolor="#FFFFFF">&nbsp;</td>
-                                            <td>&nbsp;</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table width="627" border="0" align="center">
-                                    <tbody>
-                                        <tr>
-                                            <td width="37">&nbsp;</td>
-                                            <td width="580"><strong>Información de apoyo para la Planeación Municipal 2011 – 2014</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="~/Content/files/descargas/planeacion_mpal/arm.pdf" target="_blank">Análisis de los reglamentos municipales</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="http://www.normateca.gob.mx/Archivos/41_D_1233_11-05-2007. Lineamientos para informar sobre el ejercicio, 27-Abril-2007.pdf" target="_blank">Formato único para información de resultados   Ramo 33</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="/" target="_blank">Indicadores Financieros Municipales</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="http://www.conapo.gob.mx/work/models/CONAPO/indices_margina/mf2010/CapitulosPDF/Anexo B3.pdf" target="_blank">Indicadores de Marginación y Socioeconómicos</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_xls.png" alt="icono xls" width="16" height="16" align="right"></td>
-                                            <td><a href="~/Content/files/descargas/planeacion/evaluacion pobreza nayarit 2012.pdf" target="_blank">Indicadores de Salud, Educación, Ingresos   Per Cápita (IDH) y Migración a EU</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="/" target="_blank">Programas Federales. Objetivos y Cobertura   2008</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="~/Content/files/descargas/planeacion_mpal/10lppe.pdf" target="_blank">10 Lecciones Prácticas para los Presidentes   Electos</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>&nbsp;</td>
-                                            <td>&nbsp;</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table width="630" border="0" align="center">
-                                    <tbody>
-                                        <tr>
-                                            <td width="40">&nbsp;</td>
-                                            <td width="658"><strong>Documentos y Bases para la Planeación Estatal </strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_web.png" alt="icono zip" width="16" height="16" align="right"></td>
-                                            <td><a href="http://pnd.gob.mx/" target="_blank">Plan Nacional de Desarrollo</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_web.png" alt="icono zip" width="16" height="16" align="right"></td>
-                                            <td><a href="http://presidencia.gob.mx/progsectoriales/" target="_blank">Programas Federales</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_web.png" alt="icono zip" width="16" height="16" align="right"></td>
-                                            <td><a href="http://www.seplan.gob.mx/~/Content/files/leyes/PED/PED_v7_Edit.pdf" target="_blank">Plan Estatal de Desarrollo 2011-2017</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_web.png" alt="icono zip" width="16" height="16" align="right"></td>
-                                            <td><a href="/" target="_blank">Programas Sectoriales y Especiales</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_web.png" alt="icono zip" width="16" height="16" align="right"></td>
-                                            <td><a href="pdm.html" target="_blank">Planes Municipales de Desarrollo</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>&nbsp;</td>
-                                            <td>&nbsp;</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table width="631" border="0" align="center">
-                                    <tbody>
-                                        <tr>
-                                            <td width="40">&nbsp;</td>
-                                            <td width="658"><strong>Marco Presupuestal </strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="~/Content/files/descargas/presupuesto_egresos_08.pdf" target="_blank">Presupuesto de Inversión 2008 </a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="~/Content/files/descargas/presupuesto_egresos_09.pdf" target="_blank">Presupuesto de Inversión 2009</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="~/Content/files/descargas/planeacion/presupuesto_egresos_2010.pdf" target="_blank">Presupuesto de Inversión 2010</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="~/Content/files/descargas/planeacion/pef 2012-2013.pdf" target="_blank">Presupuesto de Inversión 2012-2013</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="transparencia/files/asignaciones_pef_nayarit.pdf" target="_blank">Asignaciones para Nayarit en el PEF 2008 </a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="http://www.seplan.gob.mx/~/Content/files/descargas/asignaciones_pef_nay_09.pdf" target="_blank">Asignaciones para Nayarit en el PEF 2009</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="~/Content/files/descargas/asignaciones_pef_nay_10.pdf" target="_blank">Asignaciones para Nayarit en el PEF 2010</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="/" target="_blank">Asignaciones para Nayarit en el PEF 2012</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td><a href="/" target="_blank">Asignaciones para Nayarit en el PEF 2013</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>&nbsp;</td>
-                                            <td>&nbsp;</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table width="624" border="0" align="center">
-                                    <tbody>
-                                        <tr>
-                                            <td width="37">&nbsp;</td>
-                                            <td width="577"><strong>Evaluación</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td>&nbsp;</td>
-                                            <td>Correspondencia entre la Cuenta Pública y el Plan Estatal de Desarrollo</td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td>• <a href="http://www.nayarit.gob.mx/transparenciafiscal/rendiciondecuentas/correspondencia/correspondencia_ped.pdf" target="_blank">2005</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td>• <a href="http://www.nayarit.gob.mx/transparenciafiscal/rendiciondecuentas/correspondencia/CORRESPONDENCIA PED-CTA.PUB.pdf" target="_blank">2006</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td>• <a href="http://www.nayarit.gob.mx/transparenciafiscal/rendiciondecuentas/correspondencia/CORRESPONDENCIA PED_2007.pdf" target="_blank">2007</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td>• <a href="http://www.nayarit.gob.mx/transparenciafiscal/rendiciondecuentas/correspondencia/correspondencia_PED_2008.pdf" target="_blank">2008</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td>• <a href="~/Content/files/descargas/planeacion/correspondencia_cta_ped_2009.pdf" target="_blank">2009</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>&nbsp;</td>
-                                            <td>Informes de Gobierno : </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td>• <a href="/">Primer Informe / En construcción</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>&nbsp;</td>
-                                            <td>Evaluaciones :</td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                            <td>• <a href="#" target="_blank">2012 / En Construcción</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>&nbsp;</td>
-                                            <td>&nbsp;</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div align="center">
-                                    <table width="630" border="0">
-                                        <tbody>
-                                            <tr>
-                                                <td width="37">&nbsp;</td>
-                                                <td width="550"><strong>Información Estadística e indicadores Macro-Económicos</strong></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                                <td><a href="http://www.shcp.gob.mx/POLITICAFINANCIERA/FINANZASPUBLICAS/Paginas/CriteriosGralesPolEco.aspx" target="_blank">Criterios Generales de Política Económica para México</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                                <td><a href="~/Content/files/descargas/pla/prespectica economica 2013.pdf">Perspectivas económicas para el 2013</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="~/Content/images/icono_web.png" alt="icono zip" width="16" height="16" align="right"></td>
-                                                <td><a href="http://www.banxico.org.mx/informacion-para-la-prensa/comunicados/resultados-de-encuestas/expectativas-de-los-especialistas/" target="_blank">Espectativas de los especialistas en economia 2013</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                                <td><a href="http://www.shcp.gob.mx/INGRESOS/Ingresos_ley/2013/iniciativa_lif_2013.pdf" target="_blank">Lineamientos Económicos para el Presupuesto de Egresos de la Federación 2013</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                                <td><a href="http://www.banamex.com/esp/pdf_bin/esem/INDDEM_ACTPRO.pdf" target="_blank">Indicadores estatales demográficos y de actividad productiva. Febrero 2008. Banamex</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                                <td><a href="http://www.indetec.gob.mx/e-financiero1/Boletin142/banamex01-documentos-irae-0209-pdf.pdf" target="_blank">Indicadores estatales demográficos y de actividad productiva. Febrero 2009. Banamex</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;</td>
-                                                <td>Producto Interno Bruto : </td>
-                                            </tr>
-                                            
-                                            <tr>
-                                                <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                                <td>• <a href="~/Content/files/descargas/planeacion/pib_2008_inegi.pdf" target="_blank">INEGI: Producto Interno Bruto 2008</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="~/Content/images/icono_pdf.png" alt="icono pdf" width="16" height="16" align="right"></td>
-                                                <td>
-                                                    <div>
-                                                        <div dir="ltr" data-font-name="Helvetica" data-canvas-width="246.04800000000003">• <a href="http://www.inegi.org.mx/prod_serv/contenidos/espanol/bvinegi/productos/derivada/regionales/pib/2007-2011/PIBE2011.pdf" target="_blank">INEGI:</a></span> Producto Interno Bruto por entidad federatica 2007-2011</div>
-                                                        <div dir="ltr" data-font-name="Helvetica" data-canvas-width="229.4776"></div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;</td>
-                                                <td>&nbsp;</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td height="23">
-                                <table width="500" border="0">
-                                    <tbody>
-                                        <tr>
-                                            <td width="41">&nbsp;</td>
-                                            <td width="449">
-                                                <span class="pienota">
-                                                    Última actualización:
-                                                    <!-- #BeginDate format:fcAm1 -->Lunes, Agosto 3, 2015<!-- #EndDate -->
-                                                </span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><h1>&nbsp;</h1></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p align="center"></p>
-            </td>
-        </tr>
-    </tbody>
-</table> 
+<h2>Marco Regulatorio</h2>
+@foreach (var item in Model)
+{
+    if (item.IDTIPO == 6)
+    {
+        <div class="table-responsive text-left">
+            <img src="~/Content/images/icono_pdf.png" />
+            <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                @Html.DisplayFor(s => item.NOMBREARCHIVO)
+            </a>
+            <hr style="clear:both" />
+        </div>
+    }
+}
+<br />
+<h2>Información de apoyo para la Planeación Municipal 2011 – 2014</h2>
+@foreach (var item in Model)
+{
+    if (item.IDTIPO == 7)
+    {
+        <div class="table-responsive text-left">
+            <img src="~/Content/images/icono_pdf.png" />
+            <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                @Html.DisplayFor(s => item.NOMBREARCHIVO)
+            </a>
+            <hr style="clear:both" />
+        </div>
+    }
+}

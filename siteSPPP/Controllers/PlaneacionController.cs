@@ -14,7 +14,7 @@ namespace siteSPPP.Controllers
         // GET: Planeacion
         public ActionResult Index()
         {
-            return View();
+            return View(db.ARCHIVOS.ToList());
         }
         public ActionResult pdm()
         {
