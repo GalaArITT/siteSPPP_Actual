@@ -246,6 +246,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdministradorController.cs" />
+    <Compile Include="Controllers\ARCHIVOS1Controller.cs" />
     <Compile Include="Controllers\ArchivosController.cs" />
     <Compile Include="Controllers\CapturistaController.cs" />
     <Compile Include="Controllers\ConocenosController.cs" />
@@ -1407,6 +1408,11 @@
     <Content Include="Views\Archivos\ControlArchivos.cshtml" />
     <Content Include="Views\Archivos\CambiarImagen.cshtml" />
     <Content Include="Views\Archivos\CambiarArchivo.cshtml" />
+    <Content Include="Views\ARCHIVOS1\Create.cshtml" />
+    <Content Include="Views\ARCHIVOS1\Delete.cshtml" />
+    <Content Include="Views\ARCHIVOS1\Details.cshtml" />
+    <Content Include="Views\ARCHIVOS1\Edit.cshtml" />
+    <Content Include="Views\ARCHIVOS1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

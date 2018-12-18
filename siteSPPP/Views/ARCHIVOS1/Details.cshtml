@@ -1,0 +1,67 @@
+﻿@model siteSPPP.Models.ARCHIVOS
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/LayoutAuth.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ARCHIVOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBREARCHIVO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBREARCHIVO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ARCHIVO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ARCHIVO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMAGENARCHIVO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMAGENARCHIVO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_PLANTILLA.TIPOPLANTILLA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_PLANTILLA.TIPOPLANTILLA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDARCHIVO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

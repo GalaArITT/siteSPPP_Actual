@@ -11,11 +11,12 @@
 @using (Html.BeginForm("CambiarImagen", "Archivos", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    @Html.HiddenFor(s=>s.IDTIPO)
-    @Html.HiddenFor(s=>s.NOMBREARCHIVO)
-    @Html.HiddenFor(s=>s.FECHA)
-    @Html.HiddenFor(s=>s.ARCHIVO)
-    @Html.HiddenFor(s=>s.ESTATUS)
+    @Html.HiddenFor(s => s.IDARCHIVO)
+    @Html.HiddenFor(s => s.IDTIPO)
+    @Html.HiddenFor(s => s.NOMBREARCHIVO)
+    @Html.HiddenFor(s => s.FECHA)
+    @Html.HiddenFor(s => s.ARCHIVO)
+    @Html.HiddenFor(s => s.ESTATUS)
 
     <div class="form-horizontal">
         <hr />

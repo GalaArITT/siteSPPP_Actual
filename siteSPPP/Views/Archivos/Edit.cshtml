@@ -8,19 +8,17 @@
 <h2>Modificar Archivos</h2>
 
 
-@using (Html.BeginForm("Edit", "Archivos", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    @Html.HiddenFor(s => s.IDARCHIVO)
-    @Html.HiddenFor(s => s.FECHA)
-    @Html.HiddenFor(s => s.IMAGENARCHIVO)
-    @Html.HiddenFor(s => s.ARCHIVO)
 
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.IDARCHIVO)
-
+        @Html.HiddenFor(s => s.FECHA)
+        @Html.HiddenFor(s => s.IMAGENARCHIVO)
+        @Html.HiddenFor(s => s.ARCHIVO)
         <div class="form-group">
             @Html.LabelFor(model => model.IDTIPO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<siteSPPP.Models.ARCHIVOS>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutAuth.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBREARCHIVO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ARCHIVO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IMAGENARCHIVO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTATUS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_PLANTILLA.TIPOPLANTILLA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBREARCHIVO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ARCHIVO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IMAGENARCHIVO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTATUS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_PLANTILLA.TIPOPLANTILLA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDARCHIVO }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDARCHIVO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDARCHIVO })
+        </td>
+    </tr>
+}
+
+</table>

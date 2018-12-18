@@ -61,7 +61,7 @@ namespace siteSPPP.Controllers
             return View(aRCHIVOS);
         }
 
-        // GET: Archivos/Edit/5
+        // GET: ARCHIVOS1/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -77,21 +77,13 @@ namespace siteSPPP.Controllers
             return View(aRCHIVOS);
         }
 
-        // POST: Archivos/Edit/5
+        // POST: ARCHIVOS1/Edit/5
+        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
+        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IDARCHIVO,IDTIPO,NOMBREARCHIVO,FECHA,ESTATUS")] ARCHIVOS aRCHIVOS, HttpPostedFileBase ARCHIVO, HttpPostedFileBase IMAGENARCHIVO)
+        public ActionResult Edit([Bind(Include = "IDARCHIVO,IDTIPO,NOMBREARCHIVO,FECHA,ESTATUS")] ARCHIVOS aRCHIVOS)
         {
-            if (IMAGENARCHIVO != null)
-            {
-                aRCHIVOS.IMAGENARCHIVO = new byte[IMAGENARCHIVO.ContentLength];
-                IMAGENARCHIVO.InputStream.Read(aRCHIVOS.IMAGENARCHIVO, 0, IMAGENARCHIVO.ContentLength);
-            }
-            if (ARCHIVO != null)
-            {
-                aRCHIVOS.ARCHIVO = new byte[ARCHIVO.ContentLength];
-                ARCHIVO.InputStream.Read(aRCHIVOS.ARCHIVO, 0, ARCHIVO.ContentLength);
-            }
             if (ModelState.IsValid)
             {
                 db.Entry(aRCHIVOS).State = EntityState.Modified;

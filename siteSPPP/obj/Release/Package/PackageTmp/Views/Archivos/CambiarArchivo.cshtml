@@ -10,6 +10,7 @@
 @using (Html.BeginForm("CambiarArchivo", "Archivos", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
+    @Html.HiddenFor(s => s.IDARCHIVO)
     @Html.HiddenFor(s => s.IDTIPO)
     @Html.HiddenFor(s => s.NOMBREARCHIVO)
     @Html.HiddenFor(s => s.FECHA)
