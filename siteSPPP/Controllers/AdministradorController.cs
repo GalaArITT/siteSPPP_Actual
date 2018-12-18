@@ -539,7 +539,7 @@ namespace siteSPPP.Controllers
             return null;
         }
 
-        // GET: Funcionarios/Create
+        // GET: Funcionarios/AgregarFuncionario
         public ActionResult AgregarFuncionario()
         {
             ViewBag.IDDEPARTAMENTO = new SelectList(db.DEPARTAMENTOS, "IDDEPARTAMENTO", "NOMBREDEPTO");
@@ -550,9 +550,7 @@ namespace siteSPPP.Controllers
             return View();
         }
 
-        // POST: Funcionarios/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Funcionarios/AgregarFuncionario
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AgregarFuncionario([Bind(Include = "IDSERVPUB,IDDEPARTAMENTO,IDUSUARIO,NOMBREPERSONAL,NOMBRAMIENTO,CONMUTADOR,EXTENSION," +
@@ -588,7 +586,7 @@ namespace siteSPPP.Controllers
             return View(sERVIDORESPUBLICOS);
         }
 
-        // GET: Funcionarios/Edit/5
+        // GET: Funcionarios/EditarFuncionario
         public ActionResult EditarFuncionario(int? id)
         {
             if (id == null)
@@ -607,7 +605,7 @@ namespace siteSPPP.Controllers
             return View(sERVIDORESPUBLICOS);
         }
 
-        // POST: Funcionarios/Edit/5
+        // POST: Funcionarios/EditarFuncionario
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult EditarFuncionario([Bind(Include = "IDSERVPUB,IDDEPARTAMENTO,IDUSUARIO,NOMBREPERSONAL,NOMBRAMIENTO,CONMUTADOR," +
