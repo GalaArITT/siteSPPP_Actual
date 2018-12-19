@@ -100,8 +100,8 @@ namespace siteSPPP.Controllers
             // busqueda = busqueda.ToString();
             if (!String.IsNullOrEmpty(busqueda))
             {
-                servidores = servidores.Where(s => s.NOMBREPERSONAL.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
-                || s.NOMBRAMIENTO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")));
+                servidores = servidores.Where(s => s.NOMBREPERSONAL.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
+                || s.NOMBRAMIENTO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ", "abcdefghijklmnñopqrstuvwxyzáéíóú")));
                 ViewBag.Currentfilter = busqueda;
             }
             else
@@ -133,8 +133,8 @@ namespace siteSPPP.Controllers
             // busqueda = busqueda.ToString();
             if (!String.IsNullOrEmpty(busqueda))
             {
-                noticias = noticias.Where(s => s.TITULO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")) || 
-                s.TITULO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú"))
+                noticias = noticias.Where(s => s.TITULO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ", "abcdefghijklmnñopqrstuvwxyzáéíóú")) || 
+                s.CONTENIDO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
                 );
                 ViewBag.Currentfilter = busqueda;
             }

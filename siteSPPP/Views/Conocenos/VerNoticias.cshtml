@@ -11,7 +11,8 @@
 <div class="right">
     @using (Html.BeginForm("VerNoticias", "Conocenos", FormMethod.Get, new { @class = "input-group" }))
     {
-        @Html.TextBox("busqueda", ViewBag.CurrentFilter as string, new { @class = "form-control m-1", autofocus = "", Style="font-size:1em;" })
+        @Html.TextBox("busqueda", ViewBag.CurrentFilter as string, new { @class = "form-control m-1", autofocus = "", Style="font-size:1em;",
+       @placeholder = "Buscar Noticia, para limpiar vacía el campo y pulsa en Buscar o Enter" })
         <span class="input-group-btn">
             <input type="submit" value="Buscar" class="btn btn-group btn-primary m-1" />
         </span>

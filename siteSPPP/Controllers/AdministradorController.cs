@@ -572,7 +572,7 @@ namespace siteSPPP.Controllers
             if (ModelState.IsValid)
             {
                 sERVIDORESPUBLICOS.FECHAREGISTRO = DateTime.Now;
-                sERVIDORESPUBLICOS.ESTATUS = "A";
+                //sERVIDORESPUBLICOS.ESTATUS = "A";
                 sERVIDORESPUBLICOS.IDUSUARIO = idUsuario; //idUsuario; 
 
                 db.SERVIDORESPUBLICOS.Add(sERVIDORESPUBLICOS);
@@ -622,7 +622,7 @@ namespace siteSPPP.Controllers
             ViewBag.servidores = new SelectList(db.SERVIDORESPUBLICOS.Where(s => s.ESTATUS == "A").ToList(), "IDSERVPUB", "NOMBRAMIENTO", sERVIDORESPUBLICOS.IDSERVPUB);
             return View(sERVIDORESPUBLICOS);
         }
-        // GET: Funcionarios/Edit/5
+        // GET: Funcionarios/CambiarCurriculumFuncionario
         public ActionResult CambiarCurriculumFuncionario(int? id)
         {
             if (id == null)
@@ -637,7 +637,7 @@ namespace siteSPPP.Controllers
             return View(sERVIDORESPUBLICOS);
         }
 
-        // POST: Funcionarios/Edit/5
+        // POST: Funcionarios/CambiarCurriculumFuncionario
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CambiarCurriculumFuncionario([Bind(Include = "IDSERVPUB,IDDEPARTAMENTO,IDUSUARIO,NOMBREPERSONAL,NOMBRAMIENTO,CONMUTADOR,EXTENSION,FOTOPERSONAL," +
@@ -657,7 +657,7 @@ namespace siteSPPP.Controllers
             }
             return View(sERVIDORESPUBLICOS);
         }
-        // GET: Funcionarios/Edit/5
+        // GET: Funcionarios/CambiarFotoFuncionario
         public ActionResult CambiarFotoFuncionario(int? id)
         {
             if (id == null)
@@ -672,7 +672,7 @@ namespace siteSPPP.Controllers
             return View(sERVIDORESPUBLICOS);
         }
 
-        // POST: Funcionarios/Edit/5
+        // POST: Funcionarios/CambiarFotoFuncionario
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CambiarFotoFuncionario([Bind(Include = "IDSERVPUB,IDDEPARTAMENTO,IDUSUARIO,NOMBREPERSONAL,NOMBRAMIENTO," +
@@ -693,7 +693,7 @@ namespace siteSPPP.Controllers
             return View(sERVIDORESPUBLICOS);
         }
 
-        // GET: Funcionarios/Details/5
+        // GET: Funcionarios/DetalleFuncionario
         public ActionResult DetalleFuncionario(int? id)
         {
             if (id == null)

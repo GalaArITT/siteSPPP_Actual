@@ -57,7 +57,7 @@ namespace siteSPPP.Controllers
 
         public ActionResult CarteraProyectos()
         {
-            return View();
+            return View(db.ARCHIVOS.ToList());
         }
 
     }
