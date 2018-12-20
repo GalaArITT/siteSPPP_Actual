@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using siteSPPP.Models;
+using PagedList;
 
 namespace siteSPPP.Controllers
 {
@@ -15,7 +16,7 @@ namespace siteSPPP.Controllers
         private sitio_seplaEntities db = new sitio_seplaEntities();
 
         // GET: InformacionConocenos
-        public ActionResult Index()
+        public ActionResult Index(string currentFilter, int? page)
         {
             //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
             int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
@@ -36,8 +37,10 @@ namespace siteSPPP.Controllers
                 }
                 else
                 {
-                    var pLANTILLA = db.PLANTILLA.Include(p => p.TIPO_PLANTILLA).Include(p => p.USUARIO);
-                    return View(pLANTILLA.ToList());
+                    int pageSize = 8;
+                    int pageNumber = (page ?? 1);
+                    var pLANTILLA = db.PLANTILLA.Where(s=>s.IDTIPO<=5).OrderBy(s=>s.IDTIPO);
+                    return View(pLANTILLA.ToPagedList(pageNumber,pageSize));
                 }
             }
             return null;

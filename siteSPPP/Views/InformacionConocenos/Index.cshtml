@@ -1,51 +1,47 @@
-﻿@model IEnumerable<siteSPPP.Models.PLANTILLA>
-
+﻿@model PagedList.IPagedList<siteSPPP.Models.PLANTILLA>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/LayoutCapturista.cshtml";
-}
+                /**/
 
+                ViewBag.Title = "Index";
+                Layout = "~/Views/Shared/LayoutCapturista.cshtml";
+}
 <h2>Información del apartado de Conocenos</h2>
 
-<p>
-    @*Html.ActionLink("Crear nuevo elemento", "Create")*@
-</p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.TITULO)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().TITULO)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CONTENIDO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TIPO_PLANTILLA.TIPOPLANTILLA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.USUARIO.USUARIOINICIA)
+            @Html.DisplayNameFor(model => model.FirstOrDefault().TIPO_PLANTILLA.TIPOPLANTILLA)
         </th>
         <th></th>
     </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TITULO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CONTENIDO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TIPO_PLANTILLA.TIPOPLANTILLA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.USUARIO.USUARIOINICIA)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.IDPLANTILLA }) 
-            @Html.ActionLink("Detalle", "Details", new { id=item.IDPLANTILLA }) 
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TITULO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TIPO_PLANTILLA.TIPOPLANTILLA)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IDPLANTILLA })
+                @Html.ActionLink("Detalle", "Details", new { id = item.IDPLANTILLA })
+            </td>
+        </tr>
+    }
 </table>
+
+<div class="text-right">
+    Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount
+</div>
+<div class="text-center">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page,
+    currentFilter = ViewBag.currentFilter,
+    filtrado = ViewBag.filtrado
+}))
+</div>
