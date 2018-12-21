@@ -1407,6 +1407,7 @@
     <Content Include="Views\Archivos\ControlArchivos.cshtml" />
     <Content Include="Views\Archivos\CambiarImagen.cshtml" />
     <Content Include="Views\Archivos\CambiarArchivo.cshtml" />
+    <Content Include="Views\Administrador\ListaFotosAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,18 +1,13 @@
 ﻿@model IEnumerable<siteSPPP.Models.FOTOS>
-
 @{
     ViewBag.Title = "Lista de fotos";
-    Layout = "~/Views/Shared/LayoutCapturista.cshtml";
+    Layout = "~/Views/Shared/LayoutAuth.cshtml";
     int idNoticia = ViewBag.IDNOTICIA; //instanciar al idNoticia con un objeto ViewBag
 }
-
 <h2>@ViewBag.Title</h2>
 <div class="text-left">
     @Html.ActionLink("Regresar a Lista de Noticias", "ListaNoticias")
 </div>
-<p>
-    @Html.ActionLink("Agregar Fotografía", "AgregarFoto", "Capturista", new { idNoticia}, new { @class = "btn btn-outline-primary m-1", role = "button" })
-</p>
 <table class="table">
     <tr>
         <th>
@@ -20,12 +15,11 @@
         </th>
         <th></th>
     </tr>
-
     @foreach (var item in Model)
     {
         <tr>
             <td>
-                <img src="@Url.Action("MostrarFoto", "Capturista", new { id = item.IDFOTO })" alt="" height="180" width="180" />
+                <img src="@Url.Action("MostrarFotoNoticias", "Administrador", new { id = item.IDFOTO })" height="180" width="180" />
             </td>
             <td>
                 @Html.ActionLink("Editar", "EditarFoto", new { id = item.IDFOTO }) |
@@ -33,7 +27,5 @@
             </td>
         </tr>
     }
-
 </table>
-
 

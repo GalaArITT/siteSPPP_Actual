@@ -414,6 +414,24 @@ namespace siteSPPP.Controllers
             byte[] cover = sERVIDORESPUBLICOS.FOTOPERSONAL;
             return cover;
         }
+        public ActionResult MostrarFotoNoticias(int id)
+        {
+            byte[] cover = TraerFotoNoticias(id);
+            if (cover != null)
+            {
+                return File(cover, "image/jpg");
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public byte[] TraerFotoNoticias(int id)
+        {
+            FOTOS fotos = db.FOTOS.Find(id);
+            byte[] cover = fotos.FOTOGRAFIA;
+            return cover;
+        }
         //PDFS
         public ActionResult MostrarPDF(int id)
         {

@@ -92,7 +92,7 @@
                 }
             </td>
             <td>
-                @Html.ActionLink("Agregar Fotos", "ListaFotos", "Capturista", new { idNoticia = item.IDNOTICIA }, new { @class = "btn btn-outline-primary", role = "button" })
+                @Html.ActionLink("Lista Fotos", "ListaFotosAdmin", "Administrador", new { idNoticia = item.IDNOTICIA }, new { @class = "btn btn-outline-primary", role = "button" })
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.USUARIO.NOMBREUSUARIO)
