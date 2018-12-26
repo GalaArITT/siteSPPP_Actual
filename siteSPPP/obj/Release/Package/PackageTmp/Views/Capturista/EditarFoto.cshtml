@@ -21,7 +21,7 @@
         <div class="form-group">
             @Html.Label("Imagen Actual", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <img src="@Url.Action("MostrarFoto", "Capturista", new { id = Model.IDFOTO })" alt="" width:100% />
+                <img src="@Url.Action("MostrarFoto", "Capturista", new { id = Model.IDFOTO })" alt="" style="width:100%" />
                 @Html.ValidationMessageFor(model => model.FOTOGRAFIA, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -35,7 +35,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                @Html.ActionLink("Volver a la lista de Fotos", "ListaFotos")
+                @Html.ActionLink("Volver a la lista de fotos", "ListaFotos", new { idNoticia = Model.IDNOTICIA })
                 <input type="submit" value="Guardar Cambios" class="btn btn-default" />
             </div>
         </div>

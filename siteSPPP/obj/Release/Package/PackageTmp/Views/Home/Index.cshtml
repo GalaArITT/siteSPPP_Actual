@@ -10,7 +10,7 @@
             @foreach (var item in Model)
             {
                 <li>
-                    <img src="/Home/MostrarFoto/@Html.DisplayFor(modelItem => item.FOTOS.FirstOrDefault().IDFOTO)" alt="" height=500 width=500 />
+                    <img src="/Home/MostrarFoto/@Html.DisplayFor(modelItem => item.FOTOS.FirstOrDefault().IDFOTO)" alt="" style="width:100%" />
                     <p class="flex-caption">
                         @{
                             string strURL = "<a href='/Home/NoticiaCompleta/" + Html.DisplayFor(modelItem => item.IDNOTICIA).ToString() + "'>";

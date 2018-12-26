@@ -229,6 +229,7 @@ C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\Oracle.ManagedDataAccess.En
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\Owin.dll
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\PagedList.dll
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\PagedList.Mvc.dll
+C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\Rotativa.dll
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\System.Data.dll
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\System.Web.Helpers.dll
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\System.Web.Mvc.dll
@@ -342,4 +343,3 @@ C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Release\siteSPPP.csproj.Cor
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Release\siteSPPP.csproj.CopyComplete
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Release\siteSPPP.dll
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Release\siteSPPP.pdb
-C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\bin\Rotativa.dll
