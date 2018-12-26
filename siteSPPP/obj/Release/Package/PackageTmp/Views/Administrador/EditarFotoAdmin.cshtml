@@ -21,7 +21,7 @@
         <div class="form-group">
             @Html.Label("Imagen Actual", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <img src="@Url.Action("MostrarFoto", "Capturista", new { id = Model.IDFOTO })" alt="" height=100 width=200 />
+                <img src="@Url.Action("MostrarFoto", "Capturista", new { id = Model.IDFOTO })" alt="" style="width:10%" />
                 @Html.ValidationMessageFor(model => model.FOTOGRAFIA, "", new { @class = "text-danger" })
             </div>
         </div>

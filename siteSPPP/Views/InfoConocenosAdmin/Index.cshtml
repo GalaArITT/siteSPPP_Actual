@@ -7,16 +7,10 @@
 
 <h2>Información del apartado de Conocenos</h2>
 
-<p>
-    @*Html.ActionLink("Crear nuevo elemento", "Create")*@
-</p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.TITULO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CONTENIDO)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.TIPO_PLANTILLA.TIPOPLANTILLA)
@@ -31,9 +25,6 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.TITULO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CONTENIDO)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.TIPO_PLANTILLA.TIPOPLANTILLA)
