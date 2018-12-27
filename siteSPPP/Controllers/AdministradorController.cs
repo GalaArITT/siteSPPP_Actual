@@ -315,6 +315,43 @@ namespace siteSPPP.Controllers
             return View(fOTOS);
         }
 
+        // GET: FOTOS/Delete/5
+        public ActionResult EliminarFotoAdmin(int? id)
+        {
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
+            {
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
+            }
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
+            {
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 2) // 2 = Administrador
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    FOTOS fOTOS = db.FOTOS.Find(id);
+                    if (fOTOS == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    return View(fOTOS);
+                }
+            }
+            return null;
+        }
+
         //Modulo de usuarios
         public ActionResult ListaUsuarios(string filtrado, string currentFilter, string busqueda, int? page)
         {

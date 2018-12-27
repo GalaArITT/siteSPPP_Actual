@@ -22,8 +22,8 @@
                 <img src="@Url.Action("MostrarFotoNoticias", "Administrador", new { id = item.IDFOTO })" style="width:50%" />
             </td>
             <td>
-                @Html.ActionLink("Editar", "EditarFoto", new { id = item.IDFOTO }) |
-                @Html.ActionLink("Eliminar", "EliminarFoto", new { id = item.IDFOTO })
+                @Html.ActionLink("Editar", "EditarFotoAdmin", new { id = item.IDFOTO }) |
+                @Html.ActionLink("Eliminar", "EliminarFotoAdmin", new { id = item.IDFOTO })
             </td>
         </tr>
     }

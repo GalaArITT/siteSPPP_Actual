@@ -129,4 +129,17 @@ namespace siteSPPP.Models
         public string ESTATUS { get; set; }
     }
 
+    public class ORGANIGRAMA_Metadatos
+    {
+        public int IDORGANIGRAMA { get; set; }
+        [Display(Name = "Usuario asociado")]
+        public Nullable<int> IDUSUARIO { get; set; }
+        [Display(Name = "Imagen del organigrama")]
+        public byte[] IMAGEN { get; set; }
+        [Display(Name = "Fecha de creación")]
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
+        public Nullable<System.DateTime> FECHACREACION { get; set; }
+        [Display(Name = "Estatus")]
+        public string ESTATUS { get; set; }
+    }
 }
