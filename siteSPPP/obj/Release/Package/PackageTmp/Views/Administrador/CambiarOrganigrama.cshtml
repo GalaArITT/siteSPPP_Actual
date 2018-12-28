@@ -1,14 +1,14 @@
 ﻿@model siteSPPP.Models.ORGANIGRAMA
 
 @{
-    ViewBag.Title = "EditarOrganigrama";
+    ViewBag.Title = "CambiarOrganigrama";
     Layout = "~/Views/Shared/LayoutAuth.cshtml";
 }
 
 <h2>Carga un nuevo organigrama</h2>
 
 
-@using (Html.BeginForm(Html.BeginForm("EditarOrganigrama", "Administrador", FormMethod.Post, new { enctype = "multipart/form-data" })))
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
@@ -19,7 +19,7 @@
         @Html.HiddenFor(model => model.IDORGANIGRAMA)
         @Html.HiddenFor(model => model.IDUSUARIO)
         @Html.HiddenFor(model => model.FECHACREACION)
-        @Html.HiddenFor(model => model.IMAGEN)
+        @Html.HiddenFor(model => model.ESTATUS)
 
         <div class="form-group">
             @Html.Label("Imagen Actual", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -30,18 +30,12 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ESTATUS, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.IMAGEN, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.DropDownListFor(m => m.ESTATUS,new SelectList(new[]
-                       {
-                           new SelectListItem { Value = "", Text ="SELECCIONE UNA OPCION"},
-                           new SelectListItem { Value = "A", Text = "ACTIVO"},
-                           new SelectListItem { Value = "I", Text = "INACTIVO"},
-                       },"Value"
-                       ,"Text"), new { @id = "listRegresa", @class = "" })
-                    @Html.ValidationMessageFor(model => model.ESTATUS, "", new { @class = "text-danger" })
+                <div class="col-md-10">
+                    <input type="file" id="IMAGEN" name="IMAGEN" />
                 </div>
+                @Html.ValidationMessageFor(model => model.IMAGEN, "", new { @class = "text-danger" })
             </div>
         </div>
 

@@ -10,7 +10,7 @@
 <p>
     @Html.ActionLink("Agregar un nuevo Organigrama", "AgregarOrganigrama")
 </p>
-<table class="table">
+<table class="table-responsive">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.IMAGEN)
@@ -30,20 +30,28 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            <img src="@Url.Action("MostrarFotoOrg", "Administrador", new { id = item.IDORGANIGRAMA })" alt="" width="80" height="110" />
+            <img src="@Url.Action("MostrarFotoOrg", "Administrador", new { id = item.IDORGANIGRAMA })" alt="" width="120" height="150" />
+            @Html.ActionLink("Cambiar Imagen", "CambiarOrganigrama", new { id = item.IDORGANIGRAMA })
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.FECHACREACION)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ESTATUS)
+            @if (item.ESTATUS == "A")
+            {
+                <p>ACTIVO</p>
+            }
+            @if (item.ESTATUS == "I")
+            {
+                <p>INACTIVO</p>
+            }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.USUARIO.USUARIOINICIA)
         </td>
         <td>
-            @Html.ActionLink("Cambiar de Fotografia", "EditarOrganigrama", new { id = item.IDORGANIGRAMA }) |
-            @Html.ActionLink("Ver Organigrama", "VerOrganigrama", new { id = item.IDORGANIGRAMA }) |
+            @Html.ActionLink("Cambiar Estatus", "EditarOrganigrama", new { id = item.IDORGANIGRAMA }) |
+            @Html.ActionLink("Ver", "VerOrganigrama", new { id = item.IDORGANIGRAMA }) 
         </td>
     </tr>
 }

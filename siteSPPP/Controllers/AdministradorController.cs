@@ -883,7 +883,58 @@ namespace siteSPPP.Controllers
         //POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditarOrganigrama([Bind(Include = "IDORGANIGRAMA,IDUSUARIO,FECHACREACION,ESTATUS")] ORGANIGRAMA oRGANIGRAMA, HttpPostedFileBase IMAGEN)
+        public ActionResult EditarOrganigrama([Bind(Include = "IDORGANIGRAMA,IDUSUARIO,IMAGEN,FECHACREACION,ESTATUS")] ORGANIGRAMA oRGANIGRAMA)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(oRGANIGRAMA).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("ListaOrganigramas");
+            }
+
+            return View(oRGANIGRAMA);
+        }
+
+        //GET
+        public ActionResult CambiarOrganigrama(int? id)
+        {
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
+            {
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
+            }
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
+            {
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 2) // 2 = Administrador
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    ORGANIGRAMA oRGANIGRAMA = db.ORGANIGRAMA.Find(id);
+                    if (oRGANIGRAMA == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    return View(oRGANIGRAMA);
+                }
+            }
+            return null;
+        }
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CambiarOrganigrama([Bind(Include = "IDORGANIGRAMA,IDUSUARIO,FECHACREACION,ESTATUS")] ORGANIGRAMA oRGANIGRAMA, HttpPostedFileBase IMAGEN)
         {
             if (IMAGEN != null)
             {
@@ -899,6 +950,7 @@ namespace siteSPPP.Controllers
 
             return View(oRGANIGRAMA);
         }
+
         public ActionResult VerOrganigrama(int? id)
         {
             //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 

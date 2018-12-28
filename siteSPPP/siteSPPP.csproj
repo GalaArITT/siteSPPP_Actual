@@ -1409,6 +1409,7 @@
     <Content Include="Views\Archivos\CambiarArchivo.cshtml" />
     <Content Include="Views\Administrador\ListaFotosAdmin.cshtml" />
     <Content Include="Views\Administrador\EliminarFotoAdmin.cshtml" />
+    <Content Include="Views\Administrador\CambiarOrganigrama.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
