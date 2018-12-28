@@ -18,17 +18,61 @@ namespace siteSPPP.Controllers
         // GET: Archivos
         public ActionResult ControlArchivos(string filtrarfech, string filtrado, string currentFilter, string busqueda, int? page)
         {
-            var aRCHIVOS = db.ARCHIVOS.Include(a => a.TIPO_PLANTILLA);
-            int pageSize = 5;
-            int pageNumber = (page ?? 1);
-            return View(aRCHIVOS.OrderByDescending(s=>s.FECHA).ToPagedList(pageNumber,pageSize));
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
+            {
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
+            }
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
+            {
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 2) // 2 = Administrador
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    var aRCHIVOS = db.ARCHIVOS.Include(a => a.TIPO_PLANTILLA);
+                    int pageSize = 5;
+                    int pageNumber = (page ?? 1);
+                    return View(aRCHIVOS.OrderByDescending(s => s.FECHA).ToPagedList(pageNumber, pageSize));
+                }
+            }
+            return null;
         }
 
         // GET: Archivos/Create
         public ActionResult Create()
         {
-            ViewBag.IDTIPO = new SelectList(db.TIPO_PLANTILLA.Where(s=>s.IDTIPO>=6), "IDTIPO", "TIPOPLANTILLA");
-            return View();
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
+            {
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
+            }
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
+            {
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 2) // 2 = Administrador
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    ViewBag.IDTIPO = new SelectList(db.TIPO_PLANTILLA.Where(s => s.IDTIPO >= 6), "IDTIPO", "TIPOPLANTILLA");
+                    return View();
+                }
+            }
+            return null;
         }
 
         // POST: Archivos/Create
@@ -64,17 +108,39 @@ namespace siteSPPP.Controllers
         // GET: ARCHIVOS1/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (id == null)
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
             }
-            ARCHIVOS aRCHIVOS = db.ARCHIVOS.Find(id);
-            if (aRCHIVOS == null)
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
             {
-                return HttpNotFound();
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 2) // 2 = Administrador
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    ARCHIVOS aRCHIVOS = db.ARCHIVOS.Find(id);
+                    if (aRCHIVOS == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    ViewBag.IDTIPO = new SelectList(db.TIPO_PLANTILLA.Where(s => s.IDTIPO >= 6), "IDTIPO", "TIPOPLANTILLA", aRCHIVOS.IDTIPO);
+                    return View(aRCHIVOS);
+                }
             }
-            ViewBag.IDTIPO = new SelectList(db.TIPO_PLANTILLA.Where(s=>s.IDTIPO>=6), "IDTIPO", "TIPOPLANTILLA", aRCHIVOS.IDTIPO);
-            return View(aRCHIVOS);
+            return null;
         }
 
         // POST: ARCHIVOS1/Edit/5
@@ -133,16 +199,38 @@ namespace siteSPPP.Controllers
         // GET: Funcionarios/Edit/5
         public ActionResult CambiarArchivo(int? id)
         {
-            if (id == null)
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
             }
-            ARCHIVOS aRCHIVOS = db.ARCHIVOS.Find(id);
-            if (aRCHIVOS == null)
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
             {
-                return HttpNotFound();
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 2) // 2 = Administrador
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    ARCHIVOS aRCHIVOS = db.ARCHIVOS.Find(id);
+                    if (aRCHIVOS == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    return View(aRCHIVOS);
+                }
             }
-            return View(aRCHIVOS);
+            return null;
         }
         //idarchivo, idtipo, nombrearchivo, archivo, imagen, fecha, estatus
         // POST: Funcionarios/Edit/5
@@ -167,16 +255,38 @@ namespace siteSPPP.Controllers
         // GET: Funcionarios/Edit/5
         public ActionResult CambiarImagen(int? id)
         {
-            if (id == null)
+            //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
+            int idUsuario = Convert.ToInt32(Session["IDUSUARIO"]);
+            byte? rol = null;
+            //linea para validar que no entre a los controladores hasta que detecte una autenticación
+            if (idUsuario == 0)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Response.Redirect("~/Login/Iniciar");
+                rol = null;
             }
-            ARCHIVOS aRCHIVOS = db.ARCHIVOS.Find(id);
-            if (aRCHIVOS == null)
+            //en caso de que si detecte asignar el valor de rol y dar seguridad
+            else
             {
-                return HttpNotFound();
+                rol = db.USUARIO.Where(s => s.IDUSUARIO == idUsuario).FirstOrDefault().ROL;
+                if (rol != 2) // 2 = Administrador
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
+                }
+                else
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    ARCHIVOS aRCHIVOS = db.ARCHIVOS.Find(id);
+                    if (aRCHIVOS == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    return View(aRCHIVOS);
+                }
             }
-            return View(aRCHIVOS);
+            return null;
         }
         //idarchivo, idtipo, nombrearchivo, archivo, imagen, fecha, estatus
         // POST: Funcionarios/Edit/5
