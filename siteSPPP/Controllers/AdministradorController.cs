@@ -153,7 +153,7 @@ namespace siteSPPP.Controllers
         public ActionResult EditarNoticiasAdmin([Bind(Include = "IDNOTICIA,IDUSUARIO,TITULO,CONTENIDO,FECHACAPTURA,FECHAPUBLIC,LUGAR,PRIORIDAD,ESTATUS")] NOTICIAS_SEPLAN Noticias_Seplan)
         {
             //hay que agregar todos los campos en el bind y los idnoticia, idusuario, estatus, fechacaptura hay que colocarlos dentro de un 
-            //hidden sino este desgraciado segmento
+            //hidden sino este desgraciado segmento marca una excepción
             if (ModelState.IsValid)
             {
                 db.Entry(Noticias_Seplan).State = EntityState.Modified;
