@@ -14,6 +14,7 @@
 </p>
 <div id="Principal">
     <div id="chart_div" style="text-align:center; float:unset">
+        <!--La que dice Captura es un espacio en blanco-->
         <img src="~/Content/images/Captura.PNG" style="width:15%; float:left" id="imgGob">
         <img src="/Content/images/GobEstadoNayarit.PNG" style="width:15%; float:left" id="imgGob2">
         <img src="~/Content/images/Captura.PNG" style="width:15%; float:right" ; id="spppLogo" />
@@ -103,7 +104,7 @@
         var elm = $('#chart_div').get(0);
         var lebar = "1904";
         var tinggi = "1824";
-        var type = "jpg";
+        var type = "png";
         var filename = "Organigrama";
         html2canvas(elm).then(function (canvas) {
             var canWidth = canvas.width;
