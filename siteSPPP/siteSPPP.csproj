@@ -296,6 +296,7 @@
     <Compile Include="Models\PLANTILLA.cs">
       <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\RemoveDiacritics.cs" />
     <Compile Include="Models\SERVIDORESPUBLICOS.cs">
       <DependentUpon>NoticiasSQLServer.tt</DependentUpon>
     </Compile>
@@ -428,6 +429,7 @@
     <Content Include="Content\images\NAY_plan-de-desarrollo_BannersWEB_468x60.jpg" />
     <Content Include="Content\images\NAY_plan-de-desarrollo_BannersWEB_728x90.jpg" />
     <Content Include="Content\images\NAY_plan-de-desarrollo_BannersWEB_970x90.jpg" />
+    <Content Include="Content\images\organigrama_15-1-19.jpg" />
     <Content Include="Content\images\organigrama_25_Oct_18.jpg" />
     <Content Include="Content\images\organigrama_5_Oct_18.jpg" />
     <Content Include="Content\images\organigrama_8_Oct_18.jpg" />

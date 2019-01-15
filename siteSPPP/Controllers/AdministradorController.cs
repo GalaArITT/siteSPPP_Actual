@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using PagedList;
 using System.IO;
+using System.Text;
+using System.Globalization;
 
 namespace siteSPPP.Controllers
 {
@@ -19,6 +21,8 @@ namespace siteSPPP.Controllers
         {
             return null;
         }
+
+
         public ActionResult Bienvenido()
         {
             //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
@@ -82,8 +86,8 @@ namespace siteSPPP.Controllers
                     // busqueda = busqueda.ToString();
                     if (!String.IsNullOrEmpty(busqueda))
                     {
-                        noticias = noticias.Where(s => s.TITULO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
-                        || s.CONTENIDO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")));
+                        noticias = noticias.Where(s => s.TITULO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
+                        || s.CONTENIDO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ", "abcdefghijklmnñopqrstuvwxyzáéíóú")));
                         ViewBag.Currentfilter = busqueda;
                     }
                     //Filtrar por estatus
@@ -571,8 +575,8 @@ namespace siteSPPP.Controllers
                     // busqueda = busqueda.ToString();
                     if (!String.IsNullOrEmpty(busqueda))
                     {
-                        servidores = servidores.Where(s => s.NOMBREPERSONAL.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
-                        || s.NOMBRAMIENTO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZaeiou", "abcdefghijklmnñopqrstuvwxyzáéíóú")));
+                        servidores = servidores.Where(s => s.NOMBREPERSONAL.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZ0ÁÉÍÓÚáéíóú", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
+                        || s.NOMBRAMIENTO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚáéíóú", "abcdefghijklmnñopqrstuvwxzyáéíóú")));
                         ViewBag.Currentfilter = busqueda;
                     }
                     //filtrar por estatus

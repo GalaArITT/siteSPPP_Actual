@@ -13,7 +13,8 @@
     <input type="button" id="btnSave" value="Guardar Imagen" />
 </p>
 <div id="Principal">
-    <div id="chart_div" style="text-align:center; float:unset">
+    <div id="chart_div" class="container">
+        <!--La que dice Captura es un espacio en blanco-->
         <img src="~/Content/images/Captura.PNG" style="width:15%; float:left" id="imgGob">
         <img src="/Content/images/GobEstadoNayarit.PNG" style="width:15%; float:left" id="imgGob2">
         <img src="~/Content/images/Captura.PNG" style="width:15%; float:right" ; id="spppLogo" />
@@ -101,9 +102,9 @@
 
     $('#btnSave').click(function () {
         var elm = $('#chart_div').get(0);
-        var lebar = "1904";
-        var tinggi = "1824";
-        var type = "jpg";
+        var lebar = "3611";  //ancho
+        var tinggi = "1879"; //alto
+        var type = "png";
         var filename = "Organigrama";
         html2canvas(elm).then(function (canvas) {
             var canWidth = canvas.width;

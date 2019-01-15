@@ -12,7 +12,7 @@
 @foreach (var item in Model)
 {
     <div id="chart_div">
-        <img src="@Url.Action("MostrarFotoOrg", "Administrador", new { id = item.IDORGANIGRAMA })" width:100% />
+        <img src="@Url.Action("MostrarFotoOrg", "Administrador", new { id = item.IDORGANIGRAMA })" style="width:90%" />
     </div>
 }
 <script type="text/javascript" src="~/Content/orgchart/jquery-3.3.1.js"></script>
@@ -21,9 +21,9 @@
 <script>
     $('#btnSave').click(function () {
         var elm = $('#chart_div').get(0);
-        var lebar = "1904";
-        var tinggi = "1824";
-        var type = "png";
+        var lebar = "3611";  //ancho
+        var tinggi = "1879"; //alto
+        var type = "jpg";
         var filename = "Organigrama";
         html2canvas(elm).then(function (canvas) {
             var canWidth = canvas.width;
