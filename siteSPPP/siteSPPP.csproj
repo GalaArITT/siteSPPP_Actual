@@ -491,6 +491,7 @@
       <DependentUpon>NoticiasSQLServer.edmx</DependentUpon>
       <LastGenOutput>NoticiasSQLServer.cs</LastGenOutput>
     </Content>
+    <Content Include="QueryBD.sql" />
     <Content Include="Rotativa\help-wkhtmltoimage.txt" />
     <Content Include="Rotativa\help-wkhtmltopdf.txt" />
     <Content Include="Rotativa\wkhtmltoimage.exe" />
@@ -1269,6 +1270,7 @@
       <DependentUpon>NoticiasSQLServer.edmx</DependentUpon>
     </Content>
     <Content Include="App_Browsers\qt.browser" />
+    <Content Include="Content\files\descargas\cartera_proyectos_FISE\Avance 4toTrimestre FISE 2018.pdf" />
     <None Include="Properties\PublishProfiles\localftp.pubxml" />
     <None Include="Properties\PublishProfiles\seplan_ftp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

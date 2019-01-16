@@ -133,9 +133,8 @@ namespace siteSPPP.Controllers
             // busqueda = busqueda.ToString();
             if (!String.IsNullOrEmpty(busqueda))
             {
-                noticias = noticias.Where(s => s.TITULO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ", "abcdefghijklmnñopqrstuvwxyzáéíóú")) || 
-                s.CONTENIDO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
-                );
+                noticias = noticias.Where(s => s.TITULO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZ0ÁÉÍÓÚáéíóú", "abcdefghijklmnñopqrstuvwxyzáéíóú")) ||
+                s.CONTENIDO.Contains(busqueda));
                 ViewBag.Currentfilter = busqueda;
             }
             int pageSize = 8;

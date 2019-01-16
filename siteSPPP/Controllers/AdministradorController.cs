@@ -578,6 +578,7 @@ namespace siteSPPP.Controllers
                         servidores = servidores.Where(s => s.NOMBREPERSONAL.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZ0ÁÉÍÓÚáéíóú", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
                         || s.NOMBRAMIENTO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚáéíóú", "abcdefghijklmnñopqrstuvwxzyáéíóú")));
                         ViewBag.Currentfilter = busqueda;
+                        
                     }
                     //filtrar por estatus
 
@@ -992,3 +993,4 @@ namespace siteSPPP.Controllers
         }
     }
 }
+ 

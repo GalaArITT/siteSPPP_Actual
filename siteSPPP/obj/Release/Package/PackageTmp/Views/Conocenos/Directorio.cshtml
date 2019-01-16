@@ -326,7 +326,41 @@
     @foreach (var item in Model)
     {
         <div>
-            @if (item.IDDEPARTAMENTO >= 29 && item.IDDEPARTAMENTO <= 30)
+            @if (item.IDDEPARTAMENTO == 29)
+            {
+                <div>
+                    <h3 style="font-size:1.3em;text-align:center">@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</h3>
+                </div>
+                <div class="left">
+                    <div class="">
+                        @{
+                            <div style="float:left">
+                                <img src="@Url.Action("MostrarFoto", "Administrador", new { id = item.IDSERVPUB })" width="80" height="110" />
+                            </div>
+                            <div class="text-left" style="margin-left: 22%;">
+                                <h3 style="font-size:1.2em;text-align:center">@Html.DisplayFor(model => item.NOMBREPERSONAL)</h3>
+                                <h3 style="font-size:1.2em;text-align:center">@Html.DisplayFor(model => item.NOMBRAMIENTO)</h3>
+                                <p class="f12" align="center">
+                                    <span class="f14">Conmutador @Html.DisplayFor(s => item.CONMUTADOR) Ext @Html.DisplayFor(s => item.EXTENSION) </span>
+                                    <br>
+                                    <span class="f14">@Html.DisplayFor(s => item.CORREO)</span>
+                                </p>
+                                <a href="@Url.Action("MostrarPDF","Administrador", new { id = item.IDSERVPUB })" target="_blank">
+                                    <img src="~/Content/images/FC_acrobat-02.png" alt="" width:100%>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <hr style="clear:both" />
+            }
+        </div>
+    }
+    <h2 style="background-color:darkgray">Unidad de Transparencia</h2>
+    @foreach (var item in Model)
+    {
+        <div>
+            @if (item.IDDEPARTAMENTO == 30)
             {
                 <div>
                     <h3 style="font-size:1.3em;text-align:center">@Html.DisplayFor(s => item.DEPARTAMENTOS.NOMBREDEPTO)</h3>

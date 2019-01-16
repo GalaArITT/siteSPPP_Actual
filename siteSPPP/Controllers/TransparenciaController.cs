@@ -1,4 +1,5 @@
-﻿using System;
+﻿using siteSPPP.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace siteSPPP.Controllers
 {
     public class TransparenciaController : Controller
     {
+        private sitio_seplaEntities db = new sitio_seplaEntities();
         // GET: Transparencia
         public ActionResult Index()
         {
@@ -27,7 +29,7 @@ namespace siteSPPP.Controllers
         }
         public ActionResult ProyectosInversion()
         {
-            return View();
+            return View(db.ARCHIVOS.Where(s=>s.IDTIPO==13));
         }
     }
 }
