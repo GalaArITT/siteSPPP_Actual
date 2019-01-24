@@ -47,6 +47,7 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FirstOrDefault().FECHAPUBLIC)
+            
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FirstOrDefault().LUGAR)
@@ -70,7 +71,7 @@
                 @Html.DisplayFor(modelItem => item.TITULO)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FECHAPUBLIC)
+                @item.FECHAPUBLIC.ToString("dd MMM yyyy")
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LUGAR)

@@ -102,7 +102,7 @@ namespace siteSPPP.Controllers
                     int pageSize = 5;
                     int pageNumber = (page ?? 1);
 
-                    return View(noticias.OrderBy(x => x.FECHAPUBLIC).Where(s=>s.IDUSUARIO== idUsuario).ToPagedList(pageNumber, pageSize));
+                    return View(noticias.OrderByDescending(x => x.FECHAPUBLIC).Where(s=>s.IDUSUARIO== idUsuario && s.ESTATUS=="A").ToPagedList(pageNumber, pageSize));
                 }
             }
             return null;

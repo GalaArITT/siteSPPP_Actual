@@ -46,7 +46,7 @@ namespace siteSPPP.Models
 
         [DataType(DataType.Date)]
         [Display(Name = "Fecha de publicación")]
-        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public System.DateTime FECHAPUBLIC { get; set; }
         public string LUGAR { get; set; }
         [Display(Name = "Prioridad de la nota")]

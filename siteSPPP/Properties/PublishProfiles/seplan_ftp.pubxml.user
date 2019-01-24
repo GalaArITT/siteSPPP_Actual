@@ -341,10 +341,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="bin/siteSPPP.dll">
-      <publishTime>01/16/2019 13:47:14</publishTime>
+      <publishTime>01/24/2019 10:00:06</publishTime>
     </File>
     <File Include="bin/siteSPPP.pdb">
-      <publishTime>01/16/2019 13:47:14</publishTime>
+      <publishTime>01/24/2019 10:00:06</publishTime>
     </File>
     <File Include="bin/SqlServerTypes/x64/msvcr120.dll">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -2315,7 +2315,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/04/2018 14:17:08</publishTime>
     </File>
     <File Include="QueryBD.sql">
-      <publishTime>01/16/2019 13:37:54</publishTime>
+      <publishTime>01/23/2019 11:44:33</publishTime>
     </File>
     <File Include="Rotativa/help-wkhtmltoimage.txt">
       <publishTime>12/04/2018 14:17:07</publishTime>
@@ -3485,13 +3485,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/26/2018 12:56:04</publishTime>
     </File>
     <File Include="Views/Administrador/EditarFotoAdmin.cshtml">
-      <publishTime>12/27/2018 10:17:33</publishTime>
+      <publishTime>01/23/2019 11:48:28</publishTime>
     </File>
     <File Include="Views/Administrador/EditarFuncionario.cshtml">
       <publishTime>12/27/2018 11:13:39</publishTime>
     </File>
     <File Include="Views/Administrador/EditarNoticiasAdmin.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>01/23/2019 14:16:59</publishTime>
     </File>
     <File Include="Views/Administrador/EditarOrganigrama.cshtml">
       <publishTime>12/28/2018 11:43:38</publishTime>
@@ -3512,7 +3512,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/Administrador/ListaNoticiasAdmin.cshtml">
-      <publishTime>12/21/2018 10:56:11</publishTime>
+      <publishTime>01/24/2019 09:55:50</publishTime>
     </File>
     <File Include="Views/Administrador/ListaOrganigramas.cshtml">
       <publishTime>12/28/2018 11:29:02</publishTime>
@@ -3521,7 +3521,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/Administrador/VerOrganigrama.cshtml">
-      <publishTime>12/26/2018 13:08:19</publishTime>
+      <publishTime>01/17/2019 13:48:40</publishTime>
     </File>
     <File Include="Views/Archivos/CambiarArchivo.cshtml">
       <publishTime>12/13/2018 09:45:32</publishTime>
@@ -3587,7 +3587,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Capturista/ListaNoticias.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>01/24/2019 09:56:41</publishTime>
     </File>
     <File Include="Views/Capturista/MostrarMisDatos.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -3617,7 +3617,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/19/2018 12:59:04</publishTime>
     </File>
     <File Include="Views/Conocenos/verOrganigrama.cshtml">
-      <publishTime>01/15/2019 13:41:26</publishTime>
+      <publishTime>01/17/2019 14:20:27</publishTime>
     </File>
     <File Include="Views/Conocenos/Vision.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -3629,10 +3629,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>12/26/2018 14:22:26</publishTime>
+      <publishTime>01/23/2019 11:56:05</publishTime>
     </File>
     <File Include="Views/Home/NoticiaCompleta.cshtml">
-      <publishTime>01/11/2019 11:16:37</publishTime>
+      <publishTime>01/24/2019 09:57:09</publishTime>
     </File>
     <File Include="Views/InfoConocenosAdmin/Create.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -3797,7 +3797,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/11/2019 11:19:35</publishTime>
+      <publishTime>01/24/2019 10:00:38</publishTime>
     </File>
     <File Include="x64/Oracle.ManagedDataAccessDTC.dll">
       <publishTime>12/03/2018 13:52:26</publishTime>
