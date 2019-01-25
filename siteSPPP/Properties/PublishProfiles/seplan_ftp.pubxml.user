@@ -341,10 +341,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="bin/siteSPPP.dll">
-      <publishTime>01/24/2019 10:00:06</publishTime>
+      <publishTime>01/25/2019 14:04:53</publishTime>
     </File>
     <File Include="bin/siteSPPP.pdb">
-      <publishTime>01/24/2019 10:00:06</publishTime>
+      <publishTime>01/25/2019 14:04:53</publishTime>
     </File>
     <File Include="bin/SqlServerTypes/x64/msvcr120.dll">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -440,10 +440,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/css/custom.css">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>01/25/2019 12:43:01</publishTime>
     </File>
     <File Include="Content/css/flexslider.css">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>01/25/2019 12:22:55</publishTime>
     </File>
     <File Include="Content/css/Login.css">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -921,6 +921,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/files/descargas/actas_juridico/2018/SO/10 SO.pdf">
       <publishTime>10/11/2018 13:35:54</publishTime>
+    </File>
+    <File Include="Content/files/descargas/actas_juridico/2018/SO/11 SO SPPP.pdf">
+      <publishTime>01/25/2019 10:18:36</publishTime>
+    </File>
+    <File Include="Content/files/descargas/actas_juridico/2018/SO/12 SO SPPP.pdf">
+      <publishTime>01/25/2019 11:54:40</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2018/SO/2 SO FEBRERO.pdf">
       <publishTime>07/27/2018 14:57:10</publishTime>
@@ -3629,10 +3635,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>01/23/2019 11:56:05</publishTime>
+      <publishTime>01/25/2019 12:15:24</publishTime>
     </File>
     <File Include="Views/Home/NoticiaCompleta.cshtml">
-      <publishTime>01/24/2019 09:57:09</publishTime>
+      <publishTime>01/24/2019 13:58:54</publishTime>
     </File>
     <File Include="Views/InfoConocenosAdmin/Create.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -3731,22 +3737,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/Shared/LayoutAuth.cshtml">
-      <publishTime>12/26/2018 13:17:07</publishTime>
+      <publishTime>01/25/2019 12:57:29</publishTime>
     </File>
     <File Include="Views/Shared/LayoutCapturista.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>01/25/2019 12:58:01</publishTime>
     </File>
     <File Include="Views/Shared/Lockout.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>01/15/2019 13:19:09</publishTime>
+      <publishTime>01/25/2019 12:57:03</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/Transparencia/ActasComite.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>01/25/2019 14:10:48</publishTime>
     </File>
     <File Include="Views/Transparencia/AcuerdosNormatividad.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -3797,7 +3803,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/24/2019 10:00:38</publishTime>
+      <publishTime>01/25/2019 12:59:30</publishTime>
     </File>
     <File Include="x64/Oracle.ManagedDataAccessDTC.dll">
       <publishTime>12/03/2018 13:52:26</publishTime>

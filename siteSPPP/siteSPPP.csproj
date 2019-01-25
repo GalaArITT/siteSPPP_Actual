@@ -1271,6 +1271,8 @@
     </Content>
     <Content Include="App_Browsers\qt.browser" />
     <Content Include="Content\files\descargas\cartera_proyectos_FISE\Avance 4toTrimestre FISE 2018.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SO\11 SO SPPP.pdf" />
+    <Content Include="Content\files\descargas\actas_juridico\2018\SO\12 SO SPPP.pdf" />
     <None Include="Properties\PublishProfiles\localftp.pubxml" />
     <None Include="Properties\PublishProfiles\seplan_ftp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
