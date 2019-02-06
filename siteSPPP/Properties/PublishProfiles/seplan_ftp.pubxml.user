@@ -341,10 +341,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="bin/siteSPPP.dll">
-      <publishTime>01/25/2019 14:04:53</publishTime>
+      <publishTime>02/01/2019 13:26:27</publishTime>
     </File>
     <File Include="bin/siteSPPP.pdb">
-      <publishTime>01/25/2019 14:04:53</publishTime>
+      <publishTime>02/01/2019 13:26:27</publishTime>
     </File>
     <File Include="bin/SqlServerTypes/x64/msvcr120.dll">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -3599,22 +3599,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/Conocenos/Antecedentes.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>02/01/2019 13:24:16</publishTime>
     </File>
     <File Include="Views/Conocenos/Directorio.cshtml">
-      <publishTime>01/16/2019 10:52:33</publishTime>
+      <publishTime>01/30/2019 11:40:57</publishTime>
     </File>
     <File Include="Views/Conocenos/FuncionesPrincipales.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>02/01/2019 13:24:23</publishTime>
     </File>
     <File Include="Views/Conocenos/Mision.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>02/01/2019 13:24:27</publishTime>
     </File>
     <File Include="Views/Conocenos/MisionVision.cshtml">
       <publishTime>03/07/2018 11:27:21</publishTime>
     </File>
     <File Include="Views/Conocenos/Objetivos.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>02/01/2019 13:24:32</publishTime>
     </File>
     <File Include="Views/Conocenos/Organigrama.cshtml">
       <publishTime>01/15/2019 13:29:36</publishTime>
@@ -3626,7 +3626,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/17/2019 14:20:27</publishTime>
     </File>
     <File Include="Views/Conocenos/Vision.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>02/01/2019 13:24:45</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -3638,7 +3638,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/25/2019 12:15:24</publishTime>
     </File>
     <File Include="Views/Home/NoticiaCompleta.cshtml">
-      <publishTime>01/24/2019 13:58:54</publishTime>
+      <publishTime>02/01/2019 13:22:33</publishTime>
     </File>
     <File Include="Views/InfoConocenosAdmin/Create.cshtml">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -3803,7 +3803,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/25/2019 12:59:30</publishTime>
+      <publishTime>02/01/2019 13:26:38</publishTime>
     </File>
     <File Include="x64/Oracle.ManagedDataAccessDTC.dll">
       <publishTime>12/03/2018 13:52:26</publishTime>
