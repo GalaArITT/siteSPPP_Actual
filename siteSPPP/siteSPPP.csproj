@@ -348,6 +348,7 @@
     <Content Include="Content\images\boton_ped_CALENDARIO.png" />
     <Content Include="Content\images\boton_ped_FANPAGE.png" />
     <Content Include="Content\images\Captura.PNG" />
+    <Content Include="Content\images\Censos\2_CE_banner_cuadrado.jpg" />
     <Content Include="Content\images\Directorio\Antonio Hernandez Sanchez.jpg" />
     <Content Include="Content\images\Directorio\Arq. Angel Rodriguez.jpg" />
     <Content Include="Content\images\Directorio\Arq. Julio Cesar Pineda.jpg" />
@@ -1273,6 +1274,7 @@
     <Content Include="Content\files\descargas\cartera_proyectos_FISE\Avance 4toTrimestre FISE 2018.pdf" />
     <Content Include="Content\files\descargas\actas_juridico\2018\SO\11 SO SPPP.pdf" />
     <Content Include="Content\files\descargas\actas_juridico\2018\SO\12 SO SPPP.pdf" />
+    <Content Include="Content\images\Censos\Infografia_Completa_01.pdf" />
     <None Include="Properties\PublishProfiles\localftp.pubxml" />
     <None Include="Properties\PublishProfiles\seplan_ftp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
