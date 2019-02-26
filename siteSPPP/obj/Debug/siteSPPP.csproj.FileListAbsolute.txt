@@ -685,3 +685,9 @@ C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Debug\siteSPPP.csproj.CoreC
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Debug\siteSPPP.csproj.CopyComplete
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Debug\siteSPPP.dll
 C:\Users\ogalaviz\source\repos\siteSPPP\siteSPPP\obj\Debug\siteSPPP.pdb
+C:\Users\Oliver\source\repos\PruebaGit\siteSPPP\bin\PagedList.dll
+C:\Users\Oliver\source\repos\PruebaGit\siteSPPP\bin\PagedList.Mvc.dll
+C:\Users\Oliver\source\repos\PruebaGit\siteSPPP\bin\Rotativa.dll
+C:\Users\Oliver\source\repos\PruebaGit\siteSPPP\bin\PagedList.xml
+C:\Users\Oliver\source\repos\PruebaGit\siteSPPP\bin\PagedList.Mvc.xml
+C:\Users\Oliver\source\repos\PruebaGit\siteSPPP\bin\es\System.Web.Optimization.resources.dll

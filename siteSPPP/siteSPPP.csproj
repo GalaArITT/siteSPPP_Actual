@@ -1350,11 +1350,6 @@
     <Content Include="Views\Shared\LayoutCapturista.cshtml" />
     <Content Include="Views\Administrador\Bienvenido.cshtml" />
     <Content Include="Views\Administrador\ListaUsuarios.cshtml" />
-    <Content Include="Views\USUARIOs\Create.cshtml" />
-    <Content Include="Views\USUARIOs\Delete.cshtml" />
-    <Content Include="Views\USUARIOs\Details.cshtml" />
-    <Content Include="Views\USUARIOs\Edit.cshtml" />
-    <Content Include="Views\USUARIOs\Index.cshtml" />
     <Content Include="Views\Capturista\ListaNoticias.cshtml" />
     <Content Include="Views\Capturista\CrearNoticias.cshtml" />
     <Content Include="Themes\ckeditor\CHANGES.md" />

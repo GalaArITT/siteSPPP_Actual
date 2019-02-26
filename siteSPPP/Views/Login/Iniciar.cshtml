@@ -33,6 +33,7 @@
              <p id="profile-name" class="profile-name-card"></p>
              <form class="form-signin">
                  <span id="reauth-email" class="reauth-email"></span>
+             <!--Validar los usuarios EditorFor sirve para obtener los campos de las tablas -->
                  @Html.EditorFor(model=>model.USUARIOINICIA, new { htmlAttributes = new { @id = "inputUser", @class = "form-control", @placeholder = "Nombre de usuario",
                 required = "required", autofocus = "autofocus" } })
                  @Html.EditorFor(model=>model.CONTRASENA, new { htmlAttributes = new { @id = "inputPassword", @class = "form-control", @placeholder = "Contraseña",

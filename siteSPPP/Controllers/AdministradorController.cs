@@ -22,7 +22,6 @@ namespace siteSPPP.Controllers
             return null;
         }
 
-
         public ActionResult Bienvenido()
         {
             //Asegurar que a esta vista solo entren aquellos usuarios con rol 1=Capturista 
@@ -50,7 +49,6 @@ namespace siteSPPP.Controllers
             return null;
         }
         //MODULO DE NOTICIAS//
-
         public ActionResult ListaNoticiasAdmin(string filtrarfech, string filtrado, string currentFilter, string busqueda, int? page)
         {
             //Asegurar que a esta vista solo entren aquellos usuarios con rol 2=Administrador 
@@ -86,8 +84,10 @@ namespace siteSPPP.Controllers
                     // busqueda = busqueda.ToString();
                     if (!String.IsNullOrEmpty(busqueda))
                     {
-                        noticias = noticias.Where(s => s.TITULO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ", "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
-                        || s.CONTENIDO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ", "abcdefghijklmnñopqrstuvwxyzáéíóú")));
+                        noticias = noticias.Where(s => s.TITULO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ", 
+                            "abcdefghijklmnñopqrstuvwxyzáéíóú")) 
+                        || s.CONTENIDO.Contains(busqueda.Replace("ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ", 
+                        "abcdefghijklmnñopqrstuvwxyzáéíóú")));
                         ViewBag.Currentfilter = busqueda;
                     }
                     //Filtrar por estatus
@@ -139,6 +139,7 @@ namespace siteSPPP.Controllers
                     {
                         return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
                     }
+                    //instanciar tabla de noticias y encontrar por el id que está en la vista editarnoticia
                     NOTICIAS_SEPLAN nOTICIAS_SEPLAN = db.NOTICIAS.Find(id);
                     if (nOTICIAS_SEPLAN == null)
                     {
@@ -156,8 +157,8 @@ namespace siteSPPP.Controllers
         [ValidateAntiForgeryToken, ValidateInput(false)]
         public ActionResult EditarNoticiasAdmin([Bind(Include = "IDNOTICIA,IDUSUARIO,TITULO,CONTENIDO,FECHACAPTURA,FECHAPUBLIC,LUGAR,PRIORIDAD,ESTATUS")] NOTICIAS_SEPLAN Noticias_Seplan)
         {
-            //hay que agregar todos los campos en el bind y los idnoticia, idusuario, estatus, fechacaptura hay que colocarlos dentro de un 
-            //hidden sino este desgraciado segmento marca una excepción
+            //hay que agregar todos los campos en el bind y los idnoticia, idusuario, estatus, fechacaptura hay que colocarlos 
+            //dentro de un  hidden sino este desgraciado segmento marca una excepción
             if (ModelState.IsValid)
             {
                 db.Entry(Noticias_Seplan).State = EntityState.Modified;
@@ -303,9 +304,9 @@ namespace siteSPPP.Controllers
             if (FOTOGRAFIA != null && FOTOGRAFIA.ContentLength > 0)
             {
                 byte[] imageData = null;
-                using (var binaryMunicipio = new BinaryReader(FOTOGRAFIA.InputStream))
+                using (var foto_nota = new BinaryReader(FOTOGRAFIA.InputStream))
                 {
-                    imageData = binaryMunicipio.ReadBytes(FOTOGRAFIA.ContentLength);
+                    imageData = foto_nota.ReadBytes(FOTOGRAFIA.ContentLength);
                 }
                 fOTOS.FOTOGRAFIA = imageData;
             }
@@ -442,7 +443,7 @@ namespace siteSPPP.Controllers
             byte[] cover = TraerFoto(id);
             if (cover != null)
             {
-                return File(cover, "image/jpg");
+                return File(cover, "image/jpg"); //retornar las imagenes en ese formato
             }
             else
             {
@@ -460,7 +461,7 @@ namespace siteSPPP.Controllers
             byte[] cover = TraerFotoNoticias(id);
             if (cover != null)
             {
-                return File(cover, "image/jpg");
+                return File(cover, "image/jpg"); //retornar las imagenes en ese formato
             }
             else
             {
@@ -479,7 +480,7 @@ namespace siteSPPP.Controllers
             byte[] cover = TraerPDF(id);
             if (cover != null)
             {
-                return File(cover, "application/pdf");
+                return File(cover, "application/pdf"); 
             }
             else
             {
