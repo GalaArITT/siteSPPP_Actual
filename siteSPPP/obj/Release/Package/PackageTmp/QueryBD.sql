@@ -4,8 +4,6 @@ go
 /* DBMS name:      Microsoft SQL Server 2008                    */
 /* Created on:     07/11/2018 11:32:10 a. m.                    */
 /*==============================================================*/
-
-
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
    where r.fkeyid = object_id('BALAZO') and o.name = 'FK_BALAZO_REFERENCE_NOTICIAS')
@@ -396,18 +394,6 @@ update DEPARTAMENTOS
 set NOMBREDEPTO= 'Departamento de Seguimiento y Control de los Ramos 06, 15, 20 y Convenios'
 where IDDEPARTAMENTO = 13
 
-
-drop table BALAZO
-drop table DEPARTAMENTOS
-drop table FOTOS
-drop table INFORMACION
-drop table INFORMES
-drop table NOTICIAS
-drop table PLANTILLA
-drop table SERVIDORESPUBLICOS
-drop table TIPO_INFORME
-drop table TIPO_PLANTILLA
-drop table USUARIO
 SELECT * FROM Noticias
 --ESTATUS              nvarchar(1)          null
 ALTER TABLE ARCHIVOS
