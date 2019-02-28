@@ -1,0 +1,28 @@
+﻿@model siteSPPP.Models.FOTOS
+
+@{
+    ViewBag.Title = "EliminarFotoAdmin";
+    Layout = "~/Views/Shared/LayoutAuth.cshtml";
+}
+
+<h3>¿Estás seguro de eliminar esta foto?</h3>
+<div>
+    <hr />
+    <div class="form-group">
+        @Html.Label("Imagen Actual", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <img src="@Url.Action("MostrarFotoNoticias", "Administrador", new { id = Model.IDFOTO })" style="width:100%"/>
+            @Html.ValidationMessageFor(model => model.FOTOGRAFIA, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Volver a la lista de fotos", "ListaFotosAdmin", new { idNoticia = Model.IDNOTICIA })
+            <input type="submit" value="Eliminar Fotografia" class="btn btn-default" />
+        </div>
+    }
+</div>
+

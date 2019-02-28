@@ -1,0 +1,42 @@
+﻿@model siteSPPP.Models.PLANTILLA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/LayoutCapturista.cshtml";
+}
+
+<div>
+    <h4>Información Previa</h4>
+    <hr />
+    <dl class="text-left">
+        <dt>
+            @Html.DisplayNameFor(model => model.TITULO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TITULO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONTENIDO)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.CONTENIDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USUARIO.USUARIOINICIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USUARIO.USUARIOINICIA)
+        </dd>
+
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Volver a la Lista", "Index")
+</p>
+

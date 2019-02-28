@@ -1,0 +1,104 @@
+﻿@model siteSPPP.Models.NOTICIAS_SEPLAN
+
+@{
+    ViewBag.Title = "Detalle de noticia";
+    Layout = "~/Views/Shared/LayoutCapturista.cshtml";
+}
+
+<h2>Eliminación de Noticias</h2>
+
+<div class="text-left JustifyCenter">
+    <h4>¿Estás seguro de eliminar esta noticia?</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            <img src="@Url.Action("MostrarFoto", "Capturista", new { id = Model.FOTOS.FirstOrDefault().IDFOTO })" alt="" height=500 width=500 />
+        </dd>
+        <dd>
+            @Html.Raw(Model.TITULO)
+        </dd>
+
+        <dd>
+            @Html.Raw(Model.CONTENIDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHACAPTURA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHACAPTURA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHAPUBLIC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHAPUBLIC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LUGAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LUGAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRIORIDAD)
+        </dt>
+
+        <dd>
+            @{
+                if (Model.PRIORIDAD == 1)
+                {
+                    <p>ALTA</p>
+                }
+                if (Model.PRIORIDAD == 2)
+                {
+                    <p>MEDIA</p>
+                }
+                if (Model.PRIORIDAD == 3)
+                {
+                    <p>BAJA</p>
+                }
+            }
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTATUS)
+        </dt>
+
+        <dd>
+            @{
+                if (Model.ESTATUS == "A")
+                {
+                    <p>ACTIVO</p>
+                }
+                if (Model.ESTATUS == "I")
+                {
+                    <p>INACTIVO</p>
+                }
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USUARIO.NOMBREUSUARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USUARIO.NOMBREUSUARIO)
+        </dd>
+
+    </dl>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        @Html.ActionLink("Regresar", "¨ListaNoticias", null, new { @class = "btn btn-default", role = "button" })
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
+    </div>
+}

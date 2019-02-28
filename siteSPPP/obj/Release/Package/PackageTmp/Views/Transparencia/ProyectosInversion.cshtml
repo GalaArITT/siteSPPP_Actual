@@ -1,0 +1,212 @@
+﻿@model IEnumerable<siteSPPP.Models.ARCHIVOS>
+@{
+    ViewBag.Title = "Cartera de Proyectos del FISE";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<span style="font-size:1.5em;text-align:left">
+    <strong>@ViewBag.Title</strong>
+</span>
+<hr />
+
+<table width:"100%" border="0" cellpadding="0" cellspacing="4">
+    <tr>
+        <td colspan="2" bgcolor="#FFFFFF">
+            <img src="~/Content/images/proy_inversion_2014-03.png" width="554" height="31" />
+        </td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.IDARCHIVO == 31)
+        {
+            <tr>
+                <td height="20">
+                    <img src="~/Content/images/pdf_gray-02.png" height="25" />
+                </td>
+                <td height="20">
+                    <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                        @Html.DisplayFor(s => item.NOMBREARCHIVO)
+                    </a>
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+<table width:"100%" border="0" cellpadding="0" cellspacing="4">
+    <tr>
+        <td colspan="2" bgcolor="#FFFFFF">
+            <img src="~/Content/images/proy_inversion_2015-03.png" width="554" height="31" />
+        </td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.IDARCHIVO == 32)
+        {
+            <tr>
+                <td height="20">
+                    <img src="~/Content/images/pdf_gray-02.png" height="25" />
+                </td>
+                <td height="20">
+                    <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                        @Html.DisplayFor(s => item.NOMBREARCHIVO)
+                    </a>
+                </td>
+            </tr>
+        }
+    }
+</table>
+<table width:"100%" border="0" cellpadding="0" cellspacing="4">
+    <tr>
+        <td colspan="2" bgcolor="#FFFFFF">
+            <img src="~/Content/images/proy_inversion_2016-03.png" width="554" height="31" />
+        </td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.IDARCHIVO >= 33 && item.IDARCHIVO <= 34)
+        {
+
+            <tr>
+                <td height="20">
+                    <img src="~/Content/images/pdf_gray-02.png" height="25" />
+                </td>
+                <td height="20">
+                    <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                        @Html.DisplayFor(s => item.NOMBREARCHIVO)
+                    </a>
+                </td>
+            </tr>
+
+        }
+    }
+</table>
+<table width:"100%" border="0" cellpadding="0" cellspacing="4">
+    <tr>
+        <td colspan="2" bgcolor="#FFFFFF">
+            <img src="~/Content/images/proy_inversion_2017-03.png" width="554" height="31" />
+        </td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.IDARCHIVO >= 35 && item.IDARCHIVO <= 39)
+        {
+
+            <tr>
+                <td height="20">
+                    <img src="~/Content/images/pdf_gray-02.png" height="25" />
+                </td>
+                <td height="20">
+                    <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                        @Html.DisplayFor(s => item.NOMBREARCHIVO)
+                    </a>
+                </td>
+            </tr>
+
+        }
+    }
+</table>
+<table width:"100%" border="0" cellpadding="0" cellspacing="4">
+    <tr>
+        <td colspan="2" bgcolor="#FFFFFF">
+            <img src="~/Content/images/proy_inversion_2018-03.png" width="554" height="31" />
+        </td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.IDARCHIVO >= 40 && item.IDARCHIVO <= 44)
+        {
+
+            <tr>
+                <td height="20">
+                    <img src="~/Content/images/pdf_gray-02.png" height="25" />
+                </td>
+                <td height="20">
+                    <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                        @Html.DisplayFor(s => item.NOMBREARCHIVO)
+                    </a>
+                </td>
+            </tr>
+
+        }
+    }
+</table>
+
+
+@*
+    <table width="100%" border="0" cellpadding="0" cellspacing="4">
+        <tr>
+            <td colspan="2" bgcolor="#FFFFFF"><img src="~/Content/images/proy_inversion_2014-03.png" width="554" height="31" /></td>
+        </tr>
+        <tr>
+            <td height="20"><img src="~/Content/images/pdf_gray-02.png" height="25" /></td>
+            <td height="20"><a href="~/Content/files/descargas/cartera_proyectos_FISE/PROPUESTA FISE 2014.pdf">Propuesta FISE 2014</a></td>
+        </tr>
+        <tr>
+            <td height="20" colspan="2"><img src="~/Content/images/proy_inversion_2015-03.png" width="554" height="31" /></td>
+        </tr>
+        <tr>
+            <td width="20"><span><img src="~/Content/images/pdf_gray-02.png" height="25" /></span></td>
+            <td width="556"><span><a href="~/Content/files/descargas/cartera_proyectos_FISE/PROPUESTA FISE 2015.pdf">Propuesta FISE 2015</a></span></td>
+        </tr>
+        <tr>
+            <td colspan="2"><img src="~/Content/images/proy_inversion_2016-03.png" width="554" height="31" /></td>
+        </tr>
+        <tr>
+            <td width="20"><span><img src="~/Content/images/pdf_gray-02.png" height="25" /></span></td>
+            <td width="556"><span><a href="~/Content/files/descargas/cartera_proyectos_FISE/PROPUESTA FISE 2016.pdf"></a>Propuesta FISE 2016</span></td>
+        </tr>
+        <tr>
+            <td width="20"><span><img src="~/Content/images/pdf_gray-02.png" height="25" /></span></td>
+            <td width="556"><span><a href="~/Content/files/descargas/cartera_proyectos_FISE/AVANCES 4TO TRIM 2016.pdf"></a>Avances 4to. Trimestre FISE 2016</span></td>
+        </tr>
+        <tr>
+            <td colspan="2"><img src="~/Content/images/proy_inversion_2017-03.png" height="31" /></td>
+        </tr>
+        <tr>
+            <td width="20"><span><img src="~/Content/images/pdf_gray-02.png" height="25" /></span></td>
+            <td><span><a href="~/Content/files/descargas/cartera_proyectos_FISE/PROPUESTA FISE 2017.pdf">Propuesta FISE 2017</a></span></td>
+        </tr>
+        <tr>
+            <td width="20"><span><img src="~/Content/images/pdf_gray-02.png" height="25" /></span></td>
+            <td><span><a href="~/Content/files/descargas/cartera_proyectos_FISE/AVANCES 1ER TRIM 2017.pdf"> 2017</a></span></td>
+        </tr>
+        <tr>
+            <td width="20"><span><img src="~/Content/images/pdf_gray-02.png" alt="" height="25" /></span></td>
+            <td><span><a href="~/Content/files/descargas/cartera_proyectos_FISE/AVANCES 2do TRIM FISE 2017.pdf">Avances 2do. Trimestre FISE 2017</a></span></td>
+        </tr>
+        <tr>
+            <td width="20"><span><img src="~/Content/images/pdf_gray-02.png" alt="" height="25" /></span></td>
+            <td><span><a href="~/Content/files/descargas/cartera_proyectos_FISE/AVANCES 3er TRIM FISE 2017.pdf">Avances 3er. Trimestre FISE 2017</a></span></td>
+        </tr>
+        <tr>
+            <td width="20"><span><img src="~/Content/images/pdf_gray-02.png" alt="" height="25" /></span></td>
+            <td><span><a href="~/Content/files/descargas/cartera_proyectos_FISE/AVANCES 4TO TRIM FISE 2017.pdf">Avances 4to. Trimestre FISE 2017</a></span></td>
+        </tr>
+        <tr>
+            <td colspan="2"><img src="~/Content/images/proy_inversion_2018-03.png" width="554" height="31" /></td>
+        </tr>
+        <tr>
+            <td width="20"><span><img src="~/Content/images/pdf_gray-02.png" alt="" height="25" /></span></td>
+            <td><span><a href="~/Content/files/descargas/cartera_proyectos_FISE/Propuesta Inicial FISE 2018.pdf">Propuesta FISE 2018</a></span></td>
+        </tr>
+        <tr>
+            <td width="20"><span><img src="~/Content/images/pdf_gray-02.png" alt="" height="25" /></span></td>
+            <td><span><a href="~/Content/files/descargas/cartera_proyectos_FISE/Avances 1er Trimestre FISE  2018.pdf">Avances 1er. Trimestre FISE 2018</a></span></td>
+        </tr>
+        <tr>
+            <td width="20"><span><img src="~/Content/images/pdf_gray-02.png" alt="" height="25" /></span></td>
+            <td><span><a href="~/Content/files/descargas/cartera_proyectos_FISE/Avance 2do Trimestre portal 2018.pdf">Avances 2do. Trimestre FISE 2018</a></span></td>
+        </tr>
+        <tr>
+            <td width="20"><span><img src="~/Content/images/pdf_gray-02.png" alt="" height="25" /></span></td>
+            <td><span><a href="~/Content/files/descargas/cartera_proyectos_FISE/CARTERA DE PROYECTOS TERCER TRIMETRE FISE 2018.pdf">Avances 3er. Trimestre FISE 2018</a></span></td>
+        </tr>
+        <tr>
+            <td width="20"><span><img src="~/Content/images/pdf_gray-02.png" alt="" height="25" /></span></td>
+            <td><span><a href="~/Content/files/descargas/cartera_proyectos_FISE/Avance 4toTrimestre FISE 2018.pdf">Avances 4er. Trimestre FISE 2018</a></span></td>
+        </tr>
+    </table>
+
+
+*@

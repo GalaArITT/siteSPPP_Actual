@@ -1,0 +1,37 @@
+﻿@model IEnumerable<siteSPPP.Models.ORGANIGRAMA>
+
+@{
+    ViewBag.Title = "VerOrganigrama";
+    Layout = null;
+}
+<div class="btn-group">
+    @Html.ActionLink("Volver", "Index", "Home", null, new { @class = "btn btn-secondary m-1", role = "button" })
+    <input type="button" id="btnSave" value="Guardar Imagen" class="btn btn-secondary m-1" />
+</div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+@foreach (var item in Model)
+{
+    <div id="chart_div">
+        <img src="@Url.Action("MostrarFotoOrg", "Conocenos", new { id = item.IDORGANIGRAMA })" style="width:95%" />
+    </div>
+}
+<script type="text/javascript" src="~/Content/orgchart/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="~/Content/orgchart/canvas2image.js"></script>
+<script type="text/javascript" src="~/Content/orgchart/html2canvas.min.js"></script>
+<script>
+    $('#btnSave').click(function () {
+        var elm = $('#chart_div').css("width", "100%").get(0);
+        var lebar = "3611";  //ancho
+        var tinggi = "1879"; //alto
+        var type = "jpg";
+        var filename = "Organigrama";
+        html2canvas(elm).then(function (canvas) {
+            var canWidth = canvas.width;
+            var canHeight = canvas.height;
+            var img = Canvas2Image.convertToImage(canvas, canWidth, canHeight);
+            //$('#img-out').after(img);
+            Canvas2Image.saveAsImage(canvas, lebar, tinggi, type, filename);
+        })
+    })
+</script>

@@ -1,0 +1,151 @@
+﻿@model IEnumerable<siteSPPP.Models.ARCHIVOS>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1 style="font-style:italic">Sistema Estatal de Planeación, Programación y Presupuesto</h1>
+<br />
+<h2>Marco Regulatorio</h2>
+<br />
+@foreach (var item in Model)
+{
+    if (item.IDTIPO == 6)
+    {
+        <div class="table-responsive text-left">
+            <img src="~/Content/images/icono_pdf.png" />
+            <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                @Html.DisplayFor(s => item.NOMBREARCHIVO)
+            </a>
+            <hr style="clear:both" />
+        </div>
+    }
+}
+<br />
+<h2>Información de apoyo para la Planeación Municipal 2011 – 2014</h2>
+<br />
+@foreach (var item in Model)
+{
+    if (item.IDTIPO == 7)
+    {
+        <div class="table-responsive text-left">
+            <img src="~/Content/images/icono_pdf.png" />
+            <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                @Html.DisplayFor(s => item.NOMBREARCHIVO)
+            </a>
+            <hr style="clear:both" />
+        </div>
+    }
+}
+<br />
+<h2>Documentos y Bases para la Planeación Estatal</h2>
+<br />
+<div class="table-responsive text-left">
+    <img src="~/Content/images/icono_web.png" />
+    <a href="http://pnd.gob.mx/" target="_blank">
+        Plan Nacional de Desarrollo
+    </a>
+    <hr style="clear:both" />
+</div>
+<div class="table-responsive text-left">
+    <img src="~/Content/images/icono_web.png" />
+    <a href="https://www.gob.mx/presidencia" target="_blank">
+        Programas Federales
+    </a>
+    <hr style="clear:both" />
+</div>
+<div class="table-responsive text-left">
+    <img src="~/Content/images/icono_web.png" />
+    <a href="http://pnd.gob.mx/" target="_blank">
+        Plan Estatal de Desarrollo 2011-2017
+    </a>
+    <hr style="clear:both" />
+</div>
+<div class="table-responsive text-left">
+    <img src="~/Content/images/icono_web.png" />
+    <a href="http://pnd.gob.mx/" target="_blank">
+        Programas Sectoriales y Especiales
+    </a>
+    <hr style="clear:both" />
+</div>
+<div class="table-responsive text-left">
+    <img src="~/Content/images/icono_web.png" />
+    <a href="http://pnd.gob.mx/" target="_blank">
+        Planes Municipales de Desarrollo
+    </a>
+    <hr style="clear:both" />
+</div>
+<br />
+<h2>Marco Presupuestal</h2>
+<br />
+@foreach (var item in Model)
+{
+    if (item.IDTIPO == 8)
+    {
+        <div class="table-responsive text-left">
+            <img src="~/Content/images/icono_pdf.png" />
+            <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                @Html.DisplayFor(s => item.NOMBREARCHIVO)
+            </a>
+            <hr style="clear:both" />
+        </div>
+    }
+}
+<br />
+<h2>Correspondencia entre la Cuenta Pública y el Plan Estatal de Desarrollo</h2>
+<br />
+@foreach (var item in Model)
+{
+    if (item.IDTIPO == 9)
+    {
+        <div class="table-responsive text-left">
+            <img src="~/Content/images/icono_pdf.png" />
+            <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                @Html.DisplayFor(s => item.NOMBREARCHIVO)
+            </a>
+            <hr style="clear:both" />
+        </div>
+    }
+}
+
+<br />
+<h2>Correspondencia entre la Cuenta Pública y el Plan Estatal de Desarrollo</h2>
+<br />
+<div class="table-responsive text-left">
+    <img src="~/Content/images/icono_web.png" />
+    <a href="http://www.anterior.banxico.org.mx/informacion-para-la-prensa/comunicados/resultados-de-encuestas/expectativas-de-los-especialistas/" target="_blank">
+        Espectativas de los especialistas en economia 2013
+    </a>
+    <hr style="clear:both" />
+</div>
+@foreach (var item in Model)
+{
+    if (item.IDTIPO == 10)
+    {
+        <div class="table-responsive text-left">
+            <img src="~/Content/images/icono_pdf.png" />
+            <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                @Html.DisplayFor(s => item.NOMBREARCHIVO)
+            </a>
+            <hr style="clear:both" />
+        </div>
+    }
+}
+<br />
+<h2>Correspondencia entre la Cuenta Pública y el Plan Estatal de Desarrollo</h2>
+<br />
+@foreach (var item in Model)
+{
+    if (item.IDTIPO == 11)
+    {
+        <div class="table-responsive text-left">
+            <img src="~/Content/images/icono_pdf.png" />
+            <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                @Html.DisplayFor(s => item.NOMBREARCHIVO)
+            </a>
+            <hr style="clear:both" />
+        </div>
+    }
+}
+
+
+

@@ -320,6 +320,7 @@
     <Content Include="Content\css\normalize.css" />
     <Content Include="Content\css\orgChart.css" />
     <Content Include="Content\css\skeleton.css" />
+    <Content Include="Content\files\PED_NAYARIT_2017-2021.pdf" />
     <Content Include="Content\fonts\flexslider-icon.svg" />
     <Content Include="Content\images\actas-2014.jpg" />
     <Content Include="Content\images\actas-2015.jpg" />
@@ -508,7 +509,6 @@
     <Content Include="Content\fonts\flexslider-icon.eot" />
     <Content Include="Content\fonts\flexslider-icon.ttf" />
     <Content Include="Content\fonts\flexslider-icon.woff" />
-    <Content Include="Content\files\PED_NAYARIT_2017-2021.pdf" />
     <Content Include="Content\files\curriculum\ARMANDO_MANUEL_PORRAS_FUENTES_Unidad_Inversiones.pdf" />
     <Content Include="Content\files\curriculum\FC_ABRAHAM BASTIDA.pdf" />
     <Content Include="Content\files\curriculum\FC_AbrahamBastida.pdf" />

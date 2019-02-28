@@ -1,0 +1,70 @@
+﻿@model siteSPPP.Models.NOTICIAS_SEPLAN
+
+@{
+    ViewBag.Title = "Detalle de noticia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //me la peló el slide de las fotos
+}
+<div class="text-center">
+    <dl>
+        <dd>
+            <h1>
+                @Html.DisplayFor(model => model.TITULO)
+            </h1>
+        </dd>
+        <dd class="text-right">
+            @Model.FECHAPUBLIC.ToString("dd MMM yyyy")
+        </dd>
+        <dd class="text-right">
+            @Html.DisplayFor(model => model.LUGAR)
+        </dd>
+    </dl>
+</div>
+
+    <div class="flexslider ">
+        <ul class="slides">
+            @foreach (var item in ViewBag.fotos)
+            {
+                <li>
+                    @*Cuando se itera un Viewbag se obtiene con la nomenclatura item.ELEMENTO
+                        NOTA: el visual studio no muestra el elemento en el autocomplete.
+                    *@
+                    <img src="/Home/MostrarFoto/@item.IDFOTO"/>
+                </li>
+            }
+        </ul>
+    </div>
+
+<div style="text-align:justify">
+    <dl class="dl-horizontal">
+        <dd>
+            @Html.Raw(Model.CONTENIDO)
+        </dd>
+    </dl>
+</div>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<div class="fb-like" id="facebookshare"
+     data-href=""
+     data-layout="standard"
+     data-action="like"
+     data-size="small"
+     data-show-faces="true"
+     data-share="true">
+</div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    document.getElementById("facebookshare").setAttribute("data-href", window.location.href);
+</script>
+
+
+<p>
+    @Html.ActionLink("Regresar", "Index")
+</p>

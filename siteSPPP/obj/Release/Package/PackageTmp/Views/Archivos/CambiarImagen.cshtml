@@ -1,0 +1,48 @@
+﻿@model siteSPPP.Models.ARCHIVOS
+
+@{
+    ViewBag.Title = "CambiarImagen";
+    Layout = "~/Views/Shared/LayoutAuth.cshtml";
+}
+
+<h2>Cambiar Imagen</h2>
+
+
+@using (Html.BeginForm("CambiarImagen", "Archivos", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(s => s.IDARCHIVO)
+    @Html.HiddenFor(s => s.IDTIPO)
+    @Html.HiddenFor(s => s.NOMBREARCHIVO)
+    @Html.HiddenFor(s => s.FECHA)
+    @Html.HiddenFor(s => s.ARCHIVO)
+    @Html.HiddenFor(s => s.ESTATUS)
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="form-group">
+            @Html.Label("Imagen Actual", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <img src="@Url.Action("MostrarFoto", "Archivos", new { id = Model.IMAGENARCHIVO })" alt="" width:100% />
+                @Html.ValidationMessageFor(model => model.IMAGENARCHIVO, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Cambiar imagen", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" id="IMAGENARCHIVO" name="IMAGENARCHIVO" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Volver a la Control de Archivos", "ControlArchivos")
+                <input type="submit" value="Guardar Cambios" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}

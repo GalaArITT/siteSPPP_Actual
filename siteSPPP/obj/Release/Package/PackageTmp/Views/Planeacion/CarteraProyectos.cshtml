@@ -1,0 +1,36 @@
+﻿@model IEnumerable<siteSPPP.Models.ARCHIVOS>
+@{
+    /**/
+
+    ViewBag.Title = "Cartera de Proyectos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<span style="font-size:1.5em;text-align:left">
+    <strong>
+        Cartera de proyectos
+    </strong>
+</span>
+<br />
+@foreach (var item in Model)
+{
+    if (item.IDTIPO == 12)
+    {
+        <div class="table-responsive text-left">
+            <img src="~/Content/images/icono_pdf.png" />
+            <a href="@Url.Action("MostrarPDF", "Archivos", new { id = item.IDARCHIVO })" target="_blank">
+                @Html.DisplayFor(s => item.NOMBREARCHIVO)
+            </a>
+            <hr style="clear:both" />
+        </div>
+    }
+}
+<div class="table-responsive text-left">
+    <img src="~/Content/images/icono_word.png" />
+    <a href="~/Content/files/descargas/cartera_proyectos/GLOSARIO DE TERMINOS.doc" target="_blank">Glosario de Términos</a>
+    <hr style="clear:both" />
+</div>
+<div class="table-responsive text-left">
+    <img src="~/Content/images/icono_xls.png" />
+    <a href="~/Content/files/descargas/cartera_proyectos/MODELO DE FICHA TECNICA.xlsx" target="_blank">Modelo de Ficha Técnica</a>
+    <hr style="clear:both" />
+</div>

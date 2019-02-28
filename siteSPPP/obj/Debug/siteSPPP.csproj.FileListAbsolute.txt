@@ -1034,6 +1034,7 @@ C:\Users\ogalaviz\source\repos\siteSPPP_Actual\siteSPPP\bin\ru\Microsoft.ReportV
 C:\Users\ogalaviz\source\repos\siteSPPP_Actual\siteSPPP\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\ogalaviz\source\repos\siteSPPP_Actual\siteSPPP\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\ogalaviz\source\repos\siteSPPP_Actual\siteSPPP\bin\es\System.Web.Optimization.resources.dll
+C:\Users\ogalaviz\source\repos\siteSPPP_Actual\siteSPPP\obj\Debug\siteSPPP.csprojAssemblyReference.cache
 C:\Users\ogalaviz\source\repos\siteSPPP_Actual\siteSPPP\obj\Debug\siteSPPP.csproj.CoreCompileInputs.cache
 C:\Users\ogalaviz\source\repos\siteSPPP_Actual\siteSPPP\obj\Debug\siteSPPP.csproj.CopyComplete
 C:\Users\ogalaviz\source\repos\siteSPPP_Actual\siteSPPP\obj\Debug\siteSPPP.dll
