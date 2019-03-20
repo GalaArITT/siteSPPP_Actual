@@ -891,6 +891,7 @@
     <Content Include="Content\images\proy_inversion_2016-03.png" />
     <Content Include="Content\images\proy_inversion_2017-03.png" />
     <Content Include="Content\images\proy_inversion_2018-03.png" />
+    <Content Include="Content\images\proy_inversion_2019-03.png" />
     <Content Include="Content\images\secre1.jpg" />
     <Content Include="Content\images\secretaria-1.jpg" />
     <Content Include="Content\images\spacer.gif" />
@@ -1413,6 +1414,7 @@
     <Content Include="Views\Administrador\ListaFotosAdmin.cshtml" />
     <Content Include="Views\Administrador\EliminarFotoAdmin.cshtml" />
     <Content Include="Views\Administrador\CambiarOrganigrama.cshtml" />
+    <Content Include="Views\Transparencia\PortafolioInversiones.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -31,5 +31,9 @@ namespace siteSPPP.Controllers
         {
             return View(db.ARCHIVOS.Where(s=>s.IDTIPO==13));
         }
+        public ActionResult PortafolioInversiones()
+        {
+            return View(db.ARCHIVOS.Where(s => s.IDTIPO == 14));
+        }
     }
 }

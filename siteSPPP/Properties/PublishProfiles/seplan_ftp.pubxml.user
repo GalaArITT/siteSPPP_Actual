@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAB/VCKsIxpEiIsG6Y6EWtwAAAAAACAAAAAAADZgAAwAAAABAAAAAOWU3QrLOXKgddZPCrh8euAAAAAASAAACgAAAAEAAAANRiAGT+GRfl/agGrVV7mkAQAAAAMRE9plns+owDHlb8I1mJpxQAAABoRBnNNVm39tnWHfyUN6KorjxZ1Q==</EncryptedPassword>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcdgJ/4AhkEurIC78RgitagAAAAACAAAAAAAQZgAAAAEAACAAAACCLQKEcSfSfVcOPoYGgI4vQxeitpcY8EVbs4tuwIK89gAAAAAOgAAAAAIAACAAAABG9m7h0jyDgzqygxZxG1FdLyj7SiQfNswwcVN01SM4oxAAAABxPozgWlUzbnql5MlBWUQoQAAAAIPyNwT+9GC5jW09SNN2tsgEjbMtMcRE6bvIytaxLEL8tsbHAdgt0RB3Oo9xWf0Rn3lfWV8zmSnt9gutbq3LfGM=</EncryptedPassword>
     <_PublishTargetUrl>ftp://201.161.95.5/</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
@@ -50,7 +50,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2019 11:16:33</publishTime>
     </File>
     <File Include="bin/EnvDTE.dll">
-      <publishTime>11/16/2018 10:44:55</publishTime>
+      <publishTime>10/20/2018 15:29:52</publishTime>
     </File>
     <File Include="bin/es/Microsoft.ReportViewer.Common.resources.dll">
       <publishTime>02/26/2019 11:16:35</publishTime>
@@ -179,7 +179,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2019 11:16:34</publishTime>
     </File>
     <File Include="bin/Microsoft.MSXML.dll">
-      <publishTime>11/16/2018 10:44:55</publishTime>
+      <publishTime>10/20/2018 15:29:52</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
       <publishTime>02/26/2019 11:16:34</publishTime>
@@ -233,19 +233,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2019 11:16:35</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.OLE.Interop.dll">
-      <publishTime>11/16/2018 10:44:55</publishTime>
+      <publishTime>10/20/2018 15:29:52</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.Shell.Interop.8.0.dll">
-      <publishTime>11/16/2018 10:44:55</publishTime>
+      <publishTime>10/20/2018 15:29:52</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.Shell.Interop.dll">
-      <publishTime>11/16/2018 10:44:55</publishTime>
+      <publishTime>10/20/2018 15:29:52</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.TextManager.Interop.8.0.dll">
-      <publishTime>11/16/2018 10:44:55</publishTime>
+      <publishTime>10/20/2018 15:29:52</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.TextManager.Interop.dll">
-      <publishTime>11/16/2018 10:44:55</publishTime>
+      <publishTime>10/20/2018 15:29:52</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>02/26/2019 11:16:35</publishTime>
@@ -344,10 +344,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2019 11:16:35</publishTime>
     </File>
     <File Include="bin/siteSPPP.dll">
-      <publishTime>02/28/2019 14:22:36</publishTime>
+      <publishTime>03/12/2019 12:30:04</publishTime>
     </File>
     <File Include="bin/siteSPPP.pdb">
-      <publishTime>02/28/2019 14:22:36</publishTime>
+      <publishTime>03/12/2019 12:30:04</publishTime>
     </File>
     <File Include="bin/SqlServerTypes/x64/msvcr120.dll">
       <publishTime>02/26/2019 11:16:40</publishTime>
@@ -362,7 +362,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2019 11:16:40</publishTime>
     </File>
     <File Include="bin/stdole.dll">
-      <publishTime>11/16/2018 10:44:55</publishTime>
+      <publishTime>10/20/2018 15:29:52</publishTime>
     </File>
     <File Include="bin/System.Data.dll">
       <publishTime>05/11/2015 20:36:48</publishTime>
@@ -446,7 +446,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/25/2019 12:43:01</publishTime>
     </File>
     <File Include="Content/css/flexslider.css">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>01/25/2019 12:22:55</publishTime>
     </File>
     <File Include="Content/css/Login.css">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -548,13 +548,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_MAYRAMORALES.pdf">
-      <publishTime>02/07/2018 12:20:02</publishTime>
+      <publishTime>07/02/2018 12:20:02</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_MONICA FREGOSO.pdf">
       <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_OscarOrtiz.pdf">
-      <publishTime>02/07/2018 12:20:03</publishTime>
+      <publishTime>07/02/2018 12:20:03</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_VICTOR CUERVO.pdf">
       <publishTime>07/02/2018 12:20:04</publishTime>
@@ -569,7 +569,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/19/2018 12:45:30</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA CURRICULAR CP CUEVAS REC FINANC.pdf">
-      <publishTime>05/10/2018 15:38:17</publishTime>
+      <publishTime>10/05/2018 15:38:17</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA CURRICULAR CUEVAS.pdf">
       <publishTime>10/08/2018 11:29:06</publishTime>
@@ -590,10 +590,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/05/2018 15:38:20</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA_CURRICULAR_Antonio_Hernandez_Sanchez_Proyect_Estrat.pdf">
-      <publishTime>02/07/2018 12:20:03</publishTime>
+      <publishTime>07/02/2018 12:20:03</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA_CURRICULAR_CUEVAS.pdf">
-      <publishTime>07/02/2018 12:20:03</publishTime>
+      <publishTime>02/07/2018 12:20:03</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA_CURRICULAR_DAVID_GUERRERO_CASTELLoN_SPPP.pdf">
       <publishTime>07/02/2018 12:20:04</publishTime>
@@ -1760,358 +1760,358 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/03/2018 11:59:22</publishTime>
     </File>
     <File Include="Content/fonts/flexslider-icon.eot">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/fonts/flexslider-icon.svg">
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/fonts/flexslider-icon.ttf">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/fonts/flexslider-icon.woff">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/actas-2014.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/actas-2015.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/actas-2016.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/actas-2017.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/ArmCont_Contenido_contable.PNG">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/ArmCont_Contenido_presup.png">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/ArmCont_Contenido_program.png">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/bannerHEAD_1200x280.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/banner_PED-01.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/banner_PED-01.png">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/banner_PED-02.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/banner_PED-02.png">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/banner_PED_1200.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/banner_PED_1200.png">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/banner_PED_600.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/banner_PED_600.png">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/banner_principal_1200.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/banner_principal_600.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/boton_ATENCION CIUDADANA.png">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/boton_FOROS REGIONALES.png">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/boton_FOROS_TEMATICOS.png">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/boton_ped_BASES---.png">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/boton_ped_BASES.png">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/boton_ped_BUZON.png">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/boton_ped_CALENDARIO.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/boton_ped_FANPAGE.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Captura.PNG">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/06/2018 11:34:56</publishTime>
     </File>
     <File Include="Content/images/Censos/2_CE_banner_cuadrado.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>11/23/2018 10:31:30</publishTime>
     </File>
     <File Include="Content/images/Censos/Infografia_Completa_01.pdf">
       <publishTime>03/12/2018 12:42:24</publishTime>
     </File>
     <File Include="Content/images/Directorio/Antonio Hernandez Sanchez.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Arq. Angel Rodriguez.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Arq. Julio Cesar Pineda.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/ArqJulioCesarPineda.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/04/2018 14:17:07</publishTime>
     </File>
     <File Include="Content/images/Directorio/C. Clemente Ulloa Arteaga.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/C.P.A. Aida Lorena Monreal Rosales.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/C.P.A. Jose Gutierrez Quintero.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/C.P.A. Jose Gutierrez.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Cesar Humberto Sandoval.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Coordinador Cesar Rodriguez.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Dr. Felipe Javier Ruiz Rivera.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Dra. Reina Rosales Andrade_2.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Dra. Reina Rosales.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Efrain Contreras Constante.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/erik.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Froilan Medina Garcia.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/FroilanMedinaGarcia.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/04/2018 14:17:07</publishTime>
     </File>
     <File Include="Content/images/Directorio/genero.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Gilberto Nicolas.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Ing. Evencio Javier Burgara Vera.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Ing. Gerardo Aguilar Flores.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Ing. Hector Gomez.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Ing. Jorge Arellano Lopez.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Ing. Jorge Arellano.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Ing. Oscar Ortiz.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Ing. Victor Manuel  Cuervo Barrales.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Javier Zaragoza.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Juan Manuel Cuevas.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/L.C. Ana Alicia Enciso Duran.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/L.C. Ana Alicia Enciso Duran_2.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Leopoldo Dominguez.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Lic. A. Issai Jimenez Ante.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Lic. Abraham Bastida Gutierrez.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Lic. Armando Manuel Porras Fuentes_2.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Lic. David Guerrero Castellon.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Lic. Guillermo Mendez Salgado.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Lic. Jesus Antonio Ruiz.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Lic. Juan Pablo Lopez Diaz.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Lic. Juan Pablo Lopez.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Lic. Leonor Ortega Godinez.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Lic. M. Dolores Lopez Carrillo.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Lic. Mayra Janet Morales Rojo.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Lic. Monica Fregoso Frias.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Lic.David Guerrero.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Mtra. Cristina de la Rosa Coronado.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/PARA CURRICULA.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Vacante.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/Directorio/Xitle Gonzalez.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/favicon.ico">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/favicon.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/FC_acrobat-02.png">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/folder_16.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/gnay1721_1600x500.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/GobEstadoNayarit.PNG">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/04/2018 14:17:07</publishTime>
     </File>
     <File Include="Content/images/head-nay.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/icono_pdf.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/icono_ppt.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/icono_web.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/icono_word.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/icono_xls.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/icono_zip.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/icon_down_colap.gif">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/icon_down_colap.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/img01.jpg">
-      <publishTime>07/03/2018 13:26:08</publishTime>
+      <publishTime>03/07/2018 13:26:08</publishTime>
     </File>
     <File Include="Content/images/img02.jpg">
-      <publishTime>07/03/2018 13:26:08</publishTime>
+      <publishTime>03/07/2018 13:26:08</publishTime>
     </File>
     <File Include="Content/images/img03.jpg">
-      <publishTime>07/03/2018 13:26:08</publishTime>
+      <publishTime>03/07/2018 13:26:08</publishTime>
     </File>
     <File Include="Content/images/img04.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/ind_01.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/ind_02.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/ind_03.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/ind_03A.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/ind_04.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/ind_05.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/ind_abajo.gif">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/ind_eva.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/lavoz-.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/limaraba.gif">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/more-movilicon.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/nayarit.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/NAY_plan de desarrollo_20%25_1-Gobierno.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/NAY_plan de desarrollo_BannersWEB-2.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/NAY_plan-de-desarrollo_BannersWEB_468x60.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/NAY_plan-de-desarrollo_BannersWEB_728x90.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/NAY_plan-de-desarrollo_BannersWEB_970x90.jpg">
-      <publishTime>02/26/2019 11:16:37</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/organigrama_15-1-19.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>03/04/2019 11:33:52</publishTime>
     </File>
     <File Include="Content/images/organigrama_16_05_2018.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -2126,124 +2126,127 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/images/organigrama_25_Oct_18.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/organigrama_2_Oct_18.jpg">
-      <publishTime>02/10/2018 13:43:48</publishTime>
+      <publishTime>10/02/2018 13:43:48</publishTime>
     </File>
     <File Include="Content/images/organigrama_31_08_2018.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/images/organigrama_5_Oct_18.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/organigrama_8_Oct_18.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdf_gray-02.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_01.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_02.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_03.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_04.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_05.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_06.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_07.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_08.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_09.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_10.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_11.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_12.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_13.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_14.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_15.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_16.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_17.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_18.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_19.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/pdm_20.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/ped-movil600.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/ped_descargaweb.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/placeholder.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/proy_inversion_2014-03.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/proy_inversion_2015-03.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/proy_inversion_2016-03.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/proy_inversion_2017-03.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/proy_inversion_2018-03.png">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
+    </File>
+    <File Include="Content/images/proy_inversion_2019-03.png">
+      <publishTime>03/12/2019 11:47:12</publishTime>
     </File>
     <File Include="Content/images/secre1.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/secretaria-1.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/spacer.gif">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/sppp_logo.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/04/2018 14:17:07</publishTime>
     </File>
     <File Include="Content/images/thumbnail_trazos.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/images/values-bg.jpg">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/orgchart/canvas2image.js">
       <publishTime>12/05/2018 02:25:36</publishTime>
@@ -2267,7 +2270,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="Content/orgchart/orgchartDesign.css">
-      <publishTime>02/26/2019 11:16:38</publishTime>
+      <publishTime>12/06/2018 11:57:33</publishTime>
     </File>
     <File Include="Content/PagedList.css">
       <publishTime>12/03/2018 13:52:26</publishTime>
@@ -2282,7 +2285,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Controllers/HomeController.cs">
-      <publishTime>10/07/2018 12:48:49</publishTime>
+      <publishTime>07/10/2018 12:48:49</publishTime>
     </File>
     <File Include="Controllers/ManageController.cs">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -2297,13 +2300,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Controllers/V_top_noticiasController.cs">
-      <publishTime>10/07/2018 13:10:24</publishTime>
+      <publishTime>07/10/2018 13:10:24</publishTime>
     </File>
     <File Include="DatosXSDS/DatosOrganigrama.xsc">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>03/12/2018 13:52:26</publishTime>
     </File>
     <File Include="DatosXSDS/DatosOrganigrama.xss">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>03/12/2018 13:52:26</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>02/26/2019 11:16:42</publishTime>
@@ -2330,7 +2333,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2019 11:16:52</publishTime>
     </File>
     <File Include="QueryBD.sql">
-      <publishTime>02/26/2019 11:36:15</publishTime>
+      <publishTime>03/12/2019 11:49:39</publishTime>
     </File>
     <File Include="Rotativa/help-wkhtmltoimage.txt">
       <publishTime>02/26/2019 11:16:38</publishTime>
@@ -3554,19 +3557,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2019 11:16:41</publishTime>
     </File>
     <File Include="Views/ARCHIVOS1/Create.cshtml">
-      <publishTime>12/17/2018 09:46:36</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/ARCHIVOS1/Delete.cshtml">
-      <publishTime>12/17/2018 09:46:38</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/ARCHIVOS1/Details.cshtml">
-      <publishTime>12/17/2018 09:46:39</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/ARCHIVOS1/Edit.cshtml">
-      <publishTime>12/17/2018 09:46:40</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/ARCHIVOS1/Index.cshtml">
-      <publishTime>12/17/2018 09:46:41</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Capturista/AgregarFoto.cshtml">
       <publishTime>02/26/2019 11:16:41</publishTime>
@@ -3590,7 +3593,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2019 11:16:41</publishTime>
     </File>
     <File Include="Views/Capturista/EditNotTesting.cshtml">
-      <publishTime>07/11/2018 20:46:44</publishTime>
+      <publishTime>11/07/2018 20:46:44</publishTime>
     </File>
     <File Include="Views/Capturista/EliminarFoto.cshtml">
       <publishTime>02/26/2019 11:16:41</publishTime>
@@ -3620,7 +3623,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2019 11:16:41</publishTime>
     </File>
     <File Include="Views/Conocenos/MisionVision.cshtml">
-      <publishTime>03/07/2018 11:27:21</publishTime>
+      <publishTime>07/03/2018 11:27:21</publishTime>
     </File>
     <File Include="Views/Conocenos/Objetivos.cshtml">
       <publishTime>02/26/2019 11:16:41</publishTime>
@@ -3704,7 +3707,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Noticias/Details.cshtml">
-      <publishTime>10/07/2018 14:00:50</publishTime>
+      <publishTime>07/10/2018 14:00:50</publishTime>
     </File>
     <File Include="Views/Noticias/Edit.cshtml">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -3755,7 +3758,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2019 11:16:41</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>02/26/2019 11:16:41</publishTime>
+      <publishTime>03/12/2019 12:23:14</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>02/26/2019 11:16:41</publishTime>
@@ -3772,35 +3775,38 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Transparencia/InformesTrimestrales.cshtml">
       <publishTime>02/26/2019 11:16:41</publishTime>
     </File>
+    <File Include="Views/Transparencia/PortafolioInversiones.cshtml">
+      <publishTime>03/12/2019 12:18:34</publishTime>
+    </File>
     <File Include="Views/Transparencia/ProyectosInversion.cshtml">
-      <publishTime>02/26/2019 11:16:41</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/USUARIOs/Create.cshtml">
-      <publishTime>11/03/2018 21:49:26</publishTime>
+      <publishTime>03/11/2018 21:49:26</publishTime>
     </File>
     <File Include="Views/USUARIOs/Delete.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>03/12/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/USUARIOs/Details.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>03/12/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/USUARIOs/Edit.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>03/12/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/USUARIOs/Index.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>03/12/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/V_top_noticias/Create.cshtml">
-      <publishTime>01/03/2018 11:39:33</publishTime>
+      <publishTime>03/01/2018 11:39:33</publishTime>
     </File>
     <File Include="Views/V_top_noticias/Delete.cshtml">
-      <publishTime>01/03/2018 11:39:34</publishTime>
+      <publishTime>03/01/2018 11:39:34</publishTime>
     </File>
     <File Include="Views/V_top_noticias/Details.cshtml">
-      <publishTime>02/04/2018 13:58:23</publishTime>
+      <publishTime>04/02/2018 13:58:23</publishTime>
     </File>
     <File Include="Views/V_top_noticias/Edit.cshtml">
-      <publishTime>01/03/2018 11:39:36</publishTime>
+      <publishTime>03/01/2018 11:39:36</publishTime>
     </File>
     <File Include="Views/V_top_noticias/Index.cshtml">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -3812,7 +3818,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/26/2019 11:16:41</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/28/2019 13:59:29</publishTime>
+      <publishTime>03/12/2019 12:31:45</publishTime>
     </File>
     <File Include="x64/Oracle.ManagedDataAccessDTC.dll">
       <publishTime>02/26/2019 11:16:52</publishTime>
