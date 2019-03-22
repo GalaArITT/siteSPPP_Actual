@@ -48,8 +48,7 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     @Styles.Render("~/Content/estiloSitio")
 
-   
-
+ 
     <!-- Scripts
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="~/Scripts/js/jquery.min.js"></script>
@@ -76,9 +75,9 @@
                     <img src="~/Content/images/bannerHEAD_1200x280.jpg" class="img-logo" style="width: 100%" usemap="#Map" />
                 </div>
             </div>
-
         </div>
     </div>
+
     <!-- Fin Encabezado  organigrama_25_Oct_18.jpg ../../Content/images/organigrama_15-1-19.jpg-->
 
     <div class="container">
@@ -149,15 +148,19 @@
                     </li>
                 </ul>
             </div>
-
+            <br />
         </nav>
+        <a href="http://www.seplan.gob.mx/forosdemovilidad/" target="_blank">
+            <img src="../../Content/images/Foro/foro-movilidad-head2.jpg" style="width: 100%" />
+        </a>
     </div>
+    <!---baner de foros-->
+
     <div class="section" style="padding: 0px;">
         <div class="container formulario">
             <div class="row">
                 <div class="nine columns">
                     @RenderBody()
-               
                 </div>
                 <div class="three columns">
                     <div id="menulateral">
@@ -166,17 +169,26 @@
                         <label><a href="http://www.seplan.gob.mx/primerinforme/" target="_blank">Informes de Gobierno</a></label>
                         <label><a href="/Transparencia/InformesTrimestrales">Informes Trimestrales</a></label>
                         @*<label><a href="">Información financiera</a></label>*@
-                       
                         <b>Enlaces de Interés</b>
                         <label><a href="http://www.nayarit.gob.mx" target="_blank">Gobierno del Estado de Nayarit </a></label>
                         <b>Sistemas</b>
                         <label><a href="http://svo-14-93.servidoresvirtuales.mx/apex/f?p=124" target="_blank">Simon</a></label>
                     </div>
+                    <!--video de facebook-->
+                    <div>
+                        <p class="lead text-left" style="font-size: 1em; font-style: oblique; font-weight: bold;">
+                            2° Foro Regional de Consulta Ciudadana.
+                        </p>
+                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fspppnayarit%2Fvideos%2F400328434098558%2F&width=500&show_text=false&height=280&appId" 
+                            style="border:none;overflow:hidden; width:100%" 
+                            scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+                    </div>
                     <!-- BANER DE CENSOS-->
                     <div class="redes">
+                        <!-- BANER DE CENSOS-->
                         <a href="/Content/images/Censos/Infografia_Completa_01.pdf" target="_blank">
                             <img src="/Content/images/Censos/2_CE_banner_cuadrado.jpg" style="width:100%" />
-                        </a>
+                        </a>                        
                     </div>
                     <!-- termina menu -->
                     <div class="redes">
@@ -185,23 +197,13 @@
                             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hoCWP08XqYQ?rel=0" allowfullscreen></iframe>
                         </div>
                         <br />
-                        <script>
-                            (function (d, s, id) {
-                                var js, fjs = d.getElementsByTagName(s)[0];
-                                if (d.getElementById(id)) return;
-                                js = d.createElement(s); js.id = id;
-                                js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11&appId=272289562863753';
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }(document, 'script', 'facebook-jssdk'));</script>
-                        <div class="fb-page" data-href="https://www.facebook.com/spppnayarit/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2"></script>
+                        <div class="fb-page" data-href="https://www.facebook.com/spppnayarit/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                             <blockquote cite="https://www.facebook.com/spppnayarit/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/spppnayarit/">Secretaría de Planeación, Programación y Presupuesto de Nayarit</a></blockquote>
                         </div>
-
                     </div>
-
                 </div>
                 <!-- columns -->
-
             </div>
 
         </div>

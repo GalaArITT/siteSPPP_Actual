@@ -829,6 +829,8 @@
     <Content Include="Content\images\favicon.png" />
     <Content Include="Content\images\FC_acrobat-02.png" />
     <Content Include="Content\images\folder_16.png" />
+    <Content Include="Content\images\Foro\foro-movilidad-head.jpg" />
+    <Content Include="Content\images\Foro\foro-movilidad-head2.jpg" />
     <Content Include="Content\images\gnay1721_1600x500.png" />
     <Content Include="Content\images\GobEstadoNayarit.PNG" />
     <Content Include="Content\images\head-nay.png" />
