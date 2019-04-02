@@ -368,9 +368,13 @@ ALTER TABLE NOTICIAS ALTER COLUMN TITULO nvarchar(MAX) COLLATE SQL_Latin1_Genera
 	conexion: sqs.nayarit.gob.mx
 usuario=usepladb 
 PASSWORD='57wrTlp'
-
 db name: sitio_sepla
 	*/
+
+	select tp.TIPOPLANTILLA, a.NOMBREARCHIVO, a.ARCHIVO
+from archivos a, TIPO_PLANTILLA tp
+where 
+a.IDTIPO = tp.IDTIPO 
 
 	SELECT * FROM TIPO_PLANTILLA
 	update TIPO_PLANTILLA
@@ -433,3 +437,5 @@ WHERE IDNOTICIA = 28
 
 
 select * from TIPO_PLANTILLA
+select * from archivos
+
