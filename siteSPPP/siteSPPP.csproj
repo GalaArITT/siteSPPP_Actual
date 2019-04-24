@@ -831,6 +831,8 @@
     <Content Include="Content\images\folder_16.png" />
     <Content Include="Content\images\Foro\foro-movilidad-head.jpg" />
     <Content Include="Content\images\Foro\foro-movilidad-head2.jpg" />
+    <Content Include="Content\images\Foro\Foro_EjercicioAbierto\BANNER.jpg" />
+    <Content Include="Content\images\Foro\Foro_EjercicioAbierto\Foro_Nuevo.jpg" />
     <Content Include="Content\images\gnay1721_1600x500.png" />
     <Content Include="Content\images\GobEstadoNayarit.PNG" />
     <Content Include="Content\images\head-nay.png" />
@@ -1278,6 +1280,7 @@
     </Content>
     <Content Include="App_Browsers\qt.browser" />
     <Content Include="Content\images\Censos\Infografia_Completa_01.pdf" />
+    <Content Include="Content\images\Foro\Foro_EjercicioAbierto\CONVOCATORIA.pdf" />
     <None Include="Properties\PublishProfiles\localftp.pubxml" />
     <None Include="Properties\PublishProfiles\seplan_ftp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
