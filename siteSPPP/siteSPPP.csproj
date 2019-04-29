@@ -1281,6 +1281,17 @@
     <Content Include="App_Browsers\qt.browser" />
     <Content Include="Content\images\Censos\Infografia_Completa_01.pdf" />
     <Content Include="Content\images\Foro\Foro_EjercicioAbierto\CONVOCATORIA.pdf" />
+    <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\COPLADENAY\SE\1 SE Copladenay.pdf" />
+    <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\COPLADENAY\SO\1 SO COPLADENAY.pdf" />
+    <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\COPLADENAY\SO\2 SO COPLADENAY.pdf" />
+    <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\COPLADENAY\SO\3 SO COPLADENAY.pdf" />
+    <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\COPLADENAY\SO\4 SO COPLADENAY.pdf" />
+    <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\SPPP\SE\1 SE SPPP.pdf" />
+    <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\SPPP\SO\1 SO SPPP.pdf" />
+    <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\SPPP\SO\2 SO SPPP.pdf" />
+    <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\SPPP\SO\3 SO SPPP.pdf" />
+    <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\SPPP\SO\4 SO SPPP.pdf" />
+    <Content Include="Content\files\descargas\transparencia\PAE2019.pdf" />
     <None Include="Properties\PublishProfiles\localftp.pubxml" />
     <None Include="Properties\PublishProfiles\seplan_ftp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -1420,6 +1431,8 @@
     <Content Include="Views\Administrador\EliminarFotoAdmin.cshtml" />
     <Content Include="Views\Administrador\CambiarOrganigrama.cshtml" />
     <Content Include="Views\Transparencia\PortafolioInversiones.cshtml" />
+    <Content Include="Views\Transparencia\Macroindicadores.cshtml" />
+    <Content Include="Views\Transparencia\MacroindicadoresInversion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

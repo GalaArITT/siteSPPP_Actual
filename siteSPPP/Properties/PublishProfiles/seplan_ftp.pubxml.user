@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuR0/bsHGGUaOZ6eeo3l1FgAAAAACAAAAAAADZgAAwAAAABAAAACSxlCfhBgLVInwkDeTLzOYAAAAAASAAACgAAAAEAAAAAJhyrIsOF4V//jMb3Cy/FEQAAAAsbN1aYdFCSSfltpys3Ck7xQAAABRP3nflCU6GxKUq7/mJKC1edOIvA==</EncryptedPassword>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuR0/bsHGGUaOZ6eeo3l1FgAAAAACAAAAAAADZgAAwAAAABAAAAC9jw0fwoz9FFTGmqqadJKXAAAAAASAAACgAAAAEAAAAGgsa/lckKaAi2xXQjwFHmUQAAAARdpYHcXQdMRb9Dd0FxeCURQAAAByq2wuAGlTun67G3TK7pHBqX4e4w==</EncryptedPassword>
     <_PublishTargetUrl>ftp://201.161.95.5/</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
@@ -344,10 +344,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:01</publishTime>
     </File>
     <File Include="bin/siteSPPP.dll">
-      <publishTime>04/24/2019 11:58:14</publishTime>
+      <publishTime>04/29/2019 14:14:07</publishTime>
     </File>
     <File Include="bin/siteSPPP.pdb">
-      <publishTime>04/24/2019 11:58:14</publishTime>
+      <publishTime>04/29/2019 14:14:07</publishTime>
     </File>
     <File Include="bin/SqlServerTypes/x64/msvcr120.dll">
       <publishTime>03/20/2019 09:48:04</publishTime>
@@ -1405,6 +1405,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/files/descargas/transparencia/PAE 2018.pdf">
       <publishTime>05/18/2018 13:19:02</publishTime>
     </File>
+    <File Include="Content/files/descargas/transparencia/PAE2019.pdf">
+      <publishTime>04/26/2019 11:07:27</publishTime>
+    </File>
     <File Include="Content/files/descargas/transparencia/PROGRAMA ANUAL DE EVALUACION 2013.pdf">
       <publishTime>03/07/2018 13:39:52</publishTime>
     </File>
@@ -1494,6 +1497,36 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/files/PED_NAYARIT_2017-2021.pdf">
       <publishTime>09/04/2018 12:31:18</publishTime>
+    </File>
+    <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/COPLADENAY/SE/1 SE Copladenay.pdf">
+      <publishTime>04/16/2019 13:18:17</publishTime>
+    </File>
+    <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/COPLADENAY/SO/1 SO COPLADENAY.pdf">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/COPLADENAY/SO/2 SO COPLADENAY.pdf">
+      <publishTime>04/16/2019 13:23:30</publishTime>
+    </File>
+    <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/COPLADENAY/SO/3 SO COPLADENAY.pdf">
+      <publishTime>04/16/2019 13:36:28</publishTime>
+    </File>
+    <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/COPLADENAY/SO/4 SO COPLADENAY.pdf">
+      <publishTime>04/16/2019 13:40:17</publishTime>
+    </File>
+    <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/SPPP/SE/1 SE SPPP.pdf">
+      <publishTime>04/16/2019 13:21:37</publishTime>
+    </File>
+    <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/SPPP/SO/1 SO SPPP.pdf">
+      <publishTime>04/16/2019 13:33:03</publishTime>
+    </File>
+    <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/SPPP/SO/2 SO SPPP.pdf">
+      <publishTime>04/16/2019 13:30:45</publishTime>
+    </File>
+    <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/SPPP/SO/3 SO SPPP.pdf">
+      <publishTime>04/16/2019 13:34:54</publishTime>
+    </File>
+    <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/SPPP/SO/4 SO SPPP.pdf">
+      <publishTime>04/16/2019 13:39:06</publishTime>
     </File>
     <File Include="Content/files/transparencia/ASM_2016/FASSA/1.- POSICIONAMIENTO INSTITUCIONAL.pdf">
       <publishTime>08/20/2018 09:44:56</publishTime>
@@ -2348,7 +2381,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:24</publishTime>
     </File>
     <File Include="QueryBD.sql">
-      <publishTime>02/04/2019 12:21:03</publishTime>
+      <publishTime>04/29/2019 12:00:43</publishTime>
     </File>
     <File Include="Rotativa/help-wkhtmltoimage.txt">
       <publishTime>03/20/2019 09:48:02</publishTime>
@@ -3758,7 +3791,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:07</publishTime>
     </File>
     <File Include="Views/Planeacion/SistemaDesempeño.cshtml">
-      <publishTime>03/20/2019 09:48:07</publishTime>
+      <publishTime>04/26/2019 11:10:01</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>03/20/2019 09:48:07</publishTime>
@@ -3773,13 +3806,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:07</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>04/24/2019 11:44:16</publishTime>
+      <publishTime>04/29/2019 14:12:49</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>03/20/2019 09:48:07</publishTime>
     </File>
     <File Include="Views/Transparencia/ActasComite.cshtml">
-      <publishTime>03/20/2019 09:48:07</publishTime>
+      <publishTime>04/25/2019 09:37:40</publishTime>
     </File>
     <File Include="Views/Transparencia/AcuerdosNormatividad.cshtml">
       <publishTime>03/20/2019 09:48:07</publishTime>
@@ -3790,8 +3823,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Transparencia/InformesTrimestrales.cshtml">
       <publishTime>03/20/2019 09:48:07</publishTime>
     </File>
+    <File Include="Views/Transparencia/Macroindicadores.cshtml">
+      <publishTime>04/26/2019 11:53:05</publishTime>
+    </File>
+    <File Include="Views/Transparencia/MacroindicadoresInversion.cshtml">
+      <publishTime>04/29/2019 12:11:58</publishTime>
+    </File>
     <File Include="Views/Transparencia/PortafolioInversiones.cshtml">
-      <publishTime>03/20/2019 09:48:07</publishTime>
+      <publishTime>04/29/2019 12:10:43</publishTime>
     </File>
     <File Include="Views/Transparencia/ProyectosInversion.cshtml">
       <publishTime>02/04/2019 12:08:12</publishTime>
