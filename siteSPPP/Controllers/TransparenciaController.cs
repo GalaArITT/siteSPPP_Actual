@@ -33,7 +33,7 @@ namespace siteSPPP.Controllers
         }
         public ActionResult PortafolioInversiones()
         {
-            return View(db.ARCHIVOS.Where(s => s.IDTIPO == 14));
+            return View(db.ARCHIVOS.Where(s => s.IDTIPO == 14 || s.IDTIPO == 16));
         }
         public ActionResult MacroindicadoresInversion()
         {

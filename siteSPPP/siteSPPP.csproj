@@ -39,6 +39,7 @@
       <Objects>
       </Objects>
     </PublishDatabaseSettings>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -47,6 +48,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -849,6 +851,7 @@
     <Content Include="Content\images\ind_02.jpg" />
     <Content Include="Content\images\ind_03.jpg" />
     <Content Include="Content\images\ind_03A.jpg" />
+    <Content Include="Content\images\ind_03_2019.jpg" />
     <Content Include="Content\images\ind_04.jpg" />
     <Content Include="Content\images\ind_05.jpg" />
     <Content Include="Content\images\ind_abajo.gif" />
@@ -1292,6 +1295,7 @@
     <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\SPPP\SO\3 SO SPPP.pdf" />
     <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\SPPP\SO\4 SO SPPP.pdf" />
     <Content Include="Content\files\descargas\transparencia\PAE2019.pdf" />
+    <Content Include="Content\files\descargas\indicadores\Instructivo Metodológico %28SIID%29.pdf" />
     <None Include="Properties\PublishProfiles\localftp.pubxml" />
     <None Include="Properties\PublishProfiles\seplan_ftp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
