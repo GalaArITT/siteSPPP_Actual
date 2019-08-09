@@ -1385,3 +1385,4 @@ C:\Users\ogalaviz\source\repos\siteSPPP_Actual\siteSPPP\obj\Debug\siteSPPP.cspro
 C:\Users\ogalaviz\source\repos\siteSPPP_Actual\siteSPPP\obj\Debug\siteSPPP.csproj.CopyComplete
 C:\Users\ogalaviz\source\repos\siteSPPP_Actual\siteSPPP\obj\Debug\siteSPPP.dll
 C:\Users\ogalaviz\source\repos\siteSPPP_Actual\siteSPPP\obj\Debug\siteSPPP.pdb
+C:\Users\ogalaviz\source\repos\siteSPPP_Actual\siteSPPP\obj\Debug\siteSPPP.csprojAssemblyReference.cache

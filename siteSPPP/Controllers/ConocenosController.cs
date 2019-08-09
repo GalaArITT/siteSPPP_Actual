@@ -69,7 +69,7 @@ namespace siteSPPP.Controllers
 
         public ActionResult verOrganigrama()
         {
-            return View(db.ORGANIGRAMA.Where(s=>s.ESTATUS=="A").OrderByDescending(s=>s.IDORGANIGRAMA).Take(1));
+            return View(db.ORGANIGRAMA.Where(s=>s.ESTATUS=="A").OrderByDescending(s=>s.IDORGANIGRAMA).Take(1));  
         }
         //MOSTRAR FOTOS ORGANIGRAMAS
         public ActionResult MostrarFotoOrg(int id)
@@ -86,6 +86,7 @@ namespace siteSPPP.Controllers
         }
         public byte[] TraerFotoOrg(int id)
         {
+            //instancia a la tabla
             ORGANIGRAMA oRGANIGRAMA = db.ORGANIGRAMA.Find(id);
             byte[] cover = oRGANIGRAMA.IMAGEN;
             return cover;

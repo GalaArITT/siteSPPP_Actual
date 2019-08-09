@@ -3,7 +3,7 @@ go
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2008                    */
 /* Created on:     07/11/2018 11:32:10 a. m.                    */
-/*==============================================================*/
+/*==============================================================
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
    where r.fkeyid = object_id('BALAZO') and o.name = 'FK_BALAZO_REFERENCE_NOTICIAS')
@@ -344,7 +344,7 @@ alter table ORGANIGRAMA
       references USUARIO (IDUSUARIO)
 
 
-
+*/
 
 
 
@@ -367,7 +367,7 @@ ALTER TABLE NOTICIAS ALTER COLUMN TITULO nvarchar(MAX) COLLATE SQL_Latin1_Genera
 	I= Inactivo
 		conexion:
 	
-	conexion: sqs.nayarit.gob.mx
+conexion: sqs.nayarit.gob.mx
 usuario=usepladb 
 PASSWORD='57wrTlp'
 db name: sitio_sepla
@@ -444,3 +444,5 @@ select * from archivos
 UPDATE ARCHIVOS
 SET IDTIPO = 15
 WHERE IDARCHIVO = 46 
+
+

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -14,7 +15,7 @@ namespace siteSPPP.Controllers
         // GET: Planeacion
         public ActionResult Index()
         {
-            return View(db.ARCHIVOS.ToList());
+            return new HttpStatusCodeResult(HttpStatusCode.Forbidden); //View(db.ARCHIVOS.ToList());
         }
         public ActionResult pdm()
         {

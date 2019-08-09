@@ -7,7 +7,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuR0/bsHGGUaOZ6eeo3l1FgAAAAACAAAAAAADZgAAwAAAABAAAAC9jw0fwoz9FFTGmqqadJKXAAAAAASAAACgAAAAEAAAAGgsa/lckKaAi2xXQjwFHmUQAAAARdpYHcXQdMRb9Dd0FxeCURQAAAByq2wuAGlTun67G3TK7pHBqX4e4w==</EncryptedPassword>
-    <_PublishTargetUrl>ftp://201.161.95.5/</_PublishTargetUrl>
+    <_PublishTargetUrl>ftp://201.161.95.10/</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
@@ -20,7 +20,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:47:59</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
-      <publishTime>03/20/2019 09:47:59</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
       <publishTime>03/20/2019 09:48:02</publishTime>
@@ -344,10 +344,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:01</publishTime>
     </File>
     <File Include="bin/siteSPPP.dll">
-      <publishTime>05/07/2019 11:45:59</publishTime>
+      <publishTime>07/11/2019 14:35:34</publishTime>
     </File>
     <File Include="bin/siteSPPP.pdb">
-      <publishTime>05/03/2019 13:19:18</publishTime>
+      <publishTime>03/05/2019 13:19:18</publishTime>
     </File>
     <File Include="bin/SqlServerTypes/x64/msvcr120.dll">
       <publishTime>03/20/2019 09:48:04</publishTime>
@@ -356,7 +356,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:04</publishTime>
     </File>
     <File Include="bin/SqlServerTypes/x86/msvcr120.dll">
-      <publishTime>03/20/2019 09:48:04</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/SqlServerTypes/x86/SqlServerSpatial140.dll">
       <publishTime>03/20/2019 09:48:04</publishTime>
@@ -464,406 +464,406 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/21/2018 14:09:58</publishTime>
     </File>
     <File Include="Content/files/curriculum/ARMANDO_MANUEL_PORRAS_FUENTES_Unidad_Inversiones.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_ABRAHAM BASTIDA.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_AbrahamBastida.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_AIDA MONREAL.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_ANA ENCISO.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_Antonio Hernandez.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_ARMANDO PORRAS.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_ARQ ADRIAN RODRIGUEZ.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_C. JAVIER ZARAGOZA GOMEZ.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_CLEMENTEULLOA.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_CRISTINA DE LA ROSA.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_DOLORES LOPEZ.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_EfrainContreras.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_EvencioBurgara.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_FelipeRuiz.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_FroilanMedina.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_GERARDO AGUILAR.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_ING.GUILLERMOMENDEZ.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_ING.HECTORGOMEZ.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_IssaiJimenez.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_JORGE ARELLANO.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_JoseGutierrez.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_JUANPABLOLOPEZ.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_JulioPineda.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_Leonor Ortega.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_LEOPOLDO DOMINGUEZ.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_LIC. JESUS BALLESTEROS.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_LIC.DAVIDGUERRERO.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_MAYRAMORALES.pdf">
-      <publishTime>02/07/2018 12:20:02</publishTime>
+      <publishTime>07/02/2018 12:20:02</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_MONICA FREGOSO.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_OscarOrtiz.pdf">
-      <publishTime>02/07/2018 12:20:03</publishTime>
+      <publishTime>07/02/2018 12:20:03</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_VICTOR CUERVO.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FC_XITLE GONZALEZ.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA CURRICULAR Antonio Hernandez DIR PROGRAMAC.pdf">
-      <publishTime>05/10/2018 15:38:18</publishTime>
+      <publishTime>10/05/2018 15:38:18</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA CURRICULAR CESAR HUMBERTO.pdf">
       <publishTime>09/19/2018 12:45:30</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA CURRICULAR CP CUEVAS REC FINANC.pdf">
-      <publishTime>05/10/2018 15:38:17</publishTime>
+      <publishTime>10/05/2018 15:38:17</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA CURRICULAR CUEVAS.pdf">
-      <publishTime>08/10/2018 11:29:06</publishTime>
+      <publishTime>10/08/2018 11:29:06</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA CURRICULAR ING ERICK DELGADO.pdf">
-      <publishTime>05/10/2018 15:38:18</publishTime>
+      <publishTime>10/05/2018 15:38:18</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA CURRICULAR ING ORTIZ SUBSECRETARIO.pdf">
-      <publishTime>05/10/2018 15:38:18</publishTime>
+      <publishTime>10/05/2018 15:38:18</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA CURRICULAR LIC CESAR RODRIGUEZ.pdf">
-      <publishTime>05/10/2018 15:38:18</publishTime>
+      <publishTime>10/05/2018 15:38:18</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA CURRICULAR LIC GENARO ARCE.pdf">
-      <publishTime>05/10/2018 15:38:20</publishTime>
+      <publishTime>10/05/2018 15:38:20</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA CURRICULAR MAYRA MORALES  SIESPLAN.pdf">
-      <publishTime>05/10/2018 15:38:20</publishTime>
+      <publishTime>10/05/2018 15:38:20</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA_CURRICULAR_Antonio_Hernandez_Sanchez_Proyect_Estrat.pdf">
-      <publishTime>02/07/2018 12:20:03</publishTime>
-    </File>
-    <File Include="Content/files/curriculum/FICHA_CURRICULAR_CUEVAS.pdf">
       <publishTime>07/02/2018 12:20:03</publishTime>
     </File>
+    <File Include="Content/files/curriculum/FICHA_CURRICULAR_CUEVAS.pdf">
+      <publishTime>02/07/2018 12:20:03</publishTime>
+    </File>
     <File Include="Content/files/curriculum/FICHA_CURRICULAR_DAVID_GUERRERO_CASTELLoN_SPPP.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA_CURRICULAR_JOSE_GUTIeRREZ_SPPP.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA_CURRICULAR_JUAN_PABLO_LOPEZ_DIAZ.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA_CURRICULAR_LEOPOLDO_DOMINGUEZ_GUTIERREZ.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA_CURRICULAR_MENDEZ_fomento_inversion.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/curriculum/FICHA_CURRICULAR_REINA_ROSALES_SPPP.pdf">
-      <publishTime>02/07/2018 12:20:04</publishTime>
+      <publishTime>07/02/2018 12:20:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/1 ACTA SO_SPPP ENERO 2014.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/10 ACTA SO_OCTUBRE 2014.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/11 ACTA SPPP NOVIEMBRE 2014.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/12 SEPLAN ACTA DICIEMBRE 2014.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/2 ACTA SO_SPPP FEBRERO 14 SPPP.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/3 ACTA SO_MARZO-14 SPPP.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/3.3 ACTA SESION EXTRAORDINARIA MARZO 2014.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/4 ACTA SO_SPPP ABRIL 2014 SPPP.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/5 SESION ORDINARIA MAYO 2014 SPPP.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/6 ACTA SO _SPPP JUNIO 2014.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/7 ACTA SPPP SESION DE JULIO 2014.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/8 ACTA SO_ SPPP AGOSTO 2014.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/9 ACTA SPPP_SEPTIEMBRE 2014.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2014/ACTAS SEPLA OCTUBRE 2014.pdf">
-      <publishTime>05/07/2018 11:16:00</publishTime>
+      <publishTime>07/05/2018 11:16:00</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2015/01 ACTA SO_CI_SPPP ENERO 2015.pdf">
-      <publishTime>05/07/2018 11:16:14</publishTime>
+      <publishTime>07/05/2018 11:16:14</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2015/02 ACTA SO_CI_SPPP FEBRERO 2015.pdf">
-      <publishTime>05/07/2018 11:16:14</publishTime>
+      <publishTime>07/05/2018 11:16:14</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2015/03 ACTA SO_CI_SPPP MARZO 2015.pdf">
-      <publishTime>05/07/2018 11:16:14</publishTime>
+      <publishTime>07/05/2018 11:16:14</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2015/04 ACTA SO_CI_SPPP ABRIL  2015.pdf">
-      <publishTime>05/07/2018 11:16:14</publishTime>
+      <publishTime>07/05/2018 11:16:14</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2015/05 ACTA SO_CI_SPPP MAYO 2015.pdf">
-      <publishTime>05/07/2018 11:16:14</publishTime>
+      <publishTime>07/05/2018 11:16:14</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2015/06 ACTA SO_CI_SPPP JUNIO 2015.pdf">
-      <publishTime>05/07/2018 11:16:14</publishTime>
+      <publishTime>07/05/2018 11:16:14</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2015/07 ACTA SO_CI_SPPP JULIO 2015.pdf">
-      <publishTime>05/07/2018 11:16:14</publishTime>
+      <publishTime>07/05/2018 11:16:14</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2015/08 ACTA SO_CI_SPPP AGOSTO 2015.pdf">
-      <publishTime>05/07/2018 11:16:14</publishTime>
+      <publishTime>07/05/2018 11:16:14</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2015/09 ACTA SO_CI_SPPP SEPTIEMBRE 2015.pdf">
-      <publishTime>05/07/2018 11:16:14</publishTime>
+      <publishTime>07/05/2018 11:16:14</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2015/ACTA_SO_CI_SPPP-DICIEMBRE-2015.pdf">
-      <publishTime>05/07/2018 11:16:14</publishTime>
+      <publishTime>07/05/2018 11:16:14</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2015/ACTA_SO_CI_SPPP-NOVIEMBRE-2015.pdf">
-      <publishTime>05/07/2018 11:16:14</publishTime>
+      <publishTime>07/05/2018 11:16:14</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2015/ACTA_SO_CI_SPPP-OCTUBRE-2015.pdf">
-      <publishTime>05/07/2018 11:16:14</publishTime>
+      <publishTime>07/05/2018 11:16:14</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2016/2017-01-25 %281%29febrero.pdf">
-      <publishTime>05/07/2018 11:16:28</publishTime>
+      <publishTime>07/05/2018 11:16:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2016/2017-01-26 %281%29marzo.pdf">
-      <publishTime>05/07/2018 11:16:28</publishTime>
+      <publishTime>07/05/2018 11:16:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2016/2017-01-26 %2810%29octubre.pdf">
-      <publishTime>05/07/2018 11:16:28</publishTime>
+      <publishTime>07/05/2018 11:16:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2016/2017-01-26 %2811%29noviembre.pdf">
-      <publishTime>05/07/2018 11:16:28</publishTime>
+      <publishTime>07/05/2018 11:16:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2016/2017-01-26 %2812%29diciembre.pdf">
-      <publishTime>05/07/2018 11:16:28</publishTime>
+      <publishTime>07/05/2018 11:16:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2016/2017-01-26 %283%29junio.pdf">
-      <publishTime>05/07/2018 11:16:28</publishTime>
+      <publishTime>07/05/2018 11:16:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2016/2017-01-26 %284%29julio.pdf">
-      <publishTime>05/07/2018 11:16:28</publishTime>
+      <publishTime>07/05/2018 11:16:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2016/2017-01-26 %285%29agosto.pdf">
-      <publishTime>05/07/2018 11:16:28</publishTime>
+      <publishTime>07/05/2018 11:16:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2016/2017-01-26 %286%29septiembre.pdf">
-      <publishTime>05/07/2018 11:16:28</publishTime>
+      <publishTime>07/05/2018 11:16:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2016/acta enero 2016 sppp.pdf">
-      <publishTime>05/07/2018 11:16:28</publishTime>
+      <publishTime>07/05/2018 11:16:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2016/actaabrilsppp.pdf">
-      <publishTime>05/07/2018 11:16:28</publishTime>
+      <publishTime>07/05/2018 11:16:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2016/EXTRA09SPPP.pdf">
-      <publishTime>05/07/2018 11:16:28</publishTime>
+      <publishTime>07/05/2018 11:16:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2016/MAYO ACTA 05 SPPP 2016.pdf">
-      <publishTime>05/07/2018 11:16:28</publishTime>
+      <publishTime>07/05/2018 11:16:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/1 SE enero 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/1 SO SPPP ENERO 2017.pdf">
-      <publishTime>05/07/2018 13:22:04</publishTime>
+      <publishTime>07/05/2018 13:22:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/10 SE agosto 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/10 SO OCT 2017.pdf">
-      <publishTime>05/07/2018 13:22:04</publishTime>
+      <publishTime>07/05/2018 13:22:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/11 SE agosto 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/11 SO NOV 2017.pdf">
-      <publishTime>05/07/2018 13:22:04</publishTime>
+      <publishTime>07/05/2018 13:22:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/12 SE agosto 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/12 SESION ORDINARIA SPPP DIC 2017.pdf">
       <publishTime>07/27/2018 14:40:36</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/12 SO DIC 2017.pdf">
-      <publishTime>05/07/2018 13:22:04</publishTime>
+      <publishTime>07/05/2018 13:22:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/13 SE agosto 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/14 SE septiembre 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/15 SE septiembre 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/16 SE septiembre 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/17 SE octubre 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/18 SE noviembre 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/19 SE noviembre  2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/2 SE febrero 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/2 SO SPPP FEBRERO 2017.pdf">
-      <publishTime>05/07/2018 13:22:04</publishTime>
+      <publishTime>07/05/2018 13:22:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/20 SE noviembre 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/21 SE noviembre 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/22 SE noviembre 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/3 SE marzo 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/3 SO SPPP MARZO 2017.pdf">
-      <publishTime>05/07/2018 13:22:04</publishTime>
+      <publishTime>07/05/2018 13:22:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/4 SE abril 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/4 SO SPPP ABRIL 2017.pdf">
-      <publishTime>05/07/2018 13:22:04</publishTime>
+      <publishTime>07/05/2018 13:22:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/5 SE mayo 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/5 SO SPPP MAYO 2017.pdf">
-      <publishTime>05/07/2018 13:22:04</publishTime>
+      <publishTime>07/05/2018 13:22:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/6 SE mayo 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/6 SO SPPP JUNIO 2017.pdf">
-      <publishTime>05/07/2018 13:22:04</publishTime>
+      <publishTime>07/05/2018 13:22:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/7 SE mayo 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/7 SO SPPP JULIO 2017.pdf">
-      <publishTime>05/07/2018 13:22:04</publishTime>
+      <publishTime>07/05/2018 13:22:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/8 SE julio 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/8 SO SPPP AGOSTO 2017.pdf">
-      <publishTime>05/07/2018 13:22:04</publishTime>
+      <publishTime>07/05/2018 13:22:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/9 SE julio 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/9 SO SPPP SEP 2017.pdf">
-      <publishTime>05/07/2018 13:22:04</publishTime>
+      <publishTime>07/05/2018 13:22:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/ACTA CUARTA SESION EXTRAORDINARIA MES ABRIL 2017 SPPP.pdf">
-      <publishTime>05/07/2018 11:16:56</publishTime>
+      <publishTime>07/05/2018 11:16:56</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/ACTA DE INSTALACION OCT 2017.pdf">
-      <publishTime>05/07/2018 13:22:04</publishTime>
+      <publishTime>07/05/2018 13:22:04</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/ACTA PRIMERA SESION EXTRAORDINARIA ENERO 2017 SPPP.pdf">
-      <publishTime>05/07/2018 11:16:56</publishTime>
+      <publishTime>07/05/2018 11:16:56</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/ACTA PRIMERA SESION ORDINARIA ENERO 2017 SPPP.pdf">
-      <publishTime>05/07/2018 11:16:56</publishTime>
+      <publishTime>07/05/2018 11:16:56</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/ACTA SEGUNDA SESION EXTRAORDINARIA FEBRERO 2017 SPPP.pdf">
-      <publishTime>05/07/2018 11:16:56</publishTime>
+      <publishTime>07/05/2018 11:16:56</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/ACTA SEGUNDA SESION ORDINARIA FEBRERO 2017 SPPP.pdf">
-      <publishTime>05/07/2018 11:16:56</publishTime>
+      <publishTime>07/05/2018 11:16:56</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/ACTA SESION EXTRAORDINARIA FEBRERO 2017 SPPP.pdf">
-      <publishTime>05/07/2018 11:16:56</publishTime>
+      <publishTime>07/05/2018 11:16:56</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/ACTA TERCERA SESION EXTRAORDINARIA MARZO 2017 SPPP.pdf">
-      <publishTime>05/07/2018 11:16:56</publishTime>
+      <publishTime>07/05/2018 11:16:56</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/ACTA TERCERA SESION ORDINARIA MARZO 2017 SPPP..pdf">
-      <publishTime>05/07/2018 11:16:56</publishTime>
+      <publishTime>07/05/2018 11:16:56</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2017/SE febrero 2017.pdf">
-      <publishTime>05/07/2018 13:22:16</publishTime>
+      <publishTime>07/05/2018 13:22:16</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2018/SE/1 SE.pdf">
       <publishTime>07/30/2018 10:32:10</publishTime>
@@ -908,22 +908,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2018 11:18:06</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2018/SE/SE 15.pdf">
-      <publishTime>11/10/2018 13:35:28</publishTime>
+      <publishTime>10/11/2018 13:35:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2018/SE/SE 16.pdf">
-      <publishTime>11/10/2018 13:35:28</publishTime>
+      <publishTime>10/11/2018 13:35:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2018/SE/SE 17.pdf">
-      <publishTime>11/10/2018 13:35:28</publishTime>
+      <publishTime>10/11/2018 13:35:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2018/SE/SE 18.pdf">
-      <publishTime>11/10/2018 13:35:28</publishTime>
+      <publishTime>10/11/2018 13:35:28</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2018/SO/1 SO ENERO.pdf">
       <publishTime>07/27/2018 14:51:30</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2018/SO/10 SO.pdf">
-      <publishTime>11/10/2018 13:35:54</publishTime>
+      <publishTime>10/11/2018 13:35:54</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2018/SO/11 SO SPPP.pdf">
       <publishTime>01/25/2019 10:18:36</publishTime>
@@ -950,37 +950,37 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/27/2018 19:10:18</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2018/SO/8 SO.pdf">
-      <publishTime>11/10/2018 13:35:54</publishTime>
+      <publishTime>10/11/2018 13:35:54</publishTime>
     </File>
     <File Include="Content/files/descargas/actas_juridico/2018/SO/9 SO.pdf">
-      <publishTime>11/10/2018 13:35:54</publishTime>
+      <publishTime>10/11/2018 13:35:54</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos/1. LINEAMIENTOS determinacion de req de inf de mecanismo de planeacion.pdf">
-      <publishTime>03/07/2018 13:26:50</publishTime>
+      <publishTime>07/03/2018 13:26:50</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos/2. LINEAMIENTOS elaboracion de analisis costo-beneficio.pdf">
-      <publishTime>03/07/2018 13:26:50</publishTime>
+      <publishTime>07/03/2018 13:26:50</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos/3. LINEAMIENTOS para registro en cartera de proyectos.pdf">
-      <publishTime>03/07/2018 13:26:50</publishTime>
+      <publishTime>07/03/2018 13:26:50</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos/4. LINEAMIENTOS seguimiento de la rentabilidad de los programas.pdf">
-      <publishTime>03/07/2018 13:26:50</publishTime>
+      <publishTime>07/03/2018 13:26:50</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos/5. LINEAMIENTOS dictamenes de programas y proyectos de inversion.pdf">
-      <publishTime>03/07/2018 13:26:50</publishTime>
+      <publishTime>07/03/2018 13:26:50</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos/CERTIFICADO DE FACTIBILIDAD %28INFR. EN SALUD%29.pdf">
-      <publishTime>03/07/2018 13:26:50</publishTime>
+      <publishTime>07/03/2018 13:26:50</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos/GLOSARIO DE TERMINOS.doc">
-      <publishTime>03/07/2018 13:26:50</publishTime>
+      <publishTime>07/03/2018 13:26:50</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos/MODELO DE FICHA TECNICA.xlsx">
-      <publishTime>03/07/2018 13:26:50</publishTime>
+      <publishTime>07/03/2018 13:26:50</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos/PEF 2012 %28VER ARTICULOS 15 Y 31%29.pdf">
-      <publishTime>03/07/2018 13:26:52</publishTime>
+      <publishTime>07/03/2018 13:26:52</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/Avance 2do Trimestre portal 2018.pdf">
       <publishTime>07/27/2018 13:32:50</publishTime>
@@ -989,277 +989,277 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/16/2019 12:57:54</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/AVANCES 1ER TRIM 2017.pdf">
-      <publishTime>04/07/2018 12:50:42</publishTime>
+      <publishTime>07/04/2018 12:50:42</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/Avances 1er Trimestre FISE  2018.pdf">
-      <publishTime>04/07/2018 12:50:42</publishTime>
+      <publishTime>07/04/2018 12:50:42</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/Avances 1er Trimestre FISE 2018.pdf">
-      <publishTime>04/07/2018 12:50:42</publishTime>
+      <publishTime>07/04/2018 12:50:42</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/AVANCES 2do TRIM FISE 2017.pdf">
-      <publishTime>04/07/2018 12:50:42</publishTime>
+      <publishTime>07/04/2018 12:50:42</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/AVANCES 3er TRIM FISE 2017.pdf">
-      <publishTime>04/07/2018 12:50:42</publishTime>
+      <publishTime>07/04/2018 12:50:42</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/AVANCES 4TO TRIM 2016.pdf">
-      <publishTime>04/07/2018 12:50:42</publishTime>
+      <publishTime>07/04/2018 12:50:42</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/AVANCES 4TO TRIM FISE 2017.pdf">
-      <publishTime>04/07/2018 12:50:42</publishTime>
+      <publishTime>07/04/2018 12:50:42</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/CARTERA DE PROYECTOS TERCER TRIMETRE FISE 2018.pdf">
       <publishTime>09/21/2018 15:36:46</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/PROPUESTA FISE 2014.pdf">
-      <publishTime>04/07/2018 12:50:42</publishTime>
+      <publishTime>07/04/2018 12:50:42</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/PROPUESTA FISE 2015.pdf">
-      <publishTime>04/07/2018 12:50:42</publishTime>
+      <publishTime>07/04/2018 12:50:42</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/PROPUESTA FISE 2016.pdf">
-      <publishTime>04/07/2018 12:50:42</publishTime>
+      <publishTime>07/04/2018 12:50:42</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/PROPUESTA FISE 2017.pdf">
-      <publishTime>04/07/2018 12:50:42</publishTime>
+      <publishTime>07/04/2018 12:50:42</publishTime>
     </File>
     <File Include="Content/files/descargas/cartera_proyectos_FISE/Propuesta Inicial FISE 2018.pdf">
-      <publishTime>04/07/2018 12:50:42</publishTime>
+      <publishTime>07/04/2018 12:50:42</publishTime>
     </File>
     <File Include="Content/files/descargas/indicadores/DOCUMENTO METODOLOGICO Sistema de Indicadores.docx">
-      <publishTime>03/07/2018 13:34:22</publishTime>
+      <publishTime>07/03/2018 13:34:22</publishTime>
     </File>
     <File Include="Content/files/descargas/indicadores/Formato Difusion Resultados Evaluaciones FAFEF 2011- 2012.pdf">
-      <publishTime>03/07/2018 13:34:22</publishTime>
+      <publishTime>07/03/2018 13:34:22</publishTime>
     </File>
     <File Include="Content/files/descargas/indicadores/Formato Difusion Resultados Evaluaciones FISE 2011-2012.pdf">
-      <publishTime>03/07/2018 13:34:22</publishTime>
+      <publishTime>07/03/2018 13:34:22</publishTime>
     </File>
     <File Include="Content/files/descargas/indicadores/Instructivo Metodológico %28SIID%29.pdf">
       <publishTime>04/30/2019 13:28:18</publishTime>
     </File>
     <File Include="Content/files/descargas/indicadores/Metodologia.pdf">
-      <publishTime>03/07/2018 13:34:22</publishTime>
+      <publishTime>07/03/2018 13:34:22</publishTime>
     </File>
     <File Include="Content/files/descargas/indicadores/Programa Anual de Evaluacion para el Ejercicio Fiscal 2015.pdf">
-      <publishTime>03/07/2018 13:34:22</publishTime>
+      <publishTime>07/03/2018 13:34:22</publishTime>
     </File>
     <File Include="Content/files/descargas/indicadores/Sistema Integral de Indicadores de Desempeno2.pdf">
-      <publishTime>03/07/2018 13:34:22</publishTime>
+      <publishTime>07/03/2018 13:34:22</publishTime>
     </File>
     <File Include="Content/files/descargas/informes_trimestrales/2017/fafef/3ER. TRIM_FONDO VIII.pdf">
-      <publishTime>04/07/2018 14:08:38</publishTime>
+      <publishTime>07/04/2018 14:08:38</publishTime>
     </File>
     <File Include="Content/files/descargas/informes_trimestrales/2017/fise/3ER. TRIM_FONDO III.pdf">
-      <publishTime>04/07/2018 14:08:56</publishTime>
+      <publishTime>07/04/2018 14:08:56</publishTime>
     </File>
     <File Include="Content/files/descargas/informes_trimestrales/2017/inversion_estatal/3ER. TRIM_REC ESTATAL.pdf">
-      <publishTime>04/07/2018 14:09:06</publishTime>
+      <publishTime>07/04/2018 14:09:06</publishTime>
     </File>
     <File Include="Content/files/descargas/PBR.zip">
-      <publishTime>04/07/2018 10:08:32</publishTime>
+      <publishTime>07/04/2018 10:08:32</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_aca.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_ahu.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_ama.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_bdb.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_com.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_eln.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_hua.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_ixt.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_jal.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_lay.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_ros.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_rui.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_san.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_sap.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_si.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_smo.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_tec.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_tux.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/pdms/pdm_xal.pdf">
-      <publishTime>03/07/2018 12:20:52</publishTime>
+      <publishTime>07/03/2018 12:20:52</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/2010_spef_comunicaciones.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/2010_spef_cultura.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/2010_spef_deporte.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/2010_spef_educacion.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/2010_spef_fondosespeciales.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/2010_spef_fondosinvesion.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/2010_spef_hidraulico.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/2010_spef_medioambiente.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/2010_spef_resumen.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/2010_spef_salud.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/2010_spef_seguridadpublica.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/2010_spef_turismo.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/correspondencia_cta_ped_2009.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/criterios_2010_shcp.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/evaluacion pobreza nayarit 2012.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/evaluacion_dic_09.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/pef 2012-2013.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/pib_2008_inegi.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion/presupuesto_egresos_2010.pdf">
-      <publishTime>03/07/2018 10:10:54</publishTime>
+      <publishTime>07/03/2018 10:10:54</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion_mpal/10lppe.pdf">
-      <publishTime>03/07/2018 10:10:16</publishTime>
+      <publishTime>07/03/2018 10:10:16</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion_mpal/arm.pdf">
-      <publishTime>03/07/2018 10:10:16</publishTime>
+      <publishTime>07/03/2018 10:10:16</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion_mpal/cpam.pdf">
-      <publishTime>03/07/2018 10:10:18</publishTime>
+      <publishTime>07/03/2018 10:10:18</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion_mpal/frdfpm.pdf">
-      <publishTime>03/07/2018 10:10:20</publishTime>
+      <publishTime>07/03/2018 10:10:20</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion_mpal/fuirr33.pdf">
-      <publishTime>03/07/2018 10:10:20</publishTime>
+      <publishTime>07/03/2018 10:10:20</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion_mpal/gci.pdf">
-      <publishTime>03/07/2018 10:10:20</publishTime>
+      <publishTime>07/03/2018 10:10:20</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion_mpal/hcpmmm.pps">
-      <publishTime>03/07/2018 10:10:20</publishTime>
+      <publishTime>07/03/2018 10:10:20</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion_mpal/ieeu.pdf">
-      <publishTime>03/07/2018 10:10:20</publishTime>
+      <publishTime>07/03/2018 10:10:20</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion_mpal/ifm.pdf">
-      <publishTime>03/07/2018 10:10:20</publishTime>
+      <publishTime>07/03/2018 10:10:20</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion_mpal/ims.pdf">
-      <publishTime>03/07/2018 10:10:20</publishTime>
+      <publishTime>07/03/2018 10:10:20</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion_mpal/iseipc.xls">
-      <publishTime>03/07/2018 10:10:20</publishTime>
+      <publishTime>07/03/2018 10:10:20</publishTime>
     </File>
     <File Include="Content/files/descargas/planeacion_mpal/pfoc.pdf">
-      <publishTime>03/07/2018 10:10:20</publishTime>
+      <publishTime>07/03/2018 10:10:20</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/Criterios Grales_EvaluacProgramasEstatales.pdf">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/ANEXOS EVALUACION FAM INFRAESTRUCTURA EDUCATIVA.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/Avance Evaluacion FAEB 2014.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/Avance Evaluacion FAETA 2014.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/AVANCE EVALUACION FAFEF 2014.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/Avance Evaluacion FAM_Asist Soc_2014.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/Avance Evaluacion FASP 2014.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/Avance Evaluacion FASSA 2014.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/Avance General PAE 2015.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/Avances Evaluacion FAETA 2014.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/Avances Evaluacion FISE 2014.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/CONVENIO EVALUADOR EXTERNO-INDETEC.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/CONVENIO EVALUADOR EXTERNO-INDETEC_FAFEF.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/CONVENIO EVALUADOR EXTERNO-INDETEC_FISE.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/EVALUACION 2014 FAM INFRAESTRUCTURA EDUCATIVA %28Preliminar%29.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/EVALUACION EXTERNA FAFEF 2014 %28preliminar%29.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/evaluacionFAFEF_2014.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/FAETA EDUCACION ADULTOS Nayarit.pdf">
       <publishTime>08/13/2018 10:49:18</publishTime>
@@ -1268,13 +1268,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/13/2018 10:29:42</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/FAM INFRAESTRUCTURA EDUCATIVA Nayarit.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/FISE Nayarit FINAL.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/FORMATO DE DIFUSION FAEB.pdf">
-      <publishTime>03/09/2018 13:56:26</publishTime>
+      <publishTime>09/03/2018 13:56:26</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/FORMATO DE DIFUSION FAETA ED ADULTOS.pdf">
       <publishTime>08/13/2018 10:30:38</publishTime>
@@ -1292,55 +1292,55 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/13/2018 10:56:10</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/FORMATOS DE DIFUSION FAM INFRAESTRUCTURA EDUCATIVA.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/FORMATOS SEGUIMIENTO ASM.xlsx">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/Mecanismo para el seguimiento a los aspectos susceptibles-1.docx">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/NOR_01_14_011.doc">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/Programa Anual de Evaluacion para el Ejercicio Fiscal 2014.docx">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/REPORTE SFU_RESUMEN DE EVALUACION FAFEF 2014_Avance 31julio2015.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/REPORTE SFU_RESUMEN DE EVALUACION FISE 2014_Avance 31julio2015.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/RESUMEN DE LA EVALUACION FAFEF.pdf">
       <publishTime>08/14/2018 09:23:44</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/TDR evaluacionConsistencia.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/TDR evaluacionDesempeno_FAFEF.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2014/TDR evaluacionDesempeno_FISE.pdf">
-      <publishTime>03/07/2018 14:05:40</publishTime>
+      <publishTime>07/03/2018 14:05:40</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2015/ASM/ASM FISE-FAFEF 2014.pdf">
-      <publishTime>03/07/2018 14:13:56</publishTime>
+      <publishTime>07/03/2018 14:13:56</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2015/ASM/ASM FISE-FAFEF 2015.pdf">
-      <publishTime>03/07/2018 14:13:56</publishTime>
+      <publishTime>07/03/2018 14:13:56</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2015/ASM/FORMATOS_SEGUIMIENTO_ASM.xlsx">
-      <publishTime>03/07/2018 14:13:56</publishTime>
+      <publishTime>07/03/2018 14:13:56</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2015/ASM/Mecanismo para el seguimiento a los aspectos susceptibles.pdf">
-      <publishTime>03/07/2018 14:13:56</publishTime>
+      <publishTime>07/03/2018 14:13:56</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2016/Programa Anual de Evaluacion para el Ejercicio Fiscal 2016.pdf">
-      <publishTime>03/07/2018 14:10:56</publishTime>
+      <publishTime>07/03/2018 14:10:56</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/evaluaciones 2017/Programa Anual de Evaluacion para el Ejercicio Fiscal 2017.pdf">
-      <publishTime>03/07/2018 14:10:38</publishTime>
+      <publishTime>07/03/2018 14:10:38</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/GUÍA MIR/Guia MIR Federal_SHCP.pdf">
       <publishTime>08/21/2018 14:06:22</publishTime>
@@ -1412,94 +1412,94 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/26/2019 11:07:27</publishTime>
     </File>
     <File Include="Content/files/descargas/transparencia/PROGRAMA ANUAL DE EVALUACION 2013.pdf">
-      <publishTime>03/07/2018 13:39:52</publishTime>
+      <publishTime>07/03/2018 13:39:52</publishTime>
     </File>
     <File Include="Content/files/leyes/CONSTITUCION POLITICA DEL ESTADO LIBRE Y SOBERANO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/constitucion_politica_de_los_estados_unidos_mexicanos.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/DECRETO QUE SECTORIZA A LOS ORGANISMOS PUBLICOS DESCENTRALIZADOS, FONDOS Y FIDEICOMISOS DE LA A.PDF">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE ADQUISICIONES, ARRENDAMIENTOS Y SERVICIOS DEL SECTOR PUBLICO.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE ADQUISICIONES, ARRENDAMIENTOS, SERVICIOS Y ALMACENES DELE STADO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE ASOCIACIONES PUBLICO PRIVADAS DEL ESTADO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE COORDINACION FISCAL Y DE GASTO PUBLICO DEL ESTADO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE COORDINACION FISCAL.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE HACIENDA MUNICIPAL DEL ESTADO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE INGRESOS PARA EL ESTADO DE NAYARIT 2011.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE INVERSION PUBLICA PARA EL ESTADO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE OBRA PUBLICA DEL ESTADO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE OBRAS PUBLICAS Y SERVICIOS RELACIONADOS CON LAS MISMAS.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE PLANEACION 09-04-12.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE PLANEACION DEL ESTADO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE PLANEACION.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE PRESUPUESTACION, CONTABILIDAD Y GASTO PUBLICO.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE RESPONSABILIDAD DE SERVIDORES PUBLICOS DEL ESTADO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DE TRANSPARENCIA Y ACCESO A LA INFORMACION PUBLICA DEL ESTADO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY DEL ORGANO DE FISCALIZACION SUPERIOR DEL ESTADO.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY GENERAL DE DESARROLLO SOCIAL.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY MUNICIPAL PARA EL ESTADO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY ORGANICA DEL PODER EJECUTIVO DEL ESTADO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY PARA LA COMPETITIVIDAD Y EL EMPLEO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY QUE CREA EL COMITE DE PLANEACION PARA EL DESARROLLO DEL ESTADO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/LEY QUE REGULA LA ENTREGA RECEPCION DE LA ADMINISTRACION PUBLICA DEL ESTADO DE NAYARIT.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/PRESUPUESTO DE EGRESOS DE LA FEDERACION PARA EL EJERCICIO FISCAL 2011.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/leyes/PRESUPUESTO DE EGRESOS DEL ESTADO PARA EL 2011.pdf">
-      <publishTime>02/07/2018 14:40:06</publishTime>
+      <publishTime>07/02/2018 14:40:06</publishTime>
     </File>
     <File Include="Content/files/PED_NAYARIT_2017-2021.pdf">
-      <publishTime>09/04/2018 12:31:18</publishTime>
+      <publishTime>04/09/2018 12:31:18</publishTime>
     </File>
     <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/COPLADENAY/SE/1 SE Copladenay.pdf">
       <publishTime>04/16/2019 13:18:17</publishTime>
@@ -1530,6 +1530,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/SPPP/SO/4 SO SPPP.pdf">
       <publishTime>04/16/2019 13:39:06</publishTime>
+    </File>
+    <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/SPPP/SO/5 SO.pdf">
+      <publishTime>07/09/2019 12:53:37</publishTime>
+    </File>
+    <File Include="Content/files/transparencia/ACTAS PRIMER TRIMESTRE 2019/SPPP/SO/6 SO.pdf">
+      <publishTime>07/09/2019 12:50:39</publishTime>
     </File>
     <File Include="Content/files/transparencia/ASM_2016/FASSA/1.- POSICIONAMIENTO INSTITUCIONAL.pdf">
       <publishTime>08/20/2018 09:44:56</publishTime>
@@ -1778,22 +1784,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/23/2018 10:44:04</publishTime>
     </File>
     <File Include="Content/files/transparencia/pae_2015/CONVENIO EVALUADOR EXTERNO-INDETEC.pdf">
-      <publishTime>03/09/2018 11:58:26</publishTime>
+      <publishTime>09/03/2018 11:58:26</publishTime>
     </File>
     <File Include="Content/files/transparencia/pae_2015/TDR evaluacionConsistencia.pdf">
-      <publishTime>03/09/2018 11:58:40</publishTime>
+      <publishTime>09/03/2018 11:58:40</publishTime>
     </File>
     <File Include="Content/files/transparencia/pae_2015/TDR evaluacionDesempeno.pdf">
-      <publishTime>03/09/2018 11:58:40</publishTime>
+      <publishTime>09/03/2018 11:58:40</publishTime>
     </File>
     <File Include="Content/files/transparencia/pae_2016/ANEXO 4 NAYARIT EVALUACION FONDOS %28PRELIMINAR%29.pdf">
-      <publishTime>03/09/2018 11:59:22</publishTime>
+      <publishTime>09/03/2018 11:59:22</publishTime>
     </File>
     <File Include="Content/files/transparencia/pae_2016/SEGUIMIENTO PAE2016 dic2016.pdf">
-      <publishTime>03/09/2018 11:59:22</publishTime>
+      <publishTime>09/03/2018 11:59:22</publishTime>
     </File>
     <File Include="Content/files/transparencia/pae_2016/TdR Evaluacion ejercicio 2015.pdf">
-      <publishTime>03/09/2018 11:59:22</publishTime>
+      <publishTime>09/03/2018 11:59:22</publishTime>
     </File>
     <File Include="Content/fonts/flexslider-icon.eot">
       <publishTime>03/20/2019 09:48:02</publishTime>
@@ -2099,13 +2105,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:02</publishTime>
     </File>
     <File Include="Content/images/img01.jpg">
-      <publishTime>07/03/2018 13:26:08</publishTime>
+      <publishTime>03/07/2018 13:26:08</publishTime>
     </File>
     <File Include="Content/images/img02.jpg">
-      <publishTime>07/03/2018 13:26:08</publishTime>
+      <publishTime>03/07/2018 13:26:08</publishTime>
     </File>
     <File Include="Content/images/img03.jpg">
-      <publishTime>07/03/2018 13:26:08</publishTime>
+      <publishTime>03/07/2018 13:26:08</publishTime>
     </File>
     <File Include="Content/images/img04.jpg">
       <publishTime>03/20/2019 09:48:02</publishTime>
@@ -2117,7 +2123,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:02</publishTime>
     </File>
     <File Include="Content/images/ind_03.jpg">
-      <publishTime>03/05/2019 13:14:32</publishTime>
+      <publishTime>05/03/2019 13:14:32</publishTime>
     </File>
     <File Include="Content/images/ind_03A.jpg">
       <publishTime>03/20/2019 09:48:02</publishTime>
@@ -2183,7 +2189,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:02</publishTime>
     </File>
     <File Include="Content/images/organigrama_2_Oct_18.jpg">
-      <publishTime>02/10/2018 13:43:48</publishTime>
+      <publishTime>10/02/2018 13:43:48</publishTime>
     </File>
     <File Include="Content/images/organigrama_31_08_2018.jpg">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -2284,6 +2290,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/images/proy_inversion_2019-03.png">
       <publishTime>03/20/2019 09:48:02</publishTime>
     </File>
+    <File Include="Content/images/sds/bannerHEAD_1200x280 2.jpg">
+      <publishTime>07/10/2019 11:31:16</publishTime>
+    </File>
     <File Include="Content/images/secre1.jpg">
       <publishTime>03/20/2019 09:48:02</publishTime>
     </File>
@@ -2339,7 +2348,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Controllers/HomeController.cs">
-      <publishTime>10/07/2018 12:48:49</publishTime>
+      <publishTime>07/10/2018 12:48:49</publishTime>
     </File>
     <File Include="Controllers/ManageController.cs">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -2348,19 +2357,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Controllers/PlaneacionController.cs">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>07/11/2019 14:32:34</publishTime>
     </File>
     <File Include="Controllers/TransparenciaController.cs">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Controllers/V_top_noticiasController.cs">
-      <publishTime>10/07/2018 13:10:24</publishTime>
+      <publishTime>07/10/2018 13:10:24</publishTime>
     </File>
     <File Include="DatosXSDS/DatosOrganigrama.xsc">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>03/12/2018 13:52:26</publishTime>
     </File>
     <File Include="DatosXSDS/DatosOrganigrama.xss">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>03/12/2018 13:52:26</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>03/20/2019 09:48:09</publishTime>
@@ -2387,7 +2396,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:24</publishTime>
     </File>
     <File Include="QueryBD.sql">
-      <publishTime>05/07/2019 10:25:44</publishTime>
+      <publishTime>07/01/2019 14:50:06</publishTime>
     </File>
     <File Include="Rotativa/help-wkhtmltoimage.txt">
       <publishTime>03/20/2019 09:48:02</publishTime>
@@ -3557,7 +3566,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:06</publishTime>
     </File>
     <File Include="Views/Administrador/EditarFotoAdmin.cshtml">
-      <publishTime>03/20/2019 09:48:06</publishTime>
+      <publishTime>06/05/2019 10:28:35</publishTime>
     </File>
     <File Include="Views/Administrador/EditarFuncionario.cshtml">
       <publishTime>03/20/2019 09:48:06</publishTime>
@@ -3647,7 +3656,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:06</publishTime>
     </File>
     <File Include="Views/Capturista/EditNotTesting.cshtml">
-      <publishTime>07/11/2018 20:46:44</publishTime>
+      <publishTime>11/07/2018 20:46:44</publishTime>
     </File>
     <File Include="Views/Capturista/EliminarFoto.cshtml">
       <publishTime>03/20/2019 09:48:06</publishTime>
@@ -3668,7 +3677,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:06</publishTime>
     </File>
     <File Include="Views/Conocenos/Directorio.cshtml">
-      <publishTime>03/20/2019 09:48:06</publishTime>
+      <publishTime>05/20/2019 14:45:24</publishTime>
     </File>
     <File Include="Views/Conocenos/FuncionesPrincipales.cshtml">
       <publishTime>03/20/2019 09:48:06</publishTime>
@@ -3677,7 +3686,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:06</publishTime>
     </File>
     <File Include="Views/Conocenos/MisionVision.cshtml">
-      <publishTime>03/07/2018 11:27:21</publishTime>
+      <publishTime>07/03/2018 11:27:21</publishTime>
     </File>
     <File Include="Views/Conocenos/Objetivos.cshtml">
       <publishTime>03/20/2019 09:48:06</publishTime>
@@ -3701,7 +3710,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>04/15/2019 10:49:09</publishTime>
+      <publishTime>06/11/2019 10:23:54</publishTime>
     </File>
     <File Include="Views/Home/NoticiaCompleta.cshtml">
       <publishTime>03/20/2019 09:48:06</publishTime>
@@ -3761,7 +3770,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Noticias/Details.cshtml">
-      <publishTime>10/07/2018 14:00:50</publishTime>
+      <publishTime>07/10/2018 14:00:50</publishTime>
     </File>
     <File Include="Views/Noticias/Edit.cshtml">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -3794,10 +3803,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:07</publishTime>
     </File>
     <File Include="Views/Planeacion/pdm.cshtml">
-      <publishTime>03/20/2019 09:48:07</publishTime>
+      <publishTime>04/06/2019 11:23:31</publishTime>
     </File>
     <File Include="Views/Planeacion/SistemaDesempeño.cshtml">
-      <publishTime>03/05/2019 13:17:36</publishTime>
+      <publishTime>04/06/2019 11:24:00</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>03/20/2019 09:48:07</publishTime>
@@ -3812,13 +3821,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/20/2019 09:48:07</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>05/03/2019 14:21:46</publishTime>
+      <publishTime>07/10/2019 11:40:52</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>03/20/2019 09:48:07</publishTime>
     </File>
     <File Include="Views/Transparencia/ActasComite.cshtml">
-      <publishTime>04/25/2019 09:37:40</publishTime>
+      <publishTime>07/10/2019 10:56:30</publishTime>
     </File>
     <File Include="Views/Transparencia/AcuerdosNormatividad.cshtml">
       <publishTime>03/20/2019 09:48:07</publishTime>
@@ -3839,34 +3848,34 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/07/2019 11:42:12</publishTime>
     </File>
     <File Include="Views/Transparencia/ProyectosInversion.cshtml">
-      <publishTime>02/04/2019 12:08:12</publishTime>
+      <publishTime>07/10/2019 10:49:40</publishTime>
     </File>
     <File Include="Views/USUARIOs/Create.cshtml">
-      <publishTime>11/03/2018 21:49:26</publishTime>
+      <publishTime>03/11/2018 21:49:26</publishTime>
     </File>
     <File Include="Views/USUARIOs/Delete.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>03/12/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/USUARIOs/Details.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>03/12/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/USUARIOs/Edit.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>03/12/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/USUARIOs/Index.cshtml">
-      <publishTime>12/03/2018 13:52:26</publishTime>
+      <publishTime>03/12/2018 13:52:26</publishTime>
     </File>
     <File Include="Views/V_top_noticias/Create.cshtml">
-      <publishTime>01/03/2018 11:39:33</publishTime>
+      <publishTime>03/01/2018 11:39:33</publishTime>
     </File>
     <File Include="Views/V_top_noticias/Delete.cshtml">
-      <publishTime>01/03/2018 11:39:34</publishTime>
+      <publishTime>03/01/2018 11:39:34</publishTime>
     </File>
     <File Include="Views/V_top_noticias/Details.cshtml">
-      <publishTime>02/04/2018 13:58:23</publishTime>
+      <publishTime>04/02/2018 13:58:23</publishTime>
     </File>
     <File Include="Views/V_top_noticias/Edit.cshtml">
-      <publishTime>01/03/2018 11:39:36</publishTime>
+      <publishTime>03/01/2018 11:39:36</publishTime>
     </File>
     <File Include="Views/V_top_noticias/Index.cshtml">
       <publishTime>01/01/0001 00:00:00</publishTime>
