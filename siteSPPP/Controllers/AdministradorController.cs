@@ -12,7 +12,7 @@ using System.Text;
 using System.Globalization;
 
 namespace siteSPPP.Controllers
-{
+{ //index, create, edit, delete
     public class AdministradorController : Controller
     {
         private sitio_seplaEntities db = new sitio_seplaEntities();

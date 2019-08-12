@@ -142,4 +142,5 @@ namespace siteSPPP.Models
         [Display(Name = "Estatus")]
         public string ESTATUS { get; set; }
     }
+
 }

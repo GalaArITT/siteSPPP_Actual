@@ -31,4 +31,5 @@ namespace siteSPPP.Models
     [MetadataType(typeof(ORGANIGRAMA_Metadatos))]
     public partial class ORGANIGRAMA { }
 
+
 }

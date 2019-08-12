@@ -257,6 +257,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PlaneacionController.cs" />
     <Compile Include="Controllers\TransparenciaController.cs" />
+    <Compile Include="Controllers\USUARIOsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1440,6 +1441,11 @@
     <Content Include="Views\Transparencia\PortafolioInversiones.cshtml" />
     <Content Include="Views\Transparencia\Macroindicadores.cshtml" />
     <Content Include="Views\Transparencia\MacroindicadoresInversion.cshtml" />
+    <Content Include="Views\USUARIOs\Create.cshtml" />
+    <Content Include="Views\USUARIOs\Delete.cshtml" />
+    <Content Include="Views\USUARIOs\Details.cshtml" />
+    <Content Include="Views\USUARIOs\Edit.cshtml" />
+    <Content Include="Views\USUARIOs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
