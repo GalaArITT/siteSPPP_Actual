@@ -39,5 +39,7 @@ namespace siteSPPP.Controllers
         {
             return View(db.ARCHIVOS.Where(s => s.IDTIPO == 15));
         }
+
+
     }
 }

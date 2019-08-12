@@ -399,7 +399,7 @@ SELECT * FROM ARCHIVOS
 update DEPARTAMENTOS
 set NOMBREDEPTO= 'Departamento de Seguimiento y Control de los Ramos 06, 15, 20 y Convenios'
 where IDDEPARTAMENTO = 13
-
+delete from archivos where idarchivo=55
 SELECT * FROM Noticias
 --ESTATUS              nvarchar(1)          null
 ALTER TABLE ARCHIVOS
@@ -408,7 +408,7 @@ ADD ESTATUS nvarchar(1) not null;
 Select * from PLANTILLA
 
 INSERT INTO TIPO_PLANTILLA
-VALUES ('MACROINDICADORES DE INVERSION')
+VALUES ('ARCHIVOS SECRETARIO')
 
 delete from PLANTILLA 
 

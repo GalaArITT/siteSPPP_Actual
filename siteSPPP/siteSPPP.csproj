@@ -1446,6 +1446,7 @@
     <Content Include="Views\USUARIOs\Details.cshtml" />
     <Content Include="Views\USUARIOs\Edit.cshtml" />
     <Content Include="Views\USUARIOs\Index.cshtml" />
+    <Content Include="Views\Transparencia\VistaSecretario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

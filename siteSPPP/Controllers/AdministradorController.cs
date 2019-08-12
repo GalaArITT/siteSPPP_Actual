@@ -133,6 +133,7 @@ namespace siteSPPP.Controllers
                 {
                     return new HttpStatusCodeResult(HttpStatusCode.Forbidden);
                 }
+                //APARTIRMDE AQUI ES LALOGICA
                 else
                 {
                     if (id == null)
