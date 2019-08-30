@@ -6,306 +6,306 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuR0/bsHGGUaOZ6eeo3l1FgAAAAACAAAAAAADZgAAwAAAABAAAAC9jw0fwoz9FFTGmqqadJKXAAAAAASAAACgAAAAEAAAAGgsa/lckKaAi2xXQjwFHmUQAAAARdpYHcXQdMRb9Dd0FxeCURQAAAByq2wuAGlTun67G3TK7pHBqX4e4w==</EncryptedPassword>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANjY4woajXkik9UniK8vTCQAAAAACAAAAAAADZgAAwAAAABAAAADLRTEYYhFTqRf4oulfNrGxAAAAAASAAACgAAAAEAAAAMPhdQraoC99/eVuGxBERn0QAAAA/h7+2KQZix1xb6hZp4p2shQAAADLlIrTuuJk2qjbUdUgda2iHVtdzQ==</EncryptedPassword>
     <_PublishTargetUrl>ftp://201.161.95.10/</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:08:10</publishTime>
     </File>
     <File Include="App_Browsers/qt.browser">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:08:10</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:50</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:08:10</publishTime>
     </File>
     <File Include="bin/de/Microsoft.ReportViewer.Common.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/de/Microsoft.ReportViewer.DataVisualization.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/de/Microsoft.ReportViewer.Design.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/de/Microsoft.ReportViewer.WebDesign.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/de/Microsoft.ReportViewer.WebForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/de/Microsoft.ReportViewer.WinForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:50</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:50</publishTime>
     </File>
     <File Include="bin/EnvDTE.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>11/16/2018 10:44:55</publishTime>
     </File>
     <File Include="bin/es/Microsoft.ReportViewer.Common.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/es/Microsoft.ReportViewer.DataVisualization.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/es/Microsoft.ReportViewer.Design.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/es/Microsoft.ReportViewer.WebDesign.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/es/Microsoft.ReportViewer.WebForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/es/Microsoft.ReportViewer.WinForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/es/System.Web.Optimization.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/fr/Microsoft.ReportViewer.Common.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/fr/Microsoft.ReportViewer.DataVisualization.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/fr/Microsoft.ReportViewer.Design.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/fr/Microsoft.ReportViewer.WebDesign.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/fr/Microsoft.ReportViewer.WebForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/fr/Microsoft.ReportViewer.WinForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/it/Microsoft.ReportViewer.Common.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/it/Microsoft.ReportViewer.DataVisualization.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/it/Microsoft.ReportViewer.Design.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/it/Microsoft.ReportViewer.WebDesign.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/it/Microsoft.ReportViewer.WebForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/it/Microsoft.ReportViewer.WinForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/ja/Microsoft.ReportViewer.Common.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/ja/Microsoft.ReportViewer.DataVisualization.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/ja/Microsoft.ReportViewer.Design.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/ja/Microsoft.ReportViewer.WebDesign.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/ja/Microsoft.ReportViewer.WebForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/ja/Microsoft.ReportViewer.WinForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/ko/Microsoft.ReportViewer.Common.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/ko/Microsoft.ReportViewer.DataVisualization.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/ko/Microsoft.ReportViewer.Design.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/ko/Microsoft.ReportViewer.WebDesign.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/ko/Microsoft.ReportViewer.WebForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/ko/Microsoft.ReportViewer.WinForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.DependencyCollector.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Web.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.WindowsServer.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/Microsoft.ApplicationInsights.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/Microsoft.MSXML.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>11/16/2018 10:44:55</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Google.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/Microsoft.ReportViewer.Common.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/Microsoft.ReportViewer.DataVisualization.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/Microsoft.ReportViewer.Design.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/Microsoft.ReportViewer.ProcessingObjectModel.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/Microsoft.ReportViewer.WebDesign.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/Microsoft.ReportViewer.WebForms.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/Microsoft.ReportViewer.WinForms.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/Microsoft.SqlServer.Types.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.OLE.Interop.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>11/16/2018 10:44:55</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.Shell.Interop.8.0.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>11/16/2018 10:44:55</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.Shell.Interop.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>11/16/2018 10:44:55</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.TextManager.Interop.8.0.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>11/16/2018 10:44:55</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.TextManager.Interop.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>11/16/2018 10:44:55</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:54</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:55</publishTime>
     </File>
     <File Include="bin/Oracle.ManagedDataAccess.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:56</publishTime>
     </File>
     <File Include="bin/Oracle.ManagedDataAccess.EntityFramework.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:57</publishTime>
     </File>
     <File Include="bin/Owin.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:57</publishTime>
     </File>
     <File Include="bin/PagedList.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:57</publishTime>
     </File>
     <File Include="bin/PagedList.Mvc.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:58</publishTime>
     </File>
     <File Include="bin/pt/Microsoft.ReportViewer.Common.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/pt/Microsoft.ReportViewer.DataVisualization.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/pt/Microsoft.ReportViewer.Design.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/pt/Microsoft.ReportViewer.WebDesign.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/pt/Microsoft.ReportViewer.WebForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/pt/Microsoft.ReportViewer.WinForms.resources.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:53</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:52</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -323,7 +323,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Rotativa.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:59</publishTime>
     </File>
     <File Include="bin/ru/Microsoft.ReportViewer.Common.resources.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -344,7 +344,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/siteSPPP.dll">
-      <publishTime>11/07/2019 14:35:34</publishTime>
+      <publishTime>08/30/2019 14:43:29</publishTime>
     </File>
     <File Include="bin/siteSPPP.pdb">
       <publishTime>05/03/2019 13:19:18</publishTime>
@@ -362,31 +362,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/stdole.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>11/16/2018 10:44:55</publishTime>
     </File>
     <File Include="bin/System.Data.dll">
       <publishTime>05/11/2015 20:36:48</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Deployment.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Razor.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:07:51</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -431,7 +431,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="ClassDiagram1.cd">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:08:10</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -1414,6 +1414,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/files/descargas/transparencia/PROGRAMA ANUAL DE EVALUACION 2013.pdf">
       <publishTime>03/07/2018 13:39:52</publishTime>
     </File>
+    <File Include="Content/files/FAIS/Formatos_Participacion_Social_2019.docx">
+      <publishTime>08/19/2019 10:20:00</publishTime>
+    </File>
+    <File Include="Content/files/FAIS/Formato_Cedula_Verificacion_Seguimiento_Obra_2019.docx">
+      <publishTime>08/19/2019 10:20:00</publishTime>
+    </File>
+    <File Include="Content/files/FAIS/Guia_Cedula_Verificacion_Obras_2019.pdf">
+      <publishTime>08/05/2019 10:17:41</publishTime>
+    </File>
+    <File Include="Content/files/FAIS/Guia_Participacion_Social_2019.pdf">
+      <publishTime>08/05/2019 10:18:32</publishTime>
+    </File>
     <File Include="Content/files/leyes/CONSTITUCION POLITICA DEL ESTADO LIBRE Y SOBERANO DE NAYARIT.pdf">
       <publishTime>02/07/2018 14:40:06</publishTime>
     </File>
@@ -2372,7 +2384,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/03/2018 13:52:26</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:08:24</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -2387,16 +2399,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:08:12</publishTime>
     </File>
     <File Include="Models/NoticiasSQLServer.edmx.diagram">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/30/2019 14:08:41</publishTime>
     </File>
     <File Include="QueryBD.sql">
-      <publishTime>01/07/2019 14:50:06</publishTime>
+      <publishTime>08/30/2019 14:08:12</publishTime>
     </File>
     <File Include="Rotativa/help-wkhtmltoimage.txt">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -3821,19 +3833,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>10/07/2019 11:40:52</publishTime>
+      <publishTime>08/30/2019 15:02:55</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Transparencia/ActasComite.cshtml">
-      <publishTime>10/07/2019 10:56:30</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Transparencia/AcuerdosNormatividad.cshtml">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Transparencia/ArmonizacionContable.cshtml">
       <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Transparencia/FormatosGuiasFAIS.cshtml">
+      <publishTime>08/30/2019 15:00:03</publishTime>
     </File>
     <File Include="Views/Transparencia/InformesTrimestrales.cshtml">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -3845,10 +3860,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Transparencia/PortafolioInversiones.cshtml">
-      <publishTime>07/05/2019 11:42:12</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Transparencia/ProyectosInversion.cshtml">
-      <publishTime>10/07/2019 10:49:40</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/USUARIOs/Create.cshtml">
       <publishTime>11/03/2018 21:49:26</publishTime>
@@ -3887,7 +3902,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/05/2019 11:46:01</publishTime>
+      <publishTime>08/30/2019 14:39:14</publishTime>
     </File>
     <File Include="x64/Oracle.ManagedDataAccessDTC.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>

@@ -1300,6 +1300,10 @@
     <Content Include="Content\files\descargas\indicadores\Instructivo Metodológico %28SIID%29.pdf" />
     <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\SPPP\SO\5 SO.pdf" />
     <Content Include="Content\files\transparencia\ACTAS PRIMER TRIMESTRE 2019\SPPP\SO\6 SO.pdf" />
+    <Content Include="Content\files\FAIS\Formatos_Participacion_Social_2019.docx" />
+    <Content Include="Content\files\FAIS\Formato_Cedula_Verificacion_Seguimiento_Obra_2019.docx" />
+    <Content Include="Content\files\FAIS\Guia_Cedula_Verificacion_Obras_2019.pdf" />
+    <Content Include="Content\files\FAIS\Guia_Participacion_Social_2019.pdf" />
     <None Include="Properties\PublishProfiles\localftp.pubxml" />
     <None Include="Properties\PublishProfiles\seplan_ftp.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -1446,7 +1450,7 @@
     <Content Include="Views\USUARIOs\Details.cshtml" />
     <Content Include="Views\USUARIOs\Edit.cshtml" />
     <Content Include="Views\USUARIOs\Index.cshtml" />
-    <Content Include="Views\Transparencia\VistaSecretario.cshtml" />
+    <Content Include="Views\Transparencia\FormatosGuiasFAIS.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
