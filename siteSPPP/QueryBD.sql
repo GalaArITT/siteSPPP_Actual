@@ -347,14 +347,19 @@ alter table ORGANIGRAMA
 */
 
 
-
+--insertar una plantilla nueva
 INSERT INTO TIPO_PLANTILLA
-VALUES ('PROPUESTA DE INVERSION')
+VALUES ('NOMBRE DE LA PLANTILLA')
 
 UPDATE TIPO_PLANTILLA
 set TIPOPLANTILLA= 'CARTERA DE PROYECTOS SHCP'
 WHERE IDTIPO = 12
 --NOMBREPERSONAL
+select * from SERVIDORESPUBLICOS
+
+--borrar un servidor publico
+delete from servidorespublicos
+where IDSERVPUB=76
 
 --MODIFICAR PARA QUE OMITA LOS ACENTOS ¡NO BORRAR!
 ALTER TABLE NOTICIAS ALTER COLUMN TITULO nvarchar(MAX) COLLATE SQL_Latin1_General_CP1_CI_AI
@@ -366,7 +371,8 @@ ALTER TABLE NOTICIAS ALTER COLUMN TITULO nvarchar(MAX) COLLATE SQL_Latin1_Genera
 	A= Activo
 	I= Inactivo
 		conexion:
-	
+
+	Datos del Servidor de la Base de Datos
 conexion: sqs.nayarit.gob.mx
 usuario=usepladb 
 PASSWORD='57wrTlp'
@@ -445,4 +451,4 @@ UPDATE ARCHIVOS
 SET IDTIPO = 15
 WHERE IDARCHIVO = 46 
 
-select * from usuarios
+select * from SERVIDORESPUBLICOS

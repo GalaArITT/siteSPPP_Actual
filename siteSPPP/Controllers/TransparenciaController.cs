@@ -37,7 +37,7 @@ namespace siteSPPP.Controllers
         }
         public ActionResult MacroindicadoresInversion()
         {
-            return View(db.ARCHIVOS.Where(s => s.IDTIPO == 15));
+            return View(db.ARCHIVOS.Where(s => s.IDTIPO == 15 && s.ESTATUS=="A"));
         }
         public ActionResult FormatosGuiasFAIS()
         {
