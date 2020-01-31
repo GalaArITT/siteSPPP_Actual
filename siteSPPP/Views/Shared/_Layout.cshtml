@@ -2,7 +2,7 @@
 <html>
 <head>
     <!--@Page.Title-->
-    <title>Secretaría de Planeación, Programación y Presupuesto</title>
+    <title>Secretaría de Desarrollo Sustentable</title>
     @RenderSection("head", required: false)
    
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -17,21 +17,21 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8" />
-    <meta name="title" content="Secretaría de Planeación Programación y Presupuesto" />
+    <meta name="title" content="Secretaría de Desarrollo Sustentable" />
     <meta name="description" content="Ejercer la rectoría en materia de la planeación del desarrollo integral de la Entidad, así como la programación y presupuesto de la inversión, coordinando y estableciendo los lineamientos y criterios generales, para la formulación, instrumentación, control y evaluación de planes y programas que conlleven al bienestar social de la población, con base en el Plan Estatal de Desarrollo y el Sistema Estatal de Planeación." />
     <meta name="Author" content="Nayarit" />
     <meta name="robot" content="index,follow" />
-    <meta property="og:title" content="Secretaría de Planeación Programación y Presupuesto" />
+    <meta property="og:title" content="Secretaría de Desarrollo Sustentable" />
     <meta property="og:site_name" content="seplan" />
     <meta property="og:url" content="http://www.seplan.gob.mx/" />
     <meta property="og:description" content="Ejercer la rectoría en materia de la planeación del desarrollo integral de la Entidad, así como la programación y presupuesto de la inversión, coordinando y estableciendo los lineamientos y criterios generales, para la formulación, instrumentación, control y evaluación de planes y programas que conlleven al bienestar social de la población, con base en el Plan Estatal de Desarrollo y el Sistema Estatal de Planeación." />
     <meta property="og:image" content="http://www.seplan.gob.mx/Content/images/sppp-logo.jpg" />
     <meta property="og:type" content="article" />
     <meta property="twitter:url" content="http://www.seplan.gob.mx/" />
-    <meta property="twitter:title" content="Secretaría de Planeación Programación y Presupuesto" />
+    <meta property="twitter:title" content="Secretaría de Desarrollo Sustentable" />
     <meta property="twitter:description" content="Ejercer la rectoría en materia de la planeación del desarrollo integral de la Entidad, así como la programación y presupuesto de la inversión, coordinando y estableciendo los lineamientos y criterios generales, para la formulación, instrumentación, control y evaluación de planes y programas que conlleven al bienestar social de la población, con base en el Plan Estatal de Desarrollo y el Sistema Estatal de Planeación." />
     <meta name="twitter:image" content="http://www.seplan.gob.mx/Content/images/sppp-logo.jpg" />
-    <meta name="Keywords" content="nayarit, sppp, seplan, Planeación Programación y Presupuesto" />
+    <meta name="Keywords" content="nayarit, sppp, seplan, Desarrollo Sustentable" />
     <meta name="robots" content="index, follow" />
     <meta name="generator" content="Nayarit" />
 
@@ -111,7 +111,8 @@
                         <a class="nav-link nav-link2 dropdown-toggle" href="/" id="dropdown_pla" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;&nbsp;Planeación&nbsp;&nbsp;&nbsp;</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown_pla">
                             <a class="dropdown-item" href="/Planeacion">Sistema Estatal de Planeación, Programación y Presupuesto</a>
-                            <a class="dropdown-item" href="http://pnd.gob.mx/" target="_blank">Plan Nacional de Desarrollo</a>
+                            <a class="dropdown-item" href="https://www.dof.gob.mx/nota_detalle.php?codigo=5565599&fecha=12/07/2019" target="_blank">Plan Nacional de Desarrollo</a>
+                            <a class="dropdown-item" href="~/Content/files/descargas/VINCULACION_PND-PED.pdf" target="_blank">Alineación PED 17-21 - PND 19-24</a>
                             <a class="dropdown-item" href="/Planeacion/pdm">Planes Municipales de Desarrollo</a>
                             <a class="dropdown-item" href="/Planeacion/SistemaDesempeño">Sistema de Evaluación del Desempeño</a>
                             <a class="dropdown-item" href="/Planeacion/CarteraProyectos">Registro en SHCP mes de la Cartera de Proyectos</a>
@@ -145,6 +146,7 @@
                            
                             <a class="dropdown-item" href="/Transparencia/ActasComite">Actas del Comité de Información</a>
                             <a class="dropdown-item" href="/Transparencia/FormatosGuiasFAIS">Formatos GUIAS FAIS</a>
+                            <a class="dropdown-item" href="/Transparencia/ConvocatoriasIMPLAN" target="_blank"> Convocatorias Municipales IMPLAN</a>
                         </div>
                     </li>
                 </ul>
@@ -159,21 +161,32 @@
         <div class="container formulario">
             <div class="row">
                 <div class="nine columns">
+                            <img src="~/Content/images/E1_MAILING_CUANTASPERSONAS_600X200PX.jpg" style="width: 100%" />
+
                     @RenderBody()
-                </div>
+    </div>
+                 
                 <div class="three columns">
                     <div id="menulateral">
-                        <b>Transparencia</b>
-                        <label><a href="http://transparencia.nayarit.gob.mx/" target="_blank">Transparencia SPPP</a></label>
-                        <label><a href="http://www.seplan.gob.mx/primerinforme/" target="_blank">Informes de Gobierno</a></label>
-                        <label><a href="/Transparencia/InformesTrimestrales">Informes Trimestrales</a></label>
-                        @*<label><a href="">Información financiera</a></label>*@
-                        <b>Enlaces de Interés</b>
-                        <label><a href="http://www.nayarit.gob.mx" target="_blank">Gobierno del Estado de Nayarit </a></label>
-                        <b>Sistemas</b>
-                        <label><a href="http://svo-14-93.servidoresvirtuales.mx/apex/f?p=124" target="_blank">Simon</a></label>
-                        <label><a href="http://svo-14-93.servidoresvirtuales.mx/apex/f?p=104" target="_blank">SisViat</a></label>
+                        <!-- BANER DE CONVOCATORIA IPLANAY-->
+
+                        <!-- BANER SEGUNDO INFORME-->
+                    <div>
+
+
+
+                     <p class="lead text-left" style="font-size: medium; font-style: oblique; font-weight: bold;">
+                            Segundo Informe de Gobierno
+                        </p>
+                        <!-- BANER DE INFORME-->
+                        <a href="https://www.nayarit.gob.mx/tiempodecumplir/" target="_blank">
+                            <img src="~/Content/images/banner_2informe.jpg" style="width: 100%" />
+                        </a>
                     </div>
+
+                       
+                    
+
                     <!--video de facebook-->
                     <div>
                         <p class="lead text-left" style="font-size: 1em; font-style: oblique; font-weight: bold;">
@@ -183,25 +196,27 @@
                             style="border: none; overflow: hidden; width: 100%"
                             scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" allowfullscreen="true"></iframe>
                     </div>
-                    <!-- BANER DE CENSOS-->
-                    <div class="redes">
-                        <!-- BANER DE CENSOS-->
-                        <a href="/Content/images/Censos/Infografia_Completa_01.pdf" target="_blank">
-                            <img src="/Content/images/Censos/2_CE_banner_cuadrado.jpg" style="width: 100%" />
-                        </a>
-                    </div>
+                   
+                  
                     <!-- termina menu -->
                     <div class="redes">
                         <div id="fb-root"></div>
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hoCWP08XqYQ?rel=0" allowfullscreen></iframe>
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hoCWP08XqYQ?rel=0" allowfullscreen"></iframe>
                         </div>
                         <br />
-                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2"></script>
+                        <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2"></script>
                         <div class="fb-page" data-href="https://www.facebook.com/spppnayarit/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                             <blockquote cite="https://www.facebook.com/spppnayarit/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/spppnayarit/">Secretaría de Planeación, Programación y Presupuesto de Nayarit</a></blockquote>
                         </div>
                     </div>
+
+                    <p class="lead text-left" style="font-size: medium; font-style: oblique; font-weight: bold;">Enlaces de Interés</p>
+                        <label><a href="http://www.nayarit.gob.mx" target="_blank">Gobierno del Estado de Nayarit </a></label>
+                        <b>Sistemas</b>
+                        <label><a href="http://svo-14-93.servidoresvirtuales.mx/apex/f?p=124" target="_blank">Simon</a></label>
+                        <label><a href="http://svo-14-93.servidoresvirtuales.mx/apex/f?p=104" target="_blank">SisViat</a></label>
+
                 </div>
                 <!-- columns -->
             </div>
